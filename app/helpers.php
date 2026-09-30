@@ -63,21 +63,76 @@ function obra_whatsapp(array $config, string $message): ?string
         : null;
 }
 
-// Nombre corto de página a partir de <title>, sacando el sufijo "| Obra" / "| Constructora Obra".
-function obra_page_label(array $route): string
+// Mensajes de WhatsApp: todos viven en app/wa-messages.php (uno por pagina y ubicacion).
+function obra_wa_messages(): array
 {
-    $title = trim((string) ($route['title'] ?? ''));
-    $label = trim((string) preg_replace('/\s*\|\s*[^|]*$/', '', $title));
-    return $label !== '' ? $label : (string) ($route['h1'] ?? 'Obra.com.py');
+    static $messages = null;
+    if ($messages === null) {
+        $file = __DIR__ . '/wa-messages.php';
+        $messages = is_file($file) ? (array) require $file : [];
+    }
+    return $messages;
 }
 
-// Mensaje de WhatsApp con la página de origen, para que el equipo sepa de dónde viene cada consulta.
-function obra_page_wa_message(array $route, string $intent): string
+// Ubicacion efectiva: /gracias/ usa 'thanks' y la pagina 404 (ruta sin tipo) usa '404' en todos sus enlaces.
+function obra_wa_placement(array $route, string $placement): string
 {
-    if (($route['type'] ?? '') === 'home' || $route === []) {
-        return 'Hola, vi Obra.com.py y quiero ' . $intent . '.';
+    $type = (string) ($route['type'] ?? '');
+    if ($type === 'thanks') { return 'thanks'; }
+    if ($type === '') { return '404'; }
+    return $placement;
+}
+
+// Texto para un enlace de WhatsApp: pagina+ubicacion -> servicio -> respaldo por ubicacion -> respaldo general.
+function obra_wa_text(string $path, string $placement, ?string $serviceSlug = null): string
+{
+    $m = obra_wa_messages();
+    $text = (string) ($m['pages'][$path][$placement]
+        ?? ($serviceSlug !== null ? ($m['services'][$serviceSlug] ?? null) : null)
+        ?? $m['fallbacks'][$placement]
+        ?? $m['fallbacks']['hero']
+        ?? '');
+    if (trim($text) === '') {
+        if (PHP_SAPI === 'cli-server') { throw new RuntimeException("WhatsApp text missing for $path [$placement]"); }
+        $text = 'Hola, quiero hacer una consulta sobre una obra.';
     }
-    return 'Hola, vi la página de "' . obra_page_label($route) . '" en Obra.com.py y quiero ' . $intent . '.';
+    return $text;
+}
+
+// Atributos comunes de un enlace de WhatsApp (medicion GA4: ubicacion y servicio).
+function obra_wa_attrs(string $placement, ?string $serviceSlug = null): string
+{
+    return ' target="_blank" rel="noopener" data-wa="' . h($placement) . '"' . ($serviceSlug !== null && $serviceSlug !== '' ? ' data-wa-service="' . h($serviceSlug) . '"' : '');
+}
+
+// Mensaje final del formulario, armado con la plantilla 'form' del mapa.
+function obra_wa_form_text(array $values): string
+{
+    $template = (string) (obra_wa_messages()['form'] ?? "Hola, soy {name}. Completé el formulario de obra.com.py desde {page}.\nObra: {service}\nUbicación: {location}\nTerreno: {terrain}\nFinanciación: {financing}\nProyecto: {project}");
+    $pairs = [];
+    foreach ($values as $key => $value) { $pairs['{' . $key . '}'] = (string) $value; }
+    return strtr($template, $pairs);
+}
+
+function obra_tel_href(array $config): string
+{
+    return obra_phone_ready($config) ? 'tel:+' . $config['whatsapp'] : '';
+}
+
+// Carga un archivo de contenido por clave desde app/content/{dir}/{clave}.php.
+// Primero las claves de $order (orden fijo de menu, sitemap y footer); despues cualquier archivo nuevo, en orden alfabetico.
+// Asi cada agente de contenido edita o agrega solo su propio archivo.
+function obra_load_content_dir(string $dir, array $order): array
+{
+    $base = __DIR__ . '/content/' . $dir . '/';
+    $files = glob($base . '*.php') ?: [];
+    sort($files);
+    $keys = array_map(fn($f) => basename($f, '.php'), $files);
+    $data = [];
+    foreach (array_merge(array_values(array_intersect($order, $keys)), array_diff($keys, $order)) as $key) {
+        $data[$key] = require $base . $key . '.php';
+    }
+    return $data;
 }
 
 function obra_json(array $data): string
@@ -139,10 +194,13 @@ function obra_breadcrumbs(array $content, array $route, string $path): array
     return $items;
 }
 
-function obra_safe_return(string $value, string $fallback = '/contacto/'): string
+function obra_safe_return(string $value, string $fallback = '/cotizar/'): string
 {
-    $path = parse_url($value, PHP_URL_PATH) ?: $fallback;
-    return str_starts_with($path, '/') && !str_starts_with($path, '//') ? $path : $fallback;
+    // Solo rutas internas relativas: nada con esquema, host o caracteres raros.
+    $parts = parse_url($value);
+    if ($parts === false || isset($parts['scheme']) || isset($parts['host'])) { return $fallback; }
+    $path = (string) ($parts['path'] ?? '');
+    return preg_match('#^/(?!/)[a-z0-9/_-]*$#', $path) ? $path : $fallback;
 }
 
 function obra_add_query(string $path, array $query): string

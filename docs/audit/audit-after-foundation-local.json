@@ -1,0 +1,6389 @@
+{
+ "generated_at": "2026-09-30T04:30:29.684Z",
+ "fetched_from": "http://localhost:8081",
+ "canonical_origin": "https://obra.com.py",
+ "summary": {
+  "sitemap_url_count": 56,
+  "non_200": [],
+  "multi_or_missing_h1": [],
+  "canonical_mismatch": [],
+  "duplicate_titles": {},
+  "duplicate_descriptions": {},
+  "title_over_60": [
+   "/casas/minimalistas/",
+   "/tinglados/cocheras/",
+   "/guias/terreno/",
+   "/guias/permisos/",
+   "/credito/"
+  ],
+  "description_over_160": [],
+  "description_under_110": [],
+  "thin_under_300_words": [
+   [
+    186,
+    "/privacidad/"
+   ],
+   [
+    189,
+    "/nosotros/"
+   ],
+   [
+    252,
+    "/cotizar/"
+   ],
+   [
+    276,
+    "/comerciales/oficinas/"
+   ],
+   [
+    291,
+    "/como-trabajamos/"
+   ]
+  ],
+  "orphans_or_1_inlink": [],
+  "images_without_alt_total": 0,
+  "linked_non_sitemap_targets": {},
+  "whatsapp_numbers_found": {
+   "595992279599": 337
+  },
+  "whatsapp_distinct_texts": 281,
+  "whatsapp_texts": {
+   "Hola, quiero hablar con ustedes sobre una obra. ¿Me pueden atender por acá?": [
+    "/"
+   ],
+   "Hola, quiero construir en Paraguay y busco una sola empresa que se encargue de todo. ¿Cómo empezamos?": [
+    "/"
+   ],
+   "Hola, recorrí lo que hacen y quiero avanzar con mi obra. ¿Me cuentan qué necesitan saber?": [
+    "/"
+   ],
+   "Hola, tengo una duda general sobre construir en Paraguay. ¿Me la pueden responder?": [
+    "/"
+   ],
+   "Hola, tengo una obra en mente y quiero consultarles. ¿Tienen un minuto?": [
+    "/"
+   ],
+   "Hola, quiero saber si mi obra entra en lo que ustedes hacen. ¿Les cuento?": [
+    "/servicios/"
+   ],
+   "Hola, repasé la lista de servicios y quiero combinar más de una obra. ¿Cómo lo organizamos?": [
+    "/servicios/"
+   ],
+   "Hola, una consulta general: ¿ustedes se encargan de varios rubros en una misma obra?": [
+    "/servicios/"
+   ],
+   "Hola, quiero consultar por un servicio de obra. ¿Me ayudan a elegir?": [
+    "/servicios/"
+   ],
+   "Hola, quiero preguntarles algo sobre las guías de construcción. ¿Puedo escribirles acá?": [
+    "/guias/"
+   ],
+   "Hola, ya leí varias guías y quiero pasar a mi caso. ¿Me ayudan a definir los próximos pasos?": [
+    "/guias/"
+   ],
+   "Hola, me quedó una pregunta después de leer sus guías. ¿Me pueden orientar?": [
+    "/guias/"
+   ],
+   "Hola, tengo una duda que no encontré en las guías. ¿Me la contestan?": [
+    "/guias/"
+   ],
+   "Hola, me interesa su forma de trabajo. ¿Me cuentan cómo sigue una obra?": [
+    "/como-trabajamos/"
+   ],
+   "Hola, ya entendí cómo trabajan y quiero arrancar mi obra. ¿Cuál es el primer paso?": [
+    "/como-trabajamos/"
+   ],
+   "Hola, tengo una pregunta sobre cómo coordinan los gremios en una obra. ¿Me la responden?": [
+    "/como-trabajamos/"
+   ],
+   "Hola, quiero saber cómo es el proceso de obra con ustedes. ¿Me explican?": [
+    "/como-trabajamos/"
+   ],
+   "Hola, necesito un presupuesto de obra. ¿Me pasan qué información les mando?": [
+    "/cotizar/"
+   ],
+   "Hola, quiero pedir un presupuesto para mi obra y prefiero escribirles por acá. ¿Qué datos necesitan?": [
+    "/cotizar/"
+   ],
+   "Hola, antes de completar el formulario tengo una consulta. ¿Me la resuelven por acá?": [
+    "/cotizar/"
+   ],
+   "Hola, quiero cotizar una obra ahora mismo. ¿Me atienden por este medio?": [
+    "/cotizar/"
+   ],
+   "Hola, me gustaría hablar con alguien del equipo sobre mi obra. ¿Es posible?": [
+    "/nosotros/"
+   ],
+   "Hola, me gustó cómo se presentan y quiero hablarles de mi obra. ¿Tienen disponibilidad?": [
+    "/nosotros/"
+   ],
+   "Hola, tengo curiosidad por la empresa y cómo supervisan cada obra. ¿Me comentan?": [
+    "/nosotros/"
+   ],
+   "Hola, quiero saber quiénes son y cómo llevan las obras. ¿Me cuentan?": [
+    "/nosotros/"
+   ],
+   "Hola, una pregunta sobre privacidad de mis datos. ¿Me atienden?": [
+    "/privacidad/"
+   ],
+   "Hola, quiero saber qué hacen con la información que les paso. ¿Me la aclaran?": [
+    "/privacidad/"
+   ],
+   "Hola, quiero consultar por el uso de mis datos. ¿Me responden por acá?": [
+    "/privacidad/"
+   ],
+   "Hola, quiero consultar por la construcción de una casa. ¿Me atienden?": [
+    "/casas/"
+   ],
+   "Hola, quiero construir mi casa llave en mano. Ya tengo terreno. ¿Qué necesitan para empezar?": [
+    "/casas/"
+   ],
+   "Hola, terminé de leer sobre construcción de casas y quiero avanzar con la mía. ¿Cómo sigue?": [
+    "/casas/"
+   ],
+   "Hola, tengo una duda general sobre construir una casa nueva. ¿Me ayudan?": [
+    "/casas/"
+   ],
+   "Hola, quiero construir mi casa. ¿Me pasan los pasos para arrancar?": [
+    "/casas/"
+   ],
+   "Hola, consulta por un dúplex de dos plantas. ¿Lo hacen completo?": [
+    "/casas/duplex/"
+   ],
+   "Hola, quiero construir un dúplex en mi terreno. ¿Qué datos necesitan para empezar?": [
+    "/casas/duplex/"
+   ],
+   "Hola, leí sobre dúplex y casas de dos plantas y quiero el mío. ¿Cómo lo encaramos?": [
+    "/casas/duplex/"
+   ],
+   "Hola, una duda sobre casas de dos plantas: ¿la estructura cambia mucho respecto a una sola planta?": [
+    "/casas/duplex/"
+   ],
+   "Hola, quiero construir un dúplex. ¿Me responden por acá?": [
+    "/casas/duplex/"
+   ],
+   "Hola, consulta por una casa moderna de líneas simples. ¿Me atienden?": [
+    "/casas/minimalistas/"
+   ],
+   "Hola, quiero una casa moderna y minimalista y ya tengo planos. ¿Me dicen cómo seguimos?": [
+    "/casas/minimalistas/"
+   ],
+   "Hola, me convenció el estilo minimalista y quiero construir así. ¿Qué necesitan de mi parte?": [
+    "/casas/minimalistas/"
+   ],
+   "Hola, una pregunta sobre terminaciones de casas minimalistas: ¿qué acabados manejan?": [
+    "/casas/minimalistas/"
+   ],
+   "Hola, quiero construir una casa minimalista. ¿Hablamos?": [
+    "/casas/minimalistas/"
+   ],
+   "Hola, consulta por construir una casa en etapas. ¿Se puede empezar por lo básico?": [
+    "/casas/etapas/"
+   ],
+   "Hola, quiero construir mi casa por etapas y avanzar de a poco. ¿Cómo se organiza?": [
+    "/casas/etapas/"
+   ],
+   "Hola, leí cómo se construye por etapas y quiero armar el plan de mi casa. ¿Me ayudan?": [
+    "/casas/etapas/"
+   ],
+   "Hola, una duda: si construyo por etapas, ¿cómo evito rehacer trabajos después?": [
+    "/casas/etapas/"
+   ],
+   "Hola, quiero hacer mi casa por etapas. ¿Me orientan?": [
+    "/casas/etapas/"
+   ],
+   "Hola, consulta por casas prefabricadas frente a mampostería. ¿Qué construyen ustedes?": [
+    "/casas/prefabricadas/"
+   ],
+   "Hola, estoy dudando entre casa prefabricada o tradicional. ¿Me ayudan a decidir?": [
+    "/casas/prefabricadas/"
+   ],
+   "Hola, ya leí la comparación entre prefabricada y tradicional. ¿Me asesoran para mi terreno?": [
+    "/casas/prefabricadas/"
+   ],
+   "Hola, una pregunta sobre casas prefabricadas: ¿cómo se comportan con el calor de Paraguay?": [
+    "/casas/prefabricadas/"
+   ],
+   "Hola, prefabricada o tradicional, no me decido. ¿Me dan su opinión?": [
+    "/casas/prefabricadas/"
+   ],
+   "Hola, consulta por obras en una quinta. ¿Trabajan en el interior?": [
+    "/quintas/"
+   ],
+   "Hola, quiero construir en mi quinta con casa, quincho y piscina. ¿Por dónde arrancamos?": [
+    "/quintas/"
+   ],
+   "Hola, leí sobre obras en quintas y quiero armar la mía. ¿Qué información les paso?": [
+    "/quintas/"
+   ],
+   "Hola, una duda general sobre construir lejos de la ciudad: ¿cómo manejan los accesos?": [
+    "/quintas/"
+   ],
+   "Hola, tengo una quinta y quiero construir. ¿Me atienden?": [
+    "/quintas/"
+   ],
+   "Hola, consulta por refacción de una quinta abandonada. ¿Hacen relevamiento?": [
+    "/quintas/refaccion/"
+   ],
+   "Hola, tengo una quinta vieja y quiero ponerla a punto. ¿Pueden ir a verla?": [
+    "/quintas/refaccion/"
+   ],
+   "Hola, leí sobre refacción de quintas y quiero arreglar la mía. ¿Cómo coordinamos una visita?": [
+    "/quintas/refaccion/"
+   ],
+   "Hola, una pregunta: ¿se puede recuperar una quinta sin tirar todo abajo?": [
+    "/quintas/refaccion/"
+   ],
+   "Hola, quiero refaccionar mi quinta. ¿Me responden por acá?": [
+    "/quintas/refaccion/"
+   ],
+   "Hola, consulta por construir una casa de campo. ¿Llegan hasta mi zona?": [
+    "/quintas/casa-campo/"
+   ],
+   "Hola, quiero construir una casa de campo en mi terreno rural. ¿Qué necesitan para empezar?": [
+    "/quintas/casa-campo/"
+   ],
+   "Hola, leí sobre casas de campo y quiero construir la mía. ¿Cómo hacemos con la logística?": [
+    "/quintas/casa-campo/"
+   ],
+   "Hola, una duda sobre agua, luz y camino para una casa de campo. ¿Me orientan?": [
+    "/quintas/casa-campo/"
+   ],
+   "Hola, quiero una casa de campo. ¿Podemos hablar?": [
+    "/quintas/casa-campo/"
+   ],
+   "Hola, consulta por la construcción de una piscina. ¿Me atienden?": [
+    "/piscinas/"
+   ],
+   "Hola, quiero construir una piscina de hormigón en mi casa. ¿Qué datos necesitan para pasarme un presupuesto?": [
+    "/piscinas/"
+   ],
+   "Hola, leí todo sobre piscinas de hormigón y quiero hacer la mía. ¿Cuál es el siguiente paso?": [
+    "/piscinas/"
+   ],
+   "Hola, una duda general sobre piscinas de hormigón y su mantenimiento. ¿Me ayudan?": [
+    "/piscinas/"
+   ],
+   "Hola, quiero una piscina. ¿Me pasan los datos que necesitan?": [
+    "/piscinas/"
+   ],
+   "Hola, consulta por una piscina chica para espacio reducido. ¿Se puede?": [
+    "/piscinas/chicas/"
+   ],
+   "Hola, tengo un patio chico y quiero saber si entra una piscina. ¿Les puedo mandar las medidas por acá?": [
+    "/piscinas/chicas/"
+   ],
+   "Hola, vi que hay piscinas para patios chicos y quiero una. ¿Me dicen qué formato entra?": [
+    "/piscinas/chicas/"
+   ],
+   "Hola, una duda sobre piscinas pequeñas: ¿sirven para refrescarse y para los chicos?": [
+    "/piscinas/chicas/"
+   ],
+   "Hola, ¿entra una piscina en un patio chico? Les paso las medidas.": [
+    "/piscinas/chicas/"
+   ],
+   "Hola, consulta por piscina para quinta o casa de campo. ¿Van al lugar?": [
+    "/piscinas/quinta/"
+   ],
+   "Hola, quiero una piscina grande en mi quinta para juntar a la familia. ¿Qué necesitan para empezar?": [
+    "/piscinas/quinta/"
+   ],
+   "Hola, leí sobre piscinas en quintas y quiero hacerla en la mía. ¿Coordinamos una visita?": [
+    "/piscinas/quinta/"
+   ],
+   "Hola, una duda sobre agua y filtrado en una piscina de quinta. ¿Me aclaran?": [
+    "/piscinas/quinta/"
+   ],
+   "Hola, quiero una piscina en mi quinta. ¿Hablamos?": [
+    "/piscinas/quinta/"
+   ],
+   "Hola, consulta por una piscina infinity de borde desbordante. ¿La construyen?": [
+    "/piscinas/desbordante/"
+   ],
+   "Hola, quiero una piscina desbordante con borde infinito. ¿Es posible en mi terreno con desnivel?": [
+    "/piscinas/desbordante/"
+   ],
+   "Hola, me encantó la piscina infinity y quiero una así. ¿Cómo evalúan si mi terreno sirve?": [
+    "/piscinas/desbordante/"
+   ],
+   "Hola, una pregunta técnica: ¿cómo funciona el borde desbordante de una piscina?": [
+    "/piscinas/desbordante/"
+   ],
+   "Hola, quiero una piscina desbordante. ¿Me responden por acá?": [
+    "/piscinas/desbordante/"
+   ],
+   "Hola, consulta por reparación y renovación de una piscina existente. ¿Hacen eso?": [
+    "/piscinas/renovacion/"
+   ],
+   "Hola, mi piscina pierde agua y necesito repararla. ¿Pueden ir a revisarla?": [
+    "/piscinas/renovacion/"
+   ],
+   "Hola, leí sobre renovación de piscinas y quiero poner la mía en condiciones. ¿Cómo sigue?": [
+    "/piscinas/renovacion/"
+   ],
+   "Hola, una duda: ¿vale la pena renovar una piscina vieja o conviene rehacerla?": [
+    "/piscinas/renovacion/"
+   ],
+   "Hola, tengo una piscina para reparar. ¿Me atienden?": [
+    "/piscinas/renovacion/"
+   ],
+   "Hola, consulta por construir un quincho con parrilla. ¿Me atienden?": [
+    "/quinchos/"
+   ],
+   "Hola, quiero construir un quincho con parrilla para juntarnos con la familia. ¿Cómo arrancamos?": [
+    "/quinchos/"
+   ],
+   "Hola, leí sobre quinchos con parrilla y quiero el mío. ¿Qué información necesitan?": [
+    "/quinchos/"
+   ],
+   "Hola, una duda general sobre el tamaño ideal de un quincho para mi casa. ¿Me orientan?": [
+    "/quinchos/"
+   ],
+   "Hola, quiero hacer un quincho. ¿Me pasan los pasos?": [
+    "/quinchos/"
+   ],
+   "Hola, consulta por un quincho cerrado con mampostería. ¿Lo construyen?": [
+    "/quinchos/cerrados/"
+   ],
+   "Hola, quiero un quincho cerrado para usar todo el año, con baño y cocina. ¿Qué necesitan para empezar?": [
+    "/quinchos/cerrados/"
+   ],
+   "Hola, leí sobre quinchos cerrados y quiero uno. ¿Cómo definimos qué lleva adentro?": [
+    "/quinchos/cerrados/"
+   ],
+   "Hola, una pregunta sobre ventilación en un quincho cerrado. ¿Me la contestan?": [
+    "/quinchos/cerrados/"
+   ],
+   "Hola, quiero un quincho cerrado. ¿Hablamos por acá?": [
+    "/quinchos/cerrados/"
+   ],
+   "Hola, consulta por construir un asador con parrilla. ¿Me pasan datos?": [
+    "/quinchos/parrillas/"
+   ],
+   "Hola, quiero construir una parrilla y un asador de ladrillo en mi patio. ¿Cómo lo hacemos?": [
+    "/quinchos/parrillas/"
+   ],
+   "Hola, leí sobre parrillas y asadores y quiero hacer el mío. ¿Me ayudan a definir medidas y ubicación?": [
+    "/quinchos/parrillas/"
+   ],
+   "Hola, una duda: ¿qué material aguanta más el fuego en una parrilla de obra?": [
+    "/quinchos/parrillas/"
+   ],
+   "Hola, quiero una parrilla de obra. ¿Me atienden?": [
+    "/quinchos/parrillas/"
+   ],
+   "Hola, consulta por techo de machimbre para quincho. ¿Lo construyen ustedes?": [
+    "/quinchos/techo-madera/"
+   ],
+   "Hola, quiero un quincho con techo de madera y machimbre. ¿Cómo arrancamos?": [
+    "/quinchos/techo-madera/"
+   ],
+   "Hola, me gustó el techo de madera con machimbre y quiero hacerlo en mi quincho. ¿Qué necesitan?": [
+    "/quinchos/techo-madera/"
+   ],
+   "Hola, una pregunta sobre el cuidado de un techo de madera a la intemperie. ¿Me orientan?": [
+    "/quinchos/techo-madera/"
+   ],
+   "Hola, quiero un techo de madera para mi quincho. ¿Me responden?": [
+    "/quinchos/techo-madera/"
+   ],
+   "Hola, consulta por remodelar mi casa. ¿Me dicen cómo trabajan?": [
+    "/reformas/"
+   ],
+   "Hola, quiero reformar mi casa y no sé por dónde empezar. ¿Me ayudan a ordenar la obra?": [
+    "/reformas/"
+   ],
+   "Hola, leí sobre reformas y quiero renovar mi casa. ¿Cómo coordinamos una visita?": [
+    "/reformas/"
+   ],
+   "Hola, una duda general sobre vivir en la casa mientras se reforma. ¿Es posible?": [
+    "/reformas/"
+   ],
+   "Hola, quiero hacer una reforma. ¿Me atienden por acá?": [
+    "/reformas/"
+   ],
+   "Hola, consulta por remodelación de cocina. ¿Hacen la obra completa?": [
+    "/reformas/cocinas/"
+   ],
+   "Hola, quiero remodelar mi cocina: mesada, revestimientos e instalaciones. ¿Qué necesitan para empezar?": [
+    "/reformas/cocinas/"
+   ],
+   "Hola, leí sobre remodelación de cocinas y quiero renovar la mía. ¿Puedo mandarles fotos?": [
+    "/reformas/cocinas/"
+   ],
+   "Hola, una duda sobre cambiar la ubicación de la pileta de la cocina. ¿Se puede?": [
+    "/reformas/cocinas/"
+   ],
+   "Hola, quiero renovar mi cocina. ¿Hablamos?": [
+    "/reformas/cocinas/"
+   ],
+   "Hola, consulta por remodelar un baño con humedad. ¿Lo solucionan?": [
+    "/reformas/banos/"
+   ],
+   "Hola, quiero remodelar mi baño y cambiar revestimientos y sanitarios. ¿Cómo arrancamos?": [
+    "/reformas/banos/"
+   ],
+   "Hola, leí sobre remodelación de baños y quiero hacer el mío. ¿Les mando fotos del estado actual?": [
+    "/reformas/banos/"
+   ],
+   "Hola, una pregunta sobre impermeabilizar bien un baño en una reforma. ¿Me orientan?": [
+    "/reformas/banos/"
+   ],
+   "Hola, quiero reformar mi baño. ¿Me responden?": [
+    "/reformas/banos/"
+   ],
+   "Hola, consulta por arreglar la fachada con fisuras y manchas. ¿Lo hacen?": [
+    "/reformas/fachadas/"
+   ],
+   "Hola, quiero renovar la fachada de mi casa: revoques, pintura y detalles. ¿Qué necesitan?": [
+    "/reformas/fachadas/"
+   ],
+   "Hola, leí sobre renovación de fachadas y quiero cambiarle la cara a mi casa. ¿Cómo seguimos?": [
+    "/reformas/fachadas/"
+   ],
+   "Hola, una duda: ¿hace falta andamio para renovar una fachada de dos plantas?": [
+    "/reformas/fachadas/"
+   ],
+   "Hola, quiero renovar mi fachada. ¿Me atienden?": [
+    "/reformas/fachadas/"
+   ],
+   "Hola, consulta por cambio de techo y estructura. ¿Trabajan con tejas y chapas?": [
+    "/reformas/techos/"
+   ],
+   "Hola, tengo goteras y quiero cambiar o reparar el techo de mi casa. ¿Pueden ir a verlo?": [
+    "/reformas/techos/"
+   ],
+   "Hola, leí sobre cambio de techos y quiero resolver el mío. ¿Qué datos les paso?": [
+    "/reformas/techos/"
+   ],
+   "Hola, una pregunta sobre cuándo conviene reparar el techo y cuándo cambiarlo entero.": [
+    "/reformas/techos/"
+   ],
+   "Hola, mi techo gotea. ¿Me pueden ayudar?": [
+    "/reformas/techos/"
+   ],
+   "Hola, consulta por ampliar una vivienda existente. ¿Lo hacen?": [
+    "/ampliaciones/"
+   ],
+   "Hola, quiero ampliar mi casa porque me quedó chica. ¿Cómo se evalúa?": [
+    "/ampliaciones/"
+   ],
+   "Hola, leí sobre ampliaciones y quiero sumar espacio a mi casa. ¿Cómo arrancamos?": [
+    "/ampliaciones/"
+   ],
+   "Hola, una duda general: ¿mi casa aguanta una ampliación sin problemas?": [
+    "/ampliaciones/"
+   ],
+   "Hola, quiero ampliar mi casa. ¿Me atienden?": [
+    "/ampliaciones/"
+   ],
+   "Hola, consulta por construir un piso arriba de mi casa. ¿Es viable?": [
+    "/ampliaciones/planta-alta/"
+   ],
+   "Hola, quiero hacer una planta alta sobre mi casa. ¿Cómo saben si la estructura lo aguanta?": [
+    "/ampliaciones/planta-alta/"
+   ],
+   "Hola, leí sobre ampliación en planta alta y quiero sumar un piso. ¿Cómo coordinamos una revisión?": [
+    "/ampliaciones/planta-alta/"
+   ],
+   "Hola, una pregunta sobre las columnas y fundaciones para subir una planta. ¿Me explican?": [
+    "/ampliaciones/planta-alta/"
+   ],
+   "Hola, quiero agregar una planta alta. ¿Hablamos?": [
+    "/ampliaciones/planta-alta/"
+   ],
+   "Hola, consulta por agregar una habitación con baño. ¿Lo construyen?": [
+    "/ampliaciones/dormitorio/"
+   ],
+   "Hola, necesito agregar un dormitorio y un baño a mi casa. ¿Qué datos les paso?": [
+    "/ampliaciones/dormitorio/"
+   ],
+   "Hola, leí sobre ampliar dormitorios y baños y quiero hacerlo. ¿Cómo unimos lo nuevo con lo existente?": [
+    "/ampliaciones/dormitorio/"
+   ],
+   "Hola, una duda: ¿se puede ampliar un dormitorio sin romper la instalación de agua?": [
+    "/ampliaciones/dormitorio/"
+   ],
+   "Hola, quiero sumar un dormitorio. ¿Me responden por acá?": [
+    "/ampliaciones/dormitorio/"
+   ],
+   "Hola, consulta por una galería con techo y piso. ¿La construyen?": [
+    "/ampliaciones/galeria/"
+   ],
+   "Hola, quiero construir una galería cubierta al frente de mi casa. ¿Qué necesitan para empezar?": [
+    "/ampliaciones/galeria/"
+   ],
+   "Hola, leí sobre galerías cubiertas y quiero una para sombra y lluvia. ¿Cómo seguimos?": [
+    "/ampliaciones/galeria/"
+   ],
+   "Hola, una pregunta sobre cómo se une el techo de la galería a la casa. ¿Me explican?": [
+    "/ampliaciones/galeria/"
+   ],
+   "Hola, quiero hacer una galería. ¿Hablamos?": [
+    "/ampliaciones/galeria/"
+   ],
+   "Hola, consulta por obras exteriores para el patio. ¿Me pasan opciones?": [
+    "/patios/"
+   ],
+   "Hola, quiero arreglar mi patio con piso, deck y pérgola. ¿Me ayudan a organizar la obra?": [
+    "/patios/"
+   ],
+   "Hola, leí sobre obras de patio y quiero renovar el mío. ¿Cómo empezamos?": [
+    "/patios/"
+   ],
+   "Hola, una duda general sobre qué conviene hacer primero en un patio. ¿Me orientan?": [
+    "/patios/"
+   ],
+   "Hola, quiero hacer obras en mi patio. ¿Me atienden?": [
+    "/patios/"
+   ],
+   "Hola, consulta por contrapiso y piso exterior. ¿Lo hacen?": [
+    "/patios/veredas/"
+   ],
+   "Hola, quiero hacer la vereda y el contrapiso de mi patio. ¿Qué medidas les paso?": [
+    "/patios/veredas/"
+   ],
+   "Hola, leí sobre veredas y pisos exteriores y quiero el mío. ¿Qué tipo de piso me recomiendan?": [
+    "/patios/veredas/"
+   ],
+   "Hola, una duda sobre desagüe de lluvia en pisos exteriores. ¿Me lo aclaran?": [
+    "/patios/veredas/"
+   ],
+   "Hola, quiero hacer una vereda. ¿Me responden?": [
+    "/patios/veredas/"
+   ],
+   "Hola, consulta por construir un deck exterior. ¿Trabajan con madera y compuesto?": [
+    "/patios/decks/"
+   ],
+   "Hola, quiero un deck de madera junto a la piscina. ¿Qué necesitan para empezar?": [
+    "/patios/decks/"
+   ],
+   "Hola, leí sobre decks de madera y compuesto y quiero uno. ¿Cómo elegimos el material?": [
+    "/patios/decks/"
+   ],
+   "Hola, una pregunta sobre cuánto mantenimiento pide un deck al sol.": [
+    "/patios/decks/"
+   ],
+   "Hola, quiero un deck. ¿Me atienden por acá?": [
+    "/patios/decks/"
+   ],
+   "Hola, consulta por construir una pérgola. ¿La hacen en madera o metal?": [
+    "/patios/pergolas/"
+   ],
+   "Hola, quiero una pérgola para dar sombra en mi patio. ¿Cómo arrancamos?": [
+    "/patios/pergolas/"
+   ],
+   "Hola, leí sobre pérgolas y galerías livianas y quiero construir una. ¿Qué información les paso?": [
+    "/patios/pergolas/"
+   ],
+   "Hola, una duda: ¿una pérgola necesita permiso o se hace directo?": [
+    "/patios/pergolas/"
+   ],
+   "Hola, quiero una pérgola. ¿Hablamos?": [
+    "/patios/pergolas/"
+   ],
+   "Hola, consulta por tinglados y estructuras metálicas. ¿Los construyen?": [
+    "/tinglados/"
+   ],
+   "Hola, necesito construir un tinglado en mi terreno. ¿Qué datos necesitan para empezar?": [
+    "/tinglados/"
+   ],
+   "Hola, leí sobre tinglados, galpones y cocheras y quiero construir uno. ¿Cómo seguimos?": [
+    "/tinglados/"
+   ],
+   "Hola, una duda general sobre techos metálicos de gran luz. ¿Me orientan?": [
+    "/tinglados/"
+   ],
+   "Hola, quiero hacer un tinglado. ¿Me atienden?": [
+    "/tinglados/"
+   ],
+   "Hola, consulta por galpón con piso industrial. ¿Lo hacen?": [
+    "/tinglados/galpones/"
+   ],
+   "Hola, necesito un galpón para depósito en mi terreno. ¿Cómo lo encaramos?": [
+    "/tinglados/galpones/"
+   ],
+   "Hola, leí sobre galpones y depósitos y quiero construir el mío. ¿Qué medidas les paso?": [
+    "/tinglados/galpones/"
+   ],
+   "Hola, una pregunta sobre la altura y ventilación de un galpón. ¿Me la responden?": [
+    "/tinglados/galpones/"
+   ],
+   "Hola, quiero construir un galpón. ¿Hablamos por acá?": [
+    "/tinglados/galpones/"
+   ],
+   "Hola, consulta por cochera para dos autos. ¿La construyen?": [
+    "/tinglados/cocheras/"
+   ],
+   "Hola, quiero una cochera techada para mis autos. ¿Qué necesitan para arrancar?": [
+    "/tinglados/cocheras/"
+   ],
+   "Hola, leí sobre cocheras y techos para autos y quiero hacer la mía. ¿Cómo seguimos?": [
+    "/tinglados/cocheras/"
+   ],
+   "Hola, una duda sobre proteger los autos del granizo con un techo. ¿Me orientan?": [
+    "/tinglados/cocheras/"
+   ],
+   "Hola, quiero techar mi cochera. ¿Me responden?": [
+    "/tinglados/cocheras/"
+   ],
+   "Hola, consulta por muralla perimetral. ¿La hacen de ladrillo o bloque?": [
+    "/muros/"
+   ],
+   "Hola, quiero construir el muro perimetral de mi terreno. ¿Qué datos necesitan?": [
+    "/muros/"
+   ],
+   "Hola, leí sobre muros y murallas y quiero cerrar mi terreno. ¿Cómo seguimos?": [
+    "/muros/"
+   ],
+   "Hola, una duda general sobre límites del terreno antes de levantar un muro. ¿Me ayudan?": [
+    "/muros/"
+   ],
+   "Hola, quiero hacer un muro. ¿Me atienden?": [
+    "/muros/"
+   ],
+   "Hola, consulta por portón corredizo y pilares de acceso. ¿Lo hacen?": [
+    "/muros/portones/"
+   ],
+   "Hola, quiero un portón y un acceso nuevo para mi casa. ¿Qué necesitan para empezar?": [
+    "/muros/portones/"
+   ],
+   "Hola, leí sobre portones y accesos y quiero renovar la entrada. ¿Cómo coordinamos?": [
+    "/muros/portones/"
+   ],
+   "Hola, una pregunta sobre portón automático y la obra civil que necesita.": [
+    "/muros/portones/"
+   ],
+   "Hola, quiero un portón nuevo. ¿Hablamos?": [
+    "/muros/portones/"
+   ],
+   "Hola, consulta por obra para mi negocio. ¿Hacen locales y oficinas?": [
+    "/comerciales/"
+   ],
+   "Hola, tengo un local y necesito adecuarlo para mi negocio. ¿Cómo trabajan las obras comerciales?": [
+    "/comerciales/"
+   ],
+   "Hola, leí sobre obras comerciales y quiero avanzar con mi negocio. ¿Qué necesitan de mi parte?": [
+    "/comerciales/"
+   ],
+   "Hola, una duda general sobre obras comerciales y tiempos de apertura. ¿Me orientan?": [
+    "/comerciales/"
+   ],
+   "Hola, tengo una obra comercial. ¿Me atienden?": [
+    "/comerciales/"
+   ],
+   "Hola, consulta por adecuación de local comercial. ¿Trabajan con vidrieras y pisos?": [
+    "/comerciales/locales/"
+   ],
+   "Hola, alquilé un local y quiero adecuarlo para abrir mi negocio. ¿Qué necesitan para empezar?": [
+    "/comerciales/locales/"
+   ],
+   "Hola, leí sobre adecuación de locales y quiero preparar el mío. ¿Cómo hacemos el relevamiento?": [
+    "/comerciales/locales/"
+   ],
+   "Hola, una pregunta sobre qué obras hacen falta antes de abrir un local.": [
+    "/comerciales/locales/"
+   ],
+   "Hola, quiero adecuar un local. ¿Hablamos?": [
+    "/comerciales/locales/"
+   ],
+   "Hola, consulta por remodelar una oficina con divisiones y cielorraso. ¿Lo hacen?": [
+    "/comerciales/oficinas/"
+   ],
+   "Hola, quiero remodelar mi oficina o consultorio sin frenar la atención. ¿Se puede coordinar?": [
+    "/comerciales/oficinas/"
+   ],
+   "Hola, leí sobre remodelación de oficinas y consultorios y quiero renovar el mío. ¿Cómo seguimos?": [
+    "/comerciales/oficinas/"
+   ],
+   "Hola, una duda: ¿pueden trabajar fuera de horario en una oficina en uso?": [
+    "/comerciales/oficinas/"
+   ],
+   "Hola, quiero remodelar mi consultorio. ¿Me responden?": [
+    "/comerciales/oficinas/"
+   ],
+   "Hola, consulta por fiscalización de una obra en marcha. ¿La hacen?": [
+    "/supervision/"
+   ],
+   "Hola, ya tengo constructor y quiero que alguien supervise y fiscalice mi obra. ¿Cómo trabajan?": [
+    "/supervision/"
+   ],
+   "Hola, leí sobre supervisión de obra y quiero contratarla. ¿Qué necesitan para empezar?": [
+    "/supervision/"
+   ],
+   "Hola, una duda general sobre cómo controlar que mi obra vaya bien. ¿Me orientan?": [
+    "/supervision/"
+   ],
+   "Hola, quiero supervisión para mi obra. ¿Me atienden?": [
+    "/supervision/"
+   ],
+   "Hola, consulta por profesional a cargo de la dirección de obra. ¿Me atienden?": [
+    "/supervision/direccion/"
+   ],
+   "Hola, necesito un responsable técnico que dirija mi obra. ¿Ustedes hacen dirección técnica?": [
+    "/supervision/direccion/"
+   ],
+   "Hola, leí sobre dirección técnica de obra y quiero sumarla a la mía. ¿Cómo lo hacemos?": [
+    "/supervision/direccion/"
+   ],
+   "Hola, una pregunta sobre qué firma y qué responsabilidad asume un director técnico.": [
+    "/supervision/direccion/"
+   ],
+   "Hola, busco dirección técnica para mi obra. ¿Hablamos?": [
+    "/supervision/direccion/"
+   ],
+   "Hola, consulta por cómputo métrico de mi proyecto. ¿Lo hacen?": [
+    "/presupuesto/"
+   ],
+   "Hola, ya tengo planos y necesito el cómputo métrico y presupuesto de mi obra. ¿Qué les mando?": [
+    "/presupuesto/"
+   ],
+   "Hola, leí sobre cómputo métrico y presupuesto por rubro y quiero pedir el mío. ¿Cómo sigue?": [
+    "/presupuesto/"
+   ],
+   "Hola, una duda sobre qué diferencia hay entre presupuesto global y por rubro.": [
+    "/presupuesto/"
+   ],
+   "Hola, quiero un presupuesto detallado de obra. ¿Me atienden?": [
+    "/presupuesto/"
+   ],
+   "Hola, consulta sobre qué define el valor de construir una casa. ¿Me explican?": [
+    "/guias/costo-casa/"
+   ],
+   "Hola, leí la guía de costos y quiero un presupuesto por rubro para mi casa.": [
+    "/guias/costo-casa/"
+   ],
+   "Hola, quiero que me ayuden a ver qué rubros pesan más en la casa que quiero construir.": [
+    "/guias/costo-casa/"
+   ],
+   "Hola, después de la guía de costos quiero ver cómo se aplica a mi casa. ¿Me ayudan?": [
+    "/guias/costo-casa/"
+   ],
+   "Hola, una duda sobre qué rubros pesan más al construir una casa.": [
+    "/guias/costo-casa/"
+   ],
+   "Hola, quiero bajar la guía de costos a mi casa. ¿Hablamos?": [
+    "/guias/costo-casa/"
+   ],
+   "Hola, consulta sobre si mi terreno sirve para construir. ¿Me ayudan a chequearlo?": [
+    "/guias/terreno/"
+   ],
+   "Hola, leí qué revisar del terreno y quiero que evalúen el mío antes de construir. ¿Se puede?": [
+    "/guias/terreno/"
+   ],
+   "Hola, estoy por comprar o ya tengo un terreno y quiero saber qué revisar antes de construir.": [
+    "/guias/terreno/"
+   ],
+   "Hola, ya revisé la guía del terreno y quiero que lo miren. ¿Cómo coordinamos una visita?": [
+    "/guias/terreno/"
+   ],
+   "Hola, una pregunta sobre suelo, nivel y desagüe de un terreno. ¿Me la contestan?": [
+    "/guias/terreno/"
+   ],
+   "Hola, quiero que revisen mi terreno antes de construir. ¿Hablamos?": [
+    "/guias/terreno/"
+   ],
+   "Hola, consulta sobre las etapas de una obra de casa. ¿Me las explican?": [
+    "/guias/plazos/"
+   ],
+   "Hola, leí la guía de etapas y quiero armar el cronograma de mi casa. ¿Me ayudan?": [
+    "/guias/plazos/"
+   ],
+   "Hola, quiero entender en qué orden irían las etapas de mi obra. ¿Lo vemos juntos?": [
+    "/guias/plazos/"
+   ],
+   "Hola, después de leer las etapas de obra quiero saber cómo sería la mía. ¿Cómo lo vemos?": [
+    "/guias/plazos/"
+   ],
+   "Hola, una duda sobre qué factores atrasan una obra, como la lluvia.": [
+    "/guias/plazos/"
+   ],
+   "Hola, quiero saber cuánto demora mi obra. ¿Me orientan?": [
+    "/guias/plazos/"
+   ],
+   "Hola, consulta: ¿qué papeles piden ustedes para empezar a construir?": [
+    "/guias/permisos/"
+   ],
+   "Hola, leí sobre permisos y quiero saber qué tiene que estar aprobado antes de arrancar mi obra. ¿Me orientan?": [
+    "/guias/permisos/"
+   ],
+   "Hola, antes de empezar quiero saber si a mi obra le falta algún papel. ¿Me ayudan a revisarlo?": [
+    "/guias/permisos/"
+   ],
+   "Hola, ya entendí los permisos y quiero avanzar con los papeles de mi obra. ¿Qué documentos preparo?": [
+    "/guias/permisos/"
+   ],
+   "Hola, una pregunta sobre qué obras piden permiso y cuáles no.": [
+    "/guias/permisos/"
+   ],
+   "Hola, quiero construir y no sé si mis papeles están en regla. ¿Me orientan?": [
+    "/guias/permisos/"
+   ],
+   "Hola, consulta sobre qué fundación necesita mi casa. ¿Me responden?": [
+    "/guias/platea/"
+   ],
+   "Hola, leí la guía de platea y zapatas y quiero definir la fundación de mi casa. ¿Me asesoran?": [
+    "/guias/platea/"
+   ],
+   "Hola, quiero saber si en mi terreno conviene platea o zapatas. ¿Qué datos les paso?": [
+    "/guias/platea/"
+   ],
+   "Hola, tras comparar platea y zapatas quiero que evalúen mi terreno. ¿Cómo seguimos?": [
+    "/guias/platea/"
+   ],
+   "Hola, una duda sobre fundaciones en suelo arcilloso. ¿Me la aclaran?": [
+    "/guias/platea/"
+   ],
+   "Hola, dudo entre platea y zapatas. ¿Me ayudan a elegir?": [
+    "/guias/platea/"
+   ],
+   "Hola, consulta sobre qué mampostería usan en sus obras. ¿Me cuentan?": [
+    "/guias/ladrillo-bloque/"
+   ],
+   "Hola, leí la guía de ladrillo y bloque y quiero decidir la mampostería de mi casa. ¿Me asesoran?": [
+    "/guias/ladrillo-bloque/"
+   ],
+   "Hola, estoy entre ladrillo y bloque para mi casa y quiero una recomendación para mi caso.": [
+    "/guias/ladrillo-bloque/"
+   ],
+   "Hola, ya comparé ladrillo y bloque y quiero saber cuál va para mi obra. ¿Me dan una mano?": [
+    "/guias/ladrillo-bloque/"
+   ],
+   "Hola, una pregunta sobre aislación térmica de paredes de ladrillo y de bloque.": [
+    "/guias/ladrillo-bloque/"
+   ],
+   "Hola, ladrillo o bloque para mi casa. ¿Me orientan?": [
+    "/guias/ladrillo-bloque/"
+   ],
+   "Hola, consulta sobre contratar constructora en lugar de un albañil. ¿Me atienden?": [
+    "/guias/albanil/"
+   ],
+   "Hola, leí la guía y dudo entre albañil, maestro de obra o constructora. ¿Me explican cómo trabajan?": [
+    "/guias/albanil/"
+   ],
+   "Hola, estoy comparando entre contratar un albañil o una constructora. ¿Me cuentan cómo sería con ustedes?": [
+    "/guias/albanil/"
+   ],
+   "Hola, ya entendí las diferencias y quiero una constructora para mi obra. ¿Qué necesitan de mí?": [
+    "/guias/albanil/"
+   ],
+   "Hola, una duda sobre quién responde si algo sale mal en la obra.": [
+    "/guias/albanil/"
+   ],
+   "Hola, ¿albañil o constructora? Quiero consultarles.": [
+    "/guias/albanil/"
+   ],
+   "Hola, consulta sobre documentación de obra para un crédito. ¿La preparan?": [
+    "/credito/"
+   ],
+   "Hola, quiero construir con crédito y necesito el presupuesto de obra para el banco. ¿Me ayudan?": [
+    "/credito/"
+   ],
+   "Hola, estoy tramitando un crédito y quiero saber qué documentación de obra voy a necesitar.": [
+    "/credito/"
+   ],
+   "Hola, leí cómo construir con crédito y quiero preparar los papeles de mi obra. ¿Cómo seguimos?": [
+    "/credito/"
+   ],
+   "Hola, una duda sobre qué pide el banco para desembolsar por etapas.": [
+    "/credito/"
+   ],
+   "Hola, quiero construir con crédito bancario. ¿Me orientan?": [
+    "/credito/"
+   ]
+  },
+  "word_count_min_median_max": [
+   186,
+   364,
+   1153
+  ]
+ },
+ "route_checks": {
+  "/contacto/": {
+   "status": 301,
+   "location": "/cotizar/"
+  },
+  "/cocinas-banos/": {
+   "status": 301,
+   "location": "/reformas/cocinas/"
+  },
+  "/servicios/piscinas/": {
+   "status": 301,
+   "location": "/piscinas/"
+  },
+  "/servicios/casas-llave-en-mano/": {
+   "status": 301,
+   "location": "/casas/"
+  },
+  "/servicios/quinchos/": {
+   "status": 301,
+   "location": "/quinchos/"
+  },
+  "/servicios/quintas/": {
+   "status": 301,
+   "location": "/quintas/"
+  },
+  "/servicios/remodelaciones/": {
+   "status": 301,
+   "location": "/reformas/"
+  },
+  "/servicios/decks-y-pergolas/": {
+   "status": 301,
+   "location": "/patios/"
+  },
+  "/servicios/cocinas-y-banos/": {
+   "status": 301,
+   "location": "/reformas/cocinas/"
+  },
+  "/servicios/techos-cocheras-y-tinglados/": {
+   "status": 301,
+   "location": "/tinglados/"
+  },
+  "/servicios/murallas-y-cerramientos/": {
+   "status": 301,
+   "location": "/muros/"
+  },
+  "/servicios/obras-comerciales/": {
+   "status": 301,
+   "location": "/comerciales/"
+  },
+  "/piscinas": {
+   "status": 301,
+   "location": "/piscinas/"
+  },
+  "/sitemap.php": {
+   "status": 301,
+   "location": "/sitemap.xml"
+  },
+  "/app/": {
+   "status": 404,
+   "location": null
+  },
+  "/config/site.php": {
+   "status": 404,
+   "location": null
+  },
+  "/docs/": {
+   "status": 404,
+   "location": null
+  },
+  "/obras/": {
+   "status": 404,
+   "location": null
+  },
+  "/credito": {
+   "status": 301,
+   "location": "/credito/"
+  },
+  "/gracias/": {
+   "status": 200,
+   "location": null
+  },
+  "/no-existe/": {
+   "status": 404,
+   "location": null
+  },
+  "/robots.txt": {
+   "status": 200,
+   "location": null
+  },
+  "/form.php": {
+   "status": 405,
+   "location": null
+  }
+ },
+ "robots_txt": "User-agent: *\nAllow: /\nDisallow: /form.php\nDisallow: /gracias/\n\nSitemap: https://obra.com.py/sitemap.xml\n",
+ "sitemap_lastmod": {
+  "/": "2026-09-30",
+  "/servicios/": "2026-09-30",
+  "/guias/": "2026-09-30",
+  "/como-trabajamos/": "2026-09-30",
+  "/cotizar/": "2026-09-30",
+  "/nosotros/": "2026-09-30",
+  "/privacidad/": "2026-09-30",
+  "/casas/": "2026-09-30",
+  "/casas/duplex/": "2026-09-30",
+  "/casas/minimalistas/": "2026-09-30",
+  "/casas/etapas/": "2026-09-30",
+  "/casas/prefabricadas/": "2026-09-30",
+  "/quintas/": "2026-09-30",
+  "/quintas/refaccion/": "2026-09-30",
+  "/quintas/casa-campo/": "2026-09-30",
+  "/piscinas/": "2026-09-30",
+  "/piscinas/chicas/": "2026-09-30",
+  "/piscinas/quinta/": "2026-09-30",
+  "/piscinas/desbordante/": "2026-09-30",
+  "/piscinas/renovacion/": "2026-09-30",
+  "/quinchos/": "2026-09-30",
+  "/quinchos/cerrados/": "2026-09-30",
+  "/quinchos/parrillas/": "2026-09-30",
+  "/quinchos/techo-madera/": "2026-09-30",
+  "/reformas/": "2026-09-30",
+  "/reformas/cocinas/": "2026-09-30",
+  "/reformas/banos/": "2026-09-30",
+  "/reformas/fachadas/": "2026-09-30",
+  "/reformas/techos/": "2026-09-30",
+  "/ampliaciones/": "2026-09-30",
+  "/ampliaciones/planta-alta/": "2026-09-30",
+  "/ampliaciones/dormitorio/": "2026-09-30",
+  "/ampliaciones/galeria/": "2026-09-30",
+  "/patios/": "2026-09-30",
+  "/patios/veredas/": "2026-09-30",
+  "/patios/decks/": "2026-09-30",
+  "/patios/pergolas/": "2026-09-30",
+  "/tinglados/": "2026-09-30",
+  "/tinglados/galpones/": "2026-09-30",
+  "/tinglados/cocheras/": "2026-09-30",
+  "/muros/": "2026-09-30",
+  "/muros/portones/": "2026-09-30",
+  "/comerciales/": "2026-09-30",
+  "/comerciales/locales/": "2026-09-30",
+  "/comerciales/oficinas/": "2026-09-30",
+  "/supervision/": "2026-09-30",
+  "/supervision/direccion/": "2026-09-30",
+  "/presupuesto/": "2026-09-30",
+  "/guias/costo-casa/": "2026-09-30",
+  "/guias/terreno/": "2026-09-30",
+  "/guias/plazos/": "2026-09-30",
+  "/guias/permisos/": "2026-09-30",
+  "/guias/platea/": "2026-09-30",
+  "/guias/ladrillo-bloque/": "2026-09-30",
+  "/guias/albanil/": "2026-09-30",
+  "/credito/": "2026-09-30"
+ },
+ "pages": {
+  "/": {
+   "status": 200,
+   "url": "https://obra.com.py/",
+   "title": "Construcción llave en mano en Paraguay | Constructora Obra",
+   "title_len": 58,
+   "meta_description": "Constructora llave en mano en Asunción y Gran Asunción: casas, quintas, piscinas, quinchos y reformas con un responsable. Contanos tu obra por WhatsApp.",
+   "meta_description_len": 152,
+   "h1": [
+    "Construimos tu casa de principio a fin, llave en mano."
+   ],
+   "h2_count": 9,
+   "canonical": "https://obra.com.py/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 982,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 27,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 5,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "WebSite",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/servicios/": {
+   "status": 200,
+   "url": "https://obra.com.py/servicios/",
+   "title": "Servicios de construcción en Asunción y Gran Asunción | Obra",
+   "title_len": 60,
+   "meta_description": "Servicios de construcción en Asunción y Gran Asunción: casas llave en mano, piscinas, quinchos, reformas, ampliaciones, tinglados y obras comerciales.",
+   "meta_description_len": 150,
+   "h1": [
+    "Una sola empresa para toda la obra."
+   ],
+   "h2_count": 13,
+   "canonical": "https://obra.com.py/servicios/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 350,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/ampliaciones/planta-alta/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/etapas/",
+    "/casas/minimalistas/",
+    "/casas/prefabricadas/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/muros/portones/",
+    "/nosotros/",
+    "/patios/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/patios/veredas/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/desbordante/",
+    "/piscinas/quinta/",
+    "/piscinas/renovacion/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/quintas/",
+    "/quintas/casa-campo/",
+    "/quintas/refaccion/",
+    "/reformas/",
+    "/reformas/banos/",
+    "/reformas/cocinas/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/servicios/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/tinglados/",
+    "/tinglados/cocheras/",
+    "/tinglados/galpones/"
+   ],
+   "internal_links_out_count": 56,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/guias/": {
+   "status": 200,
+   "url": "https://obra.com.py/guias/",
+   "title": "Guías para construir en Paraguay | Obra",
+   "title_len": 39,
+   "meta_description": "Guías para construir en Paraguay: costo de una casa, terreno, plazos, permisos, fundaciones, mampostería y cómo construir con crédito bancario.",
+   "meta_description_len": 143,
+   "h1": [
+    "Guías para decidir antes de construir."
+   ],
+   "h2_count": 9,
+   "canonical": "https://obra.com.py/guias/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 350,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 27,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/como-trabajamos/": {
+   "status": 200,
+   "url": "https://obra.com.py/como-trabajamos/",
+   "title": "Cómo trabajamos: del terreno a la entrega | Obra",
+   "title_len": 48,
+   "meta_description": "Así construimos: terreno, proyecto, presupuesto por escrito, obra coordinada y entrega. Alcance claro, rubros ordenados y decisiones con tiempo.",
+   "meta_description_len": 144,
+   "h1": [
+    "Del terreno a la entrega, sin que tengas que coordinar gremios."
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/como-trabajamos/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 291,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 27,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/cotizar/": {
+   "status": 200,
+   "url": "https://obra.com.py/cotizar/",
+   "title": "Cotizá tu obra por WhatsApp | Obra",
+   "title_len": 34,
+   "meta_description": "Contanos qué querés construir, dónde queda el terreno y cómo pensás financiarlo. Te respondemos por WhatsApp con los pasos para cotizar.",
+   "meta_description_len": 136,
+   "h1": [
+    "Contanos qué querés construir."
+   ],
+   "h2_count": 2,
+   "canonical": "https://obra.com.py/cotizar/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 252,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 27,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/nosotros/": {
+   "status": 200,
+   "url": "https://obra.com.py/nosotros/",
+   "title": "Sobre Obra | Constructora en Asunción y Gran Asunción",
+   "title_len": 53,
+   "meta_description": "Constructora en Asunción y Gran Asunción de un grupo familiar con diseño en arq.com.py y carpintería en carpinteria.com.py. Un solo responsable de obra.",
+   "meta_description_len": 152,
+   "h1": [
+    "Una obra sale mejor cuando alguien ve el conjunto."
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/nosotros/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 189,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 27,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/privacidad/": {
+   "status": 200,
+   "url": "https://obra.com.py/privacidad/",
+   "title": "Política de privacidad | Obra",
+   "title_len": 29,
+   "meta_description": "Qué datos recibe Obra a través del sitio y cómo los usa para responder consultas y solicitudes de presupuesto.",
+   "meta_description_len": 110,
+   "h1": [
+    "Política de privacidad"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/privacidad/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 186,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 27,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/casas/": {
+   "status": 200,
+   "url": "https://obra.com.py/casas/",
+   "title": "Construcción de casas llave en mano en Paraguay | Obra",
+   "title_len": 54,
+   "meta_description": "Casas llave en mano en Asunción y Gran Asunción: platea, mampostería, techo, instalaciones y terminaciones con un responsable. Pedí evaluar tu terreno.",
+   "meta_description_len": 151,
+   "h1": [
+    "Construcción de casas llave en mano en Paraguay"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/casas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 717,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/etapas/",
+    "/casas/minimalistas/",
+    "/casas/prefabricadas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 31,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/casas/duplex/": {
+   "status": 200,
+   "url": "https://obra.com.py/casas/duplex/",
+   "title": "Construcción de dúplex en Paraguay | Obra",
+   "title_len": 41,
+   "meta_description": "Construcción de dúplex y casas de dos plantas en Asunción y Gran Asunción: estructura, losa, escalera e instalaciones resueltas para aprovechar terrenos chicos.",
+   "meta_description_len": 160,
+   "h1": [
+    "Construcción de dúplex y casas de dos plantas"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/casas/duplex/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 369,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/casas/",
+    "/casas/etapas/",
+    "/casas/minimalistas/",
+    "/casas/prefabricadas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 31,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/casas/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/ampliaciones/planta-alta/"
+   ],
+   "internal_links_in_count": 6
+  },
+  "/casas/minimalistas/": {
+   "status": 200,
+   "url": "https://obra.com.py/casas/minimalistas/",
+   "title": "Construcción de casas modernas y minimalistas en Paraguay | Obra",
+   "title_len": 64,
+   "meta_description": "Construcción de casas modernas y minimalistas en Asunción y Gran Asunción: losa plana, ladrillo visto y aberturas grandes, con terminaciones limpias.",
+   "meta_description_len": 149,
+   "h1": [
+    "Construcción de casas modernas y minimalistas"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/casas/minimalistas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 406,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/patios/decks/",
+    "/piscinas/",
+    "/piscinas/desbordante/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 32,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/piscinas/desbordante/",
+    "/guias/ladrillo-bloque/"
+   ],
+   "internal_links_in_count": 7
+  },
+  "/casas/etapas/": {
+   "status": 200,
+   "url": "https://obra.com.py/casas/etapas/",
+   "title": "Construcción de casas por etapas en Paraguay | Obra",
+   "title_len": 51,
+   "meta_description": "Construcción de casas por etapas en Asunción y Gran Asunción: obra gruesa primero, terminaciones después, con un plan que evita rehacer y ordena el gasto.",
+   "meta_description_len": 154,
+   "h1": [
+    "Construcción de casas por etapas"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/casas/etapas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 385,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/prefabricadas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/prefabricadas/",
+    "/guias/plazos/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 7
+  },
+  "/casas/prefabricadas/": {
+   "status": 200,
+   "url": "https://obra.com.py/casas/prefabricadas/",
+   "title": "Casas prefabricadas vs construcción tradicional | Obra",
+   "title_len": 54,
+   "meta_description": "Casas prefabricadas y premoldeadas frente a la construcción tradicional en Paraguay: durabilidad, clima, financiación, reventa y en qué casos conviene cada una.",
+   "meta_description_len": 160,
+   "h1": [
+    "Casas prefabricadas o construcción tradicional: qué conviene"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/casas/prefabricadas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 370,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/etapas/",
+    "/casas/minimalistas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/"
+   ],
+   "internal_links_in_count": 5
+  },
+  "/quintas/": {
+   "status": 200,
+   "url": "https://obra.com.py/quintas/",
+   "title": "Construcción de quintas y casas de campo en Paraguay | Obra",
+   "title_len": 59,
+   "meta_description": "Construcción y refacción de quintas en Paraguay: casa de campo, quincho, piscina, accesos, pozo y muro perimetral coordinados en un solo proyecto.",
+   "meta_description_len": 146,
+   "h1": [
+    "Construcción de quintas y casas de campo en Paraguay"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/quintas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 566,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/quintas/casa-campo/",
+    "/quintas/refaccion/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 29,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/quintas/refaccion/": {
+   "status": 200,
+   "url": "https://obra.com.py/quintas/refaccion/",
+   "title": "Refacción y puesta a punto de quintas en Paraguay | Obra",
+   "title_len": 56,
+   "meta_description": "Refacción de quintas en Paraguay: techos, instalaciones, piscina, quincho y cerramiento renovados con un solo responsable y un plan por sectores.",
+   "meta_description_len": 145,
+   "h1": [
+    "Refacción y puesta a punto de quintas"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/quintas/refaccion/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 332,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/piscinas/renovacion/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/quintas/casa-campo/",
+    "/reformas/",
+    "/reformas/techos/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/quintas/",
+    "/quintas/casa-campo/",
+    "/piscinas/renovacion/",
+    "/reformas/techos/"
+   ],
+   "internal_links_in_count": 5
+  },
+  "/quintas/casa-campo/": {
+   "status": 200,
+   "url": "https://obra.com.py/quintas/casa-campo/",
+   "title": "Construcción de casas de campo en Paraguay | Obra",
+   "title_len": 49,
+   "meta_description": "Construcción de casas de campo en Paraguay: galerías amplias, techos altos, materiales que aguantan el clima y servicios propios de agua y electricidad.",
+   "meta_description_len": 152,
+   "h1": [
+    "Construcción de casas de campo"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/quintas/casa-campo/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 370,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/piscinas/quinta/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 29,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quinchos/techo-madera/"
+   ],
+   "internal_links_in_count": 4
+  },
+  "/piscinas/": {
+   "status": 200,
+   "url": "https://obra.com.py/piscinas/",
+   "title": "Construcción de piscinas de hormigón en Paraguay | Obra",
+   "title_len": 55,
+   "meta_description": "Construcción de piscinas de hormigón en Asunción y Gran Asunción: excavación, estructura, vereda, filtrado e iluminación. Consultá por tu patio o quinta.",
+   "meta_description_len": 153,
+   "h1": [
+    "Construcción de piscinas de hormigón en Paraguay"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/piscinas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 607,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/desbordante/",
+    "/piscinas/quinta/",
+    "/piscinas/renovacion/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 31,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/piscinas/chicas/": {
+   "status": 200,
+   "url": "https://obra.com.py/piscinas/chicas/",
+   "title": "Piscinas pequeñas para patios chicos en Paraguay | Obra",
+   "title_len": 55,
+   "meta_description": "Piscinas pequeñas de hormigón para patios chicos en Asunción y Gran Asunción: medidas a la medida del espacio, acceso de obra resuelto y vereda integrada.",
+   "meta_description_len": 154,
+   "h1": [
+    "Piscinas pequeñas para patios chicos"
+   ],
+   "h2_count": 10,
+   "canonical": "https://obra.com.py/piscinas/chicas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 1153,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/patios/decks/",
+    "/piscinas/",
+    "/piscinas/desbordante/",
+    "/piscinas/quinta/",
+    "/piscinas/renovacion/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 31,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/piscinas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/"
+   ],
+   "internal_links_in_count": 5
+  },
+  "/piscinas/quinta/": {
+   "status": 200,
+   "url": "https://obra.com.py/piscinas/quinta/",
+   "title": "Construcción de piscinas para quintas en Paraguay | Obra",
+   "title_len": 56,
+   "meta_description": "Piscinas de hormigón para quintas y casas de campo en Paraguay: mayor tamaño, agua de pozo, filtrado dimensionado y área de quincho y solárium integrada.",
+   "meta_description_len": 153,
+   "h1": [
+    "Piscinas para quintas y casas de campo"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/piscinas/quinta/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 355,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/"
+   ],
+   "internal_links_in_count": 6
+  },
+  "/piscinas/desbordante/": {
+   "status": 200,
+   "url": "https://obra.com.py/piscinas/desbordante/",
+   "title": "Piscinas desbordantes e infinity en Paraguay | Obra",
+   "title_len": 51,
+   "meta_description": "Piscinas desbordantes (infinity) en Paraguay: borde perdido, canaleta, tanque de compensación y estructura calculada para que el efecto no filtre.",
+   "meta_description_len": 146,
+   "h1": [
+    "Piscinas desbordantes e infinity"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/piscinas/desbordante/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 352,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/casas/minimalistas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/patios/decks/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/renovacion/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 32,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/casas/minimalistas/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/renovacion/"
+   ],
+   "internal_links_in_count": 6
+  },
+  "/piscinas/renovacion/": {
+   "status": 200,
+   "url": "https://obra.com.py/piscinas/renovacion/",
+   "title": "Renovación y reparación de piscinas en Paraguay | Obra",
+   "title_len": 54,
+   "meta_description": "Renovación de piscinas en Asunción y Gran Asunción: pérdidas de agua, revestimiento, vereda, filtrado e iluminación renovados sin construir de nuevo.",
+   "meta_description_len": 149,
+   "h1": [
+    "Renovación y reparación de piscinas"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/piscinas/renovacion/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 348,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/patios/veredas/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/desbordante/",
+    "/piscinas/quinta/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 32,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/quintas/refaccion/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/"
+   ],
+   "internal_links_in_count": 6
+  },
+  "/quinchos/": {
+   "status": 200,
+   "url": "https://obra.com.py/quinchos/",
+   "title": "Construcción de quinchos con parrilla en Paraguay | Obra",
+   "title_len": 56,
+   "meta_description": "Construcción de quinchos con parrilla en Asunción y Gran Asunción: estructura, techo, parrilla, mesada, bacha e instalaciones en una sola obra.",
+   "meta_description_len": 143,
+   "h1": [
+    "Construcción de quinchos con parrilla en Paraguay"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/quinchos/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 590,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/quinchos/cerrados/": {
+   "status": 200,
+   "url": "https://obra.com.py/quinchos/cerrados/",
+   "title": "Construcción de quinchos cerrados en Paraguay | Obra",
+   "title_len": 52,
+   "meta_description": "Quinchos cerrados con aberturas, aire acondicionado y baño en Asunción y Gran Asunción: para usarlos en verano con calor y en invierno con frío.",
+   "meta_description_len": 144,
+   "h1": [
+    "Construcción de quinchos cerrados"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/quinchos/cerrados/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 353,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/ampliaciones/galeria/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/quinchos/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/"
+   ],
+   "internal_links_in_count": 4
+  },
+  "/quinchos/parrillas/": {
+   "status": 200,
+   "url": "https://obra.com.py/quinchos/parrillas/",
+   "title": "Construcción de parrillas y asadores en Paraguay | Obra",
+   "title_len": 55,
+   "meta_description": "Construcción de parrillas de ladrillo, asadores y hornos en Asunción y Gran Asunción: tiro correcto, mesada, bacha y fogón a la altura justa.",
+   "meta_description_len": 141,
+   "h1": [
+    "Construcción de parrillas y asadores"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/quinchos/parrillas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 325,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/patios/pergolas/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/techo-madera/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/techo-madera/"
+   ],
+   "internal_links_in_count": 4
+  },
+  "/quinchos/techo-madera/": {
+   "status": 200,
+   "url": "https://obra.com.py/quinchos/techo-madera/",
+   "title": "Quinchos con techo de madera y machimbre en Paraguay | Obra",
+   "title_len": 59,
+   "meta_description": "Quinchos con techo de madera y machimbre en Asunción y Gran Asunción: estructura, cielorraso de machimbre y tejas construidos de principio a fin.",
+   "meta_description_len": 145,
+   "h1": [
+    "Quinchos con techo de madera y machimbre"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/quinchos/techo-madera/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 351,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/patios/pergolas/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quintas/",
+    "/quintas/casa-campo/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 31,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/"
+   ],
+   "internal_links_in_count": 4
+  },
+  "/reformas/": {
+   "status": 200,
+   "url": "https://obra.com.py/reformas/",
+   "title": "Reformas y remodelación de casas en Paraguay | Obra",
+   "title_len": 51,
+   "meta_description": "Reformas y remodelación de casas en Asunción y Gran Asunción: demoliciones, albañilería, instalaciones y terminaciones con alcance claro y un responsable.",
+   "meta_description_len": 154,
+   "h1": [
+    "Reformas y remodelación de casas en Paraguay"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/reformas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 644,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/reformas/banos/",
+    "/reformas/cocinas/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 31,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/reformas/cocinas/": {
+   "status": 200,
+   "url": "https://obra.com.py/reformas/cocinas/",
+   "title": "Remodelación de cocinas en Paraguay | Obra",
+   "title_len": 42,
+   "meta_description": "Remodelación de cocinas en Asunción y Gran Asunción: obra civil con demolición, instalaciones de agua, gas y electricidad, y revestimientos.",
+   "meta_description_len": 140,
+   "h1": [
+    "Remodelación de cocinas"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/reformas/cocinas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 354,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/reformas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/"
+   ],
+   "internal_links_in_count": 5
+  },
+  "/reformas/banos/": {
+   "status": 200,
+   "url": "https://obra.com.py/reformas/banos/",
+   "title": "Remodelación de baños en Paraguay | Obra",
+   "title_len": 40,
+   "meta_description": "Remodelación de baños en Asunción y Gran Asunción: impermeabilización, instalaciones, revestimientos, ducha a nivel y sanitarios nuevos con un solo responsable.",
+   "meta_description_len": 160,
+   "h1": [
+    "Remodelación de baños"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/reformas/banos/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 324,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/ampliaciones/dormitorio/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 31,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/dormitorio/"
+   ],
+   "internal_links_in_count": 6
+  },
+  "/reformas/fachadas/": {
+   "status": 200,
+   "url": "https://obra.com.py/reformas/fachadas/",
+   "title": "Renovación de fachadas de casas en Paraguay | Obra",
+   "title_len": 50,
+   "meta_description": "Renovación de fachadas en Asunción y Gran Asunción: revoque, revestimientos, aberturas y muro frontal para cambiar la cara de la casa sin tocar adentro.",
+   "meta_description_len": 152,
+   "h1": [
+    "Renovación de fachadas"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/reformas/fachadas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 352,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/muros/portones/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/reformas/banos/",
+    "/reformas/cocinas/",
+    "/reformas/techos/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/",
+    "/tinglados/cocheras/"
+   ],
+   "internal_links_out_count": 32,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/techos/",
+    "/tinglados/cocheras/",
+    "/muros/portones/"
+   ],
+   "internal_links_in_count": 7
+  },
+  "/reformas/techos/": {
+   "status": 200,
+   "url": "https://obra.com.py/reformas/techos/",
+   "title": "Cambio y reparación de techos en Paraguay | Obra",
+   "title_len": 48,
+   "meta_description": "Reparación y cambio de techos de tejas, chapa y losa en Asunción y Gran Asunción: filtraciones, estructura, aislación térmica y canaletas resueltas de raíz.",
+   "meta_description_len": 156,
+   "h1": [
+    "Cambio y reparación de techos"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/reformas/techos/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 320,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/reformas/",
+    "/reformas/banos/",
+    "/reformas/cocinas/",
+    "/reformas/fachadas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 31,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/quintas/refaccion/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/"
+   ],
+   "internal_links_in_count": 6
+  },
+  "/ampliaciones/": {
+   "status": 200,
+   "url": "https://obra.com.py/ampliaciones/",
+   "title": "Ampliación de casas en Paraguay | Obra",
+   "title_len": 38,
+   "meta_description": "Ampliación de casas en Asunción y Gran Asunción: dormitorios, planta alta, galerías y áreas sociales sumados a lo existente, con estructura resuelta.",
+   "meta_description_len": 149,
+   "h1": [
+    "Ampliación de casas en Paraguay"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/ampliaciones/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 593,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/ampliaciones/planta-alta/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/ampliaciones/planta-alta/": {
+   "status": 200,
+   "url": "https://obra.com.py/ampliaciones/planta-alta/",
+   "title": "Ampliación en planta alta en Paraguay | Obra",
+   "title_len": 44,
+   "meta_description": "Ampliación en planta alta en Asunción y Gran Asunción: verificación de estructura, losa, escalera e instalaciones para sumar un piso sin perder el patio.",
+   "meta_description_len": 153,
+   "h1": [
+    "Ampliación en planta alta"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/ampliaciones/planta-alta/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 365,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/casas/",
+    "/casas/duplex/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/casas/duplex/",
+    "/ampliaciones/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/"
+   ],
+   "internal_links_in_count": 5
+  },
+  "/ampliaciones/dormitorio/": {
+   "status": 200,
+   "url": "https://obra.com.py/ampliaciones/dormitorio/",
+   "title": "Ampliación de dormitorio y baño en Paraguay | Obra",
+   "title_len": 50,
+   "meta_description": "Ampliación de un dormitorio con baño en Asunción y Gran Asunción: la ampliación más común, resuelta con fundaciones, techo e instalaciones empalmadas a la casa.",
+   "meta_description_len": 160,
+   "h1": [
+    "Ampliación de dormitorio y baño"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/ampliaciones/dormitorio/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 309,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/ampliaciones/galeria/",
+    "/ampliaciones/planta-alta/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/reformas/banos/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/reformas/banos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/galeria/"
+   ],
+   "internal_links_in_count": 5
+  },
+  "/ampliaciones/galeria/": {
+   "status": 200,
+   "url": "https://obra.com.py/ampliaciones/galeria/",
+   "title": "Construcción de galerías cubiertas en Paraguay | Obra",
+   "title_len": 53,
+   "meta_description": "Construcción de galerías cubiertas en Asunción y Gran Asunción: la ampliación que más se usa, con techo, piso y conexión a la casa y al patio.",
+   "meta_description_len": 142,
+   "h1": [
+    "Construcción de galerías cubiertas"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/ampliaciones/galeria/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 316,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/planta-alta/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/patios/pergolas/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/quinchos/cerrados/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/patios/pergolas/"
+   ],
+   "internal_links_in_count": 6
+  },
+  "/patios/": {
+   "status": 200,
+   "url": "https://obra.com.py/patios/",
+   "title": "Patios, decks y pérgolas en Paraguay | Obra",
+   "title_len": 43,
+   "meta_description": "Construcción de patios, veredas, decks, pérgolas y galerías en Asunción y Gran Asunción. Exteriores integrados a la casa, el quincho o la piscina.",
+   "meta_description_len": 146,
+   "h1": [
+    "Patios, decks y pérgolas en Paraguay"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/patios/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 567,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/patios/veredas/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/patios/veredas/": {
+   "status": 200,
+   "url": "https://obra.com.py/patios/veredas/",
+   "title": "Veredas, contrapisos y pisos exteriores en Paraguay | Obra",
+   "title_len": 58,
+   "meta_description": "Veredas, contrapisos y pisos exteriores en Asunción y Gran Asunción: base compactada, hormigón, juntas y pendientes para que no se agrieten ni junten agua.",
+   "meta_description_len": 155,
+   "h1": [
+    "Veredas, contrapisos y pisos exteriores"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/patios/veredas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 324,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/",
+    "/tinglados/cocheras/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/piscinas/renovacion/",
+    "/patios/",
+    "/patios/decks/",
+    "/patios/pergolas/"
+   ],
+   "internal_links_in_count": 5
+  },
+  "/patios/decks/": {
+   "status": 200,
+   "url": "https://obra.com.py/patios/decks/",
+   "title": "Construcción de decks de madera y WPC en Paraguay | Obra",
+   "title_len": 56,
+   "meta_description": "Construcción de decks de madera dura y compuesto (WPC) en Asunción y Gran Asunción, para piscina, galería o patio, con estructura ventilada y anclajes ocultos.",
+   "meta_description_len": 159,
+   "h1": [
+    "Construcción de decks de madera y compuesto"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/patios/decks/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 338,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/patios/pergolas/",
+    "/patios/veredas/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 29,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/casas/minimalistas/",
+    "/piscinas/chicas/",
+    "/piscinas/desbordante/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/pergolas/"
+   ],
+   "internal_links_in_count": 7
+  },
+  "/patios/pergolas/": {
+   "status": 200,
+   "url": "https://obra.com.py/patios/pergolas/",
+   "title": "Construcción de pérgolas en Paraguay | Obra",
+   "title_len": 43,
+   "meta_description": "Pérgolas de madera, metal y hormigón en Asunción y Gran Asunción: sombra para el patio, cochera o piscina con cubierta de policarbonato, chapa o vegetal.",
+   "meta_description_len": 153,
+   "h1": [
+    "Construcción de pérgolas y galerías livianas"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/patios/pergolas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 319,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/ampliaciones/galeria/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/patios/decks/",
+    "/patios/veredas/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/",
+    "/tinglados/cocheras/"
+   ],
+   "internal_links_out_count": 31,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/"
+   ],
+   "internal_links_in_count": 7
+  },
+  "/tinglados/": {
+   "status": 200,
+   "url": "https://obra.com.py/tinglados/",
+   "title": "Construcción de tinglados y galpones en Paraguay | Obra",
+   "title_len": 55,
+   "meta_description": "Construcción de tinglados y galpones en Asunción y Gran Asunción: estructura metálica, cubierta, canaletas y piso según el uso residencial o comercial.",
+   "meta_description_len": 151,
+   "h1": [
+    "Construcción de tinglados, galpones y cocheras en Paraguay"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/tinglados/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 513,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/",
+    "/tinglados/cocheras/",
+    "/tinglados/galpones/"
+   ],
+   "internal_links_out_count": 29,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/tinglados/galpones/": {
+   "status": 200,
+   "url": "https://obra.com.py/tinglados/galpones/",
+   "title": "Construcción de galpones y depósitos en Paraguay | Obra",
+   "title_len": 55,
+   "meta_description": "Construcción de galpones industriales y depósitos en Gran Asunción: estructura metálica de gran luz, piso para carga, portones y oficinas anexas.",
+   "meta_description_len": 145,
+   "h1": [
+    "Construcción de galpones y depósitos"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/tinglados/galpones/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 303,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/",
+    "/tinglados/cocheras/"
+   ],
+   "internal_links_out_count": 28,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/tinglados/",
+    "/tinglados/cocheras/",
+    "/comerciales/locales/"
+   ],
+   "internal_links_in_count": 4
+  },
+  "/tinglados/cocheras/": {
+   "status": 200,
+   "url": "https://obra.com.py/tinglados/cocheras/",
+   "title": "Construcción de cocheras y techos para autos en Paraguay | Obra",
+   "title_len": 63,
+   "meta_description": "Cocheras cubiertas y techos para autos en Asunción y Gran Asunción: estructura metálica o de hormigón, cubierta aislada, piso y portón al frente.",
+   "meta_description_len": 145,
+   "h1": [
+    "Cocheras y techos para autos"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/tinglados/cocheras/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 319,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/muros/portones/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/reformas/fachadas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/",
+    "/tinglados/galpones/"
+   ],
+   "internal_links_out_count": 30,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/reformas/fachadas/",
+    "/patios/veredas/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/muros/portones/"
+   ],
+   "internal_links_in_count": 7
+  },
+  "/muros/": {
+   "status": 200,
+   "url": "https://obra.com.py/muros/",
+   "title": "Muros perimetrales y murallas en Paraguay | Obra",
+   "title_len": 48,
+   "meta_description": "Construcción de muros perimetrales, murallas, portones y accesos en Asunción y Gran Asunción para casas, quintas y terrenos.",
+   "meta_description_len": 124,
+   "h1": [
+    "Muros perimetrales y murallas en Paraguay"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/muros/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 469,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/muros/portones/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 28,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/muros/portones/": {
+   "status": 200,
+   "url": "https://obra.com.py/muros/portones/",
+   "title": "Construcción de portones y accesos en Paraguay | Obra",
+   "title_len": 53,
+   "meta_description": "Portones corredizos, batientes y automatizados con su obra civil en Asunción y Gran Asunción: columnas, guías, fundaciones, muro de frente y acceso vehicular.",
+   "meta_description_len": 158,
+   "h1": [
+    "Construcción de portones y accesos"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/muros/portones/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 351,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/reformas/fachadas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/",
+    "/tinglados/cocheras/"
+   ],
+   "internal_links_out_count": 29,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/reformas/fachadas/",
+    "/tinglados/cocheras/",
+    "/muros/"
+   ],
+   "internal_links_in_count": 4
+  },
+  "/comerciales/": {
+   "status": 200,
+   "url": "https://obra.com.py/comerciales/",
+   "title": "Obras comerciales y adecuación de locales en Paraguay | Obra",
+   "title_len": 60,
+   "meta_description": "Obras comerciales y adecuación de locales, oficinas y consultorios en Asunción y Gran Asunción: obra civil, instalaciones y terminaciones coordinadas.",
+   "meta_description_len": 150,
+   "h1": [
+    "Obras comerciales y adecuación de locales en Paraguay"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/comerciales/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 520,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 29,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/comerciales/locales/": {
+   "status": 200,
+   "url": "https://obra.com.py/comerciales/locales/",
+   "title": "Adecuación de locales comerciales en Paraguay | Obra",
+   "title_len": 52,
+   "meta_description": "Adecuación de locales comerciales en Asunción y Gran Asunción: obra civil, instalaciones, vidriera, baños y terminaciones con fecha de apertura comprometida.",
+   "meta_description_len": 157,
+   "h1": [
+    "Adecuación de locales comerciales"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/comerciales/locales/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 313,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/comerciales/oficinas/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/",
+    "/tinglados/galpones/"
+   ],
+   "internal_links_out_count": 29,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/comerciales/",
+    "/comerciales/oficinas/"
+   ],
+   "internal_links_in_count": 3
+  },
+  "/comerciales/oficinas/": {
+   "status": 200,
+   "url": "https://obra.com.py/comerciales/oficinas/",
+   "title": "Remodelación de oficinas y consultorios en Paraguay | Obra",
+   "title_len": 58,
+   "meta_description": "Remodelación de oficinas y consultorios en Asunción: divisiones, cableado de datos, climatización, baños y terminaciones con mínima interrupción.",
+   "meta_description_len": 145,
+   "h1": [
+    "Remodelación de oficinas y consultorios"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/comerciales/oficinas/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 276,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 28,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/comerciales/",
+    "/comerciales/locales/"
+   ],
+   "internal_links_in_count": 3
+  },
+  "/supervision/": {
+   "status": 200,
+   "url": "https://obra.com.py/supervision/",
+   "title": "Supervisión y fiscalización de obra en Paraguay | Obra",
+   "title_len": 54,
+   "meta_description": "Supervisión, fiscalización y dirección de obra en Asunción y Gran Asunción: control de avances, calidad, certificaciones y pagos con un profesional responsable.",
+   "meta_description_len": 160,
+   "h1": [
+    "Supervisión y fiscalización de obra en Paraguay"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/supervision/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 535,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 28,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/supervision/direccion/": {
+   "status": 200,
+   "url": "https://obra.com.py/supervision/direccion/",
+   "title": "Dirección técnica de obra en Paraguay | Obra",
+   "title_len": 44,
+   "meta_description": "Dirección técnica de obra en Asunción y Gran Asunción: ingeniero a cargo de la ejecución, certificaciones y responsabilidad ante el municipio y el banco.",
+   "meta_description_len": 153,
+   "h1": [
+    "Dirección técnica de obra"
+   ],
+   "h2_count": 5,
+   "canonical": "https://obra.com.py/supervision/direccion/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 323,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 27,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/servicios/",
+    "/supervision/",
+    "/guias/permisos/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 4
+  },
+  "/presupuesto/": {
+   "status": 200,
+   "url": "https://obra.com.py/presupuesto/",
+   "title": "Presupuesto de obra y cómputo métrico en Paraguay | Obra",
+   "title_len": 56,
+   "meta_description": "Presupuesto de obra y cómputo métrico en Paraguay: cantidades, rubros y costos en guaraníes desde tus planos, para comparar propuestas o pedir crédito.",
+   "meta_description_len": 151,
+   "h1": [
+    "Presupuesto de obra y cómputo métrico en Paraguay"
+   ],
+   "h2_count": 6,
+   "canonical": "https://obra.com.py/presupuesto/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 476,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 27,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 1,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/guias/costo-casa/": {
+   "status": 200,
+   "url": "https://obra.com.py/guias/costo-casa/",
+   "title": "Cuánto cuesta construir una casa en Paraguay | Obra",
+   "title_len": 51,
+   "meta_description": "Cuánto cuesta construir una casa en Paraguay: qué define el costo (metros, terreno, sistema, terminaciones) y cómo leer un presupuesto por rubro.",
+   "meta_description_len": 145,
+   "h1": [
+    "Cuánto cuesta construir una casa en Paraguay: qué define el precio"
+   ],
+   "h2_count": 9,
+   "canonical": "https://obra.com.py/guias/costo-casa/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 634,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 27,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Article",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/guias/terreno/": {
+   "status": 200,
+   "url": "https://obra.com.py/guias/terreno/",
+   "title": "Qué revisar antes de construir en un terreno en Paraguay | Obra",
+   "title_len": 63,
+   "meta_description": "Qué revisar antes de construir en un terreno en Paraguay: títulos, medidas, suelo, desnivel, servicios, retiros y accesos. Evitá sorpresas en obra.",
+   "meta_description_len": 147,
+   "h1": [
+    "Qué revisar antes de construir en tu terreno"
+   ],
+   "h2_count": 8,
+   "canonical": "https://obra.com.py/guias/terreno/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 452,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 27,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Article",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/guias/plazos/": {
+   "status": 200,
+   "url": "https://obra.com.py/guias/plazos/",
+   "title": "Cuánto tarda construir una casa en Paraguay | Obra",
+   "title_len": 50,
+   "meta_description": "Cuánto tarda construir una casa en Paraguay: las etapas de la obra, qué define su duración y por qué no hay plazo sin un alcance cerrado.",
+   "meta_description_len": 137,
+   "h1": [
+    "Cuánto tarda construir una casa: etapas y plazos de obra"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/guias/plazos/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 427,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/casas/etapas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 28,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Article",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/guias/permisos/": {
+   "status": 200,
+   "url": "https://obra.com.py/guias/permisos/",
+   "title": "Permisos municipales para construir una casa en Paraguay | Obra",
+   "title_len": 63,
+   "meta_description": "Permisos municipales para construir una casa en Paraguay: planos aprobados, profesional responsable, retiros y habilitación final. Riesgos de no tenerlos.",
+   "meta_description_len": 154,
+   "h1": [
+    "Permisos municipales para construir"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/guias/permisos/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 373,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 28,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Article",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/guias/platea/": {
+   "status": 200,
+   "url": "https://obra.com.py/guias/platea/",
+   "title": "Platea o zapatas: qué fundación conviene | Obra",
+   "title_len": 47,
+   "meta_description": "Platea o zapatas: qué fundación conviene según el suelo, la casa y el presupuesto. Errores comunes en fundaciones de casas en Paraguay.",
+   "meta_description_len": 135,
+   "h1": [
+    "Platea o zapatas: qué fundación conviene para tu casa"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/guias/platea/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 400,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 27,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Article",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/guias/ladrillo-bloque/": {
+   "status": 200,
+   "url": "https://obra.com.py/guias/ladrillo-bloque/",
+   "title": "Ladrillo o bloque: qué mampostería conviene | Obra",
+   "title_len": 50,
+   "meta_description": "Ladrillo o bloque: qué mampostería conviene en Paraguay. Comparación de aislación térmica, velocidad de obra, terminación y costo para el clima local.",
+   "meta_description_len": 150,
+   "h1": [
+    "Ladrillo o bloque: qué mampostería conviene"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/guias/ladrillo-bloque/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 364,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/casas/minimalistas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 28,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Article",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/guias/albanil/": {
+   "status": 200,
+   "url": "https://obra.com.py/guias/albanil/",
+   "title": "Albañil, maestro de obra o constructora: qué conviene | Obra",
+   "title_len": 60,
+   "meta_description": "Albañil, maestro de obra o constructora en Paraguay: diferencias en responsabilidad, coordinación y presupuesto, y qué conviene según la obra.",
+   "meta_description_len": 142,
+   "h1": [
+    "Albañil, maestro de obra o constructora: qué conviene"
+   ],
+   "h2_count": 7,
+   "canonical": "https://obra.com.py/guias/albanil/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 439,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 27,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Article",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  },
+  "/credito/": {
+   "status": 200,
+   "url": "https://obra.com.py/credito/",
+   "title": "Construir una casa con crédito bancario o AFD en Paraguay | Obra",
+   "title_len": 64,
+   "meta_description": "Construir una casa con crédito bancario o AFD en Paraguay: documentación de obra que pide el banco, desembolsos por etapa y rol del presupuesto.",
+   "meta_description_len": 144,
+   "h1": [
+    "Construí tu casa con crédito"
+   ],
+   "h2_count": 8,
+   "canonical": "https://obra.com.py/credito/",
+   "canonical_ok": true,
+   "robots": "index,follow,max-image-preview:large",
+   "word_count_main": 506,
+   "internal_links_out": [
+    "/",
+    "/ampliaciones/",
+    "/casas/",
+    "/casas/etapas/",
+    "/comerciales/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/credito/",
+    "/guias/",
+    "/guias/albanil/",
+    "/guias/costo-casa/",
+    "/guias/ladrillo-bloque/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/plazos/",
+    "/guias/terreno/",
+    "/muros/",
+    "/nosotros/",
+    "/patios/",
+    "/piscinas/",
+    "/presupuesto/",
+    "/privacidad/",
+    "/quinchos/",
+    "/quintas/",
+    "/reformas/",
+    "/servicios/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/tinglados/"
+   ],
+   "internal_links_out_count": 29,
+   "external_links": [
+    "https://arq.com.py/",
+    "https://carpinteria.com.py/",
+    "https://wa.me/595992279599"
+   ],
+   "images": 0,
+   "images_without_alt": [],
+   "images_empty_alt": [],
+   "schema_types": [
+    "GeneralContractor",
+    "BreadcrumbList",
+    "Article",
+    "FAQPage"
+   ],
+   "internal_links_in": [
+    "/",
+    "/servicios/",
+    "/guias/",
+    "/como-trabajamos/",
+    "/cotizar/",
+    "/nosotros/",
+    "/privacidad/",
+    "/casas/",
+    "/casas/duplex/",
+    "/casas/minimalistas/",
+    "/casas/etapas/",
+    "/casas/prefabricadas/",
+    "/quintas/",
+    "/quintas/refaccion/",
+    "/quintas/casa-campo/",
+    "/piscinas/",
+    "/piscinas/chicas/",
+    "/piscinas/quinta/",
+    "/piscinas/desbordante/",
+    "/piscinas/renovacion/",
+    "/quinchos/",
+    "/quinchos/cerrados/",
+    "/quinchos/parrillas/",
+    "/quinchos/techo-madera/",
+    "/reformas/",
+    "/reformas/cocinas/",
+    "/reformas/banos/",
+    "/reformas/fachadas/",
+    "/reformas/techos/",
+    "/ampliaciones/",
+    "/ampliaciones/planta-alta/",
+    "/ampliaciones/dormitorio/",
+    "/ampliaciones/galeria/",
+    "/patios/",
+    "/patios/veredas/",
+    "/patios/decks/",
+    "/patios/pergolas/",
+    "/tinglados/",
+    "/tinglados/galpones/",
+    "/tinglados/cocheras/",
+    "/muros/",
+    "/muros/portones/",
+    "/comerciales/",
+    "/comerciales/locales/",
+    "/comerciales/oficinas/",
+    "/supervision/",
+    "/supervision/direccion/",
+    "/presupuesto/",
+    "/guias/costo-casa/",
+    "/guias/terreno/",
+    "/guias/plazos/",
+    "/guias/permisos/",
+    "/guias/platea/",
+    "/guias/ladrillo-bloque/",
+    "/guias/albanil/",
+    "/credito/"
+   ],
+   "internal_links_in_count": 56
+  }
+ }
+}

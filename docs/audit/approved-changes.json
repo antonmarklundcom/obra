@@ -1,0 +1,215 @@
+{
+ "note": "Frozen-field changes approved per docs/IMPROVE-PLAN.md. Each entry: path, fields (title, h1, description, robots, schema, route), reason.",
+ "changes": [
+  {
+   "path": "/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/servicios/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/guias/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/nosotros/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/casas/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/casas/minimalistas/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/casas/etapas/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/piscinas/chicas/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/piscinas/desbordante/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/quinchos/techo-madera/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/reformas/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/reformas/cocinas/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/reformas/fachadas/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/ampliaciones/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/ampliaciones/planta-alta/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/patios/veredas/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/tinglados/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/tinglados/cocheras/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/comerciales/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/comerciales/oficinas/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/supervision/direccion/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/presupuesto/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/guias/costo-casa/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/guias/terreno/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/guias/plazos/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/guias/permisos/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/guias/platea/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/guias/ladrillo-bloque/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/guias/albanil/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  },
+  {
+   "path": "/credito/",
+   "fields": [
+    "description"
+   ],
+   "reason": "IMPROVE-PLAN item 7 (F7): description over 160 chars shortened to <=155, primary keyword first"
+  }
+ ]
+}

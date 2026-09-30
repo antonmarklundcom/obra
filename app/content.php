@@ -10,7 +10,7 @@ return [
             'name' => 'Casas llave en mano',
             'short' => 'Planos, obra gruesa, instalaciones y terminaciones en una sola contratación.',
             'title' => 'Construcción de casas llave en mano en Paraguay | Obra',
-            'description' => 'Constructora de casas llave en mano en Asunción y Gran Asunción: platea, mampostería, techo, instalaciones y terminaciones con un solo responsable. Pedí una evaluación de tu terreno.',
+            'description' => 'Casas llave en mano en Asunción y Gran Asunción: platea, mampostería, techo, instalaciones y terminaciones con un responsable. Pedí evaluar tu terreno.',
             'h1' => 'Construcción de casas llave en mano en Paraguay',
             'kicker' => 'De un terreno a una casa lista para habitar',
             'image' => 'hero-casa.webp',
@@ -84,13 +84,13 @@ return [
                 ['¿Puedo pedir solamente techo y parrilla?', 'Sí. El alcance puede ajustarse a una intervención puntual siempre que la solución sea técnicamente viable.'],
             ],
             'related' => ['piscinas', 'patios', 'quintas'],
-            'link' => ['site' => 'carpinteria', 'text' => 'Para techos de madera y cielorraso de machimbre trabajamos con carpinteria.com.py.'],
+            'link' => ['site' => 'carpinteria', 'path' => '/aluminio/', 'text' => 'Si querés cerrar el quincho con aberturas de aluminio o blindex, esas piezas las fabrica carpinteria.com.py y las colocamos dentro de la misma obra.'],
         ],
         'reformas' => [
             'name' => 'Reformas y remodelaciones',
             'short' => 'Reorganizá ambientes, renová instalaciones y terminaciones sobre lo que ya tenés.',
             'title' => 'Reformas y remodelación de casas en Paraguay | Obra',
-            'description' => 'Reformas y remodelación de casas en Asunción y Gran Asunción: demoliciones, albañilería, instalaciones y terminaciones con un alcance claro y un solo responsable.',
+            'description' => 'Reformas y remodelación de casas en Asunción y Gran Asunción: demoliciones, albañilería, instalaciones y terminaciones con alcance claro y un responsable.',
             'h1' => 'Reformas y remodelación de casas en Paraguay',
             'kicker' => 'Hacé que la casa acompañe una nueva etapa',
             'image' => 'hero-casa.webp',
@@ -104,12 +104,13 @@ return [
                 ['¿Necesito planos para una reforma?', 'Para cambios estructurales o de fachada suele hacer falta documentación municipal. Lo revisamos en el relevamiento y te decimos qué corresponde.'],
             ],
             'related' => ['ampliaciones', 'patios', 'casas'],
+            'link' => ['site' => 'arq', 'path' => '/regularizacion/', 'text' => 'Si la construcción existente no tiene planos aprobados, la regularización la hace nuestro estudio en arq.com.py antes o durante la reforma.'],
         ],
         'ampliaciones' => [
             'name' => 'Ampliaciones de vivienda',
             'short' => 'Un dormitorio, una planta alta o un área social nueva sobre la casa actual.',
             'title' => 'Ampliación de casas en Paraguay | Obra',
-            'description' => 'Ampliación de casas en Asunción y Gran Asunción: dormitorios, planta alta, galerías y áreas sociales sumadas a la construcción existente, con estructura e instalaciones resueltas.',
+            'description' => 'Ampliación de casas en Asunción y Gran Asunción: dormitorios, planta alta, galerías y áreas sociales sumados a lo existente, con estructura resuelta.',
             'h1' => 'Ampliación de casas en Paraguay',
             'kicker' => 'Más metros sin mudarte',
             'image' => 'hero-casa.webp',
@@ -147,7 +148,7 @@ return [
             'name' => 'Tinglados, galpones y cocheras',
             'short' => 'Estructura metálica y cubierta para vehículos, depósito o producción.',
             'title' => 'Construcción de tinglados y galpones en Paraguay | Obra',
-            'description' => 'Construcción de tinglados, galpones y cocheras en Asunción y Gran Asunción: estructura metálica, cubierta, canaletas y piso según el uso residencial o comercial.',
+            'description' => 'Construcción de tinglados y galpones en Asunción y Gran Asunción: estructura metálica, cubierta, canaletas y piso según el uso residencial o comercial.',
             'h1' => 'Construcción de tinglados, galpones y cocheras en Paraguay',
             'kicker' => 'Cubiertas resueltas para el clima y el uso real',
             'image' => 'servicio-cochera.webp',
@@ -185,7 +186,7 @@ return [
             'name' => 'Obras comerciales',
             'short' => 'Locales, oficinas y consultorios preparados para operar en fecha.',
             'title' => 'Obras comerciales y adecuación de locales en Paraguay | Obra',
-            'description' => 'Construcción y adecuación de locales, oficinas y consultorios en Asunción y Gran Asunción. Obra civil, instalaciones y terminaciones coordinadas con fecha objetivo.',
+            'description' => 'Obras comerciales y adecuación de locales, oficinas y consultorios en Asunción y Gran Asunción: obra civil, instalaciones y terminaciones coordinadas.',
             'h1' => 'Obras comerciales y adecuación de locales en Paraguay',
             'kicker' => 'Un espacio listo para trabajar, en fecha',
             'image' => 'hero-casa.webp',
@@ -223,7 +224,7 @@ return [
             'name' => 'Presupuesto de obra y cómputo métrico',
             'short' => 'Sabé cuánto cuesta tu proyecto por rubro antes de comprometerte.',
             'title' => 'Presupuesto de obra y cómputo métrico en Paraguay | Obra',
-            'description' => 'Presupuesto de obra y cómputo métrico en Paraguay: cantidades, rubros y costos en guaraníes a partir de tus planos, para comparar propuestas o gestionar un crédito.',
+            'description' => 'Presupuesto de obra y cómputo métrico en Paraguay: cantidades, rubros y costos en guaraníes desde tus planos, para comparar propuestas o pedir crédito.',
             'h1' => 'Presupuesto de obra y cómputo métrico en Paraguay',
             'kicker' => 'Números antes de decisiones',
             'image' => 'hero-casa.webp',
@@ -253,8 +254,10 @@ return [
     // necesitan datos reales (financiacion AFD verificada, obras concretas) antes de construirse.
 
     // Subpaginas por servicio (/{servicio}/{sub}/) y guias (/guias/{slug}/, /credito/)
-    'children' => require __DIR__ . '/content-sub.php',
-    'guides' => require __DIR__ . '/content-guides.php',
+    // Especialidades: app/content/sub/{hub}.php, en el orden de los hubs de arriba.
+    'children' => obra_load_content_dir('sub', ['casas', 'quintas', 'piscinas', 'quinchos', 'reformas', 'ampliaciones', 'patios', 'tinglados', 'muros', 'comerciales', 'supervision', 'presupuesto']),
+    // Guias: app/content/guides/{slug}.php. El orden fija el menu y el sitemap; una guia nueva sin orden va al final.
+    'guides' => obra_load_content_dir('guides', ['costo-casa', 'terreno', 'plazos', 'permisos', 'platea', 'ladrillo-bloque', 'albanil', 'credito']),
 
     'process' => [
         ['01', 'Terreno y consulta', 'Nos contás qué querés construir, dónde queda el terreno o la casa y cómo pensás financiarlo. Podés mandarnos fotos por WhatsApp.'],

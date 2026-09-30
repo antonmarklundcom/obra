@@ -11,7 +11,7 @@ $config = [
     'name' => 'Obra',
     'domain' => obra_env('OBRA_DOMAIN', 'obra.com.py'),
     'origin' => rtrim(obra_env('OBRA_ORIGIN', 'https://obra.com.py'), '/'),
-    // WhatsApp etapa 1 (docs/obra-com-py-site-structure.md). Solo digitos: 5959XXXXXXXX.
+    // WhatsApp etapa 1 (docs/seo/obra-com-py-site-structure.md). Solo digitos: 5959XXXXXXXX.
     'whatsapp' => obra_env('OBRA_WHATSAPP', '595992279599'),
     'email' => obra_env('OBRA_EMAIL'),
     'legal_operator' => obra_env('OBRA_LEGAL_OPERATOR'),
@@ -26,8 +26,9 @@ $config = [
     'territory' => obra_env('OBRA_TERRITORY', 'Paraguay'),
     // Sitios hermanos del grupo. 'live' => false imprime el texto sin enlace hasta que el dominio este publicado.
     'partner_sites' => [
-        'arq' => ['url' => 'https://arq.com.py/', 'live' => true],
-        'carpinteria' => ['url' => 'https://carpinteria.com.py/', 'live' => true],
+        // live_paths: paginas internas confirmadas con HEAD 200. Un enlace contextual con 'path' fuera de esta lista queda como texto.
+        'arq' => ['url' => 'https://arq.com.py/', 'live' => true, 'live_paths' => []],
+        'carpinteria' => ['url' => 'https://carpinteria.com.py/', 'live' => true, 'live_paths' => []],
         'pozo' => ['url' => 'https://pozo.com.py/', 'live' => false],
         'prestamo' => ['url' => 'https://prestamo.com.py/', 'live' => false],
     ],
@@ -35,8 +36,9 @@ $config = [
 
 // Hostinger compartido no siempre permite variables de entorno: config/local.php
 // (no versionado, bloqueado por .htaccess) puede devolver un array con los valores reales.
+// OBRA_LOCAL_CONFIG=0 lo ignora (tools/verify: las pruebas del formulario nunca usan claves reales).
 $localFile = __DIR__ . '/local.php';
-if (is_file($localFile)) {
+if (is_file($localFile) && obra_env('OBRA_LOCAL_CONFIG', '1') !== '0') {
     $local = require $localFile;
     if (is_array($local)) { $config = array_replace_recursive($config, $local); }
 }
