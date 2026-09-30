@@ -50,7 +50,8 @@ function obra_mail_send(array $config, array $payload, array $labels): bool
         . "Ubicación: " . $f['location'] . "\n"
         . "Terreno: " . $labels['terrain'] . "\n"
         . "Financiación: " . $labels['financing'] . "\n"
-        . "Página: " . $payload['page_url'] . "\n\n"
+        . "Página: " . $payload['page_url'] . "\n"
+        . "Origen: " . $f['origin_path'] . " (" . $f['placement'] . ")\n\n"
         . "Proyecto:\n" . $f['project'] . "\n";
     $subject = '=?UTF-8?B?' . base64_encode('Consulta web: ' . $labels['service']) . '?=';
     $headers = "From: Obra <no-reply@" . $config['domain'] . ">\r\nReply-To: " . $to . "\r\nContent-Type: text/plain; charset=UTF-8\r\nX-Mailer: obra-site";
@@ -85,10 +86,12 @@ $labels = [
     'terrain' => $content['terrain'][$terrain],
     'financing' => $content['financing'][$financing],
 ];
-$message = sprintf(
-    "Hola, soy %s. Completé el formulario de Obra.com.py.\nServicio: %s\nUbicación: %s\nTerreno: %s\nFinanciación: %s\nProyecto: %s",
-    $name, $labels['service'], $location, $labels['terrain'], $labels['financing'], $messageText
-);
+$originPath = obra_safe_return(obra_post('origin_path', 300), '/cotizar/');
+$placement = preg_replace('/[^a-z0-9-]/', '', obra_post('placement', 20)) ?: 'form';
+$message = obra_wa_form_text([
+    'name' => $name, 'service' => $labels['service'], 'location' => $location, 'terrain' => $labels['terrain'],
+    'financing' => $labels['financing'], 'project' => $messageText, 'page' => $originPath,
+]);
 $payload = [
     'name' => $name,
     'phone' => '+' . $phone,
@@ -96,7 +99,7 @@ $payload = [
     'source' => 'site:obra-com-py',
     'page_url' => $pageUrl,
     'idempotency_key' => bin2hex(random_bytes(16)),
-    'fields' => ['service' => $service, 'location' => $location, 'terrain' => $terrain, 'financing' => $financing, 'project' => $messageText, 'submitted_at' => gmdate('c')],
+    'fields' => ['service' => $service, 'location' => $location, 'terrain' => $terrain, 'financing' => $financing, 'project' => $messageText, 'origin_path' => $originPath, 'placement' => $placement, 'submitted_at' => gmdate('c')],
 ];
 $crm = obra_crm_send($config, $payload);
 $mailed = obra_mail_send($config, $payload, $labels);
