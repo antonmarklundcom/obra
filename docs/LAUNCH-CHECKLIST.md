@@ -32,7 +32,7 @@
 - [ ] Verificar canonical, `/sitemap.xml` (dinámico) y `/robots.txt` en producción; `/app/` y `/config/` deben dar 404.
 - [ ] Purgar caché y volver a comprobar el HTML servido.
 - [ ] Confirmar redirección HTTPS y dominio sin `www`.
-- [ ] Enviar el sitemap en Search Console.
+- [-] Search Console: omitido por decisión de Anton.
 
 ## Estado de esta entrega
 
@@ -66,3 +66,4 @@
 - [x] Deploy: Git auto-deploy desde `main` (confirmado por Anton): cada merge publica.
 - [x] Endpoint de VenderCRM por defecto en `config/site.php` (`https://crm.clientes.com.py/api/v1/leads`). Falta solo `crm_api_key` en `config/local.php` del servidor (archivo no versionado; Git deploy no lo toca).
 - [ ] Imágenes con Higgsfield (presupuesto 50 créditos): NO EJECUTADO, el contenedor no descarga de `*.cloudfront.net` (403). Ver `higgsfield-image-pipeline`, Rule 2.
+- [x] /nosotros/ y /como-trabajamos/: experiencia del responsable de obra (más de 20 años) y equipo propio numeroso, sin cifras ni nombres inventados. Razón social, RUC, email y domicilio siguen vacíos hasta `config/local.php`.
