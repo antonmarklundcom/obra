@@ -10,6 +10,8 @@ return [
     'summary' => 'Qué define el costo de construir una casa en Paraguay: metros, terreno, sistema constructivo, instalaciones y terminaciones. Cómo leer un presupuesto por rubro y comparar propuestas.',
     'h1' => 'Cuánto cuesta construir una casa en Paraguay: qué define el precio',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'Todos preguntan lo mismo: cuánto cuesta el metro cuadrado. Y todos reciben cifras distintas, porque un precio por metro sin alcance no dice nada. Esta guía explica qué define el costo real de una casa y cómo comparar presupuestos sin que te sorprendan a mitad de obra.',
     ],

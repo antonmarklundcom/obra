@@ -10,6 +10,8 @@ return [
     'summary' => 'Ladrillo común, ladrillo hueco o bloque de hormigón: comparación de aislación térmica, velocidad de obra, terminación y costo para construir en el clima paraguayo.',
     'h1' => 'Ladrillo o bloque: qué mampostería conviene',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'En Paraguay se construye con ladrillo común, ladrillo hueco y bloque de hormigón. Cada uno cambia la aislación térmica, la velocidad de obra, el revoque y el costo. Esta guía compara los tres para el clima y la forma de construir de acá.',
     ],

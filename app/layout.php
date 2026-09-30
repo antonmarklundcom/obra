@@ -44,9 +44,10 @@ function obra_head(array $config, array $route, string $path, array $schemas = [
 <meta name="robots" content="<?= $index ? 'index,follow,max-image-preview:large' : 'noindex,follow' ?>">
 <meta name="theme-color" content="#f5f2eb">
 <link rel="canonical" href="<?= h($canonical) ?>">
-<meta property="og:type" content="website"><meta property="og:locale" content="es_PY"><meta property="og:site_name" content="Obra">
+<meta property="og:type" content="<?= h($route['og_type'] ?? 'website') ?>"><meta property="og:locale" content="es_PY"><meta property="og:site_name" content="Obra">
 <meta property="og:title" content="<?= h($route['title']) ?>"><meta property="og:description" content="<?= h($route['description']) ?>"><meta property="og:url" content="<?= h($canonical) ?>">
 <meta property="og:image" content="<?= h($og) ?>"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Obra: constructora en Paraguay, casas llave en mano">
+<?php if (!empty($route['modified'])): ?><meta property="article:modified_time" content="<?= h($route['modified']) ?>"><?php endif; ?>
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="<?= h($route['title']) ?>"><meta name="twitter:description" content="<?= h($route['description']) ?>"><meta name="twitter:image" content="<?= h($og) ?>">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="<?= h(obra_asset('/assets/css/site.css')) ?>">

@@ -10,6 +10,8 @@ return [
     'summary' => 'Las etapas de una obra y qué define su duración: fundaciones, mampostería, techo, instalaciones, terminaciones. Por qué no hay plazo sin alcance cerrado y qué lo atrasa.',
     'h1' => 'Cuánto tarda construir una casa: etapas y plazos de obra',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'La segunda pregunta después del precio es cuánto tarda. La respuesta honesta es que depende del alcance, del clima y de las decisiones que se toman a tiempo. Acá explicamos las etapas de una obra y qué las acelera o las atrasa.',
     ],

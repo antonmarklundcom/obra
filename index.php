@@ -78,9 +78,21 @@ if ($route['type'] === 'service') {
     $page = $content['children'][$route['slug']][$route['child']];
     $schemas[] = ['@context' => 'https://schema.org', '@type' => 'Service', 'name' => $page['name'], 'serviceType' => $page['h1'], 'description' => $page['description'], 'url' => obra_url($config, $path), 'image' => obra_url($config, '/assets/images/' . $parent['image']), 'areaServed' => $areaServed, 'provider' => $provider, 'isRelatedTo' => ['@type' => 'Service', 'name' => $parent['name'], 'url' => obra_url($config, '/' . $route['slug'] . '/')]];
     $schemas[] = obra_faq_schema($page['faqs']);
+} elseif (in_array($route['type'], ['guides', 'services'], true)) {
+    $items = [];
+    if ($route['type'] === 'guides') {
+        foreach ($content['guides'] as $gslug => $g) { $items[] = [obra_guide_path($gslug, $g), $g['name']]; }
+    } else {
+        foreach ($content['services'] as $sslug => $sv) { $items[] = ['/' . $sslug . '/', $sv['name']]; }
+    }
+    $list = [];
+    foreach ($items as $i => [$ip, $in]) { $list[] = ['@type' => 'ListItem', 'position' => $i + 1, 'name' => $in, 'url' => obra_url($config, $ip)]; }
+    $schemas[] = ['@context' => 'https://schema.org', '@type' => 'CollectionPage', 'name' => $route['h1'], 'url' => obra_url($config, $path), 'inLanguage' => 'es-PY', 'mainEntity' => ['@type' => 'ItemList', 'itemListElement' => $list]];
 } elseif ($route['type'] === 'guide') {
     $guide = $content['guides'][$route['slug']];
-    $schemas[] = ['@context' => 'https://schema.org', '@type' => 'Article', 'headline' => $guide['h1'], 'description' => $guide['description'], 'url' => obra_url($config, $path), 'inLanguage' => 'es-PY', 'image' => obra_url($config, '/assets/images/og-obra.jpg'), 'author' => $provider, 'publisher' => $provider, 'mainEntityOfPage' => obra_url($config, $path)];
+    $schemas[] = ['@context' => 'https://schema.org', '@type' => 'Article', 'headline' => $guide['h1'], 'description' => $guide['description'], 'url' => obra_url($config, $path), 'inLanguage' => 'es-PY', 'image' => obra_url($config, '/assets/images/og-obra.jpg'), 'author' => $provider, 'publisher' => $provider, 'mainEntityOfPage' => obra_url($config, $path), 'datePublished' => $guide['published'] ?? gmdate('Y-m-d'), 'dateModified' => $guide['updated'] ?? $guide['published'] ?? gmdate('Y-m-d')];
+    $route['og_type'] = 'article';
+    $route['modified'] = (string) ($guide['updated'] ?? $guide['published'] ?? '');
     $schemas[] = obra_faq_schema($guide['faqs']);
 }
 

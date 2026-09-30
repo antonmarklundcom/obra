@@ -9,6 +9,8 @@ return [
     'summary' => 'Qué define el costo de un tinglado o galpón en Paraguay: luz libre y altura, estructura metálica, cubierta, piso industrial, cerramientos y presupuesto por rubro.',
     'h1' => 'Tinglado y galpón: qué define el costo y cómo elegir',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'Un tinglado o galpón se piensa para trabajar: guardar maquinaria, producir, almacenar o proteger vehículos. Por eso el costo depende menos de la forma que de lo que el espacio tiene que soportar y cuántos metros libres necesita sin columnas.',
         'Esta guía no da precios. Explica qué decisiones cambian el presupuesto de un tinglado, por qué dos galpones del mismo tamaño pueden ser tan distintos y cómo pedir un presupuesto por rubro que puedas comparar.',

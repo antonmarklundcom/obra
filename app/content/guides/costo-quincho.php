@@ -9,6 +9,8 @@ return [
     'summary' => 'Qué define el costo de un quincho en Paraguay: tamaño, abierto o cerrado, techo, parrilla y campana, baño y terminaciones, y cómo comparar presupuestos por rubro.',
     'h1' => 'Cuánto cuesta construir un quincho: qué define el presupuesto',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'Quien busca cuánto cuesta un quincho suele encontrar un número suelto que no sirve para su caso. Un quincho abierto con parrilla de ladrillo y un quincho cerrado con baño, aire acondicionado y campana pueden parecer lo mismo en una foto y ser obras muy distintas.',
         'Esta guía no da precios: explica qué decisiones mueven el costo, en qué orden conviene tomarlas y cómo pedir un presupuesto que se pueda comparar, para que el número que recibas tenga sentido para tu terreno y tu uso.',

@@ -10,6 +10,8 @@ return [
     'summary' => 'Qué permisos hacen falta para construir o ampliar en Paraguay: planos aprobados, profesional responsable, retiros y habilitación final. Qué pasa si se construye sin permiso.',
     'h1' => 'Permisos municipales para construir',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'Construir sin permiso es común y sale caro: multas, obras paradas, problemas para vender o hipotecar. Esta guía resume qué suele exigir un municipio del Gran Asunción y cómo lo incluimos en el alcance llave en mano.',
     ],

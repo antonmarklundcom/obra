@@ -9,6 +9,8 @@ return [
     'summary' => 'Qué define el costo de ampliar una casa en Paraguay: planta alta o ampliación en planta baja, estado de la estructura, unión con lo existente, instalaciones y presupuesto por rubro.',
     'h1' => 'Cuánto cuesta ampliar una casa: qué define el presupuesto',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'Ampliar una casa parece más simple que construir una nueva, pero tiene sus propias reglas. Hay que conectar lo nuevo con lo existente, y lo existente guarda sorpresas: fundaciones que no se ven, instalaciones viejas y paredes que no estaban pensadas para cargar más.',
         'Esta guía no da precios. Explica qué factores mueven el costo de una ampliación, por qué dos ampliaciones del mismo tamaño pueden ser tan distintas y cómo pedir un presupuesto por rubro que refleje lo que realmente hay que hacer.',
