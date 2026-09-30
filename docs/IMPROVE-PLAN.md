@@ -280,3 +280,6 @@ D1 `/casas/minimalistas/`: reposition to execution (recommended) or 301. · D2 t
 ### Update after Anton's answers
 - Deploy is Git auto-deploy on `main`. GA4 skipped. VenderCRM endpoint now defaults in `config/site.php`; the key goes only in the server's untracked `config/local.php`.
 - Images: Anton approved up to 50 Higgsfield credits (referential images, labeled as such). Not started because the cloud environment cannot download from `*.cloudfront.net`; no credits spent.
+
+### SEO code round (2026-09-30)
+Five PRs merged: internal links (services <-> guides), schema/social (Article dates, CollectionPage, og:type), `seo-check` gate + helpful 404, IndexNow + LCP preload + cache headers, own analytics (`t.php`, `stats.php`). AVIF and image sitemaps skipped on purpose (images are already small and referential). Next round for Opus: `docs/NEXT-WINDOW-PROMPT-OPUS.md`.
