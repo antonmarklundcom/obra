@@ -15,6 +15,36 @@ function obra_label_for_path(array $content, string $path): string
     return match ($path) { '/como-trabajamos/' => 'Cómo trabajamos', '/cotizar/' => 'Cotizar', '/servicios/' => 'Servicios', '/guias/' => 'Guías', default => trim($path, '/') };
 }
 
+// Guias que hablan de esta pagina, segun el campo 'related' de cada guia (enlace inverso servicio -> guia).
+function obra_guides_for_path(array $content, string $path, string $hub = '', int $limit = 3): array
+{
+    $scored = [];
+    foreach ($content['guides'] as $slug => $guide) {
+        $score = 0;
+        foreach ($guide['related'] ?? [] as $rel) {
+            if ($rel === $path) { $score += 3; }
+            elseif ($hub !== '' && str_starts_with($rel, '/' . $hub . '/')) { $score += 1; }
+        }
+        if ($score > 0) { $scored[obra_guide_path($slug, $guide)] = $score; }
+    }
+    arsort($scored);
+    return array_slice(array_keys($scored), 0, $limit);
+}
+
+// Otras guias para seguir leyendo: las siguientes en el orden del menu que no estan ya en 'related'.
+function obra_more_guides(array $content, string $slug, array $exclude, int $limit = 3): array
+{
+    $slugs = array_keys($content['guides']);
+    $pos = (int) array_search($slug, $slugs, true);
+    $out = [];
+    for ($i = 1; $i < count($slugs) && count($out) < $limit; $i++) {
+        $other = $slugs[($pos + $i) % count($slugs)];
+        $p = obra_guide_path($other, $content['guides'][$other]);
+        if (!in_array($p, $exclude, true)) { $out[] = $p; }
+    }
+    return $out;
+}
+
 function obra_partner_note(array $config, ?array $link): void
 {
     if ($link === null) { return; }
@@ -149,6 +179,7 @@ function obra_page_service(array $config, array $content, array $route): void
 <?php obra_process_section($content['process']); ?>
 <?php obra_partner_note($config, $service['link'] ?? null); ?>
 <?php obra_related_list($content, array_map(fn($s) => '/' . $s . '/', $service['related'])); ?>
+<?php $gl = obra_guides_for_path($content, $path, $route['slug']); if ($gl) { obra_related_list($content, $gl, 'Guías para decidir antes de construir.'); } ?>
 <?php obra_faq_section($service['faqs']); obra_contact_band($config, $path, $route['slug']);
 }
 
@@ -166,6 +197,7 @@ function obra_page_child(array $config, array $content, array $route): void
 <section class="situations section"><div class="section-head"><div><p class="eyebrow">Cuándo consultar</p><h2>Te conviene si…</h2></div><p>Si tu caso se parece a alguno de estos, contanos y te decimos cómo seguir.</p></div><div class="situation-grid situation-grid-3"><?php foreach ($page['ideal'] as $i => $item): ?><article><span><?= sprintf('%02d', $i + 1) ?></span><p><?= h($item) ?></p></article><?php endforeach; ?></div></section>
 <?php obra_partner_note($config, $page['link'] ?? null); ?>
 <section class="related section"><div><p class="eyebrow">Dentro de <?= h($parent['name']) ?></p><h2>Otras especialidades y servicios relacionados.</h2><p><a class="text-link" href="/<?= h($route['slug']) ?>/">Volver a <?= h($parent['name']) ?></a></p></div><div><?php foreach ($siblings as $child => $sib): ?><a href="/<?= h($route['slug']) ?>/<?= h($child) ?>/"><span><?= h($sib['name']) ?></span><b aria-hidden="true">↗</b></a><?php endforeach; ?><?php foreach ($page['related'] as $p): if (str_starts_with($p, '/' . $route['slug'] . '/')) { continue; } ?><a href="<?= h($p) ?>"><span><?= h(obra_label_for_path($content, $p)) ?></span><b aria-hidden="true">↗</b></a><?php endforeach; ?></div></section>
+<?php $gl = obra_guides_for_path($content, $path, $route['slug']); if ($gl) { obra_related_list($content, $gl, 'Guías para decidir antes de construir.'); } ?>
 <?php obra_faq_section($page['faqs']); obra_contact_band($config, $path, $route['slug']);
 }
 
@@ -190,6 +222,7 @@ function obra_page_guide(array $config, array $content, array $route): void
 </article>
 </div>
 <?php obra_related_list($content, $guide['related'], 'Para seguir.'); ?>
+<?php $more = obra_more_guides($content, $route['slug'], $guide['related']); if ($more) { obra_related_list($content, $more, 'Otras guías.'); } ?>
 <?php obra_contact_band($config, $path);
 }
 
