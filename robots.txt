@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /form.php
+Disallow: /gracias/
+
+Sitemap: https://obra.com.py/sitemap.xml

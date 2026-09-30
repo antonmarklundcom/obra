@@ -1,0 +1,56 @@
+Options -Indexes
+DirectoryIndex index.php
+AddDefaultCharset UTF-8
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# HTTPS + sin www (no aplica en local)
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)(:\d+)?$ [NC]
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.obra\.com\.py$ [NC]
+RewriteRule ^ https://obra.com.py%{REQUEST_URI} [R=301,L]
+
+# Codigo interno: nunca servir app/, config/, docs/, tools/ por HTTP
+RewriteRule ^(app|config|docs|tools)(/|$) - [R=404,L]
+
+# Sitemap dinamico. /sitemap.php se redirige a la URL publica /sitemap.xml
+RewriteCond %{THE_REQUEST} \s/sitemap\.php[\s?] [NC]
+RewriteRule ^sitemap\.php$ /sitemap.xml [R=301,L]
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# Archivos reales (css, js, imagenes, form.php) se sirven directo
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Todo lo demas lo resuelve el router PHP (rutas limpias y 404)
+RewriteRule ^ index.php [L,QSA]
+</IfModule>
+
+<IfModule mod_headers.c>
+# Las paginas PHP fijan sus propias cabeceras (incluida CSP) en app/helpers.php.
+# Aqui solo se cubren los archivos estaticos.
+<FilesMatch "\.(css|js|webp|jpg|png|svg|txt)$">
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 7 days"
+ExpiresByType application/javascript "access plus 7 days"
+ExpiresByType image/webp "access plus 30 days"
+ExpiresByType image/jpeg "access plus 30 days"
+ExpiresByType image/png "access plus 30 days"
+ExpiresByType image/svg+xml "access plus 30 days"
+</IfModule>
+
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/xml image/svg+xml
+</IfModule>
+
+<FilesMatch "^(\.env.*|site\.php|local\.php|router\.php)$">
+Require all denied
+</FilesMatch>
