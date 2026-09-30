@@ -9,6 +9,8 @@ return [
     'summary' => 'Qué define el costo de un muro perimetral en Paraguay: largo y altura, fundación, ladrillo o bloque, revoque, portón y cómo comparar presupuestos por rubro.',
     'h1' => 'Muro perimetral: qué define el costo y cómo hacerlo bien',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'El muro perimetral protege el terreno, marca el límite con los vecinos y define la imagen de la casa desde la calle. Parece una obra simple, pero un muro mal fundado se fisura, se inclina o cae con las lluvias.',
         'Esta guía no da precios. Explica qué factores cambian el costo de un muro, dónde se nota la diferencia entre una obra bien hecha y una improvisada, y cómo pedir un presupuesto por rubro que se pueda comparar.',

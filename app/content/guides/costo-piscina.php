@@ -9,6 +9,8 @@ return [
     'summary' => 'Qué define el costo de una piscina de hormigón en Paraguay: tamaño y profundidad, suelo y excavación, revestimiento, filtración, vereda y cómo comparar presupuestos por rubro.',
     'h1' => 'Cuánto cuesta una piscina de hormigón: qué define el presupuesto',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'Dos piscinas del mismo largo y ancho pueden tener presupuestos muy distintos. La diferencia está debajo del agua y alrededor: el suelo donde se excava, el revestimiento, el sistema de filtrado y la vereda que la rodea.',
         'Esta guía no da precios. Explica los rubros que componen una piscina de hormigón, dónde suelen aparecer las diferencias entre propuestas y cómo pedir un presupuesto por rubro que puedas comparar con tranquilidad.',

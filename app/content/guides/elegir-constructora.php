@@ -9,6 +9,8 @@ return [
     'summary' => 'Cómo elegir una constructora en Paraguay: qué pedir por escrito, cómo comparar propuestas por rubro, cómo verificar obras y referencias y qué señales de alerta evitar.',
     'h1' => 'Cómo elegir una constructora en Paraguay',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'Elegir quién va a construir tu casa es una decisión más grande que elegir el material o la terminación. La obra dura meses, involucra mucho dinero y deja huellas durante años. Y en Paraguay es común que los presupuestos lleguen en una sola línea, sin forma de compararlos.',
         'Esta guía reúne los puntos que conviene revisar antes de firmar: qué pedir por escrito, cómo comparar propuestas, cómo verificar experiencia real y qué señales deberían hacerte dudar.',

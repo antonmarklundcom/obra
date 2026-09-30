@@ -9,6 +9,8 @@ return [
     'summary' => 'Techo de losa, chapa o teja en Paraguay: cómo se comporta cada uno con el calor y la lluvia, qué estructura piden, qué mantenimiento y cómo comparar presupuestos por rubro.',
     'h1' => 'Techo de losa, chapa o teja: cuál conviene en Paraguay',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'El techo es una de las decisiones que más condiciona una casa: el calor que entra en verano, cómo se escucha la lluvia, cuánto peso carga la estructura y qué mantenimiento vas a tener. No hay uno mejor para todos los casos.',
         'Esta guía compara los tres sistemas más usados en Paraguay, losa, chapa y teja, y explica cómo pedir un presupuesto de techo que puedas comparar rubro por rubro, sin precios sueltos.',

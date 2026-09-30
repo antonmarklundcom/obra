@@ -9,6 +9,8 @@ return [
     'summary' => 'Humedad en las paredes en Paraguay: humedad ascendente, filtración por techo o cañería y condensación, cómo distinguir cada causa y qué trabajos la corrigen de raíz.',
     'h1' => 'Humedad en las paredes: causas y cómo solucionarla',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'Pintar sobre una mancha de humedad es la solución más común y la que menos dura. La mancha vuelve porque la causa sigue ahí. En Paraguay, con lluvias fuertes, calor y suelos que retienen agua, entender de dónde viene la humedad es el primer paso.',
         'Esta guía describe las causas más comunes, cómo distinguirlas y qué tipo de trabajo las corrige de raíz, sin prometer resultados que dependen de cada casa.',

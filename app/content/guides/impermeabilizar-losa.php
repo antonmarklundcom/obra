@@ -9,6 +9,8 @@ return [
     'summary' => 'Cómo impermeabilizar una losa o terraza en Paraguay: preparación de la superficie, pendientes, membrana, babetas y desagües, y los errores que hacen que vuelva a filtrar.',
     'h1' => 'Cómo impermeabilizar una losa o terraza',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'Una losa que filtra arruina cielorrasos, pinturas y a veces instalaciones. Con las lluvias fuertes de Paraguay, una impermeabilización mal ejecutada se nota rápido, y repetirla implica romper y rehacer.',
         'Esta guía explica cómo se prepara y ejecuta una impermeabilización, qué sistemas existen y dónde se cometen los errores que hacen que el agua vuelva a entrar.',

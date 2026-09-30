@@ -10,6 +10,8 @@ return [
     'summary' => 'Platea de hormigón o zapatas y vigas de fundación: cuándo conviene cada una según el suelo, la casa y el presupuesto. Errores comunes en fundaciones en Paraguay.',
     'h1' => 'Platea o zapatas: qué fundación conviene para tu casa',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'La fundación es la parte de la casa que nadie ve y la que más cuesta corregir. En Paraguay se usan dos soluciones principales: la platea de hormigón armado y las zapatas con vigas de fundación. Ninguna es mejor en abstracto; depende del suelo y del proyecto.',
     ],

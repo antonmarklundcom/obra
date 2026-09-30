@@ -10,6 +10,8 @@ return [
     'summary' => 'Diferencias entre contratar un albañil, un maestro de obra o una empresa constructora en Paraguay: responsabilidad, coordinación, presupuesto, respaldo y qué conviene según la obra.',
     'h1' => 'Albañil, maestro de obra o constructora: qué conviene',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'La mayoría de las obras en Paraguay se hacen con un albañil o un maestro de obra de confianza. Muchas salen bien. Otras terminan con el cliente coordinando gremios, comprando materiales y sin nadie que responda. Esta guía explica qué cambia con cada opción.',
     ],

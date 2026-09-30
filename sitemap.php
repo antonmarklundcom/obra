@@ -14,11 +14,11 @@ $fecha = static function (array $archivos): string {
     }
     return $t > 0 ? gmdate('Y-m-d', $t) : gmdate('Y-m-d');
 };
-$lastmodDe = static function (array $route) use ($fecha): string {
+$lastmodDe = static function (array $route) use ($fecha, $content): string {
     switch ($route['type']) {
         case 'service': return $fecha(['app/content.php']);
         case 'child':   return $fecha(['app/content/sub/' . $route['slug'] . '.php']);
-        case 'guide':   return $fecha(['app/content/guides/' . $route['slug'] . '.php']);
+        case 'guide':   $g = $content['guides'][$route['slug']] ?? []; return (string) ($g['updated'] ?? $fecha(['app/content/guides/' . $route['slug'] . '.php']));
         case 'home':    return $fecha(['app/pages.php', 'app/routes.php', 'app/content.php']);
         default:        return $fecha(['app/pages.php', 'app/routes.php']); // paginas fijas
     }

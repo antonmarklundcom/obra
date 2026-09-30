@@ -10,6 +10,8 @@ return [
     'summary' => 'Antes de construir en tu terreno: títulos, medidas reales, suelo, desnivel, servicios, retiros municipales y accesos. La lista que evita sorpresas caras en obra.',
     'h1' => 'Qué revisar antes de construir en tu terreno',
     'kicker' => 'Guía',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'Tener el terreno es el primer paso, pero construir sobre él sin revisarlo es la forma más común de gastar de más. Estas son las cosas que verificamos antes de proyectar y presupuestar, y que vos podés adelantar.',
     ],

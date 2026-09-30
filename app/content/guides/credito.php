@@ -11,6 +11,8 @@ return [
     'summary' => 'Cómo construir tu casa con crédito en Paraguay: qué documentación de obra pide el banco, cómo funcionan los desembolsos por etapa, el rol del presupuesto y del profesional responsable.',
     'h1' => 'Construí tu casa con crédito',
     'kicker' => 'Financiación',
+    'published' => '2026-09-30',
+    'updated' => '2026-09-30',
     'intro' => [
         'Buena parte de las casas que se construyen en Gran Asunción se financian con crédito bancario, muchas veces con fondos de la AFD a través de los bancos. Construir con crédito tiene sus reglas: el banco desembolsa por etapas, exige un presupuesto con formato y un profesional que certifique avances. Acá explicamos cómo se acomoda la obra a eso.',
     ],
