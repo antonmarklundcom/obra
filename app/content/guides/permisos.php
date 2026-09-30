@@ -24,4 +24,5 @@ return [
         ['¿Qué pasa si mi casa actual no tiene permiso?', 'Se puede regularizar en muchos casos. Lo evaluamos con el profesional responsable antes de ampliar o reformar.'],
     ],
     'related' => ['/casas/', '/ampliaciones/', '/supervision/direccion/'],
+    'link' => ['site' => 'arq', 'path' => '/carpeta/', 'text' => 'La carpeta municipal y la aprobación de planos las prepara nuestro estudio en arq.com.py; con eso aprobado, arrancamos la obra.'],
 ];

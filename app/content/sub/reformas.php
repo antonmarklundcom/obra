@@ -22,6 +22,7 @@ return [
             ['¿Puedo mover la cocina a otro ambiente?', 'Sí, si los desagües y la ventilación lo permiten. Lo verificamos en el relevamiento.'],
         ],
         'related' => ['/reformas/banos/', '/reformas/', '/ampliaciones/'],
+        'link' => ['site' => 'carpinteria', 'path' => '/cocinas/', 'text' => 'Los muebles de cocina a medida los fabrica carpinteria.com.py; nosotros hacemos la demolición, las instalaciones y los revestimientos para que lleguen a una cocina lista.'],
     ],
     'banos' => [
         'name' => 'Remodelación de baños',
@@ -60,6 +61,7 @@ return [
             ['¿Incluyen la pintura?', 'Sí, cuando forma parte del alcance. Recomendamos definirla junto con el revestimiento.'],
         ],
         'related' => ['/muros/portones/', '/tinglados/cocheras/', '/reformas/'],
+        'link' => ['site' => 'arq', 'path' => '/estilos/', 'text' => 'Si todavía no está definido el diseño de la nueva fachada, el proyecto lo prepara nuestro estudio en arq.com.py y nosotros lo ejecutamos en obra.'],
     ],
     'techos' => [
         'name' => 'Cambio y reparación de techos',

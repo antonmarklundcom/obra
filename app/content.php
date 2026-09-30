@@ -84,7 +84,7 @@ return [
                 ['¿Puedo pedir solamente techo y parrilla?', 'Sí. El alcance puede ajustarse a una intervención puntual siempre que la solución sea técnicamente viable.'],
             ],
             'related' => ['piscinas', 'patios', 'quintas'],
-            'link' => ['site' => 'carpinteria', 'text' => 'Para techos de madera y cielorraso de machimbre trabajamos con carpinteria.com.py.'],
+            'link' => ['site' => 'carpinteria', 'path' => '/aluminio/', 'text' => 'Si querés cerrar el quincho con aberturas de aluminio o blindex, esas piezas las fabrica carpinteria.com.py y las colocamos dentro de la misma obra.'],
         ],
         'reformas' => [
             'name' => 'Reformas y remodelaciones',
@@ -104,6 +104,7 @@ return [
                 ['¿Necesito planos para una reforma?', 'Para cambios estructurales o de fachada suele hacer falta documentación municipal. Lo revisamos en el relevamiento y te decimos qué corresponde.'],
             ],
             'related' => ['ampliaciones', 'patios', 'casas'],
+            'link' => ['site' => 'arq', 'path' => '/regularizacion/', 'text' => 'Si la construcción existente no tiene planos aprobados, la regularización la hace nuestro estudio en arq.com.py antes o durante la reforma.'],
         ],
         'ampliaciones' => [
             'name' => 'Ampliaciones de vivienda',

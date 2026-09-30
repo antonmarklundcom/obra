@@ -22,5 +22,6 @@ return [
             ['¿La automatización se puede agregar después?', 'Sí, si se dejó la instalación eléctrica prevista. Lo hacemos siempre.'],
         ],
         'related' => ['/muros/', '/tinglados/cocheras/', '/reformas/fachadas/'],
+        'link' => ['site' => 'carpinteria', 'path' => '/portones/', 'text' => 'Si preferís un portón de madera, lo fabrica carpinteria.com.py y nosotros preparamos los pilares, los rieles y la obra civil del acceso.'],
     ],
 ];

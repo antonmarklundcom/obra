@@ -22,6 +22,7 @@ return [
             ['¿Necesita permiso municipal?', 'Un quincho cerrado suma superficie cubierta. Lo revisamos y coordinamos la documentación si corresponde.'],
         ],
         'related' => ['/quinchos/parrillas/', '/quinchos/techo-madera/', '/ampliaciones/galeria/'],
+        'link' => ['site' => 'carpinteria', 'path' => '/aberturas/', 'text' => 'Las aberturas de aluminio, el blindex y las puertas del quincho cerrado las fabrica carpinteria.com.py, del mismo grupo; la obra civil y la colocación quedan a nuestro cargo.'],
     ],
     'parrillas' => [
         'name' => 'Parrillas y asadores',
@@ -50,16 +51,15 @@ return [
         'kicker' => 'Madera vista, bien tratada',
         'intro' => [
             'El techo de madera con machimbre es el clásico del quincho paraguayo: cálido, fresco y con un olor que ningún otro material da. Requiere madera bien estacionada, tratamiento contra insectos y humedad, y una estructura calculada para el peso de la teja.',
-            'La carpintería la fabrica carpinteria.com.py, del mismo grupo, y la obra civil la hacemos nosotros. Un solo responsable para las dos partes.',
+            'La estructura de madera, el machimbre y la cubierta los resolvemos dentro de la misma obra, junto con la obra civil del quincho: un solo responsable para todo el techo, desde los apoyos hasta la última tabla, y una sola conversación para coordinar medidas, madera y terminaciones.',
         ],
         'includes' => ['Estructura de madera dura: tijeras, cabriadas o vigas vistas', 'Cielorraso de machimbre con aislación', 'Cubierta de teja colonial, francesa o chapa', 'Tratamiento y terminación de la madera', 'Columnas de mampostería o madera'],
         'ideal' => ['Querés un quincho de estilo tradicional con madera a la vista.', 'Buscás un techo fresco para el verano.', 'Preferís coordinar carpintería y obra con un solo responsable.'],
         'faqs' => [
-            ['¿Qué madera conviene para el techo?', 'Maderas duras bien estacionadas. Nuestra carpintería te asesora sobre especies disponibles y su comportamiento.'],
+            ['¿Qué madera conviene para el techo?', 'Maderas duras bien estacionadas. Te asesoramos sobre las especies disponibles y cómo se comportan con el calor y la humedad.'],
             ['¿El machimbre necesita mantenimiento?', 'Un barnizado o aceitado periódico. Lo explicamos al entregar.'],
             ['¿Se puede combinar madera con chapa?', 'Sí. Estructura y cielorraso de madera con cubierta de chapa aislada es una combinación habitual y económica.'],
         ],
         'related' => ['/quinchos/', '/patios/pergolas/', '/quintas/casa-campo/'],
-        'link' => ['site' => 'carpinteria', 'text' => 'Estructuras de madera, machimbre y aberturas se fabrican en carpinteria.com.py.'],
     ],
 ];

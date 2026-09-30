@@ -20,9 +20,17 @@ function obra_partner_note(array $config, ?array $link): void
     if ($link === null) { return; }
     $site = $config['partner_sites'][$link['site']] ?? null;
     $text = h($link['text']);
-    if ($site !== null && !empty($site['live'])) {
+    // Con 'path' (una pagina concreta del sitio hermano) solo se enlaza si esa ruta figura en live_paths
+    // (comprobada con HEAD 200). Si no, queda como texto. Sin 'path' se enlaza la portada si el sitio esta vivo.
+    $url = $site !== null ? (string) $site['url'] : '';
+    $live = $site !== null && !empty($site['live']);
+    if ($live && isset($link['path'])) {
+        $live = in_array($link['path'], $site['live_paths'] ?? [], true);
+        $url = rtrim($url, '/') . $link['path'];
+    }
+    if ($live) {
         $host = preg_replace('#^https?://#', '', rtrim((string) $site['url'], '/'));
-        $text = str_replace(h($host), '<a href="' . h($site['url']) . '" rel="noopener">' . h($host) . '</a>', $text);
+        $text = str_replace(h($host), '<a href="' . h($url) . '" rel="noopener">' . h($host) . '</a>', $text);
     }
     ?><aside class="partner-note"><p class="eyebrow">Del mismo grupo</p><p><?= $text ?></p></aside><?php
 }

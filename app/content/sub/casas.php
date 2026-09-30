@@ -41,6 +41,7 @@ return [
             ['¿Hacen el proyecto también?', 'El diseño lo hace nuestro estudio en arq.com.py o el arquitecto que elijas. Nosotros construimos.'],
         ],
         'related' => ['/casas/duplex/', '/patios/decks/', '/piscinas/desbordante/'],
+        'link' => ['site' => 'arq', 'path' => '/minimalista/', 'text' => 'El diseño de una casa minimalista (planos, fachadas y renders) lo hace nuestro estudio en arq.com.py; acá nos ocupamos de construirla.'],
     ],
     'etapas' => [
         'name' => 'Construcción por etapas',

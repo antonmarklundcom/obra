@@ -22,6 +22,7 @@ return [
             ['¿Necesito planos?', 'Sí. Una planta alta requiere proyecto y aprobación municipal. Lo incluimos en el alcance.'],
         ],
         'related' => ['/casas/duplex/', '/ampliaciones/dormitorio/', '/ampliaciones/'],
+        'link' => ['site' => 'arq', 'path' => '/estructural/', 'text' => 'Antes de sumar un piso hace falta un cálculo estructural de lo existente; ese estudio lo hace arq.com.py y nosotros ejecutamos la ampliación.'],
     ],
     'dormitorio' => [
         'name' => 'Ampliación de dormitorio y baño',

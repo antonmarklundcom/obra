@@ -26,8 +26,9 @@ $config = [
     'territory' => obra_env('OBRA_TERRITORY', 'Paraguay'),
     // Sitios hermanos del grupo. 'live' => false imprime el texto sin enlace hasta que el dominio este publicado.
     'partner_sites' => [
-        'arq' => ['url' => 'https://arq.com.py/', 'live' => true],
-        'carpinteria' => ['url' => 'https://carpinteria.com.py/', 'live' => true],
+        // live_paths: paginas internas confirmadas con HEAD 200. Un enlace contextual con 'path' fuera de esta lista queda como texto.
+        'arq' => ['url' => 'https://arq.com.py/', 'live' => true, 'live_paths' => []],
+        'carpinteria' => ['url' => 'https://carpinteria.com.py/', 'live' => true, 'live_paths' => []],
         'pozo' => ['url' => 'https://pozo.com.py/', 'live' => false],
         'prestamo' => ['url' => 'https://prestamo.com.py/', 'live' => false],
     ],
