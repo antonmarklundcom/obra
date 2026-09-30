@@ -253,8 +253,10 @@ return [
     // necesitan datos reales (financiacion AFD verificada, obras concretas) antes de construirse.
 
     // Subpaginas por servicio (/{servicio}/{sub}/) y guias (/guias/{slug}/, /credito/)
-    'children' => require __DIR__ . '/content-sub.php',
-    'guides' => require __DIR__ . '/content-guides.php',
+    // Especialidades: app/content/sub/{hub}.php, en el orden de los hubs de arriba.
+    'children' => obra_load_content_dir('sub', ['casas', 'quintas', 'piscinas', 'quinchos', 'reformas', 'ampliaciones', 'patios', 'tinglados', 'muros', 'comerciales', 'supervision', 'presupuesto']),
+    // Guias: app/content/guides/{slug}.php. El orden fija el menu y el sitemap; una guia nueva sin orden va al final.
+    'guides' => obra_load_content_dir('guides', ['costo-casa', 'terreno', 'plazos', 'permisos', 'platea', 'ladrillo-bloque', 'albanil', 'credito']),
 
     'process' => [
         ['01', 'Terreno y consulta', 'Nos contás qué querés construir, dónde queda el terreno o la casa y cómo pensás financiarlo. Podés mandarnos fotos por WhatsApp.'],

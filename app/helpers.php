@@ -80,6 +80,22 @@ function obra_page_wa_message(array $route, string $intent): string
     return 'Hola, vi la página de "' . obra_page_label($route) . '" en Obra.com.py y quiero ' . $intent . '.';
 }
 
+// Carga un archivo de contenido por clave desde app/content/{dir}/{clave}.php.
+// Primero las claves de $order (orden fijo de menu, sitemap y footer); despues cualquier archivo nuevo, en orden alfabetico.
+// Asi cada agente de contenido edita o agrega solo su propio archivo.
+function obra_load_content_dir(string $dir, array $order): array
+{
+    $base = __DIR__ . '/content/' . $dir . '/';
+    $files = glob($base . '*.php') ?: [];
+    sort($files);
+    $keys = array_map(fn($f) => basename($f, '.php'), $files);
+    $data = [];
+    foreach (array_merge(array_values(array_intersect($order, $keys)), array_diff($keys, $order)) as $key) {
+        $data[$key] = require $base . $key . '.php';
+    }
+    return $data;
+}
+
 function obra_json(array $data): string
 {
     return (string) json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT);
