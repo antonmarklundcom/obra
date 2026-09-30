@@ -1,7 +1,7 @@
 # obra.com.py: improvement plan (2026-09-30)
 
-Planning only. Today nothing on the site changed. The only files written are `audit-before.json` and this plan, plus `docs/NEXT-WINDOW-PROMPT.md`.
-Build window: tomorrow, Opus 5.5 at medium effort as director, with Sonnet 5.5 subagents for same-shaped work. Never Fable.
+Planning only. Nothing on the site changed. Files written: `docs/audit/audit-before.json`, this plan, `docs/NEXT-WINDOW-PROMPT.md` (session 1) and `docs/NEXT-WINDOW-PROMPT-SONNET.md` (session 2).
+Build: **two sessions**. Session 1 = Opus 5.5 medium: foundation (Phase 0–1, items 1–8, 12, 13, 15), the content spec and briefs, PR, merge, live check. Session 2 = Sonnet 5.5 medium, started after session 1's PR is merged: content fan-out (items 9–11) with Sonnet medium subagents, PRs, merge, live check. Never Fable.
 
 Goal: improve the site a lot while **keeping every URL and ranking it has**, and grow organic traffic and WhatsApp leads for build and execution intent (obra = construcción/ejecución).
 
@@ -13,7 +13,7 @@ Goal: improve the site a lot while **keeping every URL and ranking it has**, and
 |---|---|---|
 | Repo | Fresh clone of `antonmarklundcom/obra` (1 commit, `1572dd8`). Read README, CLAUDE-CHANGES, all of `docs/` and `docs/seo/`, `config/`, `app/*`, `form.php`, `router.php`, `.htaccess`, `sitemap.php`, `tools/*.ps1`, CSS/JS. | See findings |
 | Live crawl | **Blocked.** This cloud container's egress policy denies `obra.com.py` (curl and WebFetch both refused). | The crawl ran against the repo on `php -S router.php` (PHP 8.4, mbstring and curl on). Live equals repo per your 2026-09-29 check: 56/56 sitemap URLs, the same titles and H1s, byte-identical CSS. **The build window must re-crawl live and diff against `audit-before.json`** (Phase 0). |
-| audit-before.json | Every sitemap URL: status, title, meta description, H1, canonical, robots, word count (inside `<main>`), internal links in and out, external links, images without alt, schema types, plus redirect and blocked-path checks and every WhatsApp link's number and text. | `/audit-before.json` |
+| `docs/audit/audit-before.json` | Every sitemap URL: status, title, meta description, H1, canonical, robots, word count (inside `<main>`), internal links in and out, external links, images without alt, schema types, plus redirect and blocked-path checks and every WhatsApp link's number and text. | `/audit-before.json` |
 | Playwright | 56 URLs × 1366 px and 390 px (112 runs): console errors, failed requests, broken images, horizontal scroll, LCP element and time, bytes by type, fonts, FAB and CTA above the fold. | `playwright_summary` in audit-before.json; screenshots of 10 key pages × 2 in `./audit-shots/` (local only, not committed) |
 | Form | POST with `OBRA_CRM_MOCK=success`, valid data → `303` to `https://wa.me/595992279599?text=…`. Invalid → `303 /cotizar/?error=campos`. | Works |
 | Keywords | **The keyword-library MCP is not connected in this cloud session.** The map in §3 uses the KWP term lists in `docs/seo/*-site-structure.md` (70 obra, 60 arq, 60 carpinteria). **Phase 0 of the build pulls PY volumes** with `list_projects` → `project_overview` → `list_groups` → `get_group` / `keyword_lookup` and fills the Vol column. Any "new page" in §3.3 gets built only if its group has real PY volume. | §3 |
@@ -42,7 +42,7 @@ Goal: improve the site a lot while **keeping every URL and ranking it has**, and
 | F8 | **Images:** 4 photos reused across 56 pages (`servicio-cochera.webp` is the hero on 11 pages). No `srcset`: mobile downloads the 1600 px, 211 KB hero. `og-obra.png` (729 KB) is unused. | audit, ls |
 | F9 | **Trust pages are thin and have no facts.** `/nosotros/` 189 words, `/cotizar/` 246, `/como-trabajamos/` 291, `/privacidad/` 186. `config/local.php` data (email, RUC, razón social, address) isn't shown. No NAP, no `tel`. That's E-E-A-T and local-pack weakness. | audit |
 | F10 | **QA only runs on Windows.** `tools/qa.ps1` and `package-hostinger.ps1` are PowerShell. There's no cross-platform verify, no SEO diff, no number check. The deploy method is a zip upload; nobody has confirmed that Hostinger Git auto-deploy is connected for this repo. | tools/ |
-| F11 | Small: `obra_safe_return()` falls back to `/contacto/` (a 301) instead of `/cotizar/` (`app/helpers.php:142`). Sitemap `lastmod` is the same global date for all 56 URLs. `audit-before.json` at the repo root would be publicly served if Git deploy is on (move it under `docs/audit/`, which is blocked by .htaccess). | code |
+| F11 | Small: `obra_safe_return()` falls back to `/contacto/` (a 301) instead of `/cotizar/` (`app/helpers.php:142`). Sitemap `lastmod` is the same global date for all 56 URLs. The audit file now lives in `docs/audit/` (blocked by .htaccess), so it's never publicly served. | code |
 
 ---
 
@@ -156,7 +156,7 @@ Rule for adding any page: a distinct meaning group, PY volume > 0, its own copy 
 ## 4. Protect SEO
 
 ### 4.1 URLs that must stay (200, self-canonical, in the sitemap)
-All 56 in `audit-before.json → pages`:
+All 56 in `docs/audit/audit-before.json → pages`:
 `/ /servicios/ /guias/ /como-trabajamos/ /cotizar/ /nosotros/ /privacidad/`
 `/casas/ (+duplex, minimalistas, etapas, prefabricadas) /quintas/ (+refaccion, casa-campo) /piscinas/ (+chicas, quinta, desbordante, renovacion) /quinchos/ (+cerrados, parrillas, techo-madera) /reformas/ (+cocinas, banos, fachadas, techos) /ampliaciones/ (+planta-alta, dormitorio, galeria) /patios/ (+veredas, decks, pergolas) /tinglados/ (+galpones, cocheras) /muros/ (+portones) /comerciales/ (+locales, oficinas) /supervision/ (+direccion) /presupuesto/`
 `/guias/costo-casa/ /guias/terreno/ /guias/plazos/ /guias/permisos/ /guias/platea/ /guias/ladrillo-bloque/ /guias/albanil/ /credito/`
@@ -170,7 +170,7 @@ Existing 301s that must keep working: `/contacto/→/cotizar/`, `/cocinas-banos/
 The URL, `<title>`, H1, canonical, robots and schema `@type`s. Meta descriptions **may** be shortened (F7) but must keep the primary keyword. Word count and inbound internal links may only go **up**.
 
 ### 4.4 Before/after check (build window, before the PR and again on live after deploy)
-`tools/seo-diff` compares `audit-before.json` with a fresh `audit-after.json` and **fails** on:
+`tools/seo-diff` compares `docs/audit/audit-before.json` with a fresh `audit-after.json` and **fails** on:
 - any before-URL that isn't 200, is missing from the sitemap, or has a non-self canonical or noindex
 - a changed title or H1 that isn't in the approved list (`docs/audit/approved-changes.json`)
 - word count or internal-links-in going down on any page; schema types not a superset
@@ -225,11 +225,11 @@ Keep the flow: validate → VenderCRM (via `OBRA_CRM_MOCK` in tests: `success`, 
 
 ## 6. Ranked work items
 
-Model key: **O** = Opus 5.5 medium (director, in the main session). **S-L** / **S-M** = Sonnet 5.5 subagent at low or medium effort. Risk = risk to current rankings.
+Model key: **O** = Opus 5.5 medium (session 1 director). Items 9–11 are directed by session 2 (Sonnet 5.5 medium), which reviews its own subagents' work. **S-L** / **S-M** = Sonnet 5.5 subagent at low or medium effort. Risk = risk to current rankings.
 
 | # | Item | Effort | Risk | Model | Human decision? |
 |---|---|---|---|---|---|
-| 1 | Cross-platform tools: `tools/audit.mjs` (crawl → audit JSON, same schema as audit-before), `tools/seo-diff.mjs`, `tools/check-wa.mjs`, `tools/verify.sh` + `verify.ps1` wrappers (php -l on all, routes, form matrix, check-wa, seo-diff, Playwright). Move `audit-before.json` → `docs/audit/`. Local gate only, **no GitHub Actions** (budget policy). | M | none | O | no |
+| 1 | Cross-platform tools: `tools/audit.mjs` (crawl → audit JSON, same schema as audit-before), `tools/seo-diff.mjs`, `tools/check-wa.mjs`, `tools/verify.sh` + `verify.ps1` wrappers (php -l on all, routes, form matrix, check-wa, seo-diff, Playwright). Local gate only, **no GitHub Actions** (budget policy). | M | none | O | no |
 | 2 | Remove the old number everywhere (F1); reconcile the docs (F2): one structure doc (`docs/seo/obra-com-py-site-structure.md`, the other becomes a pointer), `/guias/` documented, `/obras/` marked "deferred until real photos", division rules from §2 added. | S | none | S-L, O reviews | no |
 | 3 | WhatsApp map + helper + QA + remove or rework the picker (F3, §5.1). Wire all 6 call sites. | M | low | O writes the helper and QA; S-L drafts the ~70 message texts; O reviews | D2 |
 | 4 | Mobile sticky bar + FAB fix + `tel:` link (F4, §5.4). | S | low | O | no |
@@ -247,7 +247,7 @@ Model key: **O** = Opus 5.5 medium (director, in the main session). **S-L** / **
 | 16 | `/obras/` portfolio (NEW-9). | M | none | O | D4 (only with real photos) |
 | 17 | Zone pages (NEW-10). | L | medium (thin/duplicate risk) | not in this build | D5 |
 
-**Build order tomorrow:** 1 → 2 → 8 → 3 → 4 → 5 → 6 → 7 → 12 → 15 → (9 ∥ 10 fan-out) → 11 → 13 (if facts arrive) → verify → PR → merge → live verify. Items 14, 16 and 17 wait for Anton.
+**Build order.** Session 1 (Opus): 1 → 2 → 8 → 3 → 4 → 5 → 6 → 7 → 12 → 15 → 13 (if facts arrive) → content spec + briefs → verify → PR → merge → live verify. Session 2 (Sonnet), after that merge: group B piscinas (item 9) → PR → merge → live verify; then the rest of 9, 10, 11 → PR → merge → live verify. Items 14, 16 and 17 wait for Anton.
 
 ---
 
