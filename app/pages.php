@@ -80,7 +80,7 @@ function obra_page_home(array $config, array $content, array $route): void
 <section class="trust-band" aria-label="Forma de trabajo"><span>Llave en mano: planos, obra y entrega</span><span>Presupuesto por escrito en guaraníes</span><span>Materiales y terminaciones definidos</span><span>Reportes de avance por etapa</span></section>
 
 <section class="services section" id="servicios">
-  <div class="section-head"><div><p class="eyebrow">Lo que construimos</p><h2>Obra completa, del terreno a la entrega.</h2></div><p>Cada proyecto empieza por entender el lugar, el uso y el nivel de terminación que necesitás. Después se cotiza por rubro, no con un precio genérico por metro cuadrado.</p></div>
+  <div class="section-head"><div><p class="eyebrow">Lo que construimos</p><h2>Obra completa, del terreno a la entrega.</h2></div><p>Cada proyecto empieza por entender el lugar, el uso y el nivel de terminación que necesitás. Después se cotiza por rubro, no con un precio genérico por metro cuadrado. Somos una constructora en Paraguay que toma a su cargo obras civiles de casas, quinchos, piscinas, reformas y locales, con una sola coordinación.</p></div>
   <div class="service-bento">
   <?php $i = 0; foreach (array_slice($content['services'], 0, 6, true) as $slug => $service): $i++; ?>
     <a class="service-card" href="/<?= h($slug) ?>/" data-reveal><span><?= sprintf('%02d', $i) ?></span><h3><?= h($service['name']) ?></h3><p><?= h($service['short']) ?></p><b>Ver servicio <i aria-hidden="true">↗</i></b></a>
