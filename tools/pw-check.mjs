@@ -59,6 +59,7 @@ for (const vp of VIEWPORTS) {
         sticky: vis(sticky), fab: vis(document.querySelector('.wa-fab')), small, lcp: window.__lcp,
       };
     });
+    if (SHOTS.includes(path)) await page.screenshot({ path: `${shotsDir}/${vp.name}${path.replace(/\//g, '_') || '_'}.png`, fullPage: false });
     // Imagenes lazy: forzar carga desplazando hasta el final y revisar.
     await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += innerHeight) { scrollTo(0, y); await new Promise(r => setTimeout(r, 30)); } });
     await page.waitForLoadState('networkidle').catch(() => {});
@@ -71,7 +72,6 @@ for (const vp of VIEWPORTS) {
     if (vp.name === 'mobile' && r.fab) fail.push(`${where}: round FAB visible on mobile`);
     r.small.forEach(s => fail.push(`${where}: tap target under 44px: ${s}`));
     lcp[where] = r.lcp;
-    if (SHOTS.includes(path)) await page.screenshot({ path: `${shotsDir}/${vp.name}${path.replace(/\//g, '_') || '_'}.png`, fullPage: false });
     await page.close();
   }
   await context.close();

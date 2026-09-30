@@ -81,66 +81,15 @@
     addEventListener('pageshow', () => { if (button) { button.disabled = false; button.innerHTML = label; } });
   });
 
-  // WhatsApp: antes de escribir, elegir la respuesta y armar el mensaje segun eso.
-  // "thanks" ya contesto estas preguntas en el formulario, se deja como link directo.
-  const WA_OPTIONS = [
-    { key: 'presupuesto', label: 'Quiero un presupuesto', suffix: 'y quiero un presupuesto por escrito.' },
-    { key: 'dudas', label: 'Tengo dudas antes de cotizar', suffix: 'y tengo algunas dudas antes de cotizar.' },
-    { key: 'urgente', label: 'Es urgente', suffix: 'y es urgente, necesito una respuesta rápida.' },
-  ];
-  let waPanel = null;
-  const closeWaPanel = () => { waPanel?.remove(); waPanel = null; };
+  // WhatsApp: un toque abre WhatsApp con el texto de la pagina (app/wa-messages.php). Solo se mide el clic.
   document.querySelectorAll('a[data-wa]').forEach(link => {
-    if (link.dataset.wa === 'thanks') {
-      link.addEventListener('click', () => track('whatsapp_click', { placement: link.dataset.wa, page_path: location.pathname }));
-      return;
-    }
-    let url;
-    try { url = new URL(link.href); } catch (e) { return; }
-    const base = url.searchParams.get('text') || '';
-    const intro = base.split(' y quiero ')[0];
-    link.setAttribute('aria-haspopup', 'true');
-    link.setAttribute('aria-expanded', 'false');
-    link.addEventListener('click', event => {
-      event.preventDefault();
-      const already = waPanel && waPanel.dataset.for === link.dataset.wa;
-      closeWaPanel();
-      if (already) return;
-      const panel = document.createElement('div');
-      panel.className = 'wa-picker';
-      panel.dataset.for = link.dataset.wa;
-      panel.setAttribute('role', 'menu');
-      panel.innerHTML = '<p>¿Cómo seguimos?</p>'
-        + WA_OPTIONS.map((opt, i) => `<button type="button" role="menuitem" data-i="${i}">${opt.label}</button>`).join('')
-        + '<button type="button" class="wa-picker-skip" role="menuitem" data-i="skip">Escribir sin elegir</button>';
-      document.body.appendChild(panel);
-      const rect = link.getBoundingClientRect();
-      const panelWidth = panel.offsetWidth;
-      const panelHeight = panel.offsetHeight;
-      const left = Math.min(Math.max(8, rect.left), window.innerWidth - panelWidth - 8);
-      const spaceBelow = window.innerHeight - rect.bottom;
-      const top = spaceBelow > panelHeight + 12 ? rect.bottom + 8 : Math.max(8, rect.top - panelHeight - 8);
-      panel.style.left = left + 'px';
-      panel.style.top = top + 'px';
-      waPanel = panel;
-      link.setAttribute('aria-expanded', 'true');
-      panel.querySelectorAll('button').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const i = btn.dataset.i;
-          const message = i === 'skip' ? base : intro + ' ' + WA_OPTIONS[+i].suffix;
-          url.searchParams.set('text', message);
-          track('whatsapp_click', { placement: link.dataset.wa, page_path: location.pathname, qualified: i === 'skip' ? 'skip' : WA_OPTIONS[+i].key });
-          window.open(url.toString(), '_blank', 'noopener');
-          closeWaPanel();
-          link.setAttribute('aria-expanded', 'false');
-        });
-      });
-      panel.querySelector('button')?.focus();
-    });
+    link.addEventListener('click', () => track('whatsapp_click', { placement: link.dataset.wa, page_path: location.pathname, service: link.dataset.waService || '' }));
   });
-  document.addEventListener('click', event => { if (waPanel && !event.target.closest('.wa-picker') && !event.target.closest('a[data-wa]')) closeWaPanel(); });
-  addEventListener('scroll', closeWaPanel, { passive: true });
-  addEventListener('keydown', event => { if (event.key === 'Escape' && waPanel) closeWaPanel(); });
+
+  // Barra fija movil: se oculta mientras el teclado esta abierto (foco en un campo).
+  const fieldSelector = 'input:not([type="checkbox"]):not([type="hidden"]), textarea, select';
+  document.addEventListener('focusin', event => { if (event.target.matches?.(fieldSelector)) document.body.classList.add('field-focus'); });
+  document.addEventListener('focusout', event => { if (event.target.matches?.(fieldSelector)) document.body.classList.remove('field-focus'); });
   const thanks = document.querySelector('[data-thanks]');
   if (thanks && /^(enviado|crm-confirmado)$/.test(thanks.dataset.thanks || '')) track('form_confirmed', { state: thanks.dataset.thanks });
 

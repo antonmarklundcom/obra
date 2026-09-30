@@ -157,7 +157,7 @@ p{color:var(--muted)}
 .service-directory b{font-size:1.3rem}
 .service-hero figure{margin:0;position:relative;min-height:340px;height:100%;background:var(--dark);overflow:hidden}
 .service-hero figure img{width:100%;height:100%;object-fit:cover}
-.service-hero figcaption{position:absolute;right:1rem;bottom:1rem;background:rgba(255,255,255,.92);padding:.4rem .7rem;font-size:.7rem}
+.service-hero figcaption{position:absolute;left:1rem;bottom:1rem;background:rgba(255,255,255,.92);padding:.4rem .7rem;font-size:.7rem}
 .breadcrumbs{margin-bottom:1.6rem;font-size:.74rem;color:var(--muted)}
 .breadcrumbs ol{list-style:none;margin:0;padding:0;display:flex;gap:.55rem;flex-wrap:wrap}
 .breadcrumbs li+li:before{content:"/";margin-right:.55rem;color:var(--sand)}
@@ -257,12 +257,12 @@ p{color:var(--muted)}
 .footer-brand{margin-bottom:.8rem}
 .footer-group a{text-decoration:underline;text-underline-offset:.15em}
 .footer-wa{color:#0a7134;font-weight:800}
+.footer-wa,.footer-tel{min-height:44px;display:flex!important;align-items:center}
+.contact-details dd a{display:inline-flex;align-items:center;min-height:44px}
+.btn-call{background:var(--surface);color:var(--ink);border:1px solid var(--ink)}
+.btn-call:hover{background:var(--ink);color:#fff}
+.sticky-cta{display:none}
 .footer-base{display:grid;gap:.5rem;padding:1.2rem 0;font-size:.74rem;color:var(--muted)}
-.wa-picker{position:fixed;z-index:150;width:min(280px,calc(100vw - 16px));background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--rust);box-shadow:var(--shadow);padding:.9rem;display:flex;flex-direction:column;gap:.35rem}
-.wa-picker p{margin:0 0 .3rem;font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--rust)}
-.wa-picker button{all:unset;box-sizing:border-box;cursor:pointer;min-height:44px;width:100%;display:flex;align-items:center;padding:0 .7rem;border:1px solid var(--line);font-family:var(--font);font-size:.86rem;font-weight:700;color:var(--ink)}
-.wa-picker button:hover,.wa-picker button:focus-visible{border-color:var(--rust);color:var(--rust);background:var(--rust-soft)}
-.wa-picker-skip{font-weight:400!important;color:var(--muted)!important;border-style:dashed!important}
 .wa-fab{position:fixed;z-index:90;right:16px;bottom:20px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--wa);color:var(--wa-ink);box-shadow:0 12px 30px rgba(0,0,0,.25);transition:transform .25s var(--ease)}
 .wa-fab:hover{transform:scale(1.06)}
 .wa-fab svg{width:30px;height:30px;fill:currentColor}
@@ -296,6 +296,7 @@ p{color:var(--muted)}
   .footer-base span:last-child{text-align:right}
   .cookie-banner{left:auto;right:24px;max-width:490px}
   .wa-fab{bottom:24px;right:24px}
+  .hero-media figcaption{right:6rem}
 }
 
 /* Escritorio */
@@ -368,9 +369,20 @@ p{color:var(--muted)}
   .footer-base span{text-align:left!important}
   .cookie-banner>div{flex-direction:column}
   .cookie-banner button{width:100%}
-  .cookie-banner{bottom:92px}
+  .cookie-banner{bottom:16px}
 }
 
+/* Barra fija movil (<=760px): WhatsApp + Cotizar. Reemplaza al boton redondo. */
+@media (max-width:760px){
+  .wa-fab{display:none}
+  .has-sticky{padding-bottom:calc(56px + env(safe-area-inset-bottom))}
+  .has-sticky .sticky-cta{position:fixed;z-index:95;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;height:calc(56px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(0,0,0,.08)}
+  .sticky-cta a{display:flex;align-items:center;justify-content:center;min-height:56px;font-size:.92rem;font-weight:800;text-decoration:none}
+  .sticky-wa{background:var(--wa);color:var(--wa-ink)}
+  .sticky-quote{background:var(--ink);color:#fff}
+  .has-sticky.menu-open .sticky-cta,.has-sticky.field-focus .sticky-cta{display:none}
+  .has-sticky .cookie-banner{bottom:calc(72px + env(safe-area-inset-bottom))}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*:before,*:after{animation:none!important;transition:none!important}
@@ -378,7 +390,7 @@ p{color:var(--muted)}
 }
 
 @media print{
-  .site-header,.wa-fab,.cookie-banner,.contact-band,.skip-link{display:none!important}
+  .site-header,.wa-fab,.sticky-cta,.cookie-banner,.contact-band,.skip-link{display:none!important}
   body{background:#fff}
   [data-reveal]{opacity:1;transform:none}
 }

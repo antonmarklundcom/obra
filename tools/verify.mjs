@@ -45,6 +45,7 @@ try {
     const html = await r.text();
     if (r.status !== 200) routeFail.push(`${p} ${r.status}`);
     if (/(Warning|Notice|Deprecated|Fatal error|Parse error):/.test(html)) routeFail.push(`${p} PHP warning in output`);
+    if (!/<\/html>\s*$/.test(html)) routeFail.push(`${p} page truncated (PHP fatal error after output started?)`);
   }
   const legacy = JSON.parse(execFileSync(PHP, ['-r', "require 'app/routes.php'; echo json_encode(obra_legacy_redirects());"], { cwd: root, encoding: 'utf8' }));
   legacy['/piscinas'] = '/piscinas/'; legacy['/sitemap.php'] = '/sitemap.xml';
