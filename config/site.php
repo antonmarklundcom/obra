@@ -21,6 +21,8 @@ $config = [
     'crm_endpoint' => obra_env('OBRA_CRM_ENDPOINT', 'https://crm.clientes.com.py/api/v1/leads'),
     'crm_api_key' => obra_env('OBRA_CRM_API_KEY'),
     'analytics_id' => obra_env('OBRA_ANALYTICS_ID'),
+    // Token (16+ caracteres) para ver /stats.php?token=... (medicion propia). Vacio = la pagina no existe.
+    'stats_token' => obra_env('OBRA_STATS_TOKEN'),
     // Zona principal que aparece en titulos, textos y schema.
     'area' => obra_env('OBRA_AREA', 'Asunción y Gran Asunción'),
     'territory' => obra_env('OBRA_TERRITORY', 'Paraguay'),

@@ -67,6 +67,10 @@
   // Medicion (solo con consentimiento y GA4 configurado)
   const analytics = document.querySelector('meta[name="obra-analytics"]')?.content || '';
   const track = (name, params) => { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); };
+  // Medicion propia: sin cookies ni datos personales (t.php guarda evento, ubicacion, pagina y servicio).
+  const beacon = (event, placement, service) => {
+    try { navigator.sendBeacon('/t.php', JSON.stringify({ e: event, p: placement || '', u: location.pathname, s: service || '' })); } catch (e) { /* medir nunca rompe la pagina */ }
+  };
 
   // Formulario: URL de origen, doble envio y restauracion al volver atras
   document.querySelectorAll('[data-page-url]').forEach(input => { input.value = location.href; });
@@ -83,8 +87,11 @@
 
   // WhatsApp: un toque abre WhatsApp con el texto de la pagina (app/wa-messages.php). Solo se mide el clic.
   document.querySelectorAll('a[data-wa]').forEach(link => {
+    link.addEventListener('click', () => beacon('whatsapp_click', link.dataset.wa, link.dataset.waService));
     link.addEventListener('click', () => track('whatsapp_click', { placement: link.dataset.wa, page_path: location.pathname, service: link.dataset.waService || '' }));
   });
+
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => link.addEventListener('click', () => beacon('tel_click', link.dataset.wa || '', '')));
 
   // Barra fija movil: se oculta mientras el teclado esta abierto (foco en un campo).
   const fieldSelector = 'input:not([type="checkbox"]):not([type="hidden"]), textarea, select';

@@ -101,6 +101,8 @@ $payload = [
     'idempotency_key' => bin2hex(random_bytes(16)),
     'fields' => ['service' => $service, 'location' => $location, 'terrain' => $terrain, 'financing' => $financing, 'project' => $messageText, 'origin_path' => $originPath, 'placement' => $placement, 'submitted_at' => gmdate('c')],
 ];
+require_once __DIR__ . '/app/events.php';
+obra_event_log('form_lead', $placement, $originPath, $service === 'otro' ? '' : $service);
 $crm = obra_crm_send($config, $payload);
 $mailed = obra_mail_send($config, $payload, $labels);
 $wa = obra_whatsapp($config, $message);
