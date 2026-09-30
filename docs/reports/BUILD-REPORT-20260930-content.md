@@ -4,7 +4,7 @@ Date: 2026-09-30. Director and subagents worked from `docs/seo/content-briefs/A.
 
 ## Pull requests
 - Round 1 (piscinas + quintas): https://github.com/antonmarklundcom/obra/pull/4, merge SHA `a84a39cd13e4828f1fe22b3ac2c96200a17183fb`.
-- Round 2 (everything else + this report): PR link and merge SHA are added at the bottom after merge.
+- Round 2 (everything else + this report): https://github.com/antonmarklundcom/obra/pull/5, merge SHA `2920d9a0fce328a72473a4203cb0a9d31b57eef6`.
 
 ## Pages: words before (docs/audit/audit-before.json) and after, links in
 Words are main-content words from `tools/audit.mjs`; "links in" counts internal links pointing at the page. Frozen fields (URL, title, H1, canonical, robots, schema types) are unchanged on all pages; 0 new URLs.
