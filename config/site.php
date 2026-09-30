@@ -11,7 +11,7 @@ $config = [
     'name' => 'Obra',
     'domain' => obra_env('OBRA_DOMAIN', 'obra.com.py'),
     'origin' => rtrim(obra_env('OBRA_ORIGIN', 'https://obra.com.py'), '/'),
-    // WhatsApp etapa 1 (docs/obra-com-py-site-structure.md). Solo digitos: 5959XXXXXXXX.
+    // WhatsApp etapa 1 (docs/seo/obra-com-py-site-structure.md). Solo digitos: 5959XXXXXXXX.
     'whatsapp' => obra_env('OBRA_WHATSAPP', '595992279599'),
     'email' => obra_env('OBRA_EMAIL'),
     'legal_operator' => obra_env('OBRA_LEGAL_OPERATOR'),

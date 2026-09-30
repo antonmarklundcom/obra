@@ -50,7 +50,7 @@ Nota sobre el encargo: el brief mencionaba "pozos artesianos". Ni el contenido n
 
 - Servicios del contenido real (construcción/remodelación) alineados con `docs/SEO-RESEARCH.md` y con la tabla de prioridad del documento de estructura. Se sumaron supervisión/fiscalización y presupuesto/cómputo métrico (servicios de obra que captan leads a mitad de proyecto).
 - Cobertura: "Asunción y Gran Asunción, resto del país según proyecto" (config `area`).
-- WhatsApp etapa 1 configurado por defecto (`595995628862`, del documento del usuario), por lo que todos los CTA van a WhatsApp con mensaje contextual; el formulario queda como alternativa ("Prefiero el formulario").
+- WhatsApp configurado por defecto con el número oficial (+595 992 279 599; el número de etapa 1 anterior, reemplazado), por lo que todos los CTA van a WhatsApp con mensaje contextual; el formulario queda como alternativa ("Prefiero el formulario").
 - Calificación de leads: las dos preguntas del documento están en el formulario y llegan al CRM.
 - Sin páginas de ciudad; sin categoría de "reparaciones varias".
 
