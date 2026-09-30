@@ -67,3 +67,4 @@
 - [x] Endpoint de VenderCRM por defecto en `config/site.php` (`https://crm.clientes.com.py/api/v1/leads`). Falta solo `crm_api_key` en `config/local.php` del servidor (archivo no versionado; Git deploy no lo toca).
 - [ ] Imágenes con Higgsfield (presupuesto 50 créditos): NO EJECUTADO, el contenedor no descarga de `*.cloudfront.net` (403). Ver `higgsfield-image-pipeline`, Rule 2.
 - [x] /nosotros/ y /como-trabajamos/: experiencia del responsable de obra (más de 20 años) y equipo propio numeroso, sin cifras ni nombres inventados. Razón social, RUC, email y domicilio siguen vacíos hasta `config/local.php`.
+- [x] 3 guías de búsqueda con intención de compra, sin precios: `/guias/costo-quincho/`, `/guias/costo-piscina/`, `/guias/techo-losa-chapa/` (59 URLs indexables). Pendiente: revisar con el responsable de obra que el contenido técnico coincida con su práctica.
