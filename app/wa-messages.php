@@ -346,6 +346,7 @@ return [
             'sticky' => 'Hola, quiero bajar la guía de costos a mi casa. ¿Hablamos?',
             'header' => 'Hola, consulta sobre qué define el valor de construir una casa. ¿Me explican?',
             'footer' => 'Hola, una duda sobre qué rubros pesan más al construir una casa.',
+            'mid' => 'Hola, quiero que me ayuden a ver qué rubros pesan más en la casa que quiero construir.',
         ],
         '/guias/terreno/' => [
             'hero' => 'Hola, leí qué revisar del terreno y quiero que evalúen el mío antes de construir. ¿Se puede?',
@@ -353,6 +354,7 @@ return [
             'sticky' => 'Hola, quiero que revisen mi terreno antes de construir. ¿Hablamos?',
             'header' => 'Hola, consulta sobre si mi terreno sirve para construir. ¿Me ayudan a chequearlo?',
             'footer' => 'Hola, una pregunta sobre suelo, nivel y desagüe de un terreno. ¿Me la contestan?',
+            'mid' => 'Hola, estoy por comprar o ya tengo un terreno y quiero saber qué revisar antes de construir.',
         ],
         '/guias/plazos/' => [
             'hero' => 'Hola, leí la guía de etapas y quiero armar el cronograma de mi casa. ¿Me ayudan?',
@@ -360,6 +362,7 @@ return [
             'sticky' => 'Hola, quiero saber cuánto demora mi obra. ¿Me orientan?',
             'header' => 'Hola, consulta sobre las etapas de una obra de casa. ¿Me las explican?',
             'footer' => 'Hola, una duda sobre qué factores atrasan una obra, como la lluvia.',
+            'mid' => 'Hola, quiero entender en qué orden irían las etapas de mi obra. ¿Lo vemos juntos?',
         ],
         '/guias/permisos/' => [
             'hero' => 'Hola, leí sobre permisos y quiero saber qué tiene que estar aprobado antes de arrancar mi obra. ¿Me orientan?',
@@ -367,6 +370,7 @@ return [
             'sticky' => 'Hola, quiero construir y no sé si mis papeles están en regla. ¿Me orientan?',
             'header' => 'Hola, consulta: ¿qué papeles piden ustedes para empezar a construir?',
             'footer' => 'Hola, una pregunta sobre qué obras piden permiso y cuáles no.',
+            'mid' => 'Hola, antes de empezar quiero saber si a mi obra le falta algún papel. ¿Me ayudan a revisarlo?',
         ],
         '/guias/platea/' => [
             'hero' => 'Hola, leí la guía de platea y zapatas y quiero definir la fundación de mi casa. ¿Me asesoran?',
@@ -374,6 +378,7 @@ return [
             'sticky' => 'Hola, dudo entre platea y zapatas. ¿Me ayudan a elegir?',
             'header' => 'Hola, consulta sobre qué fundación necesita mi casa. ¿Me responden?',
             'footer' => 'Hola, una duda sobre fundaciones en suelo arcilloso. ¿Me la aclaran?',
+            'mid' => 'Hola, quiero saber si en mi terreno conviene platea o zapatas. ¿Qué datos les paso?',
         ],
         '/guias/ladrillo-bloque/' => [
             'hero' => 'Hola, leí la guía de ladrillo y bloque y quiero decidir la mampostería de mi casa. ¿Me asesoran?',
@@ -381,6 +386,7 @@ return [
             'sticky' => 'Hola, ladrillo o bloque para mi casa. ¿Me orientan?',
             'header' => 'Hola, consulta sobre qué mampostería usan en sus obras. ¿Me cuentan?',
             'footer' => 'Hola, una pregunta sobre aislación térmica de paredes de ladrillo y de bloque.',
+            'mid' => 'Hola, estoy entre ladrillo y bloque para mi casa y quiero una recomendación para mi caso.',
         ],
         '/guias/albanil/' => [
             'hero' => 'Hola, leí la guía y dudo entre albañil, maestro de obra o constructora. ¿Me explican cómo trabajan?',
@@ -388,6 +394,7 @@ return [
             'sticky' => 'Hola, ¿albañil o constructora? Quiero consultarles.',
             'header' => 'Hola, consulta sobre contratar constructora en lugar de un albañil. ¿Me atienden?',
             'footer' => 'Hola, una duda sobre quién responde si algo sale mal en la obra.',
+            'mid' => 'Hola, estoy comparando entre contratar un albañil o una constructora. ¿Me cuentan cómo sería con ustedes?',
         ],
         '/credito/' => [
             'hero' => 'Hola, quiero construir con crédito y necesito el presupuesto de obra para el banco. ¿Me ayudan?',
@@ -395,6 +402,7 @@ return [
             'sticky' => 'Hola, quiero construir con crédito bancario. ¿Me orientan?',
             'header' => 'Hola, consulta sobre documentación de obra para un crédito. ¿La preparan?',
             'footer' => 'Hola, una duda sobre qué pide el banco para desembolsar por etapas.',
+            'mid' => 'Hola, estoy tramitando un crédito y quiero saber qué documentación de obra voy a necesitar.',
         ],
     ],
     'services' => [
