@@ -98,6 +98,11 @@ if ($route['type'] === 'service') {
     $schemas[] = obra_faq_schema($guide['faqs']);
 }
 
+// Precarga de la imagen principal (LCP) con el mismo srcset que el <img>.
+if ($route['type'] === 'home') { $route['preload'] = ['file' => 'hero-casa.webp', 'sizes' => '(min-width: 1024px) 55vw, 100vw']; }
+elseif ($route['type'] === 'service') { $route['preload'] = ['file' => $content['services'][$route['slug']]['image'], 'sizes' => '(min-width: 1024px) 45vw, 100vw']; }
+elseif ($route['type'] === 'child') { $route['preload'] = ['file' => $content['services'][$route['slug']]['image'], 'sizes' => '(min-width: 1024px) 45vw, 100vw']; }
+
 obra_head($config, $route, $path, $schemas);
 obra_header($config, $content, $path, $route);
 ?><main id="contenido"><?php
