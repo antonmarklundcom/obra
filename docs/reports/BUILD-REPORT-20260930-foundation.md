@@ -27,7 +27,7 @@ Quality gate: `bash tools/verify.sh` (Windows: `tools\verify.ps1`) is **green** 
 |---|---|---|
 | Sitemap URLs | 56 | 56 (0 new, 0 removed) |
 | Non-200 / missing H1 / canonical mismatch | 0 / 0 / 0 | 0 / 0 / 0 |
-| Word count min / median / max (inside `<main>`) | 186 / 350 / 982 | 189 / 364 / 1,155 |
+| Word count min / median / max (inside `<main>`) | 186 / 350 / 982 | 186 / 364 / 1,153 |
 | Descriptions over 160 chars | 30 | 0 |
 | WhatsApp links on sitemap pages / distinct texts | 274 / 205 | 337 / 281 |
 | WhatsApp numbers found | only 595992279599 | only 595992279599 (+ 62 `tel:` links, all the same number) |
