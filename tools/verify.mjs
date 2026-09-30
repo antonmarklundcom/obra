@@ -97,6 +97,36 @@ try {
   }
   step('form matrix', formFail.length === 0, `${formCases} cases` + (formFail.length ? '\n      ' + formFail.join('\n      ') : ''));
 
+  // 3b. Medicion propia: /t.php guarda eventos sin datos personales y /stats.php exige token
+  const evFail = [];
+  const store = mkdtempSync(join(tmpdir(), 'obra-events-'));
+  const TOKEN = 'verify-token-0123456789';
+  const eb = await server(8094, { OBRA_STORAGE: store, OBRA_STATS_TOKEN: TOKEN });
+  const ua = { 'User-Agent': 'Mozilla/5.0 (verify)' };
+  const beacon = (body, headers = ua) => fetch(eb + '/t.php', { method: 'POST', headers, body });
+  if ((await beacon(JSON.stringify({ e: 'whatsapp_click', p: 'hero', u: '/quinchos/', s: 'quinchos' }))).status !== 204) evFail.push('t.php valid != 204');
+  await beacon(JSON.stringify({ e: 'whatsapp_click', p: 'hero', u: '/x/', s: '' }), { 'User-Agent': 'Googlebot/2.1' });
+  await beacon(JSON.stringify({ e: 'hack', p: 'x', u: '/x/', s: '' }));
+  await beacon(JSON.stringify({ e: 'tel_click', p: '', u: 'https://evil.example/', s: '' }));
+  if ((await fetch(eb + '/t.php')).status !== 405) evFail.push('GET /t.php != 405');
+  await fetch(eb + '/form.php', { method: 'POST', redirect: 'manual', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(valid).toString() });
+  const { readdirSync, readFileSync } = await import('node:fs');
+  const logs = readdirSync(store).filter(f => f.startsWith('events-'));
+  const logText = logs.length ? readFileSync(join(store, logs[0]), 'utf8') : '';
+  const logLines = logText.split('\n').filter(Boolean);
+  if (logLines.length !== 2) evFail.push(`log lines ${logLines.length} (want 2: click + form_lead)`);
+  if (!/whatsapp_click\thero\t\/quinchos\/\tquinchos/.test(logText)) evFail.push('click line missing');
+  if (!/form_lead\tform\t\/piscinas\/chicas\/\tpiscinas/.test(logText)) evFail.push('form_lead line missing');
+  if (/(\d{1,3}\.){3}\d{1,3}|Mozilla|Googlebot/.test(logText)) evFail.push('log contains IP or user agent');
+  if ((await fetch(eb + '/stats.php')).status !== 404) evFail.push('stats without token != 404');
+  if ((await fetch(eb + '/stats.php?token=wrong')).status !== 404) evFail.push('stats wrong token != 404');
+  const st = await fetch(eb + `/stats.php?token=${TOKEN}`);
+  if (st.status !== 200 || !(await st.text()).includes('whatsapp_click')) evFail.push('stats with token lacks data');
+  const nb = await server(8095, { OBRA_STORAGE: store });
+  if ((await fetch(nb + `/stats.php?token=${TOKEN}`)).status !== 404) evFail.push('stats without configured token != 404');
+  if ((await fetch(nb + '/storage/')).status !== 404 && (await fetch(nb + '/storage/.gitkeep')).status === 200) evFail.push('storage/ served');
+  step('events', evFail.length === 0, 'own analytics (t.php, stats.php)' + (evFail.length ? '\n      ' + evFail.join('\n      ') : ''));
+
   // 4. WhatsApp
   const wa = node('check-wa.mjs', [base]);
   step('check-wa', wa.status === 0, (wa.stdout + wa.stderr).trim().split('\n').join('\n      '));

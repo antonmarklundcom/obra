@@ -12,7 +12,7 @@ RewriteCond %{HTTP_HOST} ^www\.obra\.com\.py$ [NC]
 RewriteRule ^ https://obra.com.py%{REQUEST_URI} [R=301,L]
 
 # Codigo interno: nunca servir app/, config/, docs/, tools/ por HTTP
-RewriteRule ^(app|config|docs|tools)(/|$) - [R=404,L]
+RewriteRule ^(app|config|docs|tools|storage)(/|$) - [R=404,L]
 
 # Sitemap dinamico. /sitemap.php se redirige a la URL publica /sitemap.xml
 RewriteCond %{THE_REQUEST} \s/sitemap\.php[\s?] [NC]

@@ -10,6 +10,7 @@ return [
     'privacy_email' => '',
     'crm_endpoint' => 'https://crm.clientes.com.py/api/v1/leads', // POST JSON, cabecera X-Api-Key (ya es el valor por defecto)
     'crm_api_key' => '',        // vc_live_... de obra.com.py: SOLO en el servidor, nunca en git
+    'stats_token' => '',       // 16+ caracteres al azar: abre /stats.php?token=...
     'analytics_id' => '',      // G-XXXXXXX
     'area' => 'Asunción y Gran Asunción',
 ];
