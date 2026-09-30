@@ -21,7 +21,7 @@
 - [ ] Agregar reseñas únicamente con fuente y permiso.
 - [ ] Confirmar que los 13 servicios se ofrecen realmente (supervisión y presupuesto son nuevos).
 - [ ] Pasar `partner_sites.pozo` y `partner_sites.prestamo` a `live => true` cuando esos dominios estén publicados.
-- [ ] Agregar a `partner_sites.arq.live_paths` / `partner_sites.carpinteria.live_paths` (config/site.php) cada ruta hermana confirmada con HEAD 200 (`/minimalista/`, `/carpeta/`, `/estructural/`, `/regularizacion/`, `/estilos/`, `/comercial/`, `/aluminio/`, `/aberturas/`, `/cocinas/`, `/portones/`). Hasta entonces se muestran como texto.
+- [ ] Agregar a `partner_sites.arq.live_paths` / `partner_sites.carpinteria.live_paths` (config/site.php) cada ruta hermana confirmada con HEAD 200 (`/minimalista/`, `/carpeta/`, `/estructural/`, `/regularizacion/`, `/estilos/`, `/comercial/`, `/aluminio/`, `/ventanas/`, `/cocinas/`, `/portones/`). Hasta entonces se muestran como texto.
 - [ ] Decidir `/credito/` y `/obras/` después del Keyword Planner y con obras reales.
 
 ## Hostinger
@@ -56,3 +56,10 @@
 - [ ] Páginas de confianza (/nosotros/, /como-trabajamos/, /cotizar/) con datos reales: esperan los datos públicos del negocio (D8).
 - [ ] Verificación en vivo después del deploy (el entorno de nube no llega a obra.com.py): ver los comandos en `docs/reports/BUILD-REPORT-20260930-foundation.md`.
 - [ ] Si el deploy es por zip: al subir, los archivos viejos `app/content-sub.php` y `app/content-guides.php` pueden borrarse del servidor (ya no se usan; igual quedan bloqueados por .htaccess).
+
+## Sesión de cierre 2026-09-30
+- [x] Enlace a carpinteria corregido: `/aberturas/` no existe; ahora `/ventanas/` (quinchos cerrados).
+- [x] `/casas/minimalistas/` ya es una página de construcción con un solo enlace a arq; el selector "¿Cómo seguimos?" ya no existe (un toque a WhatsApp).
+- [ ] Verificación en vivo (O1): NO EJECUTADA, obra.com.py no es alcanzable desde el contenedor (403 del proxy).
+- [ ] `live_paths` de arq y carpinteria: siguen vacíos hasta confirmar HEAD 200 en vivo (`/aluminio/ /ventanas/ /cocinas/ /portones/` en carpinteria).
+- [ ] Datos públicos del negocio (D8) y páginas de confianza: sin datos, NO EJECUTADO.

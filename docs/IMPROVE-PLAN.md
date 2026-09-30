@@ -269,3 +269,10 @@ D1 `/casas/minimalistas/`: reposition to execution (recommended) or 301. · D2 t
 4. **Public business facts** for Nosotros, the footer and schema: razón social, RUC, address or "zona", email, years building, and whether a "Llamar" (`tel:`) link is wanted next to WhatsApp.
 5. **Images**: spend Higgsfield credits on hub-specific "referencial" images now, or wait for real obra photos? Do real photos exist for `/obras/`?
 6. **arq.com.py**: which URLs are live today (`/planos/`, `/carpeta/`, `/minimalista/`, `/estructural/`…), so the cross-links don't point at 404s?
+
+## Status after finishing session (2026-09-30)
+- O1 live verification: NOT RUN (obra, carpinteria and arq return a proxy 403 from the cloud container). Commands are in the content build report.
+- O2: carpinteria `/aberturas/` link changed to `/ventanas/`. The arq repo has no `docs/seo/arq-urls.md` and is a builders directory (`/obras/`, `/arquitectos/`, `/nosotros/`, `/contacto/`), so none of the design URLs (`/carpeta/`, `/minimalista/`, `/estructural/`, `/estilos/`) exist; those links stay plain text. `live_paths` stay empty until HEAD 200 is confirmed live.
+- O3: Q2 and Q3 were already in place (minimalistas is a construction page with one arq link; no picker). Q4 (business facts): NOT RUN, no facts given.
+- O4: NOT RUN, the keyword-library MCP is not connected.
+- Deploy mode (Git vs zip) was not answered; assume zip until Anton confirms.

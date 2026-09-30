@@ -50,7 +50,7 @@ return [
             ['¿Conviene aire acondicionado o alcanza con ventiladores?', 'Depende del tamaño y de cuánto uses el quincho en verano. Dejamos la previsión para equipo split y ventiladores de techo, y vos decidís qué instalar.'],
         ],
         'related' => ['/quinchos/parrillas/', '/quinchos/techo-madera/', '/ampliaciones/galeria/', '/guias/costo-casa/'],
-        'link' => ['site' => 'carpinteria', 'path' => '/aberturas/', 'text' => 'Las aberturas de aluminio, el blindex y las puertas del quincho cerrado las fabrica carpinteria.com.py, del mismo grupo; la obra civil y la colocación quedan a nuestro cargo.'],
+        'link' => ['site' => 'carpinteria', 'path' => '/ventanas/', 'text' => 'Las aberturas de aluminio, el blindex y las puertas del quincho cerrado las fabrica carpinteria.com.py, del mismo grupo; la obra civil y la colocación quedan a nuestro cargo.'],
     ],
     'parrillas' => [
         'name' => 'Parrillas y asadores',

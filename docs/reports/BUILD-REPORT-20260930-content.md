@@ -88,3 +88,9 @@ Also open `/sitemap.xml`. Sibling cross-links (arq, carpinteria) render as plain
 
 ## Open decisions for Anton
 D7 (approve new pages after the keyword volumes are pulled), D4/D5 (`/obras/`, zone pages: not built), D8 (public business facts), D9 (image budget), D6 (which arq and carpinteria URLs are live).
+
+## Addendum: finishing session
+- Live results: none. obra.com.py, carpinteria.com.py and arq.com.py return HTTP 403 from the container proxy, so audit, seo-diff, check-wa and pw-check against live are NOT RUN; the route, 301 and 404 curls are NOT RUN.
+- Link changes: carpinteria `/aberturas/` -> `/ventanas/` in `app/content/sub/quinchos.php`. No arq remap possible (see IMPROVE-PLAN status). `live_paths` unchanged (empty).
+- NOT RUN: O1, Q4 trust pages, O4 keyword map.
+- `tools/verify.sh` green on this branch.
