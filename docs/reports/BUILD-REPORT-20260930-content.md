@@ -74,12 +74,12 @@ None. Every NEW-x in `docs/seo/content-briefs/NEW.md` is "skip (no data)": the k
 ## Live check
 Pending Anton: `obra.com.py` was not reachable from the build container (HTTP status 000). Run on his PC after deploy:
 ```
-node tools/audit.mjs https://obra.com.py docs/audit/audit-live-after-content.json
+node tools/audit.mjs https://obra.com.py https://obra.com.py docs/audit/audit-live-after-content.json
 node tools/seo-diff.mjs docs/audit/audit-before.json docs/audit/audit-live-after-content.json
-node tools/check-wa.mjs https://obra.com.py
-node tools/pw-check.mjs https://obra.com.py
+node tools/check-wa.mjs https://obra.com.py --no-repo
+node tools/pw-check.mjs https://obra.com.py --paths=/,/casas/,/piscinas/quinta/,/quinchos/cerrados/,/reformas/cocinas/
 ```
-Also open `/sitemap.xml`. Check the exact argument order in each tool's header comment. Sibling cross-links (arq, carpinteria) render as plain text until each target path returns HTTP 200 and is added to `partner_sites[...]['live_paths']` in `config/site.php`.
+Also open `/sitemap.xml`. Sibling cross-links (arq, carpinteria) render as plain text until each target path returns HTTP 200 and is added to `partner_sites[...]['live_paths']` in `config/site.php`.
 
 ## Skipped and why
 - NEW pages: no volume data (above).
