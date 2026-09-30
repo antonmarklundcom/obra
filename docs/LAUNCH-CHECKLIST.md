@@ -12,7 +12,7 @@
 - [ ] Crear la entrada del sitio en VenderCRM y guardar la API key solo en `config/local.php`.
 - [ ] Enviar un lead real y verificar contacto, negocio y los campos `terrain` y `financing` en `fields`.
 - [ ] Verificar que llega el aviso por email (`mail()` de Hostinger) al buzón configurado.
-- [ ] Configurar GA4 y marcar `whatsapp_click`, `generate_lead` y `form_confirmed` como conversiones.
+- [-] GA4: omitido por decisión de Anton (`analytics_id` queda vacío; no se carga Google Analytics).
 - [ ] Probar el envío desde Chrome: la redirección a `wa.me` depende de `form-action` en la CSP.
 
 ## Contenido y prueba
@@ -63,3 +63,6 @@
 - [ ] Verificación en vivo (O1): NO EJECUTADA, obra.com.py no es alcanzable desde el contenedor (403 del proxy).
 - [ ] `live_paths` de arq y carpinteria: siguen vacíos hasta confirmar HEAD 200 en vivo (`/aluminio/ /ventanas/ /cocinas/ /portones/` en carpinteria).
 - [ ] Datos públicos del negocio (D8) y páginas de confianza: sin datos, NO EJECUTADO.
+- [x] Deploy: Git auto-deploy desde `main` (confirmado por Anton): cada merge publica.
+- [x] Endpoint de VenderCRM por defecto en `config/site.php` (`https://crm.clientes.com.py/api/v1/leads`). Falta solo `crm_api_key` en `config/local.php` del servidor (archivo no versionado; Git deploy no lo toca).
+- [ ] Imágenes con Higgsfield (presupuesto 50 créditos): NO EJECUTADO, el contenedor no descarga de `*.cloudfront.net` (403). Ver `higgsfield-image-pipeline`, Rule 2.
