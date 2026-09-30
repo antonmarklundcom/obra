@@ -1,6 +1,6 @@
 # Build report: obra.com.py foundation (session 1 of 2), 2026-09-30
 
-Branch `claude/charming-albattani-w2gydt` → PR to `main` (link and merge SHA: see the follow-up section at the end, filled after merge).
+Branch `claude/charming-albattani-w2gydt` → https://github.com/antonmarklundcom/obra/pull/2, merged into `main` as `c284b481dc40707da03f824c5302d6d692627350`.
 Quality gate: `bash tools/verify.sh` (Windows: `tools\verify.ps1`) is **green** on the final commit.
 
 ## What shipped (per plan item)
@@ -74,6 +74,7 @@ If deploy is a manual zip: `powershell -ExecutionPolicy Bypass -File tools\packa
 6. **D1 / D2 / D3** were applied with the recommended defaults (minimalistas repositioned in the brief, picker removed, credit terms stay on /credito/). Say so if you want otherwise.
 7. Carpinteria repo (not this repo): its /pergolas/, /decks/ and /machimbre/ pages should route to obra.
 
-## Follow-up (filled after merge)
-- PR: (see follow-up commit)
-- Merge SHA: (see follow-up commit)
+## Merge and live status
+- PR: https://github.com/antonmarklundcom/obra/pull/2 (no review bots or CI run on this repo; the local gate was green on head `c2afcb5`).
+- Merge SHA: `c284b481dc40707da03f824c5302d6d692627350` (merge commit).
+- Live check: **pending Anton** (commands above). If Hostinger Git auto-deploy is connected, the merge already deployed; otherwise build the zip and upload.
