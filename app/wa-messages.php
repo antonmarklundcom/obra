@@ -111,7 +111,7 @@ return [
         ],
         '/piscinas/' => [
             'hero' => 'Hola, quiero construir una piscina de hormigón en mi casa. ¿Qué datos necesitan para pasarme un presupuesto?',
-            'band' => 'Hola, leí todo sobre piscinas de hormigón y quiero hacer la mía. ¿Cuál es el siguiente paso?',
+            'band' => 'Hola, quiero hacer mi piscina de hormigón antes de que empiece el calor. ¿Podemos coordinar una visita?',
             'sticky' => 'Hola, quiero una piscina. ¿Me pasan los datos que necesitan?',
             'header' => 'Hola, consulta por la construcción de una piscina. ¿Me atienden?',
             'footer' => 'Hola, una duda general sobre piscinas de hormigón y su mantenimiento. ¿Me ayudan?',
