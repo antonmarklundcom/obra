@@ -7,7 +7,8 @@ return [
     'veredas' => [
         'name' => 'Veredas y contrapisos',
         'title' => 'Veredas, contrapisos y pisos exteriores en Paraguay | Obra',
-        'description' => 'Construcción de veredas, contrapisos y pisos exteriores en Asunción y Gran Asunción: base compactada, hormigón, juntas y pendientes para que no se agrieten ni junten agua.',
+        'description' => 'Veredas, contrapisos y pisos exteriores en Asunción y Gran Asunción: base compactada, hormigón, juntas y pendientes para que no se agrieten ni junten agua.',
+        'summary' => 'Construcción de veredas, contrapisos y pisos exteriores en Asunción y Gran Asunción: base compactada, hormigón, juntas y pendientes para que no se agrieten ni junten agua.',
         'h1' => 'Veredas, contrapisos y pisos exteriores',
         'kicker' => 'Base bien hecha, piso que dura',
         'intro' => [

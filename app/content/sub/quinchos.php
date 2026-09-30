@@ -46,7 +46,8 @@ return [
     'techo-madera' => [
         'name' => 'Quinchos con techo de madera',
         'title' => 'Quinchos con techo de madera y machimbre en Paraguay | Obra',
-        'description' => 'Construcción de quinchos con estructura de madera, cielorraso de machimbre y tejas en Asunción y Gran Asunción, con la carpintería fabricada dentro del mismo grupo.',
+        'description' => 'Quinchos con techo de madera y machimbre en Asunción y Gran Asunción: estructura, cielorraso de machimbre y tejas construidos de principio a fin.',
+        'summary' => 'Construcción de quinchos con estructura de madera, cielorraso de machimbre y tejas en Asunción y Gran Asunción, con la madera y la obra civil a cargo del mismo equipo.',
         'h1' => 'Quinchos con techo de madera y machimbre',
         'kicker' => 'Madera vista, bien tratada',
         'intro' => [

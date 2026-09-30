@@ -7,7 +7,8 @@ return [
     'chicas' => [
         'name' => 'Piscinas pequeñas para patios chicos',
         'title' => 'Piscinas pequeñas para patios chicos en Paraguay | Obra',
-        'description' => 'Construcción de piscinas pequeñas de hormigón para patios chicos en Asunción y Gran Asunción: medidas a la medida del espacio, acceso de obra resuelto y vereda integrada.',
+        'description' => 'Piscinas pequeñas de hormigón para patios chicos en Asunción y Gran Asunción: medidas a la medida del espacio, acceso de obra resuelto y vereda integrada.',
+        'summary' => 'Construcción de piscinas pequeñas de hormigón para patios chicos en Asunción y Gran Asunción: medidas a la medida del espacio, acceso de obra resuelto y vereda integrada.',
         'h1' => 'Piscinas pequeñas para patios chicos',
         'kicker' => 'Una piscina real en pocos metros',
         'intro' => [
@@ -45,7 +46,8 @@ return [
     'desbordante' => [
         'name' => 'Piscinas desbordantes',
         'title' => 'Piscinas desbordantes e infinity en Paraguay | Obra',
-        'description' => 'Construcción de piscinas desbordantes (infinity) en Paraguay: borde perdido, canaleta, tanque de compensación y estructura calculada para el efecto sin filtraciones.',
+        'description' => 'Piscinas desbordantes (infinity) en Paraguay: borde perdido, canaleta, tanque de compensación y estructura calculada para que el efecto no filtre.',
+        'summary' => 'Construcción de piscinas desbordantes (infinity) en Paraguay: borde perdido, canaleta, tanque de compensación y estructura calculada para el efecto sin filtraciones.',
         'h1' => 'Piscinas desbordantes e infinity',
         'kicker' => 'El borde perdido bien resuelto',
         'intro' => [

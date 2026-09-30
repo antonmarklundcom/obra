@@ -7,7 +7,8 @@ return [
     'cocinas' => [
         'name' => 'Remodelación de cocinas',
         'title' => 'Remodelación de cocinas en Paraguay | Obra',
-        'description' => 'Remodelación de cocinas en Asunción y Gran Asunción: distribución, instalaciones de agua, gas y electricidad, revestimientos, mesadas y muebles coordinados en una sola obra.',
+        'description' => 'Remodelación de cocinas en Asunción y Gran Asunción: obra civil con demolición, instalaciones de agua, gas y electricidad, y revestimientos.',
+        'summary' => 'Remodelación de cocinas en Asunción y Gran Asunción: distribución, instalaciones de agua, gas y electricidad, revestimientos, mesadas y muebles coordinados en una sola obra.',
         'h1' => 'Remodelación de cocinas',
         'kicker' => 'Distribución, instalaciones y terminación en una sola obra',
         'intro' => [
@@ -46,7 +47,8 @@ return [
     'fachadas' => [
         'name' => 'Renovación de fachadas',
         'title' => 'Renovación de fachadas de casas en Paraguay | Obra',
-        'description' => 'Renovación de fachadas en Asunción y Gran Asunción: revoque, revestimientos, aberturas, techo de acceso y muro frontal para cambiar la cara de la casa sin tocar el interior.',
+        'description' => 'Renovación de fachadas en Asunción y Gran Asunción: revoque, revestimientos, aberturas y muro frontal para cambiar la cara de la casa sin tocar adentro.',
+        'summary' => 'Renovación de fachadas en Asunción y Gran Asunción: revoque, revestimientos, aberturas, techo de acceso y muro frontal para cambiar la cara de la casa sin tocar el interior.',
         'h1' => 'Renovación de fachadas',
         'kicker' => 'Otra casa desde la calle',
         'intro' => [

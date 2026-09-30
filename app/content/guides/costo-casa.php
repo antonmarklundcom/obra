@@ -6,7 +6,8 @@ declare(strict_types=1);
 return [
     'name' => 'Qué define cuánto cuesta construir una casa',
     'title' => 'Cuánto cuesta construir una casa en Paraguay | Obra',
-    'description' => 'Qué define el costo de construir una casa en Paraguay: metros, terreno, sistema constructivo, instalaciones y terminaciones. Cómo leer un presupuesto por rubro y comparar propuestas.',
+    'description' => 'Cuánto cuesta construir una casa en Paraguay: qué define el costo (metros, terreno, sistema, terminaciones) y cómo leer un presupuesto por rubro.',
+    'summary' => 'Qué define el costo de construir una casa en Paraguay: metros, terreno, sistema constructivo, instalaciones y terminaciones. Cómo leer un presupuesto por rubro y comparar propuestas.',
     'h1' => 'Cuánto cuesta construir una casa en Paraguay: qué define el precio',
     'kicker' => 'Guía',
     'intro' => [

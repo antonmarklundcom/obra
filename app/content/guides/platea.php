@@ -6,7 +6,8 @@ declare(strict_types=1);
 return [
     'name' => 'Platea o zapatas: fundaciones para tu casa',
     'title' => 'Platea o zapatas: qué fundación conviene | Obra',
-    'description' => 'Platea de hormigón o zapatas y vigas de fundación: cuándo conviene cada una según el suelo, la casa y el presupuesto. Errores comunes en fundaciones en Paraguay.',
+    'description' => 'Platea o zapatas: qué fundación conviene según el suelo, la casa y el presupuesto. Errores comunes en fundaciones de casas en Paraguay.',
+    'summary' => 'Platea de hormigón o zapatas y vigas de fundación: cuándo conviene cada una según el suelo, la casa y el presupuesto. Errores comunes en fundaciones en Paraguay.',
     'h1' => 'Platea o zapatas: qué fundación conviene para tu casa',
     'kicker' => 'Guía',
     'intro' => [

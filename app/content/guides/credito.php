@@ -7,7 +7,8 @@ return [
     'path' => '/credito/',
     'name' => 'Construí con crédito',
     'title' => 'Construir una casa con crédito bancario o AFD en Paraguay | Obra',
-    'description' => 'Cómo construir tu casa con crédito en Paraguay: qué documentación de obra pide el banco, cómo funcionan los desembolsos por etapa, el rol del presupuesto y del profesional responsable.',
+    'description' => 'Construir una casa con crédito bancario o AFD en Paraguay: documentación de obra que pide el banco, desembolsos por etapa y rol del presupuesto.',
+    'summary' => 'Cómo construir tu casa con crédito en Paraguay: qué documentación de obra pide el banco, cómo funcionan los desembolsos por etapa, el rol del presupuesto y del profesional responsable.',
     'h1' => 'Construí tu casa con crédito',
     'kicker' => 'Financiación',
     'intro' => [

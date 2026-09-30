@@ -6,7 +6,8 @@ declare(strict_types=1);
 return [
     'name' => 'Ladrillo o bloque: qué mampostería conviene',
     'title' => 'Ladrillo o bloque: qué mampostería conviene | Obra',
-    'description' => 'Ladrillo común, ladrillo hueco o bloque de hormigón: comparación de aislación térmica, velocidad de obra, terminación y costo para construir en el clima paraguayo.',
+    'description' => 'Ladrillo o bloque: qué mampostería conviene en Paraguay. Comparación de aislación térmica, velocidad de obra, terminación y costo para el clima local.',
+    'summary' => 'Ladrillo común, ladrillo hueco o bloque de hormigón: comparación de aislación térmica, velocidad de obra, terminación y costo para construir en el clima paraguayo.',
     'h1' => 'Ladrillo o bloque: qué mampostería conviene',
     'kicker' => 'Guía',
     'intro' => [

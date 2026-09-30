@@ -7,7 +7,8 @@ return [
     'planta-alta' => [
         'name' => 'Ampliación en planta alta',
         'title' => 'Ampliación en planta alta en Paraguay | Obra',
-        'description' => 'Ampliación de casas en planta alta en Asunción y Gran Asunción: verificación de estructura, losa, escalera e instalaciones para sumar un piso sin perder el patio.',
+        'description' => 'Ampliación en planta alta en Asunción y Gran Asunción: verificación de estructura, losa, escalera e instalaciones para sumar un piso sin perder el patio.',
+        'summary' => 'Ampliación de casas en planta alta en Asunción y Gran Asunción: verificación de estructura, losa, escalera e instalaciones para sumar un piso sin perder el patio.',
         'h1' => 'Ampliación en planta alta',
         'kicker' => 'Crecer hacia arriba cuando el terreno no da más',
         'intro' => [

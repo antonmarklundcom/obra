@@ -26,7 +26,8 @@ return [
     'minimalistas' => [
         'name' => 'Casas modernas y minimalistas',
         'title' => 'Construcción de casas modernas y minimalistas en Paraguay | Obra',
-        'description' => 'Construcción de casas modernas y minimalistas en Asunción y Gran Asunción: losa plana, ladrillo visto, grandes aberturas y galería integrada, ejecutadas con terminaciones limpias.',
+        'description' => 'Construcción de casas modernas y minimalistas en Asunción y Gran Asunción: losa plana, ladrillo visto y aberturas grandes, con terminaciones limpias.',
+        'summary' => 'Construcción de casas modernas y minimalistas en Asunción y Gran Asunción: losa plana, ladrillo visto, grandes aberturas y galería integrada, ejecutadas con terminaciones limpias.',
         'h1' => 'Construcción de casas modernas y minimalistas',
         'kicker' => 'Líneas simples, bien ejecutadas',
         'intro' => [
@@ -46,7 +47,8 @@ return [
     'etapas' => [
         'name' => 'Construcción por etapas',
         'title' => 'Construcción de casas por etapas en Paraguay | Obra',
-        'description' => 'Construí tu casa por etapas en Asunción y Gran Asunción: obra gruesa primero, terminaciones después, con un plan que evita rehacer y mantiene el presupuesto controlado.',
+        'description' => 'Construcción de casas por etapas en Asunción y Gran Asunción: obra gruesa primero, terminaciones después, con un plan que evita rehacer y ordena el gasto.',
+        'summary' => 'Construí tu casa por etapas en Asunción y Gran Asunción: obra gruesa primero, terminaciones después, con un plan que evita rehacer y mantiene el presupuesto controlado.',
         'h1' => 'Construcción de casas por etapas',
         'kicker' => 'Empezá con lo que tenés, sin cerrar puertas',
         'intro' => [

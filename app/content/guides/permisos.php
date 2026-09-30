@@ -6,7 +6,8 @@ declare(strict_types=1);
 return [
     'name' => 'Permisos municipales para construir',
     'title' => 'Permisos municipales para construir una casa en Paraguay | Obra',
-    'description' => 'Qué permisos hacen falta para construir o ampliar en Paraguay: planos aprobados, profesional responsable, retiros y habilitación final. Qué pasa si se construye sin permiso.',
+    'description' => 'Permisos municipales para construir una casa en Paraguay: planos aprobados, profesional responsable, retiros y habilitación final. Riesgos de no tenerlos.',
+    'summary' => 'Qué permisos hacen falta para construir o ampliar en Paraguay: planos aprobados, profesional responsable, retiros y habilitación final. Qué pasa si se construye sin permiso.',
     'h1' => 'Permisos municipales para construir',
     'kicker' => 'Guía',
     'intro' => [

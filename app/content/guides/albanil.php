@@ -6,7 +6,8 @@ declare(strict_types=1);
 return [
     'name' => 'Albañil, maestro de obra o constructora',
     'title' => 'Albañil, maestro de obra o constructora: qué conviene | Obra',
-    'description' => 'Diferencias entre contratar un albañil, un maestro de obra o una empresa constructora en Paraguay: responsabilidad, coordinación, presupuesto, garantía y qué conviene según la obra.',
+    'description' => 'Albañil, maestro de obra o constructora en Paraguay: diferencias en responsabilidad, coordinación y presupuesto, y qué conviene según la obra.',
+    'summary' => 'Diferencias entre contratar un albañil, un maestro de obra o una empresa constructora en Paraguay: responsabilidad, coordinación, presupuesto, respaldo y qué conviene según la obra.',
     'h1' => 'Albañil, maestro de obra o constructora: qué conviene',
     'kicker' => 'Guía',
     'intro' => [

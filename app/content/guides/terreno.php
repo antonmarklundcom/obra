@@ -6,7 +6,8 @@ declare(strict_types=1);
 return [
     'name' => 'Qué revisar antes de construir en tu terreno',
     'title' => 'Qué revisar antes de construir en un terreno en Paraguay | Obra',
-    'description' => 'Antes de construir en tu terreno: títulos, medidas reales, suelo, desnivel, servicios, retiros municipales y accesos. La lista que evita sorpresas caras en obra.',
+    'description' => 'Qué revisar antes de construir en un terreno en Paraguay: títulos, medidas, suelo, desnivel, servicios, retiros y accesos. Evitá sorpresas en obra.',
+    'summary' => 'Antes de construir en tu terreno: títulos, medidas reales, suelo, desnivel, servicios, retiros municipales y accesos. La lista que evita sorpresas caras en obra.',
     'h1' => 'Qué revisar antes de construir en tu terreno',
     'kicker' => 'Guía',
     'intro' => [

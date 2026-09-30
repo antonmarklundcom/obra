@@ -7,7 +7,8 @@ return [
     'direccion' => [
         'name' => 'Dirección técnica de obra',
         'title' => 'Dirección técnica de obra en Paraguay | Obra',
-        'description' => 'Dirección técnica y profesional responsable de obra en Asunción y Gran Asunción: ingeniero a cargo de la ejecución, certificaciones y responsabilidad ante el municipio y el banco.',
+        'description' => 'Dirección técnica de obra en Asunción y Gran Asunción: ingeniero a cargo de la ejecución, certificaciones y responsabilidad ante el municipio y el banco.',
+        'summary' => 'Dirección técnica y profesional responsable de obra en Asunción y Gran Asunción: ingeniero a cargo de la ejecución, certificaciones y responsabilidad ante el municipio y el banco.',
         'h1' => 'Dirección técnica de obra',
         'kicker' => 'Un profesional responsable de tu obra',
         'intro' => [

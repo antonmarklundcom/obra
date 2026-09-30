@@ -26,7 +26,8 @@ return [
     'oficinas' => [
         'name' => 'Oficinas y consultorios',
         'title' => 'Remodelación de oficinas y consultorios en Paraguay | Obra',
-        'description' => 'Remodelación y adecuación de oficinas y consultorios en Asunción: divisiones, cableado de datos, climatización, baños y terminaciones con mínima interrupción de la actividad.',
+        'description' => 'Remodelación de oficinas y consultorios en Asunción: divisiones, cableado de datos, climatización, baños y terminaciones con mínima interrupción.',
+        'summary' => 'Remodelación y adecuación de oficinas y consultorios en Asunción: divisiones, cableado de datos, climatización, baños y terminaciones con mínima interrupción de la actividad.',
         'h1' => 'Remodelación de oficinas y consultorios',
         'kicker' => 'Un lugar listo para trabajar y atender',
         'intro' => [

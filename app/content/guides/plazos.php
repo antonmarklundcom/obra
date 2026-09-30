@@ -6,7 +6,8 @@ declare(strict_types=1);
 return [
     'name' => 'Cuánto tarda una obra: etapas y plazos',
     'title' => 'Cuánto tarda construir una casa en Paraguay | Obra',
-    'description' => 'Las etapas de una obra y qué define su duración: fundaciones, mampostería, techo, instalaciones, terminaciones. Por qué no hay plazo sin alcance cerrado y qué lo atrasa.',
+    'description' => 'Cuánto tarda construir una casa en Paraguay: las etapas de la obra, qué define su duración y por qué no hay plazo sin un alcance cerrado.',
+    'summary' => 'Las etapas de una obra y qué define su duración: fundaciones, mampostería, techo, instalaciones, terminaciones. Por qué no hay plazo sin alcance cerrado y qué lo atrasa.',
     'h1' => 'Cuánto tarda construir una casa: etapas y plazos de obra',
     'kicker' => 'Guía',
     'intro' => [

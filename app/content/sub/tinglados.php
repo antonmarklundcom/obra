@@ -26,7 +26,8 @@ return [
     'cocheras' => [
         'name' => 'Cocheras y techos para autos',
         'title' => 'Construcción de cocheras y techos para autos en Paraguay | Obra',
-        'description' => 'Cocheras cubiertas y techos para autos en Asunción y Gran Asunción: estructura metálica o de hormigón, cubierta aislada, piso y portón integrados al frente de la casa.',
+        'description' => 'Cocheras cubiertas y techos para autos en Asunción y Gran Asunción: estructura metálica o de hormigón, cubierta aislada, piso y portón al frente.',
+        'summary' => 'Cocheras cubiertas y techos para autos en Asunción y Gran Asunción: estructura metálica o de hormigón, cubierta aislada, piso y portón integrados al frente de la casa.',
         'h1' => 'Cocheras y techos para autos',
         'kicker' => 'El auto a la sombra, el frente mejor',
         'intro' => [
