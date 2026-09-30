@@ -22,6 +22,13 @@ function obra_image_size(string $file): array
     };
 }
 
+function obra_srcset(string $file): string
+{
+    $base = preg_replace('/\.webp$/', '', $file);
+    [$w] = obra_image_size($file);
+    return "/assets/images/{$base}-480.webp 480w, /assets/images/{$base}-960.webp 960w, /assets/images/{$file} {$w}w";
+}
+
 function obra_head(array $config, array $route, string $path, array $schemas = []): void
 {
     $canonical = obra_url($config, $path);

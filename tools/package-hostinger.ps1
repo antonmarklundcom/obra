@@ -17,7 +17,8 @@ $files = @(
   'config/site.php', 'config/local.example.php',
   'assets/css/site.css', 'assets/js/site.js',
   'assets/images/hero-casa.webp', 'assets/images/og-obra.jpg', 'assets/images/servicio-cochera.webp',
-  'assets/images/servicio-piscina.webp', 'assets/images/servicio-quincho.webp'
+  'assets/images/servicio-piscina.webp', 'assets/images/servicio-quincho.webp',
+  'assets/images/hero-casa-480.webp', 'assets/images/hero-casa-960.webp', 'assets/images/servicio-cochera-480.webp', 'assets/images/servicio-cochera-960.webp', 'assets/images/servicio-piscina-480.webp', 'assets/images/servicio-piscina-960.webp', 'assets/images/servicio-quincho-480.webp', 'assets/images/servicio-quincho-960.webp'
 )
 # Contenido partido por archivo: app/content/sub/{hub}.php y app/content/guides/{slug}.php (y app/wa-messages.php si existe).
 foreach ($dir in @('app/content/sub', 'app/content/guides')) {
