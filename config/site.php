@@ -35,8 +35,9 @@ $config = [
 
 // Hostinger compartido no siempre permite variables de entorno: config/local.php
 // (no versionado, bloqueado por .htaccess) puede devolver un array con los valores reales.
+// OBRA_LOCAL_CONFIG=0 lo ignora (tools/verify: las pruebas del formulario nunca usan claves reales).
 $localFile = __DIR__ . '/local.php';
-if (is_file($localFile)) {
+if (is_file($localFile) && obra_env('OBRA_LOCAL_CONFIG', '1') !== '0') {
     $local = require $localFile;
     if (is_array($local)) { $config = array_replace_recursive($config, $local); }
 }

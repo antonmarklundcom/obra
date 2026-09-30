@@ -1,0 +1,16 @@
+{
+  "name": "obra-tools",
+  "private": true,
+  "type": "module",
+  "description": "Local quality gate for obra.com.py (no CI). Run tools/verify.sh or tools/verify.ps1.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "audit": "node audit.mjs",
+    "seo-diff": "node seo-diff.mjs",
+    "check-wa": "node check-wa.mjs",
+    "pw-check": "node pw-check.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.1"
+  }
+}

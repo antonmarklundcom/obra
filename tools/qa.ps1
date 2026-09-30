@@ -61,7 +61,7 @@ foreach ($route in ($routes | Where-Object { $_ -notmatch '\.(xml|txt)$' })) {
   if ($html -notmatch '<link rel="canonical" href="https://obra\.com\.py') { throw "$route canonical missing" }
   if ($html -match 'Warning:|Notice:|Deprecated:|Fatal error|Parse error') { throw "$route contains a PHP warning" }
   if ($html -match 'Pendiente de configuraci|pendiente de configuraci|antes de publicar|antes del lanzamiento') { throw "$route leaks internal setup copy" }
-  if ($html -match '595XXXXXXXX|0981 000 000</a>|RUC 80000000') { throw "$route possible fabricated public contact data" }
+  if ($html -match '595XXXXXXXX|0981 0{3} 0{3}</a>|RUC 80000000') { throw "$route possible fabricated public contact data" }
   if ($html -match 'plataforma t.cnica|profesionales independientes') { throw "$route legacy marketplace copy found" }
 }
 $homeHtml = Get-Html ($Base + '/')
