@@ -18,7 +18,7 @@ $config = [
     'ruc' => obra_env('OBRA_RUC'),
     'legal_address' => obra_env('OBRA_LEGAL_ADDRESS'),
     'privacy_email' => obra_env('OBRA_PRIVACY_EMAIL'),
-    'crm_endpoint' => obra_env('OBRA_CRM_ENDPOINT'),
+    'crm_endpoint' => obra_env('OBRA_CRM_ENDPOINT', 'https://crm.clientes.com.py/api/v1/leads'),
     'crm_api_key' => obra_env('OBRA_CRM_API_KEY'),
     'analytics_id' => obra_env('OBRA_ANALYTICS_ID'),
     // Zona principal que aparece en titulos, textos y schema.

@@ -276,3 +276,7 @@ D1 `/casas/minimalistas/`: reposition to execution (recommended) or 301. · D2 t
 - O3: Q2 and Q3 were already in place (minimalistas is a construction page with one arq link; no picker). Q4 (business facts): NOT RUN, no facts given.
 - O4: NOT RUN, the keyword-library MCP is not connected.
 - Deploy mode (Git vs zip) was not answered; assume zip until Anton confirms.
+
+### Update after Anton's answers
+- Deploy is Git auto-deploy on `main`. GA4 skipped. VenderCRM endpoint now defaults in `config/site.php`; the key goes only in the server's untracked `config/local.php`.
+- Images: Anton approved up to 50 Higgsfield credits (referential images, labeled as such). Not started because the cloud environment cannot download from `*.cloudfront.net`; no credits spent.
