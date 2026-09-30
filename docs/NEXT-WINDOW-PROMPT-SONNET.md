@@ -5,6 +5,8 @@ SITE AND REPO
 - Run locally: php -S localhost:8081 router.php (on Anton's Windows PC PHP is in C:\php; in PowerShell run $env:Path = "C:\php;$env:Path" first).
 - Session 1 (Opus) already merged the foundation: tools/verify (sh and ps1), tools/audit.mjs, tools/seo-diff.mjs, tools/check-wa.mjs, tools/pw-check.mjs, app/wa-messages.php (the single WhatsApp message map), content split into app/content/sub/<hub>.php and app/content/guides/<slug>.php, docs/seo/CONTENT-SPEC.md, docs/seo/content-briefs/A.md to F.md and NEW.md, docs/seo/obra-keyword-map.md, and docs/reports/BUILD-REPORT-*-foundation.md.
 - Read first, in order: docs/seo/CONTENT-SPEC.md, docs/seo/content-briefs/*.md, docs/IMPROVE-PLAN.md (sections 2, 3, 4 and 5), the foundation report, docs/seo/obra-keyword-map.md.
+- Word counts per page: php tools/content-words.php <hub>/<child> | guides/<slug> | hub/<slug>. The reference v2 page is /piscinas/chicas/ (already done in session 1).
+- Keyword volumes: session 1 had no keyword-library MCP, so every "Vol PY" is "sin dato" and every NEW-x is "skip (no data)". If the keyword-library MCP is connected in your session, fill the Vol PY column first (list_projects -> project_overview -> list_groups -> get_group / keyword_lookup, Paraguay only). A NEW-x that then qualifies still needs Anton's approval (D7) before it is built.
 
 PRECONDITION CHECK (do this first)
 On an up-to-date main, the files above must exist and tools/verify must pass. If any is missing or verify fails on main, stop: tell Anton exactly what's missing and don't write content.
@@ -33,8 +35,8 @@ ROUND 1: POOL SEASON FIRST (its own PR)
 
 ROUND 2: EVERYTHING ELSE (a second PR)
 1. Branch claude/obra-content-<yyyymmdd> from the updated main.
-2. Run briefs A, C, D, E and F in parallel (5 subagents).
-3. Then NEW.md: one subagent per 2–3 new pages, each creating only its own new files. You add their routes' WA texts and confirm each new URL is in the sitemap, the menu or its hub, and the breadcrumbs, with at least 3 inbound internal links.
+2. Run briefs A, C, D, E and F in parallel (F may be split into F1 = app/content.php hubs and F2 = guides + supervision.php, so 6 subagents at most). You (the director) add the one "obras civiles" sentence to the home services intro in app/pages.php (keyword row K-01).
+3. Then NEW.md (as of session 1 every row is "skip", so normally nothing to do): one subagent per 2–3 new pages marked "build", each creating only its own new files. You add their routes' WA texts and confirm each new URL is in the sitemap, the menu or its hub, and the breadcrumbs, with at least 3 inbound internal links.
 4. Review everything, run tools/verify (new URLs must be 200 with 1 H1 and unique title and description), and open the PR. PR FLOW as below.
 
 PR FLOW (you own it)
