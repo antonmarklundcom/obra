@@ -501,3 +501,4 @@ p{color:var(--muted)}
   .directory-main{grid-template-columns:1fr auto}
 }
 .site-nav .mega a,.directory-children a,.spec-grid a,.guide-grid a,.toc a{text-decoration:none}
+.about-experience{display:grid;gap:1.5rem}
