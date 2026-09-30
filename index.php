@@ -30,9 +30,11 @@ if (isset($routes[$path]) && obra_raw_path() !== $path) {
 if (!isset($routes[$path])) {
     http_response_code(404);
     $route = ['title' => 'Página no encontrada | Obra', 'description' => 'La página solicitada no existe.', 'h1' => 'Esta página no está en obra.', 'indexable' => false];
+    // Registro de 404 para detectar enlaces rotos y URLs viejas (solo ruta y dominio de origen, sin datos personales).
+    error_log('obra-404 ' . substr(preg_replace('/[^\x21-\x7e]/', '', $path), 0, 200) . ' ref=' . substr((string) parse_url((string) ($_SERVER['HTTP_REFERER'] ?? ''), PHP_URL_HOST), 0, 80));
     obra_head($config, $route, $path);
     obra_header($config, $content, $path, $route);
-    ?><main id="contenido"><section class="error-page"><span aria-hidden="true">404</span><div><p class="eyebrow">Ruta no encontrada</p><h1><?= h($route['h1']) ?></h1><p>La dirección puede estar mal escrita o la página ya no existe. Volvé al inicio o revisá los servicios.</p><div class="action-row"><a class="btn btn-primary" href="/">Ir al inicio</a><a class="text-link" href="/servicios/">Ver servicios</a></div></div></section></main><?php
+    ?><main id="contenido"><section class="error-page"><span aria-hidden="true">404</span><div><p class="eyebrow">Ruta no encontrada</p><h1><?= h($route['h1']) ?></h1><p>La dirección puede estar mal escrita o la página ya no existe. Volvé al inicio o revisá los servicios.</p><div class="action-row"><a class="btn btn-primary" href="/">Ir al inicio</a><a class="text-link" href="/servicios/">Ver servicios</a></div><nav class="error-links" aria-label="Páginas útiles"><strong>Lo que más se busca</strong><?php foreach (array_slice($content['services'], 0, 6, true) as $es => $esv): ?><a href="/<?= h($es) ?>/"><?= h($esv['name']) ?></a><?php endforeach; ?><?php foreach (array_slice($content['guides'], 0, 3, true) as $eg => $egv): ?><a href="<?= h(obra_guide_path($eg, $egv)) ?>"><?= h($egv['name']) ?></a><?php endforeach; ?></nav><?php $ewa = obra_whatsapp($config, 'Hola, no encontré la página que buscaba en obra.com.py y quiero consultar por mi obra. ¿Me ayudan?'); if ($ewa): ?><p><a class="btn btn-whatsapp" href="<?= h($ewa) ?>"<?= obra_wa_attrs('hero') ?>>Escribinos por WhatsApp</a></p><?php endif; ?></div></section></main><?php
     obra_footer($config, $content, $route);
     exit;
 }
