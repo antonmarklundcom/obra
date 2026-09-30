@@ -502,3 +502,4 @@ p{color:var(--muted)}
 }
 .site-nav .mega a,.directory-children a,.spec-grid a,.guide-grid a,.toc a{text-decoration:none}
 .about-experience{display:grid;gap:1.5rem}
+.error-links{display:flex;flex-wrap:wrap;gap:.5rem 1rem;margin:1.5rem 0}.error-links strong{flex-basis:100%}.error-links a{text-decoration:underline}

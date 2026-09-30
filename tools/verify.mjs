@@ -105,6 +105,8 @@ try {
   const auditFile = join(mkdtempSync(join(tmpdir(), 'obra-verify-')), 'audit-after.json');
   const au = node('audit.mjs', [base, 'https://obra.com.py', auditFile]);
   step('audit', au.status === 0, (au.stdout + au.stderr).trim());
+  const sc = node('seo-check.mjs', [auditFile]);
+  step('seo-check', sc.status === 0, (sc.stdout + sc.stderr).trim().split('\n').join('\n      '));
   const sd = node('seo-diff.mjs', [join(root, 'docs/audit/audit-before.json'), auditFile]);
   step('seo-diff', sd.status === 0, (sd.stdout + sd.stderr).trim().split('\n').join('\n      '));
 
