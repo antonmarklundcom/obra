@@ -69,3 +69,4 @@
 - [x] /nosotros/ y /como-trabajamos/: experiencia del responsable de obra (más de 20 años) y equipo propio numeroso, sin cifras ni nombres inventados. Razón social, RUC, email y domicilio siguen vacíos hasta `config/local.php`.
 - [x] 3 guías de búsqueda con intención de compra, sin precios: `/guias/costo-quincho/`, `/guias/costo-piscina/`, `/guias/techo-losa-chapa/` (59 URLs indexables). Pendiente: revisar con el responsable de obra que el contenido técnico coincida con su práctica.
 - [x] 6 guías más (65 URLs indexables): `elegir-constructora`, `costo-ampliacion`, `costo-muro-perimetral`, `costo-tinglado`, `humedad-paredes`, `impermeabilizar-losa`. Sin precios ni plazos. El responsable de obra debe revisar el contenido técnico.
+- [ ] Después de cada deploy con páginas nuevas: `node tools/indexnow.mjs` (avisa a Bing/Yandex; la clave pública está en el archivo `<clave>.txt` de la raíz, no borrarlo). Bing Webmaster Tools: enviar `https://obra.com.py/sitemap.xml`.
