@@ -94,6 +94,6 @@ return [
             ['¿Puedo hacer la cochera pegada a la pared de mi casa?', 'Se puede, verificando que la pared aguante y cuidando la unión de la cubierta para que no filtre. A veces conviene que la cochera tenga estructura propia.'],
             ['¿Dejan preparado el cargador para auto eléctrico?', 'Sí, dejamos la canalización y el tablero previstos para que el equipo se instale cuando lo necesites.'],
         ],
-        'related' => ['/muros/portones/', '/reformas/fachadas/', '/tinglados/', '/guias/costo-casa/'],
+        'related' => ['/techos/chapa/', '/muros/portones/', '/reformas/fachadas/', '/tinglados/', '/guias/costo-casa/'],
     ],
 ];

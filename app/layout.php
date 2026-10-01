@@ -55,6 +55,7 @@ function obra_head(array $config, array $route, string $path, array $schemas = [
 <?php foreach ($schemas as $schema): ?><script type="application/ld+json"><?= obra_json($schema) ?></script>
 <?php endforeach; ?>
 <?php if (preg_match('/^G-[A-Z0-9]+$/', (string) $config['analytics_id'])): ?><meta name="obra-analytics" content="<?= h($config['analytics_id']) ?>"><?php endif; ?>
+<?php if (preg_match('/^AW-[0-9]+$/', (string) $config['ads_id'])): ?><meta name="obra-ads" content="<?= h($config['ads_id']) ?>" data-wa="<?= h(preg_match('/^[A-Za-z0-9_-]{6,40}$/', (string) $config['ads_label_wa']) ? $config['ads_label_wa'] : '') ?>" data-form="<?= h(preg_match('/^[A-Za-z0-9_-]{6,40}$/', (string) $config['ads_label_form']) ? $config['ads_label_form'] : '') ?>" data-tel="<?= h(preg_match('/^[A-Za-z0-9_-]{6,40}$/', (string) $config['ads_label_tel']) ? $config['ads_label_tel'] : '') ?>"><?php endif; ?>
 </head><body<?= obra_has_sticky($route, $path) ? ' class="has-sticky"' : '' ?>><a class="skip-link" href="#contenido">Saltar al contenido</a><?php
 }
 
@@ -132,7 +133,7 @@ function obra_contact_form(array $config, array $content): void
     $wa = obra_phone_ready($config);
     if ($error === 'tiempo'): ?><p class="form-error" role="alert">El formulario quedó abierto demasiado tiempo o se envió demasiado rápido. Revisá los datos y volvé a enviarlo.</p><?php elseif ($error !== ''): ?><p class="form-error" role="alert">Faltó completar algún dato o el número de WhatsApp no es válido (usá el formato 0981 123 456). Revisá y volvé a enviar.</p><?php endif; ?>
 <form class="contact-form" action="/form.php" method="post" data-form>
-  <input type="hidden" name="return_path" value="/cotizar/"><input type="hidden" name="origin_path" value="<?= h($origin) ?>"><input type="hidden" name="placement" value="form"><input type="hidden" name="page_url" value="" data-page-url><input type="hidden" name="started_at" value="<?= time() ?>">
+  <input type="hidden" name="return_path" value="/cotizar/"><input type="hidden" name="origin_path" value="<?= h($origin) ?>"><input type="hidden" name="placement" value="form"><input type="hidden" name="page_url" value="" data-page-url><input type="hidden" name="started_at" value="<?= time() ?>"><?php foreach (obra_attribution_keys() as $attrKey): ?><input type="hidden" name="<?= h($attrKey) ?>" value="" data-attrib="<?= h($attrKey) ?>"><?php endforeach; ?>
   <label class="trap" aria-hidden="true">Sitio web<input name="website" tabindex="-1" autocomplete="off"></label>
   <div class="field-grid">
     <label>Nombre<input name="name" required maxlength="100" autocomplete="name" placeholder="Tu nombre"></label>

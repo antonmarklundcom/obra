@@ -34,5 +34,5 @@ return [
         ['¿Hacen el piso industrial?', 'Sí, con espesor y armadura definidos según el tránsito y la carga esperados.'],
         ['¿Hacen también cocheras y techos para autos?', 'Sí, son versiones más chicas de la misma lógica. Las coordinamos con el resto de la obra.'],
     ],
-    'related' => ['/tinglados/', '/tinglados/galpones/', '/tinglados/cocheras/', '/comerciales/', '/guias/techo-losa-chapa/'],
+    'related' => ['/techos/chapa/', '/tinglados/', '/tinglados/galpones/', '/tinglados/cocheras/', '/comerciales/', '/guias/techo-losa-chapa/'],
 ];

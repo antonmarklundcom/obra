@@ -145,6 +145,6 @@ return [
             ['¿Cómo se protege la madera de los insectos?', 'Con un tratamiento antes de instalarla, madera seca y una revisión periódica. El detalle se explica al entregar.'],
             ['¿Se puede reemplazar el techo de un quincho existente?', 'Sí. Se revisa la estructura y las columnas, y se propone reemplazar todo o solo el cielorraso y la cubierta.'],
         ],
-        'related' => ['/quinchos/', '/patios/pergolas/', '/quintas/casa-campo/', '/guias/terreno/'],
+        'related' => ['/techos/estructuras/', '/quinchos/', '/patios/pergolas/', '/quintas/casa-campo/', '/guias/terreno/'],
     ],
 ];

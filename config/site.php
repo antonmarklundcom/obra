@@ -21,6 +21,11 @@ $config = [
     'crm_endpoint' => obra_env('OBRA_CRM_ENDPOINT', 'https://crm.clientes.com.py/api/v1/leads'),
     'crm_api_key' => obra_env('OBRA_CRM_API_KEY'),
     'analytics_id' => obra_env('OBRA_ANALYTICS_ID'),
+    // Google Ads: id de cuenta (AW-123456789) y etiquetas de conversion (docs/ads/GOOGLE-ADS-SETUP.md). Vacio = sin etiqueta.
+    'ads_id' => obra_env('OBRA_ADS_ID'),
+    'ads_label_wa' => obra_env('OBRA_ADS_LABEL_WA'),
+    'ads_label_form' => obra_env('OBRA_ADS_LABEL_FORM'),
+    'ads_label_tel' => obra_env('OBRA_ADS_LABEL_TEL'),
     // Token (16+ caracteres) para ver /stats.php?token=... (medicion propia). Vacio = la pagina no existe.
     'stats_token' => obra_env('OBRA_STATS_TOKEN'),
     // Zona principal que aparece en titulos, textos y schema.

@@ -135,6 +135,12 @@ function obra_load_content_dir(string $dir, array $order): array
     return $data;
 }
 
+// Parametros de campana que viajan del enlace del anuncio al CRM (site.js los guarda y completa los inputs ocultos).
+function obra_attribution_keys(): array
+{
+    return ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'landing_path'];
+}
+
 function obra_json(array $data): string
 {
     return (string) json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT);
@@ -158,7 +164,7 @@ function obra_security_headers(): void
     header('Permissions-Policy: camera=(), microphone=(), geolocation=()');
     // form-action incluye wa.me porque form.php responde con un 303 hacia WhatsApp
     // y Chrome aplica form-action tambien a las redirecciones de un envio.
-    header("Content-Security-Policy: default-src 'self'; base-uri 'self'; form-action 'self' https://wa.me; frame-ancestors 'self'; object-src 'none'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; font-src 'self'");
+    header("Content-Security-Policy: default-src 'self'; base-uri 'self'; form-action 'self' https://wa.me; frame-ancestors 'self'; object-src 'none'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com https://www.google.com https://*.g.doubleclick.net https://www.googleadservices.com; style-src 'self' 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://*.g.doubleclick.net https://www.googleadservices.com; font-src 'self'");
 }
 
 function obra_breadcrumb_schema(array $config, array $items): array
