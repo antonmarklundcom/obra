@@ -1,6 +1,6 @@
 # Plan: casas prefabricadas + precios por m² (obra.com.py)
 
-Date: 2026-10-01. Status: **PLAN, waiting on 2 decisions from Anton (section 1)**. Pattern: copy the `/techos/` build (`TECHOS.md`, commit 866fbae): one hub file, one file per specialty, WhatsApp texts, Ads-ready exact phrases.
+Date: 2026-10-01. Status: **PLAN. D1 and D2 answered (section 1); waiting on Anton's unit prices (section 7) before building**. Pattern: copy the `/techos/` build (`TECHOS.md`, commit 866fbae): one hub file, one file per specialty, WhatsApp texts, Ads-ready exact phrases.
 
 ## 0. What the KWP list really says (PY monthly volume)
 
@@ -21,7 +21,9 @@ Two facts drive the whole plan:
 1. The head term (390) is **"casas prefabricadas en paraguay"** and the existing page `/casas/prefabricadas/` is a "prefab vs tradicional, we don't build prefab" comparison. That angle cannot win a 390 commercial query where Google shows catalogues with models and prices.
 2. **8 of the 28 terms contain "precio"** and the biggest non-prefab term is "precio de pared por metro cuadrado" (210). The site's HARD RULE is *no prices*. A price page without a number will not rank and will annoy the visitor.
 
-## 1. Decisions for Anton (blocking)
+## 1. Decisions for Anton
+
+**Answered 2026-10-01:** D1 = obra does not manufacture prefab houses but **sets them up** (base, montaje, conexiones, terminaciones, add-ons). Site = **obra.com.py**, not carpinteria (a prefab house needs platea, montaje and connections: construction work; carpinteria keeps wood products and finishes, one sibling note at most on `/prefabricadas/madera/`). D2 = **yes, dated reference prices** (rows in section 7).
 
 **D1. Who sells the prefab house?**
 - (a) **Honest buyer's guide + what obra does around a prefab** (recommended if obra does not build prefab): the hub answers "casas prefabricadas en Paraguay" fully (types, what the catalogue price leaves out, how to compare, cuotas, container, madera) and sells obra's real work: platea/base, conexiones de agua/luz/cloaca, cámara séptica, galería, quincho, ampliación tradicional pegada a la prefabricada, cochera. Lead = "I bought/am buying a prefab and need the base and the rest".
@@ -104,8 +106,31 @@ Recommendation: **Opus director in this session for phase 1, Sonnet subagents fo
 | 3 Wire-up | Opus | WhatsApp texts in `app/wa-messages.php`, reverse links (techos, casas, guías → new pages), images, `docs/ads/GOOGLE-ADS-SETUP.md` ad groups for "casas prefabricadas en paraguay" and "precio de pared por metro cuadrado", keyword map rows K-04 + new | 1 |
 | Gate | Opus | `bash tools/verify.sh` green (seo-check, seo-diff, check-wa, events, pw-check 390/1366), IndexNow after merge | — |
 
-## 6. What Anton must provide
-- D1 and D2 answers.
+## 6. Existing copy that must change (D1 = we set them up)
+- `app/content/sub/casas.php` `prefabricadas`: intro "Obra construye con sistema tradicional…", the "Casas premoldeadas" section ("Nosotros no las construimos…") and FAQ "¿Ustedes construyen casas prefabricadas? No…" all say we have nothing to do with prefab. The entry moves to `/prefabricadas/` (301) and the copy becomes "no las fabricamos: las montamos, hacemos la base, las conexiones y lo que el catálogo no trae".
+- `app/wa-messages.php` `/casas/prefabricadas/` texts ("¿Qué construyen ustedes?") move to `/prefabricadas/` and get a setup angle ("Hola, compré una casa prefabricada y necesito la platea y el montaje…").
+- `app/content.php` `casas` hub: specialty card and any "prefabricadas" mention point to the new hub; `/guias/costo-casa/` "Sistema constructivo" paragraph links to `/prefabricadas/`.
+- `CONTENT-SPEC.md` §6 and `NEXT-WINDOW-PROMPT.md` HARD RULES: add the price exception (allowlisted paths, numbers only from `app/content/prices.php`).
+
+## 7. Price rows (D2): what each table shows
+
+"Dated" = every table carries a visible line like *"Precios referenciales a octubre 2026, material y mano de obra, sin IVA. Varían según acceso, cantidad y terminación."* and is refreshed every 3-6 months (the "2021" queries show people look for a current figure). Each row: item, unit, low-high Gs, what is included. Anton supplies the numbers from his own budgets.
+
+| Page | Rows |
+|---|---|
+| `/precios/` | Construcción por m²: obra gruesa · casa económica · estándar · alta terminación · semicubierto (galería, quincho, cochera) |
+| `/precios/pared/` | Ladrillo común 0.15 · ladrillo común 0.30 · ladrillo hueco · bloque de cemento · ladrillo visto (doble cara) · solo mano de obra de levantamiento |
+| `/precios/techo-chapa/` | Chapa trapezoidal galvanizada con estructura metálica · chapa prepintada · panel termoacústico · solo colocación de chapa |
+| `/precios/techo-tejas/` | Teja colonial cerámica con estructura de madera y machimbre · teja francesa · solo colocación de tejas · retejado |
+| `/precios/losa/` | Losa de viguetas pretensadas (losa rap) con capa de compresión · losa maciza de hormigón armado · impermeabilización de losa |
+| `/precios/durlock/` | Tabique simple · tabique con aislación · cielorraso de durlock · placa resistente a la humedad |
+| `/precios/revoque-pintura/` | Revoque interior (grueso + fino) · revoque exterior · revoque hidrófugo · pintura látex interior 2 manos · pintura exterior · enduido + pintura |
+| `/prefabricadas/` (what obra charges, not the catalogue) | Platea para prefabricada (por m²) · montaje (por m²) · conexión de agua y ANDE (global) · cámara séptica y pozo absorbente (global) · galería o semicubierto (por m²) |
+| `/prefabricadas/container/` | Aislación interior (por m²) · techo doble ventilado (por m²) · base o pilotes (por unidad) |
+
+No catalogue prices of prefab manufacturers (we don't sell them and can't keep them true). If a row has no real number, it is left out, never estimated.
+
+## 8. What Anton must provide
 - If D2 = a: current unit prices per rubro (Gs/m², material + mano de obra, with/without IVA) and the month they are valid for. Without them, D2 falls back to (b).
 - If D1 = b/c: partner name, models, photos with permission, financing terms.
 - Whether Villarrica is a served zone.
