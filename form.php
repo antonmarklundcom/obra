@@ -51,7 +51,9 @@ function obra_mail_send(array $config, array $payload, array $labels): bool
         . "Terreno: " . $labels['terrain'] . "\n"
         . "Financiación: " . $labels['financing'] . "\n"
         . "Página: " . $payload['page_url'] . "\n"
-        . "Origen: " . $f['origin_path'] . " (" . $f['placement'] . ")\n\n"
+        . "Origen: " . $f['origin_path'] . " (" . $f['placement'] . ")\n"
+        . (isset($f['gclid']) || isset($f['utm_campaign']) ? "Anuncio: " . ($f['utm_campaign'] ?? '-') . " / " . ($f['utm_term'] ?? '-') . (isset($f['gclid']) ? " (Google Ads)" : '') . "\n" : '')
+        . "\n"
         . "Proyecto:\n" . $f['project'] . "\n";
     $subject = '=?UTF-8?B?' . base64_encode('Consulta web: ' . $labels['service']) . '?=';
     $headers = "From: Obra <no-reply@" . $config['domain'] . ">\r\nReply-To: " . $to . "\r\nContent-Type: text/plain; charset=UTF-8\r\nX-Mailer: obra-site";
@@ -92,6 +94,11 @@ $message = obra_wa_form_text([
     'name' => $name, 'service' => $labels['service'], 'location' => $location, 'terrain' => $labels['terrain'],
     'financing' => $labels['financing'], 'project' => $messageText, 'page' => $originPath,
 ]);
+$attribution = [];
+foreach (obra_attribution_keys() as $attrKey) {
+    $attrValue = preg_replace('/[^A-Za-z0-9_\-\.\/%+ ]/', '', obra_post($attrKey, 200)) ?? '';
+    if ($attrValue !== '') { $attribution[$attrKey] = $attrValue; }
+}
 $payload = [
     'name' => $name,
     'phone' => '+' . $phone,
@@ -99,7 +106,7 @@ $payload = [
     'source' => 'site:obra-com-py',
     'page_url' => $pageUrl,
     'idempotency_key' => bin2hex(random_bytes(16)),
-    'fields' => ['service' => $service, 'location' => $location, 'terrain' => $terrain, 'financing' => $financing, 'project' => $messageText, 'origin_path' => $originPath, 'placement' => $placement, 'submitted_at' => gmdate('c')],
+    'fields' => ['service' => $service, 'location' => $location, 'terrain' => $terrain, 'financing' => $financing, 'project' => $messageText, 'origin_path' => $originPath, 'placement' => $placement, 'submitted_at' => gmdate('c')] + $attribution,
 ];
 require_once __DIR__ . '/app/events.php';
 obra_event_log('form_lead', $placement, $originPath, $service === 'otro' ? '' : $service);

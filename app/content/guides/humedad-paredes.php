@@ -34,5 +34,5 @@ return [
         ['¿Hacen diagnóstico antes del presupuesto?', 'Sí, con una visita a la obra. Sin ver la casa no se puede indicar la causa ni el trabajo.'],
         ['¿También atienden humedad en baños y cocinas?', 'Sí, dentro de reformas de baños y cocinas, junto con la ventilación y las instalaciones.'],
     ],
-    'related' => ['/reformas/', '/reformas/techos/', '/reformas/banos/', '/reformas/fachadas/', '/guias/impermeabilizar-losa/'],
+    'related' => ['/techos/goteras/', '/reformas/', '/reformas/techos/', '/reformas/banos/', '/reformas/fachadas/', '/guias/impermeabilizar-losa/'],
 ];

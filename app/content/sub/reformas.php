@@ -182,6 +182,6 @@ return [
             ['¿Cómo sé si la humedad viene del techo o de otro lado?', 'Se sigue el recorrido: manchas que aparecen tras la lluvia y cerca de encuentros con paredes suelen venir del techo; las que suben desde el piso son otra causa. Lo verificamos en la visita.'],
             ['¿Se puede impermeabilizar una losa sin cambiar todo?', 'Muchas veces sí, si la losa está sana. Se limpia, se corrige la pendiente y se coloca una membrana nueva; si hay daños en el hormigón se reparan antes.'],
         ],
-        'related' => ['/reformas/', '/tinglados/', '/quintas/refaccion/', '/guias/costo-casa/'],
+        'related' => ['/techos/goteras/', '/techos/impermeabilizar/', '/techos/chapa/', '/reformas/', '/tinglados/', '/quintas/refaccion/', '/guias/costo-casa/'],
     ],
 ];

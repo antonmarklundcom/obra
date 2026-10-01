@@ -32,5 +32,5 @@ return [
         ['¿Cada cuánto hay que revisar el techo?', 'Conviene revisarlo después de tormentas fuertes y limpiar canaletas periódicamente. Te explicamos qué mirar al entregar la obra.'],
         ['¿Hacen techos nuevos en quinchos y cocheras?', 'Sí. Hacemos cubiertas para quinchos, cocheras, galerías y tinglados, y las coordinamos con el resto de la obra.'],
     ],
-    'related' => ['/reformas/techos/', '/quinchos/techo-madera/', '/tinglados/cocheras/', '/casas/', '/guias/costo-casa/'],
+    'related' => ['/techos/', '/techos/chapa/', '/techos/losa/', '/techos/tejas/', '/reformas/techos/', '/quinchos/techo-madera/', '/tinglados/cocheras/', '/casas/', '/guias/costo-casa/'],
 ];

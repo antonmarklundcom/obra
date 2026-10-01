@@ -66,7 +66,28 @@
 
   // Medicion (solo con consentimiento y GA4 configurado)
   const analytics = document.querySelector('meta[name="obra-analytics"]')?.content || '';
+  const adsMeta = document.querySelector('meta[name="obra-ads"]');
+  const adsId = adsMeta?.content || '';
   const track = (name, params) => { if (typeof window.gtag === 'function') window.gtag('event', name, params || {}); };
+  // Conversion de Google Ads (solo con consentimiento y etiqueta configurada en config/local.php)
+  const adsConversion = kind => {
+    const label = adsMeta?.dataset[kind] || '';
+    if (adsId && label && typeof window.gtag === 'function') window.gtag('event', 'conversion', { send_to: adsId + '/' + label });
+  };
+
+  // Atribucion de campana: gclid/gbraid/wbraid y utm_* del anuncio viajan al CRM con el formulario.
+  // Se guardan en sessionStorage (no es cookie) para sobrevivir a la navegacion dentro del sitio.
+  const attribKeys = ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+  let attrib = {};
+  try { attrib = JSON.parse(sessionStorage.getItem('obra-attrib') || '{}') || {}; } catch (e) { attrib = {}; }
+  const params = new URLSearchParams(location.search);
+  if (attribKeys.some(key => params.get(key))) {
+    attrib = {};
+    attribKeys.forEach(key => { const v = (params.get(key) || '').slice(0, 200); if (v) attrib[key] = v; });
+    attrib.landing_path = location.pathname;
+    try { sessionStorage.setItem('obra-attrib', JSON.stringify(attrib)); } catch (e) { /* modo privado */ }
+  }
+  document.querySelectorAll('[data-attrib]').forEach(input => { input.value = attrib[input.dataset.attrib] || ''; });
   // Medicion propia: sin cookies ni datos personales (t.php guarda evento, ubicacion, pagina y servicio).
   const beacon = (event, placement, service) => {
     try { navigator.sendBeacon('/t.php', JSON.stringify({ e: event, p: placement || '', u: location.pathname, s: service || '' })); } catch (e) { /* medir nunca rompe la pagina */ }
@@ -80,6 +101,7 @@
     form.addEventListener('submit', () => {
       if (!form.checkValidity()) return;
       track('generate_lead', { method: 'form' });
+      adsConversion('form');
       if (button) { button.disabled = true; button.textContent = 'Enviando…'; }
     });
     addEventListener('pageshow', () => { if (button) { button.disabled = false; button.innerHTML = label; } });
@@ -89,9 +111,10 @@
   document.querySelectorAll('a[data-wa]').forEach(link => {
     link.addEventListener('click', () => beacon('whatsapp_click', link.dataset.wa, link.dataset.waService));
     link.addEventListener('click', () => track('whatsapp_click', { placement: link.dataset.wa, page_path: location.pathname, service: link.dataset.waService || '' }));
+    link.addEventListener('click', () => adsConversion('wa'));
   });
 
-  document.querySelectorAll('a[href^="tel:"]').forEach(link => link.addEventListener('click', () => beacon('tel_click', link.dataset.wa || '', '')));
+  document.querySelectorAll('a[href^="tel:"]').forEach(link => link.addEventListener('click', () => { beacon('tel_click', link.dataset.wa || '', ''); adsConversion('tel'); }));
 
   // Barra fija movil: se oculta mientras el teclado esta abierto (foco en un campo).
   const fieldSelector = 'input:not([type="checkbox"]):not([type="hidden"]), textarea, select';
@@ -106,18 +129,21 @@
   const remember = value => { try { localStorage.setItem('obra-cookie-consent', value); } catch (e) { /* modo privado */ } };
   const banner = document.querySelector('[data-cookie]');
   const loadAnalytics = () => {
-    if (!/^G-[A-Z0-9]+$/.test(analytics) || window.gtag) return;
+    const ga4 = /^G-[A-Z0-9]+$/.test(analytics) ? analytics : '';
+    const ads = /^AW-[0-9]+$/.test(adsId) ? adsId : '';
+    if ((!ga4 && !ads) || window.gtag) return;
     window.dataLayer = window.dataLayer || [];
     window.gtag = function () { window.dataLayer.push(arguments); };
     window.gtag('js', new Date());
-    window.gtag('config', analytics);
+    if (ga4) window.gtag('config', ga4);
+    if (ads) window.gtag('config', ads);
     const script = document.createElement('script');
     script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(analytics)}`;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ga4 || ads)}`;
     document.head.appendChild(script);
   };
   if (consent === 'accepted') loadAnalytics();
-  if (!consent && banner && analytics) banner.hidden = false;
+  if (!consent && banner && (analytics || adsId)) banner.hidden = false;
   banner?.querySelector('[data-cookie-accept]')?.addEventListener('click', () => { remember('accepted'); banner.hidden = true; loadAnalytics(); });
   banner?.querySelector('[data-cookie-deny]')?.addEventListener('click', () => { remember('necessary'); banner.hidden = true; });
 })();

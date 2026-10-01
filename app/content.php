@@ -215,8 +215,9 @@ return [
                 ['Cubierta, aislación y desagües', ['En Paraguay mandan el calor y las lluvias fuertes. Una chapa sola calienta; con aislación o una cámara de aire el ambiente se soporta mucho más. Las canaletas y bajadas deben dimensionarse para tormentas y llevar el agua lejos de las bases.', 'Si el espacio va a usarse para trabajar, se piensa también la ventilación natural, la iluminación y la altura de los portones.']],
                 ['Galpones, cocheras y usos comerciales', ['La cochera cubierta para uno o varios vehículos es la obra más común en casas. El galpón de depósito, taller o producción suma preguntas: piso reforzado, accesos para camiones, instalación eléctrica y sanitaria. Cada uso define el alcance.', 'Si el tinglado se apoya en una construcción existente o comparte pared con un vecino, se estudian los apoyos y los desagües para no generar problemas.']],
             ],
-            'related' => ['patios', 'comerciales', 'muros', 'casas', 'quintas'],
+            'related' => ['techos', 'patios', 'comerciales', 'muros', 'casas', 'quintas'],
         ],
+        'techos' => require __DIR__ . '/content/hub/techos.php',
         'muros' => [
             'name' => 'Muros perimetrales y cerramientos',
             'short' => 'Muralla, portón y acceso integrados a la propiedad.',
@@ -329,7 +330,8 @@ return [
     // Grupos para el menu de servicios y el indice /servicios/
     'groups' => [
         'nueva' => ['name' => 'Construcción nueva', 'services' => ['casas', 'quintas', 'comerciales']],
-        'exterior' => ['name' => 'Exteriores y patio', 'services' => ['piscinas', 'quinchos', 'patios', 'muros', 'tinglados']],
+        'exterior' => ['name' => 'Exteriores y patio', 'services' => ['piscinas', 'quinchos', 'patios', 'muros']],
+        'cubiertas' => ['name' => 'Techos y cubiertas', 'services' => ['techos', 'tinglados']],
         'reforma' => ['name' => 'Reformas y ampliaciones', 'services' => ['reformas', 'ampliaciones']],
         'tecnico' => ['name' => 'Servicios técnicos', 'services' => ['supervision', 'presupuesto']],
     ],
@@ -338,7 +340,7 @@ return [
 
     // Subpaginas por servicio (/{servicio}/{sub}/) y guias (/guias/{slug}/, /credito/)
     // Especialidades: app/content/sub/{hub}.php, en el orden de los hubs de arriba.
-    'children' => obra_load_content_dir('sub', ['casas', 'quintas', 'piscinas', 'quinchos', 'reformas', 'ampliaciones', 'patios', 'tinglados', 'muros', 'comerciales', 'supervision', 'presupuesto']),
+    'children' => obra_load_content_dir('sub', ['casas', 'quintas', 'piscinas', 'quinchos', 'reformas', 'ampliaciones', 'patios', 'tinglados', 'techos', 'muros', 'comerciales', 'supervision', 'presupuesto']),
     // Guias: app/content/guides/{slug}.php. El orden fija el menu y el sitemap; una guia nueva sin orden va al final.
     'guides' => obra_load_content_dir('guides', ['costo-casa', 'terreno', 'plazos', 'permisos', 'platea', 'ladrillo-bloque', 'albanil', 'credito', 'costo-quincho', 'costo-piscina', 'techo-losa-chapa', 'elegir-constructora', 'costo-ampliacion', 'costo-muro-perimetral', 'costo-tinglado', 'humedad-paredes', 'impermeabilizar-losa']),
 

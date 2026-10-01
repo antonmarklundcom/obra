@@ -34,5 +34,5 @@ return [
         ['¿Hacen losas nuevas ya impermeabilizadas?', 'Sí. En construcciones nuevas la impermeabilización es parte de la ejecución de la losa.'],
         ['¿Cómo saben de dónde viene la filtración?', 'Con inspección visual, prueba de agua y revisión de desagües y encuentros.'],
     ],
-    'related' => ['/reformas/techos/', '/reformas/', '/casas/', '/guias/humedad-paredes/', '/guias/techo-losa-chapa/'],
+    'related' => ['/techos/impermeabilizar/', '/techos/goteras/', '/reformas/techos/', '/reformas/', '/casas/', '/guias/humedad-paredes/', '/guias/techo-losa-chapa/'],
 ];
