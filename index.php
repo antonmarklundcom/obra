@@ -78,7 +78,7 @@ if ($route['type'] === 'service') {
 } elseif ($route['type'] === 'child') {
     $parent = $content['services'][$route['slug']];
     $page = $content['children'][$route['slug']][$route['child']];
-    $schemas[] = ['@context' => 'https://schema.org', '@type' => 'Service', 'name' => $page['name'], 'serviceType' => $page['h1'], 'description' => $page['description'], 'url' => obra_url($config, $path), 'image' => obra_url($config, '/assets/images/' . $parent['image']), 'areaServed' => $areaServed, 'provider' => $provider, 'isRelatedTo' => ['@type' => 'Service', 'name' => $parent['name'], 'url' => obra_url($config, '/' . $route['slug'] . '/')]];
+    $schemas[] = ['@context' => 'https://schema.org', '@type' => 'Service', 'name' => $page['name'], 'serviceType' => $page['h1'], 'description' => $page['description'], 'url' => obra_url($config, $path), 'image' => obra_url($config, '/assets/images/' . ($page['image'] ?? $parent['image'])), 'areaServed' => $areaServed, 'provider' => $provider, 'isRelatedTo' => ['@type' => 'Service', 'name' => $parent['name'], 'url' => obra_url($config, '/' . $route['slug'] . '/')]];
     $schemas[] = obra_faq_schema($page['faqs']);
 } elseif (in_array($route['type'], ['guides', 'services'], true)) {
     $items = [];
@@ -100,8 +100,8 @@ if ($route['type'] === 'service') {
 
 // Precarga de la imagen principal (LCP) con el mismo srcset que el <img>.
 if ($route['type'] === 'home') { $route['preload'] = ['file' => 'hero-casa.webp', 'sizes' => '(min-width: 1024px) 55vw, 100vw']; }
-elseif ($route['type'] === 'service') { $route['preload'] = ['file' => $content['services'][$route['slug']]['image'], 'sizes' => '(min-width: 1024px) 45vw, 100vw']; }
-elseif ($route['type'] === 'child') { $route['preload'] = ['file' => $content['services'][$route['slug']]['image'], 'sizes' => '(min-width: 1024px) 45vw, 100vw']; }
+elseif ($route['type'] === 'service') { $route['preload'] = ['file' => $content['services'][$route['slug']]['image'], 'sizes' => '(min-width: 1024px) 45vw, 100vw', 'media' => '(min-width: 1024px)']; }
+elseif ($route['type'] === 'child') { $route['preload'] = ['file' => $content['children'][$route['slug']][$route['child']]['image'] ?? $content['services'][$route['slug']]['image'], 'sizes' => '(min-width: 1024px) 45vw, 100vw', 'media' => '(min-width: 1024px)']; }
 
 obra_head($config, $route, $path, $schemas);
 obra_header($config, $content, $path, $route);
