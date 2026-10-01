@@ -1,0 +1,67 @@
+{
+  "_notes": {
+    "generated": "2026-10-01",
+    "model": "gpt_image_2_5 sunburst, medium, 1k, 4:3",
+    "cost_preflight": "0.5 credits per image",
+    "actual_spend_credits": 4.5,
+    "balance_before": 5854.75,
+    "download_status": "blocked: *.cloudfront.net answers CONNECT 403 in this environment; files not yet in assets/images",
+    "qa": "not done visually (bytes unreachable)"
+  },
+  "images": [
+    {
+      "page": "hub",
+      "file": "techos-cubiertas-casa-paraguay.webp",
+      "job_id": "60c5fb83-6f75-4672-afa2-402d08d82978",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20261001_030127_60c5fb83-6f75-4672-afa2-402d08d82978.png"
+    },
+    {
+      "page": "chapa",
+      "file": "techo-de-chapa-trapezoidal-galvanizada.webp",
+      "job_id": "676c8297-1ada-43df-930e-c004688487ea",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20261001_030127_676c8297-1ada-43df-930e-c004688487ea.png"
+    },
+    {
+      "page": "termoacusticos",
+      "file": "techo-termoacustico-panel-sandwich.webp",
+      "job_id": "1cd7620d-8428-4b5f-9859-66b397163a53",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20261001_030127_1cd7620d-8428-4b5f-9859-66b397163a53.png"
+    },
+    {
+      "page": "tejas",
+      "file": "techo-de-tejas-ceramicas-coloniales.webp",
+      "job_id": "d7d11e6b-c592-482e-99f6-742b2776cb74",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20261001_030127_d7d11e6b-c592-482e-99f6-742b2776cb74.png"
+    },
+    {
+      "page": "losa",
+      "file": "techo-de-losa-hormigon-terraza.webp",
+      "job_id": "2b106933-44d6-480e-afba-c0ad6265a7af",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20261001_030127_2b106933-44d6-480e-afba-c0ad6265a7af.png"
+    },
+    {
+      "page": "impermeabilizar",
+      "file": "impermeabilizacion-losa-membrana-asfaltica.webp",
+      "job_id": "5f8e6d6d-fed1-4598-b6f1-f34aeebfd09f",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20261001_030127_5f8e6d6d-fed1-4598-b6f1-f34aeebfd09f.png"
+    },
+    {
+      "page": "goteras",
+      "file": "goteras-lluvia-techo-humedad.webp",
+      "job_id": "009ff839-22a1-428c-8351-df21443746af",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20261001_030127_009ff839-22a1-428c-8351-df21443746af.png"
+    },
+    {
+      "page": "canaletas",
+      "file": "canaleta-bajada-pluvial-techo.webp",
+      "job_id": "89b9348b-df34-4df2-8f0f-3dd57bb6cee3",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20261001_030127_89b9348b-df34-4df2-8f0f-3dd57bb6cee3.png"
+    },
+    {
+      "page": "estructuras",
+      "file": "estructura-techo-metalica-madera.webp",
+      "job_id": "09479597-02ed-44b1-b61b-f286ca79db42",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_349VrHjTFIpx9q71lpfpAXcLXvR/hf_20261001_030127_09479597-02ed-44b1-b61b-f286ca79db42.png"
+    }
+  ]
+}

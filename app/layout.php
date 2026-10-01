@@ -50,7 +50,7 @@ function obra_head(array $config, array $route, string $path, array $schemas = [
 <?php if (!empty($route['modified'])): ?><meta property="article:modified_time" content="<?= h($route['modified']) ?>"><?php endif; ?>
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="<?= h($route['title']) ?>"><meta name="twitter:description" content="<?= h($route['description']) ?>"><meta name="twitter:image" content="<?= h($og) ?>">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<?php if (!empty($route['preload'])): ?><link rel="preload" as="image" href="/assets/images/<?= h($route['preload']['file']) ?>" imagesrcset="<?= h(obra_srcset($route['preload']['file'])) ?>" imagesizes="<?= h($route['preload']['sizes']) ?>" fetchpriority="high"><?php endif; ?>
+<?php if (!empty($route['preload'])): ?><link rel="preload" as="image" href="/assets/images/<?= h($route['preload']['file']) ?>" imagesrcset="<?= h(obra_srcset($route['preload']['file'])) ?>" imagesizes="<?= h($route['preload']['sizes']) ?>"<?= !empty($route['preload']['media']) ? ' media="' . h($route['preload']['media']) . '"' : '' ?> fetchpriority="high"><?php endif; ?>
 <link rel="stylesheet" href="<?= h(obra_asset('/assets/css/site.css')) ?>">
 <?php foreach ($schemas as $schema): ?><script type="application/ld+json"><?= obra_json($schema) ?></script>
 <?php endforeach; ?>
