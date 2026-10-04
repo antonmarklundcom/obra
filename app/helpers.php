@@ -96,6 +96,10 @@ function obra_wa_text(string $path, string $placement, ?string $serviceSlug = nu
         if (PHP_SAPI === 'cli-server') { throw new RuntimeException("WhatsApp text missing for $path [$placement]"); }
         $text = 'Hola, quiero hacer una consulta sobre una obra.';
     }
+    // Todo mensaje indica dominio y pagina de origen, para saber que se consulta y desde donde.
+    if (stripos($text, 'obra.com.py') === false) {
+        $text .= "\n\n(Desde obra.com.py" . ($path === '/' ? '' : $path) . ')';
+    }
     return $text;
 }
 
