@@ -11,7 +11,7 @@ const base = (args.find(a => !a.startsWith('--')) || 'http://localhost:8081').re
 const opt = k => (args.find(a => a.startsWith(`--${k}=`)) || '').split('=').slice(1).join('=');
 const shotsDir = opt('shots') || 'audit-shots';
 const VIEWPORTS = [{ name: 'desktop', width: 1366, height: 768 }, { name: 'mobile', width: 390, height: 844 }];
-const SHOTS = ['/', '/servicios/', '/casas/', '/piscinas/', '/piscinas/chicas/', '/quinchos/techo-madera/', '/guias/', '/guias/costo-casa/', '/cotizar/', '/credito/'];
+const SHOTS = ['/', '/servicios/', '/casas/', '/piscinas/', '/piscinas/chicas/', '/quinchos/techo-madera/', '/techos/', '/techos/tejas/', '/techos/goteras/', '/presupuesto/', '/guias/', '/guias/costo-casa/', '/cotizar/', '/credito/'];
 const NO_STICKY = ['/cotizar/', '/gracias/'];
 
 let paths = opt('paths') ? opt('paths').split(',') : null;
@@ -62,7 +62,7 @@ for (const vp of VIEWPORTS) {
     if (SHOTS.includes(path)) await page.screenshot({ path: `${shotsDir}/${vp.name}${path.replace(/\//g, '_') || '_'}.png`, fullPage: false });
     // Imagenes lazy: forzar carga desplazando hasta el final y revisar.
     await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += innerHeight) { scrollTo(0, y); await new Promise(r => setTimeout(r, 30)); } });
-    await page.waitForLoadState('networkidle').catch(() => {});
+    await page.waitForFunction(() => [...document.images].every(i => i.complete), null, { timeout: 5000 }).catch(() => {});
     const brokenLazy = await page.evaluate(() => [...document.images].filter(i => i.complete && i.naturalWidth === 0).map(i => i.src));
     errs.forEach(e => fail.push(`${where}: ${e}`));
     if (r.hscroll) fail.push(`${where}: horizontal scroll`);

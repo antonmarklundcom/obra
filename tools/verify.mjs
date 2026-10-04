@@ -67,21 +67,27 @@ try {
   const post = async (b, data) => {
     const r = await fetch(b + '/form.php', { method: 'POST', redirect: 'manual', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
     formCases++;
-    return { status: r.status, location: r.headers.get('location') || '' };
+    return { status: r.status, location: r.headers.get('location') || '', cookie: (r.headers.get('set-cookie') || '').split(';')[0] };
   };
   for (const mock of ['success', 'fail', '']) {
     const b = await server(8091 + ['success', 'fail', ''].indexOf(mock), { OBRA_CRM_MOCK: mock });
     const tag = `mock=${mock || 'unset'}`;
     const r = await post(b, valid);
-    if (r.status !== 303 || !r.location.startsWith(`https://wa.me/${OK}?text=`)) formFail.push(`${tag} valid -> ${r.status} ${r.location.slice(0, 60)}`);
+    if (r.status !== 303 || !/^\/gracias\/\?recibo=[a-f0-9]{32}$/.test(r.location)) formFail.push(`${tag} valid -> ${r.status} ${r.location.slice(0, 60)}`);
     else {
-      const text = new URL(r.location).searchParams.get('text') || '';
+      const receipt = await (await fetch(b + r.location, { headers: { Cookie: r.cookie } })).text();
+      const state = mock === 'success' ? 'crm-confirmado' : 'sin-canales';
+      if (!receipt.includes(`data-thanks="${state}"`)) formFail.push(`${tag}: incorrect delivery receipt`);
+      const wa = receipt.match(/href="(https:\/\/wa\.me\/[^\"]+)"/g)?.find(v => v.includes('Prueba%20QA')) || '';
+      const text = wa ? new URL(wa.slice(6, -1).replace(/&amp;/g, '&')).searchParams.get('text') || '' : '';
       if (!text.includes('Prueba QA') || !text.includes('Luque')) formFail.push(`${tag} WA text lacks lead data`);
       if (!text.includes('/piscinas/chicas/')) formFail.push(`${tag} WA text lacks origin page`);
+      const forged = await (await fetch(b + '/gracias/?estado=crm-confirmado')).text();
+      if (forged.includes('data-thanks="crm-confirmado"')) formFail.push(`${tag}: GET query can forge successful delivery`);
     }
     if (mock !== 'success') continue;
     const hp = await post(b, { ...valid, website: 'spam' });
-    if (hp.status !== 303 || hp.location !== '/gracias/?estado=enviado') formFail.push(`honeypot -> ${hp.location}`);
+    if (hp.status !== 303 || hp.location !== '/gracias/') formFail.push(`honeypot -> ${hp.location}`);
     const fast = await post(b, { ...valid, started_at: String(Math.floor(Date.now() / 1000)) });
     if (!/error=tiempo/.test(fast.location)) formFail.push(`too fast -> ${fast.location}`);
     for (const k of ['name', 'phone', 'service', 'location', 'terrain', 'financing', 'message', 'consent']) {
@@ -89,11 +95,24 @@ try {
       const m = await post(b, d);
       if (m.status !== 303 || !/^\/cotizar\/\?error=campos/.test(m.location)) formFail.push(`missing ${k} -> ${m.location}`);
       else if (k !== 'service' && !/servicio=piscinas/.test(m.location)) formFail.push(`missing ${k}: service not kept (${m.location})`);
+      if (k === 'phone') {
+        const returned = await (await fetch(b + m.location, { headers: { Cookie: m.cookie } })).text();
+        if (!returned.includes('value="Prueba QA"') || !returned.includes('Prueba automatica del formulario, sin datos reales.') || !returned.includes('id="error-phone"')) formFail.push('validation loses values or field error');
+      }
     }
     const foreign = await post(b, { ...valid, phone: '+1 202 555 0147' });
     if (!/error=campos/.test(foreign.location)) formFail.push(`non-PY phone -> ${foreign.location}`);
     const evil = await post(b, { ...valid, name: '', return_path: 'https://evil.example/' });
     if (!evil.location.startsWith('/cotizar/?error=campos')) formFail.push(`off-site return_path -> ${evil.location}`);
+    const small = { ...valid, service: 'techos', specialty: 'goteras', origin_path: '/techos/goteras/' };
+    delete small.terrain; delete small.financing;
+    const repair = await post(b, small);
+    if (!repair.location.startsWith('/gracias/?recibo=')) formFail.push('repair wrongly requires terrain/financing');
+    const repairReceipt = await (await fetch(b + repair.location, { headers: { Cookie: repair.cookie } })).text();
+    if (!repairReceipt.includes('Goteras%20y%20filtraciones')) formFail.push('specialty not retained in WhatsApp handoff');
+    const xss = await post(b, { ...valid, name: '<script>alert(1)</script>', phone: '' });
+    const xssPage = await (await fetch(b + xss.location, { headers: { Cookie: xss.cookie } })).text();
+    if (xssPage.includes('<script>alert(1)</script>') || !xssPage.includes('&lt;script&gt;')) formFail.push('restored input not HTML escaped');
   }
   step('form matrix', formFail.length === 0, `${formCases} cases` + (formFail.length ? '\n      ' + formFail.join('\n      ') : ''));
 
@@ -101,12 +120,13 @@ try {
   const evFail = [];
   const store = mkdtempSync(join(tmpdir(), 'obra-events-'));
   const TOKEN = 'verify-token-0123456789';
-  const eb = await server(8094, { OBRA_STORAGE: store, OBRA_STATS_TOKEN: TOKEN });
+  const eb = await server(8094, { OBRA_STORAGE: store, OBRA_STATS_TOKEN: TOKEN, OBRA_CRM_MOCK: 'success' });
   const ua = { 'User-Agent': 'Mozilla/5.0 (verify)' };
   const beacon = (body, headers = ua) => fetch(eb + '/t.php', { method: 'POST', headers, body });
   if ((await beacon(JSON.stringify({ e: 'whatsapp_click', p: 'hero', u: '/quinchos/', s: 'quinchos' }))).status !== 204) evFail.push('t.php valid != 204');
   await beacon(JSON.stringify({ e: 'whatsapp_click', p: 'hero', u: '/x/', s: '' }), { 'User-Agent': 'Googlebot/2.1' });
   await beacon(JSON.stringify({ e: 'hack', p: 'x', u: '/x/', s: '' }));
+  await beacon(JSON.stringify({ e: 'form_lead', p: 'x', u: '/x/', s: '' }));
   await beacon(JSON.stringify({ e: 'tel_click', p: '', u: 'https://evil.example/', s: '' }));
   if ((await fetch(eb + '/t.php')).status !== 405) evFail.push('GET /t.php != 405');
   await fetch(eb + '/form.php', { method: 'POST', redirect: 'manual', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(valid).toString() });
@@ -114,7 +134,7 @@ try {
   const logs = readdirSync(store).filter(f => f.startsWith('events-'));
   const logText = logs.length ? readFileSync(join(store, logs[0]), 'utf8') : '';
   const logLines = logText.split('\n').filter(Boolean);
-  if (logLines.length !== 2) evFail.push(`log lines ${logLines.length} (want 2: click + form_lead)`);
+  if (logLines.length !== 4) evFail.push(`log lines ${logLines.length} (want 4: click + valid attempt + confirmed lead + CRM delivery)`);
   if (!/whatsapp_click\thero\t\/quinchos\/\tquinchos/.test(logText)) evFail.push('click line missing');
   if (!/form_lead\tform\t\/piscinas\/chicas\/\tpiscinas/.test(logText)) evFail.push('form_lead line missing');
   if (/(\d{1,3}\.){3}\d{1,3}|Mozilla|Googlebot/.test(logText)) evFail.push('log contains IP or user agent');
@@ -137,7 +157,7 @@ try {
   step('audit', au.status === 0, (au.stdout + au.stderr).trim());
   const sc = node('seo-check.mjs', [auditFile]);
   step('seo-check', sc.status === 0, (sc.stdout + sc.stderr).trim().split('\n').join('\n      '));
-  const sd = node('seo-diff.mjs', [join(root, 'docs/audit/audit-before.json'), auditFile]);
+  const sd = node('seo-diff.mjs', [join(root, 'docs/audit/service-redesign-before.json'), auditFile]);
   step('seo-diff', sd.status === 0, (sd.stdout + sd.stderr).trim().split('\n').join('\n      '));
 
   // 6. Playwright
