@@ -1,6 +1,6 @@
 # Generated reference photographs
 
-51 separate Higgsfield GPT Image 2.5 Sunburst / medium / 1k images cover the homepage, 13 service hubs and 37 specialties. All are **generated service references**, not completed Obra projects or engineering documentation. They are labeled in the page UI; the project-evidence renderer rejects this asset directory.
+51 separate Higgsfield GPT Image 2.5 Sunburst / medium / 1k images cover the homepage, 13 service hubs and 37 specialties. All are **generated service references**, not completed Obra projects or engineering documentation. Public image notices were removed at the owner’s request. Generation provenance remains documented here; the project-evidence renderer rejects this asset directory.
 
 The visual brief uses Paraguay context: low-rise rendered/brick masonry, shade, local clay-tile and sheet-metal roofing, galerías, quinchos and subtropical vegetation. Images were visually reviewed in these labeled contact sheets:
 
