@@ -16,7 +16,7 @@ The homepage also has a compact hero, three visual entry points (build, improve,
 
 The first schematic roof drawings looked too similar at card size. They have been replaced by **51 distinct generated reference photographs**: one for the homepage and one for each service/specialty. Prompts use Paraguay context (Asunción/Gran Asunción, rendered masonry, ceramic brick, clay tiles, sheet metal, shade, galerías, quinchos and subtropical plants). Roof choices now show a metal roof, a localized leak and a gutter/downpipe connection separately, with larger photographs on desktop.
 
-Final assets use Higgsfield **GPT Image 2.5 Sunburst, medium, 1k**, following the owner's model preference. Each has 480/960/1200px WebP variants and responsive srcsets. They are explicitly labeled as generated references, and the project-evidence component refuses the generated-reference directory. These do not replace the need for real authorized project photos.
+Final assets use Higgsfield **GPT Image 2.5 Sunburst, medium, 1k**, following the owner's model preference. Each has 480/960/1200px WebP variants and responsive srcsets. At the owner’s request, public generation/reference notices have been removed from all pages; provenance remains in docs/media/reference-images.json. The project-evidence component refuses the generated-reference directory. These do not replace the need for real authorized project photos.
 
 Quoted budget: 35 earlier Recraft explorations × 1.25 credits plus 51 final Sunburst images × 0.5 credits = **69.25 estimated credits**, below the owner's 100-credit ceiling. Submission rate-limit rejections created no jobs. Generation provenance is recorded in `docs/media/reference-images.json`; original PNG downloads stay local in ignored `.image-source/`.
 

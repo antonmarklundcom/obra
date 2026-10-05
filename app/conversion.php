@@ -55,7 +55,7 @@ function obra_reference_srcset(string $slug, string $child = ''): string
 
 function obra_service_media(array $page, string $slug, string $child = ''): void
 {
-    ?><figure class="conversion-media"><img src="<?= h(obra_service_image($slug, $child)) ?>" srcset="<?= h(obra_reference_srcset($slug, $child)) ?>" sizes="(min-width:1024px) 45vw, 100vw" alt="<?= h('Imagen referencial de ' . $page['name']) ?>" width="1200" height="900" fetchpriority="high"><figcaption>Imagen generada · referencial, no es una obra realizada</figcaption></figure><?php
+    ?><figure class="conversion-media"><img src="<?= h(obra_service_image($slug, $child)) ?>" srcset="<?= h(obra_reference_srcset($slug, $child)) ?>" sizes="(min-width:1024px) 45vw, 100vw" alt="<?= h($page['name']) ?>" width="1200" height="900" fetchpriority="high"></figure><?php
 }
 
 function obra_service_hero(array $config, array $content, array $route, array $page): void
