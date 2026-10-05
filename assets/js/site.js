@@ -11,6 +11,13 @@
     toggle.setAttribute('aria-label', 'Abrir menú');
     document.body.classList.remove('menu-open');
   };
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Tab' || desktop() || !menu?.classList.contains('is-open')) return;
+    const items = [toggle, ...menu.querySelectorAll('a,button')].filter(el => el && el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden');
+    const first = items[0], last = items.at(-1);
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+  });
   if (toggle && menu) {
     toggle.addEventListener('click', () => {
       const open = toggle.getAttribute('aria-expanded') !== 'true';
@@ -92,6 +99,14 @@
   const beacon = (event, placement, service) => {
     try { navigator.sendBeacon('/t.php', JSON.stringify({ e: event, p: placement || '', u: location.pathname, s: service || '' })); } catch (e) { /* medir nunca rompe la pagina */ }
   };
+  // Page loads are an anonymous denominator, not unique visitors.
+  if (location.pathname !== '/gracias/' && !document.querySelector('meta[name="robots"]')?.content.includes('noindex')) {
+    beacon('page_view', '', document.querySelector('[data-wa-service]')?.dataset.waService || '');
+  }
+  const footerSections = [...document.querySelectorAll('.footer-section')];
+  const footerBreakpoint = matchMedia('(max-width:760px)');
+  const updateFooter = () => footerSections.forEach(section => { section.open = !footerBreakpoint.matches; });
+  updateFooter(); footerBreakpoint.addEventListener('change', updateFooter);
 
   // Formulario: URL de origen, doble envio y restauracion al volver atras
   document.querySelectorAll('[data-page-url]').forEach(input => { input.value = location.href; });
@@ -100,11 +115,26 @@
     const label = button ? button.innerHTML : '';
     form.addEventListener('submit', () => {
       if (!form.checkValidity()) return;
-      track('generate_lead', { method: 'form' });
-      adsConversion('form');
+      track('form_attempt', { method: 'form' });
       if (button) { button.disabled = true; button.textContent = 'Enviando…'; }
     });
     addEventListener('pageshow', () => { if (button) { button.disabled = false; button.innerHTML = label; } });
+    const service = form.querySelector('[data-service-select]');
+    const specialty = form.querySelector('[name="specialty"]');
+    const initialService = service?.value;
+    const updateProjectFields = () => {
+      const small = ['techos', 'reformas', 'patios', 'muros', 'supervision', 'presupuesto'].includes(service?.value) || ['renovacion', 'refaccion', 'parrillas'].includes(specialty?.value);
+      form.querySelectorAll('[name="terrain"],[name="financing"]').forEach(input => { input.required = !small; });
+      const details = form.querySelector('[data-project-details]');
+      if (details) details.open = !small || !!details.querySelector('[aria-invalid="true"]');
+      const status = form.querySelector('[data-details-status]');
+      if (status) status.textContent = small ? '(opcional para esta consulta)' : '(para planificar la obra)';
+    };
+    service?.addEventListener('change', () => {
+      if (specialty && service.value !== initialService) { specialty.value = ''; form.querySelector('.form-specialty')?.remove(); }
+      updateProjectFields();
+    });
+    updateProjectFields();
   });
 
   // WhatsApp: un toque abre WhatsApp con el texto de la pagina (app/wa-messages.php). Solo se mide el clic.
@@ -121,7 +151,15 @@
   document.addEventListener('focusin', event => { if (event.target.matches?.(fieldSelector)) document.body.classList.add('field-focus'); });
   document.addEventListener('focusout', event => { if (event.target.matches?.(fieldSelector)) document.body.classList.remove('field-focus'); });
   const thanks = document.querySelector('[data-thanks]');
-  if (thanks && /^(enviado|crm-confirmado)$/.test(thanks.dataset.thanks || '')) track('form_confirmed', { state: thanks.dataset.thanks });
+  const trackReceipt = () => {
+    if (!thanks || !/^(enviado|crm-confirmado)$/.test(thanks.dataset.thanks || '') || !thanks.dataset.receipt || typeof window.gtag !== 'function') return;
+    const key = 'obra-confirmed-' + thanks.dataset.receipt;
+    try { if (sessionStorage.getItem(key)) return; } catch { /* private browsing */ }
+    track('generate_lead', { method: 'form', state: thanks.dataset.thanks });
+    track('form_confirmed', { state: thanks.dataset.thanks });
+    adsConversion('form');
+    try { sessionStorage.setItem(key, '1'); } catch { /* server count remains authoritative */ }
+  };
 
   // Consentimiento de cookies
   let consent = null;
@@ -141,9 +179,11 @@
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(ga4 || ads)}`;
     document.head.appendChild(script);
+    script.addEventListener('load', trackReceipt, { once: true });
   };
   if (consent === 'accepted') loadAnalytics();
   if (!consent && banner && (analytics || adsId)) banner.hidden = false;
   banner?.querySelector('[data-cookie-accept]')?.addEventListener('click', () => { remember('accepted'); banner.hidden = true; loadAnalytics(); });
   banner?.querySelector('[data-cookie-deny]')?.addEventListener('click', () => { remember('necessary'); banner.hidden = true; });
+  trackReceipt();
 })();

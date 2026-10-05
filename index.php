@@ -40,6 +40,7 @@ if (!isset($routes[$path])) {
 }
 
 $route = $routes[$path];
+if (in_array($route['type'], ['contact', 'thanks'], true)) { require_once __DIR__ . '/app/form-state.php'; obra_form_session(); }
 $areaServed = [['@type' => 'Country', 'name' => 'Paraguay']];
 if (($config['area'] ?? '') !== '' && $config['area'] !== 'Paraguay') {
     array_unshift($areaServed, ['@type' => 'AdministrativeArea', 'name' => $config['area']]);

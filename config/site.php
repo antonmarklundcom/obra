@@ -32,6 +32,9 @@ $config = [
     'area' => obra_env('OBRA_AREA', 'Asunción y Gran Asunción'),
     'territory' => obra_env('OBRA_TERRITORY', 'Paraguay'),
     // Sitios hermanos del grupo. 'live' => false imprime el texto sin enlace hasta que el dominio este publicado.
+    // Verified facts and authorized real project evidence only; configured privately on the server.
+    'team' => [],
+    'projects' => [],
     'partner_sites' => [
         // live_paths: paginas internas confirmadas con HEAD 200. Un enlace contextual con 'path' fuera de esta lista queda como texto.
         'arq' => ['url' => 'https://arq.com.py/', 'live' => true, 'live_paths' => []],

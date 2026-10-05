@@ -18,7 +18,7 @@ function obra_event_clean(string $value, string $pattern, int $max): string
 // Devuelve true si el evento se acepto (aunque no se pueda escribir el archivo: medir nunca rompe la pagina).
 function obra_event_log(string $event, string $placement, string $path, string $service): bool
 {
-    if (!in_array($event, ['whatsapp_click', 'tel_click', 'form_lead'], true)) { return false; }
+    if (!in_array($event, ['page_view', 'whatsapp_click', 'tel_click', 'form_attempt', 'form_lead', 'form_delivery_failed', 'crm_delivered', 'email_delivered'], true)) { return false; }
     $placement = obra_event_clean($placement, '/^[a-z0-9-]*$/', 24);
     $path = obra_event_clean($path, '#^/[a-z0-9/-]*$#', 120);
     $service = obra_event_clean($service, '/^[a-z0-9-]*$/', 40);

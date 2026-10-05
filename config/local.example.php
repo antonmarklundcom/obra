@@ -13,4 +13,9 @@ return [
     'stats_token' => '',       // 16+ caracteres al azar: abre /stats.php?token=...
     'analytics_id' => '',      // G-XXXXXXX
     'area' => 'Asunción y Gran Asunción',
+    // Complete only with real, verified information. Empty entries are not displayed.
+    'team' => ['name' => '', 'role' => '', 'background' => '', 'credentials' => '', 'portrait' => ''],
+    // Authorized projects: service, title, scope, location, image (/assets/images/...), authorized=true.
+    // Record author/date/permission outside the public site. Never use illustrations as project evidence.
+    'projects' => [],
 ];

@@ -1,0 +1,47 @@
+# Live before / PR build after
+
+Live roofing before captures were saved on **2026-10-04, approximately 20:16 America/Asuncion (UTC−03:00)**. Homepage before captures were added later the same evening. After previews were refreshed around 21:10–21:15 after the owner's image review, before deployment of PR #21.
+
+**Before** images are from the actual public `https://obra.com.py` site. **After** images are from the PHP preview at `http://127.0.0.1:8086`, running the current PR branch with the homepage redesign and Paraguay-context Sunburst images. These are screenshots of rendered pages, not mockups. Production was not changed.
+
+Both versions used the same browser and viewport overrides: desktop 1366×768 and mobile 390×844. Native browser captures include the visible scrollbar; rendered image dimensions can differ slightly from the requested viewport. The section-two captures use one downward page scroll, so they compare the same browsing action rather than an identical content position.
+
+| Page / view | Current live site | New PR build |
+|---|---|---|
+| Homepage, desktop opening | [Before](before-home-desktop.jpg) | [After](after-home-desktop.jpg) |
+| Homepage, mobile opening | [Before](before-home-mobile.jpg) | [After](after-home-mobile.jpg) |
+| Homepage, project choices | — | [After](after-home-desktop-section2.jpg) |
+| Homepage, enquiry brief | — | [After](after-home-desktop-section3.jpg) |
+| Roofing hub, desktop opening | [Before](before-techos-desktop.jpg) | [After](after-techos-desktop.jpg) |
+| Roofing hub, desktop after scrolling | [Before](before-techos-desktop-section2.jpg) | [After](after-techos-desktop-section2.jpg) |
+| Roofing hub, mobile opening | [Before](before-techos-mobile.jpg) | [After](after-techos-mobile.jpg) |
+| Tile-roof specialty, desktop opening | [Before](before-tejas-desktop.jpg) | [After](after-tejas-desktop.jpg) |
+| Tile-roof specialty, mobile opening | [Before](before-tejas-mobile.jpg) | [After](after-tejas-mobile.jpg) |
+
+## Opening comparison
+
+| Current live site | New PR build |
+|---|---|
+| ![Roofing before](before-techos-desktop.jpg) | ![Roofing after](after-techos-desktop.jpg) |
+
+## Homepage comparison
+
+| Current live site | New PR build |
+|---|---|
+| ![Homepage before](before-home-desktop.jpg) | ![Homepage after](after-home-desktop.jpg) |
+
+![Homepage project choices](after-home-desktop-section2.jpg)
+
+## Next-section comparison
+
+| Current live site | New PR build |
+|---|---|
+| ![Before: inclusions and text cards](before-techos-desktop-section2.jpg) | ![After: case selection and proposal explanation](after-techos-desktop-section2.jpg) |
+
+## Specialty comparison
+
+| Current live site | New PR build |
+|---|---|
+| ![Tile-roof before](before-tejas-desktop.jpg) | ![Tile-roof after](after-tejas-desktop.jpg) |
+
+For a post-deployment check, capture the same public URLs at these settings and compare them with the archived PR-build images. The archive preserves what was live before release even after production changes.
