@@ -35,6 +35,8 @@ try {
   step('php -l', bad.length === 0, `${files.length} files${bad.length ? ', errors: ' + bad.join(' ') : ''}`);
 
   const base = await server(8090);
+  const referenceImages = node('check-reference-images.mjs', [base]);
+  step('reference-images', referenceImages.status === 0, (referenceImages.stdout + referenceImages.stderr).trim());
 
   // 2. Rutas
   const sm = await (await fetch(base + '/sitemap.xml')).text();

@@ -7,3 +7,6 @@ config/local.php
 *.log
 .DS_Store
 audit-shots/
+.image-source/
+tools/image-jobs.json
+tools/sunburst-jobs.json

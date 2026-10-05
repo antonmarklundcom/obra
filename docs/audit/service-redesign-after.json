@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-04T23:08:43.337Z",
+ "generated_at": "2026-10-05T00:17:41.535Z",
  "fetched_from": "http://127.0.0.1:8086",
  "canonical_origin": "https://obra.com.py",
  "summary": {
@@ -38,7 +38,7 @@
   "images_without_alt_total": 0,
   "linked_non_sitemap_targets": {},
   "whatsapp_numbers_found": {
-   "595992279599": 504
+   "595992279599": 505
   },
   "whatsapp_distinct_texts": 380,
   "whatsapp_texts": {
@@ -1185,8 +1185,8 @@
   },
   "word_count_min_median_max": [
    268,
-   1286,
-   1709
+   1288,
+   1720
   ]
  },
  "route_checks": {
@@ -1285,13 +1285,13 @@
  },
  "robots_txt": "User-agent: *\r\nAllow: /\r\nDisallow: /form.php\r\nDisallow: /gracias/\r\n\r\nSitemap: https://obra.com.py/sitemap.xml\r\n",
  "sitemap_lastmod": {
-  "/": "2026-10-04",
-  "/servicios/": "2026-10-04",
-  "/guias/": "2026-10-04",
-  "/como-trabajamos/": "2026-10-04",
-  "/cotizar/": "2026-10-04",
-  "/nosotros/": "2026-10-04",
-  "/privacidad/": "2026-10-04",
+  "/": "2026-10-05",
+  "/servicios/": "2026-10-05",
+  "/guias/": "2026-10-05",
+  "/como-trabajamos/": "2026-10-05",
+  "/cotizar/": "2026-10-05",
+  "/nosotros/": "2026-10-05",
+  "/privacidad/": "2026-10-05",
   "/casas/": "2026-10-04",
   "/casas/duplex/": "2026-10-04",
   "/casas/minimalistas/": "2026-10-04",
@@ -1371,11 +1371,11 @@
    "h1": [
     "Construimos tu casa de principio a fin, llave en mano."
    ],
-   "h2_count": 9,
+   "h2_count": 10,
    "canonical": "https://obra.com.py/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1005,
+   "word_count_main": 1132,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -1421,9 +1421,19 @@
     "https://carpinteria.com.py/",
     "https://wa.me/595992279599"
    ],
-   "images": 5,
+   "images": 14,
    "images_without_alt": [],
-   "images_empty_alt": [],
+   "images_empty_alt": [
+    "/assets/images/reference/casas-960.webp",
+    "/assets/images/reference/reformas-960.webp",
+    "/assets/images/reference/techos-960.webp",
+    "/assets/images/reference/casas-960.webp",
+    "/assets/images/reference/quintas-960.webp",
+    "/assets/images/reference/piscinas-960.webp",
+    "/assets/images/reference/quinchos-960.webp",
+    "/assets/images/reference/reformas-960.webp",
+    "/assets/images/reference/ampliaciones-960.webp"
+   ],
    "schema_types": [
     "GeneralContractor",
     "WebSite",
@@ -2430,7 +2440,7 @@
    "canonical": "https://obra.com.py/casas/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1336,
+   "word_count_main": 1346,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -2483,13 +2493,13 @@
    "images": 8,
    "images_without_alt": [],
    "images_empty_alt": [
-    "/assets/illustrations/casas-duplex.svg",
-    "/assets/illustrations/casas-minimalistas.svg",
-    "/assets/illustrations/casas-etapas.svg",
-    "/assets/illustrations/casas-duplex.svg",
-    "/assets/illustrations/casas-minimalistas.svg",
-    "/assets/illustrations/casas-etapas.svg",
-    "/assets/illustrations/casas-prefabricadas.svg"
+    "/assets/images/reference/casas-duplex-960.webp",
+    "/assets/images/reference/casas-minimalistas-960.webp",
+    "/assets/images/reference/casas-etapas-960.webp",
+    "/assets/images/reference/casas-duplex-960.webp",
+    "/assets/images/reference/casas-minimalistas-960.webp",
+    "/assets/images/reference/casas-etapas-960.webp",
+    "/assets/images/reference/casas-prefabricadas-960.webp"
    ],
    "schema_types": [
     "GeneralContractor",
@@ -2922,7 +2932,7 @@
    "canonical": "https://obra.com.py/quintas/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1168,
+   "word_count_main": 1176,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -2973,10 +2983,10 @@
    "images": 5,
    "images_without_alt": [],
    "images_empty_alt": [
-    "/assets/illustrations/quintas-refaccion.svg",
-    "/assets/illustrations/quintas-casa-campo.svg",
-    "/assets/illustrations/quintas-refaccion.svg",
-    "/assets/illustrations/quintas-casa-campo.svg"
+    "/assets/images/reference/quintas-refaccion-960.webp",
+    "/assets/images/reference/quintas-casa-campo-960.webp",
+    "/assets/images/reference/quintas-refaccion-960.webp",
+    "/assets/images/reference/quintas-casa-campo-960.webp"
    ],
    "schema_types": [
     "GeneralContractor",
@@ -3237,7 +3247,7 @@
    "canonical": "https://obra.com.py/piscinas/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1225,
+   "word_count_main": 1235,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -3290,13 +3300,13 @@
    "images": 8,
    "images_without_alt": [],
    "images_empty_alt": [
-    "/assets/illustrations/piscinas-chicas.svg",
-    "/assets/illustrations/piscinas-quinta.svg",
-    "/assets/illustrations/piscinas-desbordante.svg",
-    "/assets/illustrations/piscinas-chicas.svg",
-    "/assets/illustrations/piscinas-quinta.svg",
-    "/assets/illustrations/piscinas-desbordante.svg",
-    "/assets/illustrations/piscinas-renovacion.svg"
+    "/assets/images/reference/piscinas-chicas-960.webp",
+    "/assets/images/reference/piscinas-quinta-960.webp",
+    "/assets/images/reference/piscinas-desbordante-960.webp",
+    "/assets/images/reference/piscinas-chicas-960.webp",
+    "/assets/images/reference/piscinas-quinta-960.webp",
+    "/assets/images/reference/piscinas-desbordante-960.webp",
+    "/assets/images/reference/piscinas-renovacion-960.webp"
    ],
    "schema_types": [
     "GeneralContractor",
@@ -3730,7 +3740,7 @@
    "canonical": "https://obra.com.py/quinchos/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1253,
+   "word_count_main": 1262,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -3782,12 +3792,12 @@
    "images": 7,
    "images_without_alt": [],
    "images_empty_alt": [
-    "/assets/illustrations/quinchos-cerrados.svg",
-    "/assets/illustrations/quinchos-parrillas.svg",
-    "/assets/illustrations/quinchos-techo-madera.svg",
-    "/assets/illustrations/quinchos-cerrados.svg",
-    "/assets/illustrations/quinchos-parrillas.svg",
-    "/assets/illustrations/quinchos-techo-madera.svg"
+    "/assets/images/reference/quinchos-cerrados-960.webp",
+    "/assets/images/reference/quinchos-parrillas-960.webp",
+    "/assets/images/reference/quinchos-techo-madera-960.webp",
+    "/assets/images/reference/quinchos-cerrados-960.webp",
+    "/assets/images/reference/quinchos-parrillas-960.webp",
+    "/assets/images/reference/quinchos-techo-madera-960.webp"
    ],
    "schema_types": [
     "GeneralContractor",
@@ -4134,7 +4144,7 @@
    "canonical": "https://obra.com.py/reformas/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1286,
+   "word_count_main": 1296,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -4187,13 +4197,13 @@
    "images": 8,
    "images_without_alt": [],
    "images_empty_alt": [
-    "/assets/illustrations/reformas-cocinas.svg",
-    "/assets/illustrations/reformas-banos.svg",
-    "/assets/illustrations/reformas-fachadas.svg",
-    "/assets/illustrations/reformas-cocinas.svg",
-    "/assets/illustrations/reformas-banos.svg",
-    "/assets/illustrations/reformas-fachadas.svg",
-    "/assets/illustrations/reformas-techos.svg"
+    "/assets/images/reference/reformas-cocinas-960.webp",
+    "/assets/images/reference/reformas-banos-960.webp",
+    "/assets/images/reference/reformas-fachadas-960.webp",
+    "/assets/images/reference/reformas-cocinas-960.webp",
+    "/assets/images/reference/reformas-banos-960.webp",
+    "/assets/images/reference/reformas-fachadas-960.webp",
+    "/assets/images/reference/reformas-techos-960.webp"
    ],
    "schema_types": [
     "GeneralContractor",
@@ -4640,7 +4650,7 @@
    "canonical": "https://obra.com.py/ampliaciones/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1202,
+   "word_count_main": 1211,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -4692,12 +4702,12 @@
    "images": 7,
    "images_without_alt": [],
    "images_empty_alt": [
-    "/assets/illustrations/ampliaciones-planta-alta.svg",
-    "/assets/illustrations/ampliaciones-dormitorio.svg",
-    "/assets/illustrations/ampliaciones-galeria.svg",
-    "/assets/illustrations/ampliaciones-planta-alta.svg",
-    "/assets/illustrations/ampliaciones-dormitorio.svg",
-    "/assets/illustrations/ampliaciones-galeria.svg"
+    "/assets/images/reference/ampliaciones-planta-alta-960.webp",
+    "/assets/images/reference/ampliaciones-dormitorio-960.webp",
+    "/assets/images/reference/ampliaciones-galeria-960.webp",
+    "/assets/images/reference/ampliaciones-planta-alta-960.webp",
+    "/assets/images/reference/ampliaciones-dormitorio-960.webp",
+    "/assets/images/reference/ampliaciones-galeria-960.webp"
    ],
    "schema_types": [
     "GeneralContractor",
@@ -5043,7 +5053,7 @@
    "canonical": "https://obra.com.py/patios/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1201,
+   "word_count_main": 1210,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -5095,12 +5105,12 @@
    "images": 7,
    "images_without_alt": [],
    "images_empty_alt": [
-    "/assets/illustrations/patios-veredas.svg",
-    "/assets/illustrations/patios-decks.svg",
-    "/assets/illustrations/patios-pergolas.svg",
-    "/assets/illustrations/patios-veredas.svg",
-    "/assets/illustrations/patios-decks.svg",
-    "/assets/illustrations/patios-pergolas.svg"
+    "/assets/images/reference/patios-veredas-960.webp",
+    "/assets/images/reference/patios-decks-960.webp",
+    "/assets/images/reference/patios-pergolas-960.webp",
+    "/assets/images/reference/patios-veredas-960.webp",
+    "/assets/images/reference/patios-decks-960.webp",
+    "/assets/images/reference/patios-pergolas-960.webp"
    ],
    "schema_types": [
     "GeneralContractor",
@@ -5448,7 +5458,7 @@
    "canonical": "https://obra.com.py/tinglados/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1100,
+   "word_count_main": 1108,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -5499,10 +5509,10 @@
    "images": 5,
    "images_without_alt": [],
    "images_empty_alt": [
-    "/assets/illustrations/tinglados-galpones.svg",
-    "/assets/illustrations/tinglados-cocheras.svg",
-    "/assets/illustrations/tinglados-galpones.svg",
-    "/assets/illustrations/tinglados-cocheras.svg"
+    "/assets/images/reference/tinglados-galpones-960.webp",
+    "/assets/images/reference/tinglados-cocheras-960.webp",
+    "/assets/images/reference/tinglados-galpones-960.webp",
+    "/assets/images/reference/tinglados-cocheras-960.webp"
    ],
    "schema_types": [
     "GeneralContractor",
@@ -5770,7 +5780,7 @@
    "canonical": "https://obra.com.py/techos/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1706,
+   "word_count_main": 1720,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -5827,17 +5837,17 @@
    "images": 12,
    "images_without_alt": [],
    "images_empty_alt": [
-    "/assets/illustrations/techos-chapa.svg",
-    "/assets/illustrations/techos-goteras.svg",
-    "/assets/illustrations/techos-canaletas.svg",
-    "/assets/illustrations/techos-chapa.svg",
-    "/assets/illustrations/techos-termoacusticos.svg",
-    "/assets/illustrations/techos-tejas.svg",
-    "/assets/illustrations/techos-losa.svg",
-    "/assets/illustrations/techos-goteras.svg",
-    "/assets/illustrations/techos-impermeabilizar.svg",
-    "/assets/illustrations/techos-estructuras.svg",
-    "/assets/illustrations/techos-canaletas.svg"
+    "/assets/images/reference/techos-chapa-960.webp",
+    "/assets/images/reference/techos-goteras-960.webp",
+    "/assets/images/reference/techos-canaletas-960.webp",
+    "/assets/images/reference/techos-chapa-960.webp",
+    "/assets/images/reference/techos-termoacusticos-960.webp",
+    "/assets/images/reference/techos-tejas-960.webp",
+    "/assets/images/reference/techos-losa-960.webp",
+    "/assets/images/reference/techos-goteras-960.webp",
+    "/assets/images/reference/techos-impermeabilizar-960.webp",
+    "/assets/images/reference/techos-estructuras-960.webp",
+    "/assets/images/reference/techos-canaletas-960.webp"
    ],
    "schema_types": [
     "GeneralContractor",
@@ -6671,7 +6681,7 @@
    "canonical": "https://obra.com.py/muros/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1042,
+   "word_count_main": 1043,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -6721,8 +6731,8 @@
    "images": 3,
    "images_without_alt": [],
    "images_empty_alt": [
-    "/assets/illustrations/muros-portones.svg",
-    "/assets/illustrations/muros-portones.svg"
+    "/assets/images/reference/muros-portones-960.webp",
+    "/assets/images/reference/muros-portones-960.webp"
    ],
    "schema_types": [
     "GeneralContractor",
@@ -6902,7 +6912,7 @@
    "canonical": "https://obra.com.py/comerciales/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1127,
+   "word_count_main": 1129,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -6953,10 +6963,10 @@
    "images": 5,
    "images_without_alt": [],
    "images_empty_alt": [
-    "/assets/illustrations/comerciales-locales.svg",
-    "/assets/illustrations/comerciales-oficinas.svg",
-    "/assets/illustrations/comerciales-locales.svg",
-    "/assets/illustrations/comerciales-oficinas.svg"
+    "/assets/images/reference/comerciales-locales-960.webp",
+    "/assets/images/reference/comerciales-oficinas-960.webp",
+    "/assets/images/reference/comerciales-locales-960.webp",
+    "/assets/images/reference/comerciales-oficinas-960.webp"
    ],
    "schema_types": [
     "GeneralContractor",
@@ -7211,7 +7221,7 @@
    "canonical": "https://obra.com.py/supervision/",
    "canonical_ok": true,
    "robots": "index,follow,max-image-preview:large",
-   "word_count_main": 1162,
+   "word_count_main": 1163,
    "internal_links_out": [
     "/",
     "/ampliaciones/",
@@ -7261,8 +7271,8 @@
    "images": 3,
    "images_without_alt": [],
    "images_empty_alt": [
-    "/assets/illustrations/supervision-direccion.svg",
-    "/assets/illustrations/supervision-direccion.svg"
+    "/assets/images/reference/supervision-direccion-960.webp",
+    "/assets/images/reference/supervision-direccion-960.webp"
    ],
    "schema_types": [
     "GeneralContractor",

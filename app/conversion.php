@@ -42,18 +42,20 @@ function obra_is_small_enquiry(string $slug, string $child = ''): bool
         || in_array($child, ['renovacion', 'refaccion', 'parrillas'], true);
 }
 
-function obra_illustration_path(string $slug, string $child = ''): string
+function obra_service_image(string $slug, string $child = ''): string
 {
-    return '/assets/illustrations/' . $slug . ($child !== '' ? '-' . $child : '') . '.svg';
+    return '/assets/images/reference/' . $slug . ($child !== '' ? '-' . $child : '') . '-960.webp';
+}
+
+function obra_reference_srcset(string $slug, string $child = ''): string
+{
+    $base = '/assets/images/reference/' . $slug . ($child !== '' ? '-' . $child : '');
+    return $base . '-480.webp 480w, ' . $base . '-960.webp 960w, ' . $base . '-1200.webp 1200w';
 }
 
 function obra_service_media(array $page, string $slug, string $child = ''): void
 {
-    // A specialty uses a relevant architectural illustration rather than an unrelated parent photo.
-    $illustrated = $child !== '' || in_array($slug, ['supervision', 'presupuesto', 'comerciales', 'muros'], true);
-    $src = $illustrated ? obra_illustration_path($slug, $child) : '/assets/images/' . $page['image'];
-    [$width, $height] = $illustrated ? [800, 600] : obra_image_size($page['image']);
-    ?><figure class="conversion-media<?= $illustrated ? ' is-illustration' : '' ?>"><img src="<?= h($src) ?>"<?= !$illustrated ? ' srcset="' . h(obra_srcset($page['image'])) . '" sizes="(min-width:1024px) 45vw, 100vw"' : '' ?> alt="<?= h($illustrated ? 'Ilustración de ' . $page['name'] : $page['image_alt']) ?>" width="<?= $width ?>" height="<?= $height ?>" fetchpriority="high"><figcaption><?= $illustrated ? 'Ilustración del servicio · no es una obra realizada' : 'Imagen referencial' ?></figcaption></figure><?php
+    ?><figure class="conversion-media"><img src="<?= h(obra_service_image($slug, $child)) ?>" srcset="<?= h(obra_reference_srcset($slug, $child)) ?>" sizes="(min-width:1024px) 45vw, 100vw" alt="<?= h('Imagen referencial de ' . $page['name']) ?>" width="1200" height="900" fetchpriority="high"><figcaption>Imagen generada · referencial, no es una obra realizada</figcaption></figure><?php
 }
 
 function obra_service_hero(array $config, array $content, array $route, array $page): void
@@ -87,7 +89,7 @@ function obra_choice_overview(array $content, string $slug): void
             $choices[] = [$page['name'], $page['kicker'], '/' . $slug . '/' . $child . '/', $child];
         }
     }
-    ?><section class="choice-overview section" id="opciones"><div class="section-head"><div><p class="eyebrow">Elegí tu solución</p><h2><?= h($p['heading']) ?></h2></div><p><?= h($p['explain']) ?></p></div><div class="choice-grid"><?php foreach ($choices as [$name, $summary, $url, $child]): ?><a class="choice-card" href="<?= h($url) ?>"><img src="<?= h(obra_illustration_path($slug, $child)) ?>" alt="" width="800" height="600" loading="lazy"><div><h3><?= h($name) ?></h3><p><?= h($summary) ?></p><span aria-hidden="true">↗</span></div></a><?php endforeach; ?></div><a class="text-link" href="#especialidades">Ver todas las especialidades →</a></section><?php
+    ?><section class="choice-overview section" id="opciones"><div class="section-head"><div><p class="eyebrow">Elegí tu solución</p><h2><?= h($p['heading']) ?></h2></div><p><?= h($p['explain']) ?></p></div><div class="choice-grid"><?php foreach ($choices as [$name, $summary, $url, $child]): ?><a class="choice-card" href="<?= h($url) ?>"><img src="<?= h(obra_service_image($slug, $child)) ?>" srcset="<?= h(obra_reference_srcset($slug, $child)) ?>" sizes="(min-width:760px) 33vw, 120px" alt="" width="1200" height="900" loading="lazy"><div><h3><?= h($name) ?></h3><p><?= h($summary) ?></p><span aria-hidden="true">↗</span></div></a><?php endforeach; ?></div><a class="text-link" href="#especialidades">Ver todas las especialidades →</a></section><?php
 }
 
 function obra_case_section(array $page, string $slug): void
@@ -112,7 +114,7 @@ function obra_roof_comparison(): void
 // Only authorized, attributable projects are rendered. Empty data is never replaced with invented proof.
 function obra_project_evidence(array $config, string $slug): void
 {
-    $projects = array_filter($config['projects'] ?? [], fn($p) => is_array($p) && !empty($p['authorized']) && ($p['service'] ?? '') === $slug && !empty($p['title']) && !empty($p['scope']) && !empty($p['image']) && str_starts_with($p['image'], '/assets/images/') && !str_contains($p['image'], '..') && is_file(__DIR__ . '/..' . $p['image']));
+    $projects = array_filter($config['projects'] ?? [], fn($p) => is_array($p) && !empty($p['authorized']) && ($p['service'] ?? '') === $slug && !empty($p['title']) && !empty($p['scope']) && !empty($p['image']) && str_starts_with($p['image'], '/assets/images/') && !str_starts_with($p['image'], '/assets/images/reference/') && !str_contains($p['image'], '..') && is_file(__DIR__ . '/..' . $p['image']));
     if (!$projects) { return; }
     ?><section class="project-evidence section"><p class="eyebrow">Obras realizadas</p><h2>Del proyecto al resultado.</h2><div class="evidence-grid"><?php foreach ($projects as $project): ?><figure><img src="<?= h($project['image']) ?>" alt="<?= h($project['title']) ?>" width="1000" height="750" loading="lazy"><figcaption><h3><?= h($project['title']) ?></h3><p><?= h($project['scope']) ?></p><small><?= h($project['location'] ?? '') ?></small></figcaption></figure><?php endforeach; ?></div></section><?php
 }

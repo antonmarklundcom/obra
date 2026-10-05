@@ -1,6 +1,6 @@
 # Service conversion redesign — 2026-10-04
 
-The redesign applies to all 13 service hubs and 37 specialty pages. It preserves the current repository's 74 sitemap URLs, route metadata and original service manuscripts. This is a presentation and enquiry-flow change; conversion uplift needs measurement after deployment.
+The redesign applies to the homepage, all 13 service hubs and 37 specialty pages. It preserves the current repository's 74 sitemap URLs, route metadata and original service manuscripts. This is a presentation and enquiry-flow change; conversion uplift needs measurement after deployment.
 
 ## First three sections
 
@@ -10,6 +10,16 @@ The redesign applies to all 13 service hubs and 37 specialty pages. It preserves
 
 The complete specialty directory, original descriptions, inclusions, long-form SEO text, process, related links and FAQs continue below. Navigation jumps link directly to the appropriate sections.
 
+The homepage also has a compact hero, three visual entry points (build, improve, roofing) and the enquiry brief immediately afterward. Its original long-form sections remain below. Six primary service cards now use relevant photography and a consistent grid.
+
+## Image revision after owner review
+
+The first schematic roof drawings looked too similar at card size. They have been replaced by **51 distinct generated reference photographs**: one for the homepage and one for each service/specialty. Prompts use Paraguay context (Asunción/Gran Asunción, rendered masonry, ceramic brick, clay tiles, sheet metal, shade, galerías, quinchos and subtropical plants). Roof choices now show a metal roof, a localized leak and a gutter/downpipe connection separately, with larger photographs on desktop.
+
+Final assets use Higgsfield **GPT Image 2.5 Sunburst, medium, 1k**, following the owner's model preference. Each has 480/960/1200px WebP variants and responsive srcsets. They are explicitly labeled as generated references, and the project-evidence component refuses the generated-reference directory. These do not replace the need for real authorized project photos.
+
+Quoted budget: 35 earlier Recraft explorations × 1.25 credits plus 51 final Sunburst images × 0.5 credits = **69.25 estimated credits**, below the owner's 100-credit ceiling. Submission rate-limit rejections created no jobs. Generation provenance is recorded in `docs/media/reference-images.json`; original PNG downloads stay local in ignored `.image-source/`.
+
 ## Priority checklist
 
 | Priority | Improvement | Implementation / remaining dependency |
@@ -18,7 +28,7 @@ The complete specialty directory, original descriptions, inclusions, long-form S
 | 2 | Clarify what each service solves | Separate presentation profiles for all 13 services; specialty summaries retained. |
 | 3 | Put relevant proof near the decision | Authorized service-specific project component implemented. Actual project evidence still needs owner-supplied photos, scope and permission. |
 | 4 | Make the main action obvious | Prominent contextual WhatsApp and enquiry actions in the hero and next-step section. |
-| 5 | Show relevant specialty visuals | 50 local architectural SVG explanations replace inappropriate repeated specialty photos; explicitly labeled as explanatory. |
+| 5 | Show relevant specialty visuals | 51 distinct Paraguay-context generated reference photos for the homepage and all 50 service pages, explicitly labeled. |
 | 6 | Preserve service selection into enquiry | Service, specialty and originating page follow the form link and submission. |
 | 7 | Reduce friction for repairs and small jobs | Terrain and financing are optional for suitable services; server and client validation agree. |
 | 8 | Keep entered values after errors | Short-lived server session, linked field errors and accessible invalid states. |
@@ -31,7 +41,7 @@ The complete specialty directory, original descriptions, inclusions, long-form S
 | 15 | Reduce opening copy density | Compact summaries; original long descriptions retained farther down. |
 | 16 | Make long pages navigable | Section jump links for specialties, details and questions. |
 | 17 | Improve typography and reading width | Responsive heading sizes, readable long-copy widths, spacing and contrast. |
-| 18 | Make specialty cards easier to scan | Illustration, complete summary and clear destination per card. |
+| 18 | Make specialty cards easier to scan | Distinct relevant photo, complete summary and clear destination per card. |
 | 19 | Avoid oversized mobile opening sections | Compact case overview before full specialty grid. |
 | 20 | Match technical services to their workflow | Supervision and estimating get specific steps; original construction process remains available. |
 | 21 | Show real team credentials | Optional verified profile component; name, credentials and portrait await owner information. |
@@ -53,10 +63,12 @@ Keep secrets and business data in untracked `config/local.php`, using `config/lo
 
 Review screenshots: [roofing desktop](screenshots/techos-desktop.png), [roofing mobile](screenshots/techos-mobile.png), [tile-roof desktop](screenshots/tejas-desktop.png), [tile-roof mobile](screenshots/tejas-mobile.png).
 
+The [comparison gallery](screenshots/comparison/README.md) preserves actual live before captures and current PR-build after previews, including the homepage. The PNGs above are the earlier design review; the comparison gallery is the current visual revision.
+
 - `node tools/verify.mjs --skip-pw --php=C:/php/php.exe`: PHP syntax, 74 routes, redirects and blocked paths, 17 form cases, event validation, WhatsApp consistency, SEO audit and diff.
 - `node tools/pw-check.mjs http://127.0.0.1:8086`: all sitemap pages plus the unconfirmed receipt page at desktop 1366×768 and mobile 390×844; checks console errors, failed resources, broken images, horizontal overflow, mobile sticky behavior and action target sizes.
 - `docs/audit/service-redesign-before.json` and `service-redesign-after.json` record the repository baseline and final crawl. Existing SEO manuscripts are unchanged.
 
-Results: verification gate **GREEN** (56 PHP files, 74 sitemap URLs, 14 redirects, 17 form cases, event and WhatsApp checks). Browser check **PASS: 150 runs / 75 URLs × 2 viewports**. Final SEO diff **PASS: 74 → 74 URLs, zero changed descriptions**, no protected metadata changes or word-count/inbound-link losses. JavaScript syntax and staged whitespace checks pass.
+Results after the homepage and image revision: verification gate **GREEN** (57 PHP files, 51 distinct image subjects/153 WebP files, 74 sitemap URLs, 14 redirects, 17 form cases, event and WhatsApp checks). Browser check **PASS: 150 runs / 75 URLs × 2 viewports**. Final SEO diff **PASS: 74 → 74 URLs, zero changed descriptions**, no protected metadata changes or word-count/inbound-link losses. Jump-link targets are checked on the homepage, service pages and directory. JavaScript syntax and staged whitespace checks pass.
 
 Before production, verify PHP sessions work on the host, keep CRM/email credentials in server configuration, and exercise one real enquiry without mock delivery. Mock tests verify handling, not the remote CRM or mail provider. After release, re-run the live audit and compare per-service delivered leads with the previous period. Add real project/team evidence when available and assess lead quality in the CRM. No measured conversion or production Core Web Vitals improvement is claimed by this PR.

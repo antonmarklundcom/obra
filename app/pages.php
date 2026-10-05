@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/conversion.php';
+require_once __DIR__ . '/home-conversion.php';
 
 // Nombre legible de una ruta interna (para listas de "relacionados").
 function obra_label_for_path(array $content, string $path): string
@@ -78,7 +79,7 @@ function obra_specialties(array $content, string $slug, array $service): void
     if (!$children) { return; }
     $p = obra_conversion_profile($slug);
     $groups = $slug === 'techos' ? ['Cubierta nueva' => ['chapa', 'termoacusticos', 'tejas', 'losa'], 'Reparación y protección' => ['goteras', 'impermeabilizar'], 'Estructura y desagüe' => ['estructuras', 'canaletas']] : [$p['heading'] => array_keys($children)];
-    ?><section class="specialties section visual-specialties" id="especialidades"><div class="section-head"><div><p class="eyebrow">Especialidades</p><h2><?= h($p['heading']) ?></h2></div><p><?= h($p['explain']) ?></p></div><p class="specialty-context">Dentro de <?= h(function_exists('mb_strtolower') ? mb_strtolower($service['name'], 'UTF-8') : strtolower($service['name'])) ?>, lo que más nos piden. Cada especialidad tiene su propia página con qué incluye, cuándo conviene y preguntas frecuentes.</p><?php foreach ($groups as $group => $keys): ?><?php if (count($groups) > 1): ?><h3 class="option-group-title"><?= h($group) ?></h3><?php endif; ?><div class="spec-grid"><?php foreach ($keys as $child): if (!isset($children[$child])) { continue; } $page = $children[$child]; ?><a href="/<?= h($slug) ?>/<?= h($child) ?>/" class="option-card"><div class="option-art"><img src="<?= h(obra_illustration_path($slug, $child)) ?>" alt="" width="800" height="600" loading="lazy"><small>Ilustración</small></div><div class="option-copy"><span><?= h($page['kicker']) ?></span><h3><?= h($page['name']) ?></h3><p><?= h($page['summary'] ?? $page['description']) ?></p><b>Ver <?= h($page['name']) ?> <i aria-hidden="true">↗</i></b></div></a><?php endforeach; ?></div><?php endforeach; ?></section><?php
+    ?><section class="specialties section visual-specialties" id="especialidades"><div class="section-head"><div><p class="eyebrow">Especialidades</p><h2><?= h($p['heading']) ?></h2></div><p><?= h($p['explain']) ?></p></div><p class="specialty-context">Dentro de <?= h(function_exists('mb_strtolower') ? mb_strtolower($service['name'], 'UTF-8') : strtolower($service['name'])) ?>, lo que más nos piden. Cada especialidad tiene su propia página con qué incluye, cuándo conviene y preguntas frecuentes.</p><?php foreach ($groups as $group => $keys): ?><?php if (count($groups) > 1): ?><h3 class="option-group-title"><?= h($group) ?></h3><?php endif; ?><div class="spec-grid"><?php foreach ($keys as $child): if (!isset($children[$child])) { continue; } $page = $children[$child]; ?><a href="/<?= h($slug) ?>/<?= h($child) ?>/" class="option-card"><div class="option-art"><img src="<?= h(obra_service_image($slug, $child)) ?>" srcset="<?= h(obra_reference_srcset($slug, $child)) ?>" sizes="(min-width:1280px) 25vw, (min-width:760px) 33vw, 50vw" alt="" width="1200" height="900" loading="lazy"><small>Referencia generada</small></div><div class="option-copy"><span><?= h($page['kicker']) ?></span><h3><?= h($page['name']) ?></h3><p><?= h($page['summary'] ?? $page['description']) ?></p><b>Ver <?= h($page['name']) ?> <i aria-hidden="true">↗</i></b></div></a><?php endforeach; ?></div><?php endforeach; ?></section><?php
 }
 
 function obra_v2_sections(array $page): void
@@ -95,27 +96,29 @@ function obra_page_home(array $config, array $content, array $route): void
     $count = count($content['services']);
     $subCount = array_sum(array_map('count', $content['children']));
     ?>
-<section class="home-hero">
+<section class="home-hero home-conversion">
   <div class="hero-copy" data-reveal>
     <p class="eyebrow">Constructora · <?= h($config['area']) ?></p>
     <h1><?= h($route['h1']) ?></h1>
     <p class="hero-deck">Casas, quintas, piscinas, quinchos y reformas con una sola empresa a cargo: del terreno al presupuesto por escrito, y de la obra a la entrega.</p>
-    <div class="action-row"><a class="btn btn-primary" href="<?= h($wa ?: '/cotizar/') ?>"<?= $wa ? obra_wa_attrs('hero') : '' ?>>Cotizar por WhatsApp <span aria-hidden="true">↗</span></a><a class="text-link" href="#servicios">Ver qué construimos</a></div>
-    <ul class="hero-notes"><li>Presupuesto por rubro, por escrito</li><li>Un solo responsable de obra</li><li>Sin precios por m² a ciegas</li></ul>
+    <div class="action-row"><a class="btn btn-primary" href="<?= h($wa ?: '/cotizar/') ?>"<?= $wa ? obra_wa_attrs('hero') : '' ?>>Consultar mi proyecto <span aria-hidden="true">↗</span></a><a class="text-link" href="/cotizar/?origen=%2F">Completar el formulario</a></div>
+    <p class="hero-response">Mandanos ubicación y una idea de lo que necesitás. Respondemos en horario comercial.</p><ul class="hero-notes"><li>Presupuesto por rubro, por escrito</li><li>Un solo responsable de obra</li><li>Sin precios por m² a ciegas</li></ul><a class="hero-method" href="#servicios">Ver qué construimos →</a>
   </div>
-  <figure class="hero-media" data-reveal><img src="/assets/images/hero-casa.webp" srcset="/assets/images/hero-casa-480.webp 480w, /assets/images/hero-casa-960.webp 960w, /assets/images/hero-casa.webp 1600w" sizes="(min-width: 1024px) 55vw, 100vw" alt="Casa contemporánea de ladrillo visto con galería y jardín, estilo paraguayo moderno" width="1600" height="900" fetchpriority="high"><figcaption><span>Casa · galería · exterior</span><small>Imagen referencial</small></figcaption></figure>
+  <figure class="hero-media" data-reveal><img src="<?= h(obra_service_image('home')) ?>" srcset="<?= h(obra_reference_srcset('home')) ?>" sizes="(min-width:1024px) 45vw, 100vw" alt="Casa con galería, jardín y piscina, imagen generada de referencia" width="1200" height="900" fetchpriority="high"><figcaption><span>Casa · galería · exterior</span><small>Imagen generada · referencial</small></figcaption></figure>
 </section>
 
 <section class="trust-band" aria-label="Forma de trabajo"><span>Llave en mano: planos, obra y entrega</span><span>Presupuesto por escrito en guaraníes</span><span>Materiales y terminaciones definidos</span><span>Reportes de avance por etapa</span></section>
+
+<?php obra_home_intents(); obra_home_start($config); ?>
 
 <section class="services section" id="servicios">
   <div class="section-head"><div><p class="eyebrow">Lo que construimos</p><h2>Obra completa, del terreno a la entrega.</h2></div><p>Cada proyecto empieza por entender el lugar, el uso y el nivel de terminación que necesitás. Después se cotiza por rubro, no con un precio genérico por metro cuadrado. Somos una constructora en Paraguay que toma a su cargo obras civiles de casas, quinchos, piscinas, reformas y locales, con una sola coordinación.</p></div>
   <div class="service-bento">
   <?php $i = 0; foreach (array_slice($content['services'], 0, 6, true) as $slug => $service): $i++; ?>
-    <a class="service-card" href="/<?= h($slug) ?>/" data-reveal><span><?= sprintf('%02d', $i) ?></span><h3><?= h($service['name']) ?></h3><p><?= h($service['short']) ?></p><b>Ver servicio <i aria-hidden="true">↗</i></b></a>
+    <a class="service-card" href="/<?= h($slug) ?>/" data-reveal><img src="<?= h(obra_service_image($slug)) ?>" srcset="<?= h(obra_reference_srcset($slug)) ?>" sizes="(min-width:1024px) 33vw, 100vw" alt="" width="1200" height="900" loading="lazy"><span><?= sprintf('%02d', $i) ?></span><h3><?= h($service['name']) ?></h3><p><?= h($service['short']) ?></p><b>Ver servicio <i aria-hidden="true">↗</i></b></a>
   <?php endforeach; ?>
   </div>
-  <div class="all-services-link"><a class="text-link" href="/servicios/">Ver los <?= $count ?> servicios y <?= $subCount ?> especialidades</a></div>
+  <p class="reference-note">Imágenes generadas como referencia; no son obras realizadas.</p><div class="all-services-link"><a class="text-link" href="/servicios/">Ver los <?= $count ?> servicios y <?= $subCount ?> especialidades</a></div>
 </section>
 
 <section class="image-band">
@@ -134,10 +137,7 @@ function obra_page_home(array $config, array $content, array $route): void
   </div>
 </section>
 
-<section class="proof-replacement section">
-  <div><p class="eyebrow">Antes de cotizar</p><h2>Lo que necesitamos saber.</h2><p>Un buen presupuesto no empieza con un precio por metro cuadrado. Empieza con información suficiente para comparar el mismo alcance.</p></div>
-  <div class="brief-list"><article><span>01</span><h3>Ubicación</h3><p>Ciudad, barrio y condiciones de acceso.</p></article><article><span>02</span><h3>Terreno y medidas</h3><p>Si ya tenés terreno, sus medidas. Si es una reforma, el sector a intervenir.</p></article><article><span>03</span><h3>Estado actual</h3><p>Obra nueva, construcción existente o proyecto en marcha. Fotos ayudan.</p></article><article><span>04</span><h3>Financiación</h3><p>Fondos propios o crédito. Cambia el cronograma y el formato del presupuesto.</p></article></div>
-</section>
+
 
 <section class="project-gallery section">
   <div class="section-head"><div><p class="eyebrow">Tres escalas de obra</p><h2>Desde una mejora puntual hasta un proyecto completo.</h2></div><p>Estas imágenes muestran los tipos de espacios que construimos. Son referenciales, no obras propias: las fotos de obras reales se suman con autorización de cada cliente.</p></div>
@@ -158,8 +158,8 @@ function obra_page_services(array $config, array $content, array $route): void
 {
     $count = count($content['services']);
     ?><header class="page-hero directory-hero"><div><p class="eyebrow">Servicios de obra</p><h1><?= h($route['h1']) ?></h1><p>Elegí el servicio más parecido a tu proyecto. Si combina varios rubros, lo ordenamos como una obra integral con un solo presupuesto.</p></div><div class="directory-intro"><strong><?= $count ?> servicios coordinados</strong><p>De una mejora puntual a una obra completa.</p><a class="text-link" href="/cotizar/">Ayudame a elegir →</a></div></header><nav class="directory-jumps" aria-label="Categorías de servicios"><?php foreach ($content['groups'] as $i => $group): ?><a href="#grupo-<?= h((string) $i) ?>"><?= h($group['name']) ?></a><?php endforeach; ?></nav>
-<?php foreach ($content['groups'] as $group): ?>
-<section class="service-group section"><div class="section-head"><div><p class="eyebrow"><?= h($group['name']) ?></p></div></div><div class="service-directory"><?php foreach ($group['services'] as $slug): $service = $content['services'][$slug]; $children = $content['children'][$slug] ?? []; ?><div class="directory-row"><a class="directory-main" href="/<?= h($slug) ?>/"><div><h2><?= h($service['name']) ?></h2><p><?= h($service['short']) ?></p></div><b aria-hidden="true">↗</b></a><?php if ($children !== []): ?><ul class="directory-children"><?php foreach ($children as $child => $page): ?><li><a href="/<?= h($slug) ?>/<?= h($child) ?>/"><?= h($page['name']) ?></a></li><?php endforeach; ?></ul><?php endif; ?></div><?php endforeach; ?></div></section>
+  <?php foreach ($content['groups'] as $i => $group): ?>
+  <section class="service-group section" id="grupo-<?= h((string) $i) ?>"><div class="section-head"><div><p class="eyebrow"><?= h($group['name']) ?></p></div></div><div class="service-directory"><?php foreach ($group['services'] as $slug): $service = $content['services'][$slug]; $children = $content['children'][$slug] ?? []; ?><div class="directory-row"><a class="directory-main" href="/<?= h($slug) ?>/"><div><h2><?= h($service['name']) ?></h2><p><?= h($service['short']) ?></p></div><b aria-hidden="true">↗</b></a><?php if ($children !== []): ?><ul class="directory-children"><?php foreach ($children as $child => $page): ?><li><a href="/<?= h($slug) ?>/<?= h($child) ?>/"><?= h($page['name']) ?></a></li><?php endforeach; ?></ul><?php endif; ?></div><?php endforeach; ?></div></section>
 <?php endforeach; ?>
 <?php obra_contact_band($config, '/servicios/');
 }
