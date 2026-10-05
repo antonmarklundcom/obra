@@ -29,7 +29,8 @@ for (const entry of entries) {
   if (response.status !== 200) failures.push(`${path}: ${response.status}`);
   const hero = html.match(/<figure class="(?:conversion-media|hero-media)[^>]*>[\s\S]*?<\/figure>/)?.[0] || '';
   if (!hero.includes(`/assets/images/reference/${entry.slug}-960.webp`)) failures.push(`${path}: wrong hero subject`);
-  if (!hero.includes('srcset=') || !hero.includes('Imagen generada')) failures.push(`${path}: missing responsive sizes or reference label`);
+  if (!hero.includes('srcset=')) failures.push(`${path}: missing responsive sizes`);
+  if (/imagen(?:es)? generad|referencia generada|imagen(?:es)? referencial|no (?:es|son) (?:una )?obra(?:s)? realizada|no son obras propias/i.test(html)) failures.push(`${path}: unwanted image notice`);
 }
 const roof = await (await fetch(base + '/techos/')).text();
 const choices = [...roof.matchAll(/class="choice-card"[\s\S]*?<img src="([^"]+)"/g)].map(m => m[1]);
@@ -41,4 +42,4 @@ for (const match of directory.matchAll(/href="#([^"]+)"/g)) {
 }
 if (!(home.indexOf('id="elegi"') < home.indexOf('id="empezar"') && home.indexOf('id="empezar"') < home.indexOf('id="servicios"'))) failures.push('Homepage opening order regressed');
 if (failures.length) { console.error(failures.join('\n')); process.exit(1); }
-console.log('reference-images OK: 51 distinct subjects, 153 WebP assets, hero labels/srcsets, roofing choices and homepage order');
+console.log('reference-images OK: 51 distinct subjects, 153 WebP assets, hero srcsets/no image notices, roofing choices and homepage order');
