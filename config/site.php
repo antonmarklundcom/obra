@@ -53,6 +53,15 @@ if (is_file($localFile) && obra_env('OBRA_LOCAL_CONFIG', '1') !== '0') {
     if (is_array($local)) { $config = array_replace_recursive($config, $local); }
 }
 
+require_once dirname(__DIR__) . '/lib/vendercrm-config.php';
+try { $canonicalCrm = \VenderCRM\Config::optional(dirname(__DIR__)); }
+catch (RuntimeException $error) {
+    error_log('obra: invalid server CRM configuration');
+    $canonicalCrm = null;
+    $config['crm_endpoint'] = '';
+    $config['crm_api_key'] = '';
+}
+if ($canonicalCrm) { $config['crm_endpoint'] = $canonicalCrm->endpoint(); $config['crm_api_key'] = $canonicalCrm->apiKey(); }
 $config['origin'] = rtrim((string) $config['origin'], '/');
 $config['whatsapp'] = preg_replace('/\D+/', '', (string) $config['whatsapp']) ?: '';
 $config['privacy_email'] = (string) ($config['privacy_email'] ?: $config['email']);
