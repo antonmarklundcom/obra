@@ -36,10 +36,16 @@ function obra_quote_url(?string $slug = null, ?string $child = null, string $ori
     return '/cotizar/' . ($query ? '?' . http_build_query($query) : '');
 }
 
+// Consultas chicas: terreno y financiacion son opcionales. Fuente unica; site.js lee las listas del <form>.
+function obra_small_enquiry_lists(): array
+{
+    return ['services' => ['techos', 'reformas', 'patios', 'muros', 'supervision', 'presupuesto'], 'specialties' => ['renovacion', 'refaccion', 'parrillas']];
+}
+
 function obra_is_small_enquiry(string $slug, string $child = ''): bool
 {
-    return in_array($slug, ['techos', 'reformas', 'patios', 'muros', 'supervision', 'presupuesto'], true)
-        || in_array($child, ['renovacion', 'refaccion', 'parrillas'], true);
+    $lists = obra_small_enquiry_lists();
+    return in_array($slug, $lists['services'], true) || in_array($child, $lists['specialties'], true);
 }
 
 function obra_service_image(string $slug, string $child = ''): string

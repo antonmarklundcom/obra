@@ -1,0 +1,2 @@
+# Defensa extra: storage/ nunca se sirve por HTTP, aunque mod_rewrite este apagado.
+Require all denied

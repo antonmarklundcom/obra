@@ -55,7 +55,8 @@ try {
     const r = await fetch(base + from, { redirect: 'manual' });
     if (r.status !== 301 || r.headers.get('location') !== to) routeFail.push(`${from} -> ${r.status} ${r.headers.get('location')} (want 301 ${to})`);
   }
-  for (const p of ['/app/', '/app/helpers.php', '/config/', '/config/site.php', '/docs/', '/tools/', '/no-existe/']) {
+  // /storage/: el router local devuelve 404; el "Require all denied" de storage/.htaccess solo aplica en Apache y no se prueba aqui.
+  for (const p of ['/app/', '/app/helpers.php', '/config/', '/config/site.php', '/docs/', '/tools/', '/storage/', '/storage/events-2026-01.log', '/no-existe/']) {
     const r = await fetch(base + p, { redirect: 'manual' });
     if (r.status !== 404) routeFail.push(`${p} ${r.status} (want 404)`);
   }

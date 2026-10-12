@@ -13,8 +13,6 @@ return [
             'description' => 'Casas llave en mano en Asunción y Gran Asunción: platea, mampostería, techo, instalaciones y terminaciones con un responsable. Pedí evaluar tu terreno.',
             'h1' => 'Construcción de casas llave en mano en Paraguay',
             'kicker' => 'De un terreno a una casa lista para habitar',
-            'image' => 'hero-casa.webp',
-            'image_alt' => 'Casa contemporánea de ladrillo visto con galería y jardín, estilo paraguayo moderno',
             'includes' => ['Revisión del terreno, niveles y accesos', 'Planos y aprobación municipal dentro del alcance', 'Platea, mampostería y estructura', 'Techo, instalaciones eléctricas y sanitarias', 'Aberturas, revestimientos y terminaciones', 'Entrega con recorrido final y detalle de lo ejecutado'],
             'ideal' => ['Tenés un terreno y querés una sola empresa a cargo de toda la obra.', 'Querés construir desde cero sin coordinar albañil, electricista y plomero por separado.', 'Necesitás definir etapas y alcance antes de cotizar.', 'Querés comparar propuestas con el mismo alcance y las mismas terminaciones.'],
             'faqs' => [
@@ -40,8 +38,6 @@ return [
             'description' => 'Construcción y refacción de quintas en Paraguay: casa de campo, quincho, piscina, accesos, pozo y muro perimetral coordinados en un solo proyecto.',
             'h1' => 'Construcción de quintas y casas de campo en Paraguay',
             'kicker' => 'Un conjunto completo, no obras sueltas',
-            'image' => 'hero-casa.webp',
-            'image_alt' => 'Casa de una planta con galería amplia y jardín arbolado',
             'includes' => ['Plan general de intervención por sectores', 'Casa principal o casa de campo', 'Quincho, galería y áreas exteriores', 'Piscina y circulaciones', 'Muro perimetral, portón y accesos', 'Coordinación de pozo, agua y electricidad'],
             'ideal' => ['Compraste una quinta que necesita una puesta a punto integral.', 'Querés construir una casa de campo desde cero.', 'Tenés varias obras que comparten terreno, agua y electricidad.', 'Querés ejecutar por etapas con una visión completa.'],
             'faqs' => [
@@ -67,8 +63,6 @@ return [
             'description' => 'Construcción de piscinas de hormigón en Asunción y Gran Asunción: excavación, estructura, vereda, filtrado e iluminación. Consultá por tu patio o quinta.',
             'h1' => 'Construcción de piscinas de hormigón en Paraguay',
             'kicker' => 'Una piscina pensada como parte del patio',
-            'image' => 'servicio-piscina.webp',
-            'image_alt' => 'Piscina de hormigón con vereda clara y vegetación tropical',
             'includes' => ['Evaluación del espacio y acceso para la excavación', 'Excavación y estructura de hormigón armado', 'Instalación hidráulica y sistema de filtrado', 'Terminación interior y bordes', 'Vereda, iluminación y área inmediata'],
             'ideal' => ['Querés una piscina nueva para tu casa o quinta.', 'Necesitás integrar piscina, quincho y circulación exterior.', 'Tu patio tiene accesos o medidas que condicionan la obra.', 'Querés definir equipos y terminaciones antes de ejecutar.'],
             'faqs' => [
@@ -93,8 +87,6 @@ return [
             'description' => 'Construcción de quinchos con parrilla en Asunción y Gran Asunción: estructura, techo, parrilla, mesada, bacha e instalaciones en una sola obra.',
             'h1' => 'Construcción de quinchos con parrilla en Paraguay',
             'kicker' => 'Donde la casa se encuentra con el patio',
-            'image' => 'servicio-quincho.webp',
-            'image_alt' => 'Quincho abierto con parrilla de ladrillo, mesa y jardín',
             'includes' => ['Definición de tamaño, ubicación y estilo', 'Estructura y techo (tejas, chapa o madera)', 'Parrilla, mesada y bacha', 'Instalación eléctrica e hidráulica', 'Pisos, iluminación y terminaciones'],
             'ideal' => ['Querés sumar un área de asado a una casa existente.', 'Buscás conectar cocina, galería y patio.', 'Necesitás un quincho para una quinta o casa de fin de semana.', 'Querés hacer quincho y piscina en una misma obra.'],
             'faqs' => [
@@ -120,8 +112,6 @@ return [
             'description' => 'Reformas y remodelación de casas en Asunción y Gran Asunción: demoliciones, albañilería, instalaciones y terminaciones con alcance claro y un responsable.',
             'h1' => 'Reformas y remodelación de casas en Paraguay',
             'kicker' => 'Hacé que la casa acompañe una nueva etapa',
-            'image' => 'hero-casa.webp',
-            'image_alt' => 'Vivienda contemporánea renovada con galería y jardín',
             'includes' => ['Relevamiento de lo existente', 'Demoliciones y retiro de escombros', 'Albañilería e instalaciones nuevas', 'Revestimientos, pisos y pintura', 'Plan de trabajo para reducir molestias si la casa está habitada'],
             'ideal' => ['La distribución actual ya no funciona para tu familia.', 'Querés integrar ambientes o abrir la casa hacia el patio.', 'Compraste una casa y querés renovarla antes de mudarte.', 'Querés poner en valor una casa antes de alquilarla o venderla.'],
             'faqs' => [
@@ -147,8 +137,6 @@ return [
             'description' => 'Ampliación de casas en Asunción y Gran Asunción: dormitorios, planta alta, galerías y áreas sociales sumados a lo existente, con estructura resuelta.',
             'h1' => 'Ampliación de casas en Paraguay',
             'kicker' => 'Más metros sin mudarte',
-            'image' => 'hero-casa.webp',
-            'image_alt' => 'Casa ampliada hacia una galería cubierta y jardín',
             'includes' => ['Verificación de estructura y fundaciones existentes', 'Planos de ampliación y aprobación cuando corresponde', 'Obra gruesa del sector nuevo', 'Empalme de techos, instalaciones y desagües', 'Terminaciones a tono con la casa actual'],
             'ideal' => ['La familia creció y necesitás un dormitorio o baño más.', 'Querés sumar una planta alta o un estudio.', 'Buscás una galería o área social conectada al patio.', 'Tu terreno tiene lugar y querés aprovecharlo antes que mudarte.'],
             'faqs' => [
@@ -172,8 +160,6 @@ return [
             'description' => 'Construcción de patios, veredas, decks, pérgolas y galerías en Asunción y Gran Asunción. Exteriores integrados a la casa, el quincho o la piscina.',
             'h1' => 'Patios, decks y pérgolas en Paraguay',
             'kicker' => 'Más sombra, circulación y vida al aire libre',
-            'image' => 'servicio-cochera.webp',
-            'image_alt' => 'Estructura liviana de metal y madera sobre un patio de adoquines',
             'includes' => ['Evaluación de asoleamiento y escurrimiento del agua', 'Contrapiso, vereda o adoquinado', 'Deck de madera o compuesto', 'Pérgola o galería con estructura y cubierta', 'Encuentros con jardín, casa y piscina'],
             'ideal' => ['Querés ganar sombra sin cerrar el patio.', 'Necesitás mejorar la circulación entre casa, quincho y piscina.', 'Buscás renovar un exterior deteriorado.', 'Querés un deck o una galería liviana.'],
             'faqs' => [
@@ -198,8 +184,6 @@ return [
             'description' => 'Construcción de tinglados y galpones en Asunción y Gran Asunción: estructura metálica, cubierta, canaletas y piso según el uso residencial o comercial.',
             'h1' => 'Construcción de tinglados, galpones y cocheras en Paraguay',
             'kicker' => 'Cubiertas resueltas para el clima y el uso real',
-            'image' => 'servicio-cochera.webp',
-            'image_alt' => 'Cochera moderna con estructura metálica y cubierta liviana',
             'includes' => ['Definición de uso, luces y apoyos', 'Fundaciones y estructura metálica', 'Cubierta y aislación según alcance', 'Canaletas y conducción del agua', 'Contrapiso, portones e iluminación'],
             'ideal' => ['Necesitás proteger vehículos del sol y la lluvia.', 'Querés un galpón para depósito, taller o producción.', 'Tu negocio necesita área cubierta para operar.', 'Querés ampliar una galería o un área de trabajo.'],
             'faqs' => [
@@ -225,8 +209,6 @@ return [
             'description' => 'Construcción de muros perimetrales, murallas, portones y accesos en Asunción y Gran Asunción para casas, quintas y terrenos.',
             'h1' => 'Muros perimetrales y murallas en Paraguay',
             'kicker' => 'Privacidad y acceso desde el límite del terreno',
-            'image' => 'servicio-cochera.webp',
-            'image_alt' => 'Acceso residencial con estructura metálica, pavimento y jardín',
             'includes' => ['Medición y verificación de límites', 'Fundaciones y mampostería', 'Revoque, terminación y pintura', 'Previsión de portón y accesos', 'Drenaje y encuentro con vereda o patio'],
             'ideal' => ['Necesitás cerrar un terreno o una quinta.', 'Querés renovar el frente y el acceso de la casa.', 'Buscás integrar muralla, portón y cochera.', 'El proyecto completo necesita resolver perímetro y seguridad.'],
             'faqs' => [
@@ -251,8 +233,6 @@ return [
             'description' => 'Obras comerciales y adecuación de locales, oficinas y consultorios en Asunción y Gran Asunción: obra civil, instalaciones y terminaciones coordinadas.',
             'h1' => 'Obras comerciales y adecuación de locales en Paraguay',
             'kicker' => 'Un espacio listo para trabajar, en fecha',
-            'image' => 'hero-casa.webp',
-            'image_alt' => 'Arquitectura contemporánea de ladrillo con galería y amplias aberturas',
             'includes' => ['Relevamiento del local o inmueble', 'Demoliciones, divisiones y obra civil', 'Instalaciones eléctricas, sanitarias y de datos', 'Pisos, cielorrasos, iluminación y terminaciones', 'Planificación por etapas con fecha objetivo'],
             'ideal' => ['Alquilaste un local y necesitás adaptarlo.', 'Querés remodelar una oficina o un consultorio.', 'La operación requiere instalaciones o sectores nuevos.', 'Buscás un solo responsable de obra y terminaciones.'],
             'faqs' => [
@@ -278,8 +258,6 @@ return [
             'description' => 'Supervisión, fiscalización y dirección de obra en Asunción y Gran Asunción: control de avances, calidad, certificaciones y pagos con un profesional responsable.',
             'h1' => 'Supervisión y fiscalización de obra en Paraguay',
             'kicker' => 'Alguien de tu lado mirando la obra',
-            'image' => 'servicio-cochera.webp',
-            'image_alt' => 'Obra en construcción con estructura metálica y piso terminado',
             'includes' => ['Revisión del contrato, planos y presupuesto vigente', 'Visitas de control con informe de avance', 'Verificación de calidad de materiales y ejecución', 'Control de certificaciones y pagos por etapa', 'Recepción final con lista de pendientes'],
             'ideal' => ['Contrataste un maestro de obra y querés control profesional.', 'Vivís lejos de la obra o en el exterior.', 'La obra se atrasó o superó el presupuesto y necesitás ordenarla.', 'El banco o el municipio exigen un profesional responsable.'],
             'faqs' => [
@@ -304,8 +282,6 @@ return [
             'description' => 'Presupuesto de obra y cómputo métrico en Paraguay: cantidades, rubros y costos en guaraníes desde tus planos, para comparar propuestas o pedir crédito.',
             'h1' => 'Presupuesto de obra y cómputo métrico en Paraguay',
             'kicker' => 'Números antes de decisiones',
-            'image' => 'hero-casa.webp',
-            'image_alt' => 'Casa contemporánea terminada, referencia para presupuesto de obra',
             'includes' => ['Revisión de planos y especificaciones', 'Cómputo métrico por rubro', 'Presupuesto detallado en guaraníes', 'Cronograma estimado por etapas', 'Versión apta para presentar al banco'],
             'ideal' => ['Tenés planos y querés saber cuánto cuesta construir.', 'Necesitás un presupuesto para gestionar un crédito de vivienda.', 'Querés comparar propuestas con el mismo alcance.', 'Vas a construir por etapas y necesitás ordenar prioridades.'],
             'faqs' => [
