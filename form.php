@@ -35,6 +35,11 @@ function obra_phone(string $value): string
 }
 
 // Tercer canal: aviso por email al buzon configurado (mail() de Hostinger). Mejor esfuerzo, nunca bloquea.
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $payload
+ * @param array<string, string> $labels
+ */
 function obra_mail_send(array $config, array $payload, array $labels): bool
 {
     $to = (string) ($config['email'] ?? '');

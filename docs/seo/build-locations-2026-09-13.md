@@ -4,7 +4,7 @@
 - Canonical local folder: `C:\Users\anton\Documents\Paraguay-Local-Site\obra-com-py`
 - Last modified: 2026-09-09 (newest file: `assets/js/site.js`)
 - Homepage copy lives in `app/content.php` and `app/layout.php` — NOT in `index.php` (that's just routing/wiring). Don't grep `index.php` for page text.
-- Also present: `app/helpers.php`, `config/site.php` (site-wide WhatsApp number + per-page message helpers), `docs/obra-com-py-site-structure.md`, `docs/LAUNCH-CHECKLIST.md`, `CLAUDE-CHANGES.md`.
+- Also present: `app/helpers.php`, `config/site.php` (site-wide WhatsApp number + per-page message helpers), `docs/obra-com-py-site-structure.md`, `docs/LAUNCH-CHECKLIST.md`, `docs/archive/CLAUDE-CHANGES.md`.
 - Packaged zip: `C:\Users\anton\Documents\Paraguay-Local-Site\obra-com-py-hostinger-ready-2026-09-09.zip`
 - There is an older, now-superseded local copy at `C:\Claude 1\obra-com-py` (dated 2026-07-29) — a much earlier one-pager demo, not the live structure. Ignore it.
 - Confirmed matching live 2026-09-13: fetched live homepage text and matched hero headline, "12 servicios y 29 especialidades" line, 5-step process, guías section, FAQ against the local content files.

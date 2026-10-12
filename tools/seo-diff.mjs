@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Compara dos auditorias (tools/audit.mjs) y falla (exit 1) ante cualquier regresion SEO (docs/IMPROVE-PLAN.md §4.4).
+// Compara dos auditorias (tools/audit.mjs) y falla (exit 1) ante cualquier regresion SEO (docs/archive/IMPROVE-PLAN.md §4.4).
 // Uso: node tools/seo-diff.mjs docs/audit/audit-before.json audit-after.json [docs/audit/approved-changes.json]
 import { readFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';

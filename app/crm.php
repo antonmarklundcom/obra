@@ -5,6 +5,11 @@ declare(strict_types=1);
 // Nunca registra nombres, telefonos ni texto del mensaje: solo estado HTTP y error de curl.
 require_once __DIR__ . '/events.php';
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $payload
+ * @return array{ok: bool, status: int}
+ */
 function obra_crm_send(array $config, array $payload): array
 {
     $mock = strtolower((string) (getenv('OBRA_CRM_MOCK') ?: ''));
@@ -26,6 +31,7 @@ function obra_crm_pending_dir(): string
 }
 
 // Mejor esfuerzo: un fallo al escribir nunca cambia lo que ve la persona.
+/** @param array<string, mixed> $payload */
 function obra_crm_spool(array $payload): bool
 {
     $key = (string) ($payload['idempotency_key'] ?? '');

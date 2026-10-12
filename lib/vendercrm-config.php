@@ -8,8 +8,10 @@ final class Config
 {
     private string $url;
     private string $key;
+    /** @var list<string> */
     private array $sources;
 
+    /** @param list<string> $sources */
     private function __construct(string $url, string $key, array $sources)
     {
         $this->url = $url;
@@ -22,6 +24,7 @@ final class Config
      * Return null only when no canonical source was configured, allowing the
      * caller to keep its existing effective legacy configuration unchanged.
      * A partial pair or explicit missing/unsafe path still fails in load().
+     * @param array<string, mixed>|null $environment
      */
     public static function optional(string $publicRoot, ?array $environment = null): ?self
     {
@@ -49,6 +52,8 @@ final class Config
      * are explicitly mapped canonical pairs, never auto-discovered files.
      * Precedence: environment > private file > legacy; every populated source
      * must agree after validation. No partial pairs are permitted.
+     * @param array<string, mixed>|null $environment
+     * @param array<string, mixed> $legacy
      */
     public static function load(string $publicRoot, ?array $environment = null, array $legacy = [], bool $allowLocalTest = false): self
     {
@@ -130,7 +135,7 @@ final class Config
     private static function origin(string $url, bool $legacy, bool $local): string
     {
         $p = parse_url($url);
-        if ($p === false || preg_match('/[\x00-\x20\x7F\\\\]/', $url) || strtolower($p['scheme'] ?? '') !== 'https' || empty($p['host']) || isset($p['user']) || isset($p['pass']) || isset($p['query']) || isset($p['fragment']) || (isset($p['port']) && ($p['port'] < 1 || $p['port'] > 65535))) {
+        if ($p === false || preg_match('/[\x00-\x20\x7F\\\\]/', $url) || strtolower($p['scheme'] ?? '') !== 'https' || empty($p['host']) || isset($p['user']) || isset($p['pass']) || isset($p['query']) || isset($p['fragment']) || (isset($p['port']) && $p['port'] < 1)) {
             throw new \RuntimeException('VenderCRM URL must be a clean HTTPS origin.');
         }
         $path = $p['path'] ?? '';
@@ -152,6 +157,7 @@ final class Config
     public function endpoint(): string { return $this->url . '/api/v1/leads'; }
     /** Server-side transport use only; never serialize this value. */
     public function apiKey(): string { return $this->key; }
+    /** @return array<string, mixed> */
     public function doctor(): array { return ['configured' => true, 'url' => $this->url, 'endpoint' => $this->endpoint(), 'sources' => $this->sources]; }
     public function __debugInfo(): array { return $this->doctor(); }
 }

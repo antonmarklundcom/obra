@@ -1,7 +1,7 @@
 # Mapa de palabras clave de obra.com.py
 
 Fecha: 2026-09-30.
-Fuente: listas de términos KWP de los documentos de estructura (docs/seo/obra-com-py-site-structure.md) y docs/IMPROVE-PLAN.md secciones 3.1, 3.2 y 3.3.
+Fuente: listas de términos KWP de los documentos de estructura (docs/seo/obra-com-py-site-structure.md) y docs/archive/IMPROVE-PLAN.md secciones 3.1, 3.2 y 3.3.
 
 La columna "Vol PY" dice "sin dato" en todas las filas porque el MCP keyword-library no estaba conectado en esta sesión. La próxima sesión con el MCP debe completarla: list_projects -> project_overview -> list_groups -> get_group / keyword_lookup, solo Paraguay.
 

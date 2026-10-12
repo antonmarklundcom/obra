@@ -1,6 +1,11 @@
 <?php
 declare(strict_types=1);
 
+/**
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $config
+ * @return array<string, array<string, mixed>>
+ */
 function obra_routes(array $content, array $config = []): array
 {
     $area = (string) ($config['area'] ?? 'Paraguay');
@@ -26,12 +31,14 @@ function obra_routes(array $content, array $config = []): array
     return $routes;
 }
 
+/** @param array<string, mixed> $guide */
 function obra_guide_path(string $slug, array $guide): string
 {
     return $guide['path'] ?? '/guias/' . $slug . '/';
 }
 
 // URLs de versiones anteriores del sitio -> URL actual (301).
+/** @return array<string, string> */
 function obra_legacy_redirects(): array
 {
     return [

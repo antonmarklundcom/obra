@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// QA de WhatsApp (docs/IMPROVE-PLAN.md §5.1). Falla (exit 1) ante otro numero, textos vacios/cortos,
+// QA de WhatsApp (docs/archive/IMPROVE-PLAN.md §5.1). Falla (exit 1) ante otro numero, textos vacios/cortos,
 // precios, tuteo o textos repetidos entre paginas.
 // Uso:
 //   node tools/check-wa.mjs http://localhost:8081        paginas renderizadas + escaneo del repo

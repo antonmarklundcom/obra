@@ -2,7 +2,7 @@
 // Puerta de calidad local (sin CI). La llaman tools/verify.sh y tools/verify.ps1.
 //  1. php -l en cada archivo PHP
 //  2. rutas: sitemap 200 sin avisos PHP, 301 heredados, rutas bloqueadas 404
-//  3. formulario: matriz de docs/IMPROVE-PLAN.md §5.2 con OBRA_CRM_MOCK=success|fail|sin definir
+//  3. formulario: matriz de docs/archive/IMPROVE-PLAN.md §5.2 con OBRA_CRM_MOCK=success|fail|sin definir
 //  4. check-wa  5. audit + seo-diff contra docs/audit/audit-before.json  6. pw-check (Playwright)
 // Opciones: --skip-pw (sin Playwright), --php=<ruta a php>
 import { spawn, spawnSync, execFileSync } from 'node:child_process';
@@ -46,6 +46,13 @@ try {
   const today = new Date().toISOString().slice(0, 10);
   const badDates = Object.entries(dates).filter(([, d]) => !/^\d{4}-\d{2}-\d{2}$/.test(d) || d > today).map(([p, d]) => `${p} "${d}"`);
   step('content dates', badDates.length === 0, `${Object.keys(dates).length} pages with 'updated'` + (badDates.length ? '\n      ' + badDates.join('\n      ') : ''));
+
+  // PHPStan nivel 6 (tools/phpstan.neon). Opcional: tools/phpstan.phar no se versiona.
+  // Descarga: curl -sSL -o tools/phpstan.phar https://github.com/phpstan/phpstan/releases/latest/download/phpstan.phar
+  if (existsSync(join(root, 'tools', 'phpstan.phar'))) {
+    const ps = spawnSync(PHP, [join(root, 'tools', 'phpstan.phar'), 'analyse', '-c', join(root, 'tools', 'phpstan.neon'), '--no-progress', '--error-format=raw', '--memory-limit=1G'], { cwd: root, encoding: 'utf8' });
+    step('phpstan', ps.status === 0, ps.status === 0 ? 'level 6, no errors' : (ps.stdout + ps.stderr).trim().split('\n').filter(l => /\.php:\d+:/.test(l)).slice(0, 30).join('\n      '));
+  } else step('phpstan', true, 'skipped: tools/phpstan.phar not present (download command in tools/phpstan.neon)');
 
   const base = await server(8090);
   const referenceImages = node('check-reference-images.mjs', [base]);

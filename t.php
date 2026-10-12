@@ -14,6 +14,6 @@ if (obra_rate_limited('events', 60, 600)) { http_response_code(204); exit; }
 $raw = file_get_contents('php://input', false, null, 0, 600);
 $data = json_decode((string) $raw, true);
 if (is_array($data) && in_array($data['e'] ?? '', ['page_view', 'whatsapp_click', 'tel_click'], true)) {
-    obra_event_log((string) ($data['e'] ?? ''), (string) ($data['p'] ?? ''), (string) ($data['u'] ?? ''), (string) ($data['s'] ?? ''));
+    obra_event_log((string) $data['e'], (string) ($data['p'] ?? ''), (string) ($data['u'] ?? ''), (string) ($data['s'] ?? ''));
 }
 http_response_code(204);

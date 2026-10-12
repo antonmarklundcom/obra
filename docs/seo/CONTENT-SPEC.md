@@ -81,7 +81,7 @@ The director then runs the full `bash tools/verify.sh` (or `tools\verify.ps1`).
 
 ## 8. WhatsApp texts for new or changed pages
 
-Agents don't edit `app/wa-messages.php`. For a **new** page, the reply lists 5 proposed texts (hero, band, sticky, header, footer) following `docs/IMPROVE-PLAN.md` §5.1: start with "Hola,", voseo, 25–160 characters, no prices/plazos/"gratis", unique across the file. Existing pages already have texts; propose a change only if the page's angle changed (e.g. /casas/minimalistas/).
+Agents don't edit `app/wa-messages.php`. For a **new** page, the reply lists 5 proposed texts (hero, band, sticky, header, footer) following `docs/archive/IMPROVE-PLAN.md` §5.1: start with "Hola,", voseo, 25–160 characters, no prices/plazos/"gratis", unique across the file. Existing pages already have texts; propose a change only if the page's angle changed (e.g. /casas/minimalistas/).
 
 ## 9. Reference entry (copy the shape, not the words)
 

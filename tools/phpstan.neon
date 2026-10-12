@@ -1,0 +1,18 @@
+# PHPStan (analisis estatico local, sin CI). Lo corre tools/verify.mjs cuando existe tools/phpstan.phar.
+# Descarga: curl -sSL -o tools/phpstan.phar https://github.com/phpstan/phpstan/releases/latest/download/phpstan.phar
+parameters:
+    level: 6
+    phpVersion: 80100
+    paths:
+        - ../app
+        - ../config
+        - ../lib
+        - ../index.php
+        - ../form.php
+        - ../t.php
+        - ../stats.php
+        - ../sitemap.php
+        - ../router.php
+    excludePaths:
+        - ../app/content
+        - ../config/local.php (?)
