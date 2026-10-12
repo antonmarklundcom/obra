@@ -70,11 +70,25 @@ for (const [p, b] of Object.entries(before.route_checks || {})) {
 }
 
 const robotsRef = before.robots_txt ?? (existsSync(join(root, 'robots.txt')) ? readFileSync(join(root, 'robots.txt'), 'utf8') : null);
-if (after.robots_txt !== undefined && robotsRef !== null && after.robots_txt.trim() !== robotsRef.trim() && !allowed('/robots.txt', 'robots')) fail.push('robots.txt changed');
+// robots.txt: un cambio es solo un aviso, salvo que un Disallow nuevo bloquee una URL indexable del sitemap.
+const warn = [];
+if (after.robots_txt !== undefined && robotsRef !== null && after.robots_txt.trim() !== robotsRef.trim() && !allowed('/robots.txt', 'robots')) {
+  const disallows = txt => new Set(txt.split('\n').map(l => l.replace(/#.*/, '').trim()).filter(l => /^disallow\s*:/i.test(l)).map(l => l.replace(/^disallow\s*:\s*/i, '')).filter(Boolean));
+  const old = disallows(robotsRef);
+  const added = [...disallows(after.robots_txt)].filter(d => !old.has(d));
+  const rx = d => new RegExp('^' + d.replace(/[.+?^{}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*').replace(/\\?\$$/, '$'));
+  const indexable = Object.entries(after.pages).filter(([, a]) => a.status === 200 && !/noindex/i.test(a.robots || '')).map(([p]) => p);
+  for (const d of added) {
+    const hit = indexable.filter(p => rx(d).test(p));
+    if (hit.length) fail.push(`robots.txt: new "Disallow: ${d}" blocks indexable ${hit.slice(0, 5).join(' ')}`);
+  }
+  warn.push(`robots.txt changed (new Disallow: ${added.join(' ') || 'none'})`);
+}
 
 console.log(`seo-diff: ${Object.keys(before.pages).length} before URLs, ${Object.keys(after.pages).length} after URLs, ${info.new_urls.length} new, ${info.changed_descriptions.length} changed descriptions, ${Object.keys(info.word_delta).length} pages with word delta`);
 if (info.new_urls.length) console.log('  new URLs: ' + info.new_urls.join(' '));
 for (const d of info.changed_descriptions) console.log(`  description ${d.path}: ${d.before_len} -> ${d.after_len}`);
+for (const w of warn) console.log(`  WARN ${w}`);
 if (process.env.SEO_DIFF_VERBOSE) console.log(JSON.stringify(info, null, 1));
 if (fail.length) { console.error(`seo-diff FAILED (${fail.length}):\n  ` + fail.join('\n  ')); process.exit(1); }
 console.log('seo-diff OK');

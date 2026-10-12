@@ -6,7 +6,7 @@ if (Test-Path 'C:\php\php.exe') { $env:Path = "C:\php;$env:Path" }
 Push-Location $PSScriptRoot
 try {
   if (-not (Test-Path 'node_modules\playwright')) {
-    npm install --no-fund --no-audit
+    npm ci --no-fund --no-audit
     npx playwright install chromium
   }
   $verifyArgs = @()

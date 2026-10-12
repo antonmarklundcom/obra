@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /form.php
 Disallow: /gracias/
+Disallow: /t.php
+Disallow: /stats.php
 
 Sitemap: https://obra.com.py/sitemap.xml
