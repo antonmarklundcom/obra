@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 return [
     'name' => 'Techos de chapa',
+    'updated' => '2026-10-01',
     'title' => 'Techos de chapa en Paraguay: colocación y estructura | Obra',
     'description' => 'Techo de chapa para casa, cochera o quincho en Paraguay: colocación de chapas galvanizadas con estructura y pendiente. Mandá fotos por WhatsApp.',
     'summary' => 'Techos de chapa en Paraguay: colocación de chapas trapezoidales y galvanizadas sobre una estructura bien armada, con la pendiente y las fijaciones resueltas.',

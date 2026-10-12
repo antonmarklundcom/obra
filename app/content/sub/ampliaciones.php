@@ -6,6 +6,7 @@ declare(strict_types=1);
 return [
     'planta-alta' => [
         'name' => 'Ampliación en planta alta',
+        'updated' => '2026-09-30',
         'title' => 'Ampliación en planta alta en Paraguay | Obra',
         'description' => 'Ampliación en planta alta en Asunción y Gran Asunción: verificación de estructura, losa, escalera e instalaciones para sumar un piso sin perder el patio.',
         'summary' => 'Ampliación de casas en planta alta en Asunción y Gran Asunción: verificación de estructura, losa, escalera e instalaciones para sumar un piso sin perder el patio.',
@@ -53,6 +54,7 @@ return [
     ],
     'dormitorio' => [
         'name' => 'Ampliación de dormitorio y baño',
+        'updated' => '2026-09-30',
         'title' => 'Ampliación de dormitorio y baño en Paraguay | Obra',
         'description' => 'Ampliación de un dormitorio con baño en Asunción y Gran Asunción: la ampliación más común, resuelta con fundaciones, techo e instalaciones empalmadas a la casa.',
         'h1' => 'Ampliación de dormitorio y baño',
@@ -98,6 +100,7 @@ return [
     ],
     'galeria' => [
         'name' => 'Galerías cubiertas',
+        'updated' => '2026-09-30',
         'title' => 'Construcción de galerías cubiertas en Paraguay | Obra',
         'description' => 'Construcción de galerías cubiertas en Asunción y Gran Asunción: la ampliación que más se usa, con techo, piso y conexión a la casa y al patio.',
         'h1' => 'Construcción de galerías cubiertas',

@@ -60,7 +60,7 @@ $business = [
 ];
 if (obra_phone_ready($config)) { $business['telephone'] = '+' . $config['whatsapp']; }
 if ($config['email'] !== '') { $business['email'] = $config['email']; }
-if ($config['legal_address'] !== '') { $business['address'] = ['@type' => 'PostalAddress', 'streetAddress' => $config['legal_address'], 'addressLocality' => 'Asunción', 'addressCountry' => 'PY']; }
+if ($config['legal_address'] !== '') { $business['address'] = ['@type' => 'PostalAddress', 'streetAddress' => $config['legal_address'], 'addressLocality' => $config['locality'] ?: 'Asunción', 'addressCountry' => 'PY']; }
 if ($config['legal_operator'] !== '') { $business['legalName'] = $config['legal_operator']; }
 if ($config['ruc'] !== '') { $business['taxID'] = $config['ruc']; }
 $schemas = [$business];

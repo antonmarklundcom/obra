@@ -9,7 +9,7 @@ Preferred persistent file: one level above the actual document root, private/ven
 return ['VENDERCRM_URL' => 'https://crm.clientes.com.py', 'VENDERCRM_API_KEY' => '']; // fill privately, never commit
 ```
 
-A complete canonical environment pair or private file overrides the old effective configuration. Partial canonical pairs fail validation and are never blended with legacy fields. Conflicting canonical environment/file pairs fail validation; remove stale duplicate canonical settings. No canonical source preserves the old loader. Existing local .env and non-CRM settings keep their behavior.
+A complete canonical environment pair or private file overrides the old effective configuration. Partial canonical pairs fail validation and are never blended with legacy fields. Conflicting canonical environment/file pairs fail validation; remove stale duplicate canonical settings. No canonical source preserves the old loader. Existing local .env and non-CRM settings keep their behavior. .env.example lists every variable, including this pair, and the precedence between environment, private file and config/local.php.
 
 For a root-deployed PHP site the loader uses the repository root as its document root.  Verify the actual hosting layout first. Retain the private directory through deployments, and configure filesystem permissions. PHP file changes normally apply next request; PHP worker environment changes may require a worker restart and OPcache refresh. Code changes require deploying the changed adapter and lib directory. Keep all existing capture flags, sinks, queues, storage and notifications unchanged.
 

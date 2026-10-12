@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 return [
     'name' => 'Estructuras para techos',
+    'updated' => '2026-10-01',
     'title' => 'Estructuras para techos: metálicas y de madera | Obra',
     'description' => 'Estructura de techo metálica o de madera en Paraguay: cabriadas, tirantes y vigas bien apoyadas, con la pendiente correcta. Mandá fotos por WhatsApp.',
     'summary' => 'Construcción de la estructura de techo, metálica o de madera, con cabriadas, tirantes y vigas bien apoyadas y la pendiente que pide la cubierta.',

@@ -5,7 +5,7 @@ Status 2026-10-01. The site is ready to receive ad traffic; the Ads account side
 ## 1. What the site already does for ads
 - One page per intent, with the typed phrase in the H1, title and first paragraph (relevance and Quality Score): see section 3.
 - WhatsApp button above the fold on every page, sticky bar on mobile, 5 different pre-written messages per page. Short form as the alternative.
-- Click tracking without cookies (`/t.php`, `/stats.php?token=…`) plus optional GA4 and Google Ads conversions after cookie consent.
+- Click tracking without cookies (`/t.php`, `/stats.php` with a POST token login) plus optional GA4 and Google Ads conversions after cookie consent.
 - **Attribution to the CRM**: `gclid`, `gbraid`, `wbraid`, `utm_source/medium/campaign/term/content` and the landing path travel with the form (`fields` in the VenderCRM payload and in the notification email). They are read from the ad URL and kept in `sessionStorage`.
 
 ## 2. What Anton must set up (in this order)

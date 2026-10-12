@@ -6,6 +6,7 @@ declare(strict_types=1);
 return [
     'direccion' => [
         'name' => 'Dirección técnica de obra',
+        'updated' => '2026-09-30',
         'title' => 'Dirección técnica de obra en Paraguay | Obra',
         'description' => 'Dirección técnica de obra en Asunción y Gran Asunción: ingeniero a cargo de la ejecución, certificaciones y responsabilidad ante el municipio y el banco.',
         'summary' => 'Dirección técnica y profesional responsable de obra en Asunción y Gran Asunción: ingeniero a cargo de la ejecución, certificaciones y responsabilidad ante el municipio y el banco.',

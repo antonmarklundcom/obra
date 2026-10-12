@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 return [
     'name' => 'Techos de tejas',
+    'updated' => '2026-10-01',
     'title' => 'Techos de tejas en Paraguay | Obra',
     'description' => 'Techo de tejas en Paraguay: colocación de tejas cerámicas y coloniales sobre estructura firme, con buena pendiente y cumbreras. Mandá fotos por WhatsApp.',
     'summary' => 'Construcción de techos de tejas en Paraguay: estructura, colocación de tejas cerámicas o coloniales, cumbreras y remates para que el tejado aguante el calor y las tormentas.',

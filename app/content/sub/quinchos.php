@@ -6,6 +6,7 @@ declare(strict_types=1);
 return [
     'cerrados' => [
         'name' => 'Quinchos cerrados',
+        'updated' => '2026-10-01',
         'title' => 'Construcción de quinchos cerrados en Paraguay | Obra',
         'description' => 'Quinchos cerrados con aberturas, aire acondicionado y baño en Asunción y Gran Asunción: para usarlos en verano con calor y en invierno con frío.',
         'h1' => 'Construcción de quinchos cerrados',
@@ -54,6 +55,7 @@ return [
     ],
     'parrillas' => [
         'name' => 'Parrillas y asadores',
+        'updated' => '2026-10-01',
         'title' => 'Construcción de parrillas y asadores en Paraguay | Obra',
         'description' => 'Construcción de parrillas de ladrillo, asadores y hornos en Asunción y Gran Asunción: tiro correcto, mesada, bacha y fogón a la altura justa.',
         'h1' => 'Construcción de parrillas y asadores',
@@ -101,6 +103,7 @@ return [
     ],
     'techo-madera' => [
         'name' => 'Quinchos con techo de madera',
+        'updated' => '2026-10-01',
         'title' => 'Quinchos con techo de madera y machimbre en Paraguay | Obra',
         'description' => 'Quinchos con techo de madera y machimbre en Asunción y Gran Asunción: estructura, cielorraso de machimbre y tejas construidos de principio a fin.',
         'summary' => 'Construcción de quinchos con estructura de madera, cielorraso de machimbre y tejas en Asunción y Gran Asunción, con la madera y la obra civil a cargo del mismo equipo.',

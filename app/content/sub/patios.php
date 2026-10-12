@@ -6,6 +6,7 @@ declare(strict_types=1);
 return [
     'veredas' => [
         'name' => 'Veredas y contrapisos',
+        'updated' => '2026-09-30',
         'title' => 'Veredas, contrapisos y pisos exteriores en Paraguay | Obra',
         'description' => 'Veredas, contrapisos y pisos exteriores en Asunción y Gran Asunción: base compactada, hormigón, juntas y pendientes para que no se agrieten ni junten agua.',
         'summary' => 'Construcción de veredas, contrapisos y pisos exteriores en Asunción y Gran Asunción: base compactada, hormigón, juntas y pendientes para que no se agrieten ni junten agua.',
@@ -54,6 +55,7 @@ return [
     ],
     'decks' => [
         'name' => 'Decks de madera y compuesto',
+        'updated' => '2026-09-30',
         'title' => 'Construcción de decks de madera y WPC en Paraguay | Obra',
         'description' => 'Construcción de decks de madera dura y compuesto (WPC) en Asunción y Gran Asunción, para piscina, galería o patio, con estructura ventilada y anclajes ocultos.',
         'h1' => 'Construcción de decks de madera y compuesto',
@@ -101,6 +103,7 @@ return [
     ],
     'pergolas' => [
         'name' => 'Pérgolas y galerías livianas',
+        'updated' => '2026-09-30',
         'title' => 'Construcción de pérgolas en Paraguay | Obra',
         'description' => 'Pérgolas de madera, metal y hormigón en Asunción y Gran Asunción: sombra para el patio, cochera o piscina con cubierta de policarbonato, chapa o vegetal.',
         'h1' => 'Construcción de pérgolas y galerías livianas',

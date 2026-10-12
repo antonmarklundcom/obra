@@ -6,6 +6,7 @@ declare(strict_types=1);
 return [
     'locales' => [
         'name' => 'Adecuación de locales comerciales',
+        'updated' => '2026-09-30',
         'title' => 'Adecuación de locales comerciales en Paraguay | Obra',
         'description' => 'Adecuación de locales comerciales en Asunción y Gran Asunción: obra civil, instalaciones, vidriera, baños y terminaciones con fecha de apertura comprometida.',
         'h1' => 'Adecuación de locales comerciales',
@@ -52,6 +53,7 @@ return [
     ],
     'oficinas' => [
         'name' => 'Oficinas y consultorios',
+        'updated' => '2026-09-30',
         'title' => 'Remodelación de oficinas y consultorios en Paraguay | Obra',
         'description' => 'Remodelación de oficinas y consultorios en Asunción: divisiones, cableado de datos, climatización, baños y terminaciones con mínima interrupción.',
         'summary' => 'Remodelación y adecuación de oficinas y consultorios en Asunción: divisiones, cableado de datos, climatización, baños y terminaciones con mínima interrupción de la actividad.',

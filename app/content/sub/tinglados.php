@@ -6,6 +6,7 @@ declare(strict_types=1);
 return [
     'galpones' => [
         'name' => 'Galpones y depósitos',
+        'updated' => '2026-10-01',
         'title' => 'Construcción de galpones y depósitos en Paraguay | Obra',
         'description' => 'Construcción de galpones industriales y depósitos en Gran Asunción: estructura metálica de gran luz, piso para carga, portones y oficinas anexas.',
         'h1' => 'Construcción de galpones y depósitos',
@@ -51,6 +52,7 @@ return [
     ],
     'cocheras' => [
         'name' => 'Cocheras y techos para autos',
+        'updated' => '2026-10-01',
         'title' => 'Construcción de cocheras y techos para autos en Paraguay | Obra',
         'description' => 'Cocheras cubiertas y techos para autos en Asunción y Gran Asunción: estructura metálica o de hormigón, cubierta aislada, piso y portón al frente.',
         'summary' => 'Cocheras cubiertas y techos para autos en Asunción y Gran Asunción: estructura metálica o de hormigón, cubierta aislada, piso y portón integrados al frente de la casa.',
