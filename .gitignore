@@ -10,3 +10,6 @@ audit-shots/
 .image-source/
 tools/image-jobs.json
 tools/sunburst-jobs.json
+storage/*
+!storage/.gitkeep
+!storage/.htaccess

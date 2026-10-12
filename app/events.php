@@ -26,6 +26,10 @@ function obra_event_log(string $event, string $placement, string $path, string $
     $dir = obra_storage_dir();
     if (!is_dir($dir)) { return true; }
     $line = gmdate('Y-m-d') . "\t" . $event . "\t" . $placement . "\t" . $path . "\t" . $service . "\n";
-    @file_put_contents($dir . '/events-' . gmdate('Y-m') . '.log', $line, FILE_APPEND | LOCK_EX);
+    $file = $dir . '/events-' . gmdate('Y-m') . '.log';
+    // Tope de 5 MB por archivo mensual: mas alla se deja de escribir (protege el disco ante abuso).
+    clearstatcache(true, $file);
+    if (is_file($file) && (int) filesize($file) >= 5 * 1024 * 1024) { return true; }
+    @file_put_contents($file, $line, FILE_APPEND | LOCK_EX);
     return true;
 }

@@ -5,12 +5,17 @@ $config = require __DIR__ . '/config/site.php';
 require_once __DIR__ . '/app/helpers.php';
 require_once __DIR__ . '/app/conversion.php';
 require_once __DIR__ . '/app/form-state.php';
+require_once __DIR__ . '/app/crm.php';
+require_once __DIR__ . '/app/ratelimit.php';
 $content = require __DIR__ . '/app/content.php';
 obra_security_headers();
 
 if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'POST') {
     header('Allow: POST'); http_response_code(405); echo 'Método no permitido.'; exit;
 }
+
+// Envios desde otros sitios (Sec-Fetch-Site): 403 antes de abrir la sesion.
+if (obra_cross_site_request()) { http_response_code(403); echo 'Prohibido.'; exit; }
 
 obra_form_session();
 
@@ -27,18 +32,6 @@ function obra_phone(string $value): string
     if (str_starts_with($digits, '0')) { $digits = '595' . substr($digits, 1); }
     elseif (strlen($digits) === 9 && str_starts_with($digits, '9')) { $digits = '595' . $digits; }
     return $digits;
-}
-
-function obra_crm_send(array $config, array $payload): array
-{
-    $mock = strtolower((string) (getenv('OBRA_CRM_MOCK') ?: ''));
-    if ($mock !== '') { return $mock === 'success' ? ['ok' => true, 'status' => 201] : ['ok' => false, 'status' => 503]; }
-    if ($config['crm_endpoint'] === '' || $config['crm_api_key'] === '') { return ['ok' => false, 'status' => 0]; }
-    if (!filter_var($config['crm_endpoint'], FILTER_VALIDATE_URL) || !str_starts_with($config['crm_endpoint'], 'https://') || !function_exists('curl_init')) { return ['ok' => false, 'status' => 0]; }
-    $ch = curl_init($config['crm_endpoint']);
-    curl_setopt_array($ch, [CURLOPT_POST => true, CURLOPT_RETURNTRANSFER => true, CURLOPT_CONNECTTIMEOUT => 5, CURLOPT_TIMEOUT => 12, CURLOPT_HTTPHEADER => ['Content-Type: application/json', 'Accept: application/json', 'X-Api-Key: ' . $config['crm_api_key']], CURLOPT_POSTFIELDS => obra_json($payload)]);
-    curl_exec($ch); $status = (int) curl_getinfo($ch, CURLINFO_RESPONSE_CODE); curl_close($ch);
-    return ['ok' => in_array($status, [200, 201, 202], true), 'status' => $status];
 }
 
 // Tercer canal: aviso por email al buzon configurado (mail() de Hostinger). Mejor esfuerzo, nunca bloquea.
@@ -65,9 +58,13 @@ function obra_mail_send(array $config, array $payload, array $labels): bool
 }
 
 $returnPath = obra_safe_return(obra_post('return_path', 300), '/cotizar/');
-if (obra_post('website', 200) !== '') { header('Location: /gracias/', true, 303); exit; }
+// Token CSRF de la sesion (lo imprime obra_contact_form) y como maximo 5 envios cada 10 minutos por IP.
+$csrf = $_POST['csrf'] ?? '';
+if (!is_string($csrf) || obra_form_csrf() === '' || !hash_equals(obra_form_csrf(), $csrf)) { header('Location: ' . obra_add_query($returnPath, ['error' => 'tiempo']), true, 303); exit; }
 $values = [];
 foreach (['name', 'phone', 'service', 'specialty', 'location', 'terrain', 'financing', 'message', 'consent', 'origin_path'] as $key) { $values[$key] = obra_post($key, $key === 'message' ? 1600 : 300); }
+if (obra_rate_limited('form', 5, 600)) { obra_form_save($values); header('Location: ' . obra_add_query($returnPath, ['error' => 'tiempo']), true, 303); exit; }
+if (obra_post('website', 200) !== '') { header('Location: /gracias/', true, 303); exit; }
 $started = (int) obra_post('started_at', 20);
 if ($started <= 0 || time() - $started < 2 || time() - $started > 86400) { obra_form_save($values); header('Location: ' . obra_add_query($returnPath, ['error' => 'tiempo']), true, 303); exit; }
 $name = obra_post('name', 100); $phone = obra_phone(obra_post('phone', 40));
@@ -98,9 +95,10 @@ $message = obra_wa_form_text(['name' => $name, 'service' => $labels['service'], 
 $attribution = [];
 foreach (obra_attribution_keys() as $key) { $v = preg_replace('/[^A-Za-z0-9_\-\.\/%+ ]/', '', obra_post($key, 200)) ?? ''; if ($v !== '') { $attribution[$key] = $v; } }
 $payload = ['name' => $name, 'phone' => '+' . $phone, 'message' => $message, 'source' => 'site:obra-com-py', 'page_url' => $pageUrl, 'idempotency_key' => bin2hex(random_bytes(16)), 'fields' => ['service' => $service, 'specialty' => $specialty, 'location' => $location, 'terrain' => $terrain, 'financing' => $financing, 'project' => $messageText, 'origin_path' => $originPath, 'placement' => $placement, 'submitted_at' => gmdate('c')] + $attribution];
-require_once __DIR__ . '/app/events.php';
 obra_event_log('form_attempt', $placement, $originPath, $service === 'otro' ? '' : $service);
-$crm = obra_crm_send($config, $payload); $mailed = obra_mail_send($config, $payload, $labels);
+$crm = obra_crm_send($config, $payload);
+if (!$crm['ok']) { obra_crm_spool($payload); }
+$mailed = obra_mail_send($config, $payload, $labels);
 $state = $crm['ok'] ? 'crm-confirmado' : ($mailed ? 'enviado' : 'sin-canales');
 obra_event_log($state === 'sin-canales' ? 'form_delivery_failed' : 'form_lead', $placement, $originPath, $service === 'otro' ? '' : $service);
 if ($crm['ok']) { obra_event_log('crm_delivered', $placement, $originPath, $service === 'otro' ? '' : $service); }

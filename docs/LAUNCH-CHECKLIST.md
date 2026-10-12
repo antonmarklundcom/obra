@@ -15,6 +15,14 @@
 - [-] GA4: omitido por decisión de Anton (`analytics_id` queda vacío; no se carga Google Analytics).
 - [ ] Probar el envío desde Chrome: la redirección a `wa.me` depende de `form-action` en la CSP.
 
+## Leads pendientes (CRM caído)
+
+Cuando el CRM no acepta un lead, `form.php` lo guarda en `storage/leads-pending/<idempotency_key>.json` (bloqueado por `.htaccess` y `storage/.htaccess`) y deja una línea `obra-crm status=… curl=…` en el log de errores de PHP, sin datos personales.
+
+- [ ] Subir `tools/replay-leads.php` a `public_html/tools/` (el zip no incluye `tools/`; la carpeta está bloqueada por HTTP y el script se niega a correr fuera de la consola).
+- [ ] Programar en Hostinger (hPanel → Avanzado → Cron Jobs) una vez por semana, o correrlo a mano: `php ~/public_html/tools/replay-leads.php`. Imprime una línea `replay-leads: N pending, N sent, N kept, N invalid`; borra cada archivo que el CRM acepta (2xx) y conserva el resto. El mismo `idempotency_key` evita duplicados.
+- [ ] Si `kept` no baja a 0, revisar las líneas `obra-crm` del log de errores y la configuración de VenderCRM.
+
 ## Contenido y prueba
 
 - [ ] Reemplazar imágenes referenciales con obras reales autorizadas cuando existan (ver `IMAGE-PRODUCTION.md`).
