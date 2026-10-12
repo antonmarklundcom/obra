@@ -7,7 +7,7 @@ Read `docs/seo/CONTENT-SPEC.md` first (template, voice, banned words). Reference
 ## Where each agent writes (one file each, nothing else)
 | Page | File | Shape |
 |---|---|---|
-| `/techos/` hub | `app/content/hub/techos.php` | hub entry (see "Hub fields") |
+| `/techos/` hub | `app/content/services/techos.php` | hub entry (see "Hub fields") |
 | `/techos/<slug>/` | `app/content/sub/techos/<slug>.php` | the file returns ONE specialty array (not keyed by slug) |
 
 Check yourself: `php -l <file>` and `php tools/content-words.php techos/<slug>` (hub: `php tools/content-words.php hub/techos`). Specialty: **700-1,000 words, 4-6 FAQs**. Hub: **500-800 words, 6 FAQs**.
@@ -33,7 +33,7 @@ Check yourself: `php -l <file>` and `php tools/content-words.php techos/<slug>` 
 - Every page ends up with its own `summary` (the title's promise in one sentence), `kicker` (short eyebrow), `description` (<=155 chars, phrase first, ends with a soft CTA like "Mandá fotos por WhatsApp").
 - Anything you are not sure is true for all cases ("siempre", "nunca", "garantiza") gets softened ("suele", "depende de").
 
-## Hub fields (`app/content/hub/techos.php`)
+## Hub fields (`app/content/services/techos.php`)
 Return an array with: `name` ("Techos y cubiertas"), `short` (<=120 chars), `title`, `description`, `h1`, `kicker`, `image` = `servicio-cochera.webp`, `image_alt` ("Cochera con cubierta liviana y estructura metálica"), `includes` (5-6), `ideal` (3-4), `faqs` (6), `sections` (2-3 x `[H2, [paragraphs]]`), `related` = list of **hub slugs** (`['tinglados', 'reformas', 'ampliaciones', 'quinchos']`). The 8 specialty cards are generated automatically.
 
 ## WhatsApp texts (proposal, not a file edit)

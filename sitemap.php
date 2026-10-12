@@ -17,7 +17,7 @@ $fecha = static function (array $archivos): string {
 };
 $lastmodDe = static function (array $route) use ($fecha, $content): string {
     switch ($route['type']) {
-        case 'service': return (string) ($content['services'][$route['slug']]['updated'] ?? $fecha(['app/content.php']));
+        case 'service': return (string) ($content['services'][$route['slug']]['updated'] ?? $fecha(['app/content/services/' . $route['slug'] . '.php']));
         case 'child':   return (string) ($content['children'][$route['slug']][$route['child']]['updated'] ?? $fecha(['app/content/sub/' . $route['slug'] . '.php']));
         case 'guide':   $g = $content['guides'][$route['slug']] ?? []; return (string) ($g['updated'] ?? $fecha(['app/content/guides/' . $route['slug'] . '.php']));
         case 'home':    return $fecha(['app/pages.php', 'app/routes.php', 'app/content.php']);

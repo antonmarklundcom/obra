@@ -1,7 +1,7 @@
 # Content layout
 
-- `app/content.php`: services, groups, terrain, financing and home FAQs.
-- `app/content/hub/`: service files loaded from `content.php` (e.g. `techos.php`).
+- `app/content.php`: groups, terrain, financing and home FAQs; it loads services, specialty pages and guides from the directories below.
+- `app/content/services/<slug>.php`: one file per service (hub); the order is set in `app/content.php`.
 - `app/content/sub/<hub>.php` and `app/content/sub/techos/`: specialty pages.
 - `app/content/guides/`: one guide per file.
 
