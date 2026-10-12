@@ -8,21 +8,24 @@
 import { spawn, spawnSync, execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { mkdtempSync } from 'node:fs';
+import { mkdtempSync, readdirSync, readFileSync, rmSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
 const PHP = (args.find(a => a.startsWith('--php=')) || '').slice(6) || process.env.PHP || 'php';
 const OK = '595992279599';
-const results = []; const servers = [];
+const results = []; const servers = []; const storeOf = {};
 const step = (name, ok, detail = '') => { results.push({ name, ok, detail }); console.log(`${ok ? 'PASS' : 'FAIL'}  ${name}${detail ? '  ' + detail : ''}`); };
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
+// Cada servidor tiene su propio OBRA_STORAGE temporal: eventos, leads pendientes y limites no se mezclan entre casos.
 async function server(port, env = {}) {
-  const p = spawn(PHP, ['-S', `127.0.0.1:${port}`, 'router.php'], { cwd: root, env: { ...process.env, OBRA_LOCAL_CONFIG: '0', OBRA_CRM_MOCK: '', ...env }, stdio: 'ignore' });
+  const store = env.OBRA_STORAGE || mkdtempSync(join(tmpdir(), `obra-store-${port}-`));
+  const p = spawn(PHP, ['-S', `127.0.0.1:${port}`, 'router.php'], { cwd: root, env: { ...process.env, OBRA_LOCAL_CONFIG: '0', OBRA_CRM_MOCK: '', ...env, OBRA_STORAGE: store }, stdio: 'ignore' });
   servers.push(p);
   const base = `http://127.0.0.1:${port}`;
+  storeOf[base] = store;
   for (let i = 0; i < 50; i++) { try { await fetch(base + '/robots.txt'); return base; } catch { await sleep(100); } }
   throw new Error(`php -S on ${port} did not start`);
 }
@@ -67,11 +70,19 @@ try {
   // 3. Formulario
   const formFail = []; let formCases = 0;
   const valid = { name: 'Prueba QA', phone: '0981 123 456', service: 'piscinas', location: 'Luque', terrain: 'si', financing: 'propios', message: 'Prueba automatica del formulario, sin datos reales.', consent: '1', return_path: '/cotizar/', origin_path: '/piscinas/chicas/', placement: 'form', started_at: String(Math.floor(Date.now() / 1000) - 30) };
-  const post = async (b, data) => {
-    const r = await fetch(b + '/form.php', { method: 'POST', redirect: 'manual', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() });
+  // Cada envio abre antes /cotizar/ para obtener la cookie de sesion y el token CSRF del HTML.
+  // keepLimit: false borra el contador del limite de envios (la matriz manda muchos POST desde la misma IP).
+  const post = async (b, data, { token = true, keepLimit = false, headers = {} } = {}) => {
+    const g = await fetch(b + '/cotizar/');
+    const cookie = (g.headers.get('set-cookie') || '').split(';')[0];
+    const csrf = ((await g.text()).match(/name="csrf" value="([a-f0-9]{32})"/) || [])[1] || '';
+    if (!keepLimit) rmSync(join(storeOf[b], 'ratelimit'), { recursive: true, force: true });
+    const body = new URLSearchParams(token ? { csrf, ...data } : data).toString();
+    const r = await fetch(b + '/form.php', { method: 'POST', redirect: 'manual', headers: { 'Content-Type': 'application/x-www-form-urlencoded', Cookie: cookie, ...headers }, body });
     formCases++;
-    return { status: r.status, location: r.headers.get('location') || '', cookie: (r.headers.get('set-cookie') || '').split(';')[0] };
+    return { status: r.status, location: r.headers.get('location') || '', cookie: (r.headers.get('set-cookie') || '').split(';')[0] || cookie };
   };
+  const pending = b => { const d = join(storeOf[b], 'leads-pending'); return existsSync(d) ? readdirSync(d).filter(f => f.endsWith('.json')) : []; };
   for (const mock of ['success', 'fail', '']) {
     const b = await server(8091 + ['success', 'fail', ''].indexOf(mock), { OBRA_CRM_MOCK: mock });
     const tag = `mock=${mock || 'unset'}`;
@@ -88,7 +99,28 @@ try {
       const forged = await (await fetch(b + '/gracias/?estado=crm-confirmado')).text();
       if (forged.includes('data-thanks="crm-confirmado"')) formFail.push(`${tag}: GET query can forge successful delivery`);
     }
+    // Leads que el CRM no acepta quedan en storage/leads-pending/ y tools/replay-leads.php los reenvia.
+    const spooled = pending(b);
+    if (mock === 'success' && spooled.length !== 0) formFail.push(`${tag}: ${spooled.length} pending lead files (want 0)`);
+    if (mock === 'fail') {
+      if (spooled.length !== 1 || !/^[a-f0-9]{32}\.json$/.test(spooled[0] || '')) formFail.push(`${tag}: ${spooled.length} pending lead files (want 1)`);
+      const keep = spawnSync(PHP, ['tools/replay-leads.php'], { cwd: root, encoding: 'utf8', env: { ...process.env, OBRA_LOCAL_CONFIG: '0', OBRA_STORAGE: storeOf[b], OBRA_CRM_MOCK: 'fail' } });
+      if (keep.status !== 1 || pending(b).length !== 1) formFail.push(`replay with failing CRM: exit ${keep.status}, ${pending(b).length} files left (want 1, 1)`);
+      const replay = spawnSync(PHP, ['tools/replay-leads.php'], { cwd: root, encoding: 'utf8', env: { ...process.env, OBRA_LOCAL_CONFIG: '0', OBRA_STORAGE: storeOf[b], OBRA_CRM_MOCK: 'success' } });
+      if (replay.status !== 0 || pending(b).length !== 0) formFail.push(`replay-leads: exit ${replay.status}, ${pending(b).length} files left (want 0, 0) ${(replay.stdout + replay.stderr).trim()}`);
+    }
     if (mock !== 'success') continue;
+    const noToken = await post(b, valid, { token: false });
+    if (noToken.status !== 303 || noToken.location !== '/cotizar/?error=tiempo') formFail.push(`missing csrf -> ${noToken.status} ${noToken.location}`);
+    const badToken = await post(b, { ...valid, csrf: '0'.repeat(32) }, { token: false });
+    if (badToken.location !== '/cotizar/?error=tiempo') formFail.push(`wrong csrf -> ${badToken.status} ${badToken.location}`);
+    const cross = await post(b, valid, { headers: { 'Sec-Fetch-Site': 'cross-site' } });
+    if (cross.status !== 403) formFail.push(`Sec-Fetch-Site cross-site -> ${cross.status} (want 403)`);
+    const sameOrigin = await post(b, valid, { headers: { 'Sec-Fetch-Site': 'same-origin' } });
+    if (!sameOrigin.location.startsWith('/gracias/?recibo=')) formFail.push(`Sec-Fetch-Site same-origin -> ${sameOrigin.status} ${sameOrigin.location}`);
+    const limited = [];
+    for (let i = 0; i < 6; i++) limited.push((await post(b, valid, { keepLimit: i > 0 })).location);
+    if (limited.slice(0, 5).some(l => !l.startsWith('/gracias/?recibo=')) || limited[5] !== '/cotizar/?error=tiempo') formFail.push(`rate limit (5 per 10 min): ${limited.map(l => l.slice(0, 18)).join(' | ')}`);
     const hp = await post(b, { ...valid, website: 'spam' });
     if (hp.status !== 303 || hp.location !== '/gracias/') formFail.push(`honeypot -> ${hp.location}`);
     const fast = await post(b, { ...valid, started_at: String(Math.floor(Date.now() / 1000)) });
@@ -132,8 +164,8 @@ try {
   await beacon(JSON.stringify({ e: 'form_lead', p: 'x', u: '/x/', s: '' }));
   await beacon(JSON.stringify({ e: 'tel_click', p: '', u: 'https://evil.example/', s: '' }));
   if ((await fetch(eb + '/t.php')).status !== 405) evFail.push('GET /t.php != 405');
-  await fetch(eb + '/form.php', { method: 'POST', redirect: 'manual', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(valid).toString() });
-  const { readdirSync, readFileSync } = await import('node:fs');
+  await post(eb, valid);
+  if ((await beacon(JSON.stringify({ e: 'page_view', p: '', u: '/x/', s: '' }), { ...ua, 'Sec-Fetch-Site': 'cross-site' })).status !== 204) evFail.push('t.php cross-site != 204');
   const logs = readdirSync(store).filter(f => f.startsWith('events-'));
   const logText = logs.length ? readFileSync(join(store, logs[0]), 'utf8') : '';
   const logLines = logText.split('\n').filter(Boolean);
@@ -147,6 +179,14 @@ try {
   if (st.status !== 200 || !(await st.text()).includes('whatsapp_click')) evFail.push('stats with token lacks data');
   const nb = await server(8095, { OBRA_STORAGE: store });
   if ((await fetch(nb + `/stats.php?token=${TOKEN}`)).status !== 404) evFail.push('stats without configured token != 404');
+  // Limite de t.php: 60 eventos cada 10 minutos por IP; el resto responde 204 sin registrar.
+  const rb = await server(8096);
+  for (let i = 0; i < 61; i++) await fetch(rb + '/t.php', { method: 'POST', headers: ua, body: JSON.stringify({ e: 'page_view', p: '', u: '/casas/', s: '' }) });
+  const rlog = readdirSync(storeOf[rb]).filter(f => f.startsWith('events-'));
+  const rlines = rlog.length ? readFileSync(join(storeOf[rb], rlog[0]), 'utf8').split('\n').filter(Boolean).length : 0;
+  if (rlines !== 60) evFail.push(`t.php rate limit: ${rlines} lines after 61 beacons (want 60)`);
+  const rdir = join(storeOf[rb], 'ratelimit');
+  if (!existsSync(rdir) || readdirSync(rdir).some(f => !/^[a-f0-9]{64}$/.test(f))) evFail.push('rate limit files missing or not named by hash');
   if ((await fetch(nb + '/storage/')).status !== 404 && (await fetch(nb + '/storage/.gitkeep')).status === 200) evFail.push('storage/ served');
   step('events', evFail.length === 0, 'own analytics (t.php, stats.php)' + (evFail.length ? '\n      ' + evFail.join('\n      ') : ''));
 

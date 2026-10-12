@@ -9,7 +9,15 @@ function obra_form_session(): void
     session_set_cookie_params(['lifetime' => 0, 'path' => '/', 'secure' => !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off', 'httponly' => true, 'samesite' => 'Lax']);
     session_start();
     header('Cache-Control: private, no-store');
+    // Los datos del formulario vencen a los 30 minutos; el token CSRF dura lo que la sesion.
+    $csrf = $_SESSION['obra_form']['csrf'] ?? '';
     if (($_SESSION['obra_form']['expires'] ?? 0) < time()) { unset($_SESSION['obra_form']); }
+    $_SESSION['obra_form']['csrf'] = is_string($csrf) && preg_match('/^[a-f0-9]{32}$/', $csrf) ? $csrf : bin2hex(random_bytes(16));
+}
+
+function obra_form_csrf(): string
+{
+    return (string) ($_SESSION['obra_form']['csrf'] ?? '');
 }
 
 function obra_form_values(): array
@@ -24,7 +32,7 @@ function obra_form_errors(): array
 
 function obra_form_save(array $values, array $errors = []): void
 {
-    $_SESSION['obra_form'] = ['values' => $values, 'errors' => $errors, 'expires' => time() + 1800];
+    $_SESSION['obra_form'] = ['values' => $values, 'errors' => $errors, 'expires' => time() + 1800, 'csrf' => obra_form_csrf()];
 }
 
 function obra_field_error(string $field, array $errors): string
