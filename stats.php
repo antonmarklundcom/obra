@@ -40,11 +40,11 @@ $table = static function (string $title, array $rows, int $limit = 15): void {
 };
 krsort($by['day']);
 ?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Estadísticas</title>
-<style>body{font:16px system-ui;margin:2rem auto;max-width:720px;padding:0 1rem}table{border-collapse:collapse;width:100%}td{border-bottom:1px solid #ddd;padding:.35rem .5rem}td+td{text-align:right}</style></head><body>
+<link rel="stylesheet" href="<?= h(obra_asset('/assets/css/stats.css')) ?>"></head><body>
 <h1>Eventos de los últimos <?= $days ?> días</h1><p><?= $total ?> eventos. Sin cookies ni datos personales.</p>
 <h2>Consultas y entrega por página</h2>
 <p>Vistas = cargas de página, no personas únicas. Los clics no son mensajes enviados. Una consulta confirmada se cuenta cuando CRM o email acepta la entrega; la calificación comercial se revisa en el CRM.</p>
-<div style="overflow:auto"><table><thead><tr><th>Página</th><th>Vistas</th><th>Clics WhatsApp</th><th>Formularios válidos</th><th>Entregados</th><th>Fallos</th><th>Entrega / vistas</th></tr></thead><tbody>
+<div class="table-scroll"><table><thead><tr><th>Página</th><th>Vistas</th><th>Clics WhatsApp</th><th>Formularios válidos</th><th>Entregados</th><th>Fallos</th><th>Entrega / vistas</th></tr></thead><tbody>
 <?php uasort($funnel, fn($a, $b) => ($b['page_view'] ?? 0) <=> ($a['page_view'] ?? 0)); foreach ($funnel as $path => $row): $views = $row['page_view'] ?? 0; $leads = $row['form_lead'] ?? 0; ?>
 <tr><td><?= h($path) ?></td><td><?= $views ?></td><td><?= $row['whatsapp_click'] ?? 0 ?></td><td><?= $row['form_attempt'] ?? 0 ?></td><td><?= $leads ?></td><td><?= $row['form_delivery_failed'] ?? 0 ?></td><td><?= $views > 0 ? number_format(100 * $leads / $views, 1) . '%' : '—' ?></td></tr>
 <?php endforeach; ?></tbody></table></div>

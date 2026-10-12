@@ -1,0 +1,5 @@
+body{font:16px system-ui;margin:2rem auto;max-width:720px;padding:0 1rem}
+table{border-collapse:collapse;width:100%}
+td{border-bottom:1px solid #ddd;padding:.35rem .5rem}
+td+td{text-align:right}
+.table-scroll{overflow:auto}

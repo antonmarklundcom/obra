@@ -1,4 +1,4 @@
-﻿# obra.com.py
+# obra.com.py
 
 Stack: PHP (router.php, app/, config/; needs .env from .env.example, never commit .env).
 

@@ -55,7 +55,8 @@ try {
     const r = await fetch(base + from, { redirect: 'manual' });
     if (r.status !== 301 || r.headers.get('location') !== to) routeFail.push(`${from} -> ${r.status} ${r.headers.get('location')} (want 301 ${to})`);
   }
-  for (const p of ['/app/', '/app/helpers.php', '/config/', '/config/site.php', '/docs/', '/tools/', '/no-existe/']) {
+  // /storage/: el router local devuelve 404; el "Require all denied" de storage/.htaccess solo aplica en Apache y no se prueba aqui.
+  for (const p of ['/app/', '/app/helpers.php', '/config/', '/config/site.php', '/docs/', '/tools/', '/storage/', '/storage/events-2026-01.log', '/no-existe/']) {
     const r = await fetch(base + p, { redirect: 'manual' });
     if (r.status !== 404) routeFail.push(`${p} ${r.status} (want 404)`);
   }
@@ -159,7 +160,7 @@ try {
   step('audit', au.status === 0, (au.stdout + au.stderr).trim());
   const sc = node('seo-check.mjs', [auditFile]);
   step('seo-check', sc.status === 0, (sc.stdout + sc.stderr).trim().split('\n').join('\n      '));
-  const sd = node('seo-diff.mjs', [join(root, 'docs/audit/service-redesign-before.json'), auditFile]);
+  const sd = node('seo-diff.mjs', [join(root, 'docs/audit/audit-before.json'), auditFile]);
   step('seo-diff', sd.status === 0, (sd.stdout + sd.stderr).trim().split('\n').join('\n      '));
 
   // 6. Playwright

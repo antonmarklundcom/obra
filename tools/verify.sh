@@ -3,5 +3,5 @@
 # Uso: bash tools/verify.sh [--skip-pw]
 set -euo pipefail
 cd "$(dirname "$0")"
-[ -d node_modules/playwright ] || npm install --no-fund --no-audit
+[ -d node_modules/playwright ] || npm ci --no-fund --no-audit
 exec node verify.mjs "$@"

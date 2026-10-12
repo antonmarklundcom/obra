@@ -31,7 +31,7 @@ for (const vp of VIEWPORTS) {
   for (const path of paths) {
     const page = await context.newPage();
     const errs = [];
-    page.on('console', m => { if (m.type() === 'error') errs.push('console: ' + m.text()); });
+    page.on('console', m => { if (m.type() === 'error' || m.text().includes('Content Security Policy')) errs.push('console: ' + m.text()); });
     page.on('pageerror', e => errs.push('pageerror: ' + e.message));
     page.on('requestfailed', r => { if (r.url().startsWith(base)) errs.push('requestfailed: ' + r.url()); });
     page.on('response', r => { if (r.url().startsWith(base) && r.status() >= 400 && r.request().resourceType() !== 'document') errs.push(`http ${r.status()}: ${r.url()}`); });
@@ -76,6 +76,22 @@ for (const vp of VIEWPORTS) {
   }
   await context.close();
 }
+// La precarga LCP debe pedir exactamente la imagen que muestra el hero (mismo srcset y sizes).
+const preloadCtx = await browser.newContext({ viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 });
+for (const path of ['/', '/casas/', '/techos/goteras/']) {
+  const page = await preloadCtx.newPage();
+  await page.goto(base + path, { waitUntil: 'load' });
+  const r = await page.evaluate(() => {
+    const img = document.querySelector('.hero-media img, .conversion-media img');
+    const preloaded = performance.getEntriesByType('resource').filter(e => e.initiatorType === 'link' && /\/assets\/images\//.test(e.name)).map(e => e.name);
+    return { hero: img?.currentSrc || '', preloaded, links: document.querySelectorAll('link[rel="preload"][as="image"]').length };
+  });
+  runs++;
+  if (r.links !== 1) fail.push(`preload ${path}: ${r.links} image preload links (want 1)`);
+  else if (r.preloaded.length !== 1 || r.preloaded[0] !== r.hero) fail.push(`preload ${path}: preloaded ${r.preloaded.join(' ') || 'nothing'} but hero shows ${r.hero || 'nothing'}`);
+  await page.close();
+}
+await preloadCtx.close();
 await browser.close();
 
 const els = {}; for (const v of Object.values(lcp)) { const k = v ? `${v.tag} ${v.tag === 'IMG' ? v.src : ''}`.trim() : 'none'; els[k] = (els[k] || 0) + 1; }

@@ -122,8 +122,11 @@
     const service = form.querySelector('[data-service-select]');
     const specialty = form.querySelector('[name="specialty"]');
     const initialService = service?.value;
+    // Listas de consultas chicas: las define PHP (obra_small_enquiry_lists) en data-small-*.
+    const smallServices = (form.dataset.smallServices || '').split(' ').filter(Boolean);
+    const smallSpecialties = (form.dataset.smallSpecialties || '').split(' ').filter(Boolean);
     const updateProjectFields = () => {
-      const small = ['techos', 'reformas', 'patios', 'muros', 'supervision', 'presupuesto'].includes(service?.value) || ['renovacion', 'refaccion', 'parrillas'].includes(specialty?.value);
+      const small = smallServices.includes(service?.value) || smallSpecialties.includes(specialty?.value);
       form.querySelectorAll('[name="terrain"],[name="financing"]').forEach(input => { input.required = !small; });
       const details = form.querySelector('[data-project-details]');
       if (details) details.open = !small || !!details.querySelector('[aria-invalid="true"]');

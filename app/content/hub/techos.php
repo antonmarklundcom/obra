@@ -8,8 +8,6 @@ return [
     'description' => 'Construcción de techos en Asunción y Gran Asunción: techos de chapa, de tejas y de losa para casas, cocheras y quinchos. Mandá fotos por WhatsApp.',
     'h1' => 'Construcción de techos en Paraguay',
     'kicker' => 'Cubiertas pensadas para el calor y las tormentas',
-    'image' => 'servicio-cochera.webp',
-    'image_alt' => 'Cochera con cubierta liviana y estructura metálica',
     'includes' => [
         'Visita, medición y definición de la cubierta',
         'Estructura metálica o de madera con la pendiente correcta',

@@ -13,23 +13,6 @@ function obra_has_sticky(array $route, string $path): bool
     return !in_array($route['type'] ?? '', ['contact', 'thanks'], true) && $path !== '/cotizar/' && $path !== '/gracias/';
 }
 
-// Dimensiones reales de las imagenes en assets/images (evita saltos de layout y avisos de Lighthouse).
-function obra_image_size(string $file): array
-{
-    return match ($file) {
-        'hero-casa.webp' => [1600, 900],
-        default => [1000, 750],
-    };
-}
-
-function obra_srcset(string $file): string
-{
-    if (str_ends_with($file, '.svg')) { return ''; }
-    $base = preg_replace('/\.webp$/', '', $file);
-    [$w] = obra_image_size($file);
-    return "/assets/images/{$base}-480.webp 480w, /assets/images/{$base}-960.webp 960w, /assets/images/{$file} {$w}w";
-}
-
 function obra_head(array $config, array $route, string $path, array $schemas = []): void
 {
     $canonical = obra_url($config, $path);
@@ -51,7 +34,7 @@ function obra_head(array $config, array $route, string $path, array $schemas = [
 <?php if (!empty($route['modified'])): ?><meta property="article:modified_time" content="<?= h($route['modified']) ?>"><?php endif; ?>
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="<?= h($route['title']) ?>"><meta name="twitter:description" content="<?= h($route['description']) ?>"><meta name="twitter:image" content="<?= h($og) ?>">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<?php if (!empty($route['preload'])): ?><link rel="preload" as="image" href="/assets/images/<?= h($route['preload']['file']) ?>" imagesrcset="<?= h(obra_srcset($route['preload']['file'])) ?>" imagesizes="<?= h($route['preload']['sizes']) ?>"<?= !empty($route['preload']['media']) ? ' media="' . h($route['preload']['media']) . '"' : '' ?> fetchpriority="high"><?php endif; ?>
+<?php if (!empty($route['preload'])): ?><link rel="preload" as="image" href="<?= h($route['preload']['href']) ?>"<?= !empty($route['preload']['srcset']) ? ' imagesrcset="' . h($route['preload']['srcset']) . '" imagesizes="' . h($route['preload']['sizes'] ?? '100vw') . '"' : '' ?> fetchpriority="high"><?php endif; ?>
 <link rel="stylesheet" href="<?= h(obra_asset('/assets/css/site.css')) ?>">
 <link rel="stylesheet" href="<?= h(obra_asset('/assets/css/conversion.css')) ?>">
 <?php foreach ($schemas as $schema): ?><script type="application/ld+json"><?= obra_json($schema) ?></script>
@@ -139,7 +122,8 @@ function obra_contact_form(array $config, array $content): void
     $value = fn(string $key): string => h((string) ($values[$key] ?? ''));
     if ($errors): ?><div class="form-error" role="alert" tabindex="-1"><strong>Revisá estos datos; conservamos tu consulta.</strong><ul><?php foreach ($errors as $field => $message): ?><li><a href="#field-<?= h($field) ?>"><?= h($message) ?></a></li><?php endforeach; ?></ul></div><?php endif;
     if (isset($_GET['error']) && $_GET['error'] === 'tiempo'): ?><p class="form-error" role="alert">El formulario quedó abierto demasiado tiempo o se envió demasiado rápido. Revisá los datos y volvé a enviarlo.</p><?php endif;
-    ?><form class="contact-form" action="/form.php" method="post" data-form>
+    $smallLists = obra_small_enquiry_lists();
+    ?><form class="contact-form" action="/form.php" method="post" data-form data-small-services="<?= h(implode(' ', $smallLists['services'])) ?>" data-small-specialties="<?= h(implode(' ', $smallLists['specialties'])) ?>">
     <input type="hidden" name="return_path" value="/cotizar/"><input type="hidden" name="origin_path" value="<?= h($origin) ?>"><input type="hidden" name="specialty" value="<?= h($child) ?>"><input type="hidden" name="placement" value="form"><input type="hidden" name="page_url" value="" data-page-url><input type="hidden" name="started_at" value="<?= time() ?>"><?php foreach (obra_attribution_keys() as $key): ?><input type="hidden" name="<?= h($key) ?>" value="<?= $value($key) ?>" data-attrib="<?= h($key) ?>"><?php endforeach; ?>
     <label class="trap" aria-hidden="true">Sitio web<input name="website" tabindex="-1" autocomplete="off"></label>
     <?php if ($child !== ''): ?><p class="form-specialty">Tu consulta: <strong><?= h($content['children'][$selected][$child]['name']) ?></strong></p><?php endif; ?>

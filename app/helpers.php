@@ -168,7 +168,8 @@ function obra_security_headers(): void
     header('Permissions-Policy: camera=(), microphone=(), geolocation=()');
     // form-action incluye wa.me porque form.php responde con un 303 hacia WhatsApp
     // y Chrome aplica form-action tambien a las redirecciones de un envio.
-    header("Content-Security-Policy: default-src 'self'; base-uri 'self'; form-action 'self' https://wa.me; frame-ancestors 'self'; object-src 'none'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com https://www.google.com https://*.g.doubleclick.net https://www.googleadservices.com; style-src 'self' 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://*.g.doubleclick.net https://www.googleadservices.com; font-src 'self'");
+    header("Content-Security-Policy: default-src 'self'; base-uri 'self'; form-action 'self' https://wa.me; frame-ancestors 'self'; object-src 'none'; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com https://www.google.com https://*.g.doubleclick.net https://www.googleadservices.com; style-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://www.google.com https://*.g.doubleclick.net https://www.googleadservices.com; font-src 'self'; upgrade-insecure-requests");
+    if (($_SERVER['HTTPS'] ?? '') === 'on') { header('Strict-Transport-Security: max-age=31536000; includeSubDomains'); }
 }
 
 function obra_breadcrumb_schema(array $config, array $items): array
