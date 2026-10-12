@@ -121,5 +121,6 @@ match ($route['type']) {
     'about' => obra_page_about($config, $content, $route),
     'privacy' => obra_page_privacy($config, $route),
     'thanks' => obra_page_thanks($config, $route),
+    default => throw new LogicException('Unknown route type'),
 };
 ?></main><?php obra_footer($config, $content, $route); ?>

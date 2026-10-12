@@ -5,6 +5,7 @@ require_once __DIR__ . '/conversion.php';
 require_once __DIR__ . '/home-conversion.php';
 
 // Nombre legible de una ruta interna (para listas de "relacionados").
+/** @param array<string, mixed> $content */
 function obra_label_for_path(array $content, string $path): string
 {
     $parts = array_values(array_filter(explode('/', $path)));
@@ -19,6 +20,10 @@ function obra_label_for_path(array $content, string $path): string
 }
 
 // Guias que hablan de esta pagina, segun el campo 'related' de cada guia (enlace inverso servicio -> guia).
+/**
+ * @param array<string, mixed> $content
+ * @return list<string>
+ */
 function obra_guides_for_path(array $content, string $path, string $hub = '', int $limit = 3): array
 {
     $scored = [];
@@ -35,6 +40,11 @@ function obra_guides_for_path(array $content, string $path, string $hub = '', in
 }
 
 // Otras guias para seguir leyendo: las siguientes en el orden del menu que no estan ya en 'related'.
+/**
+ * @param array<string, mixed> $content
+ * @param list<string> $exclude
+ * @return list<string>
+ */
 function obra_more_guides(array $content, string $slug, array $exclude, int $limit = 3): array
 {
     $slugs = array_keys($content['guides']);
@@ -48,6 +58,10 @@ function obra_more_guides(array $content, string $slug, array $exclude, int $lim
     return $out;
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, string>|null $link
+ */
 function obra_partner_note(array $config, ?array $link): void
 {
     if ($link === null) { return; }
@@ -68,11 +82,19 @@ function obra_partner_note(array $config, ?array $link): void
     ?><aside class="partner-note"><p class="eyebrow">Del mismo grupo</p><p><?= $text ?></p></aside><?php
 }
 
+/**
+ * @param array<string, mixed> $content
+ * @param list<string> $paths
+ */
 function obra_related_list(array $content, array $paths, string $title = 'El proyecto puede necesitar más de un rubro.'): void
 {
     ?><section class="related section"><div><p class="eyebrow">Relacionado</p><h2><?= h($title) ?></h2></div><div><?php foreach ($paths as $p): ?><a href="<?= h($p) ?>"><span><?= h(obra_label_for_path($content, $p)) ?></span><b aria-hidden="true">↗</b></a><?php endforeach; ?></div></section><?php
 }
 
+/**
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $service
+ */
 function obra_specialties(array $content, string $slug, array $service): void
 {
     $children = $content['children'][$slug] ?? [];
@@ -82,6 +104,7 @@ function obra_specialties(array $content, string $slug, array $service): void
     ?><section class="specialties section visual-specialties" id="especialidades"><div class="section-head"><div><p class="eyebrow">Especialidades</p><h2><?= h($p['heading']) ?></h2></div><p><?= h($p['explain']) ?></p></div><p class="specialty-context">Dentro de <?= h(function_exists('mb_strtolower') ? mb_strtolower($service['name'], 'UTF-8') : strtolower($service['name'])) ?>, lo que más nos piden. Cada especialidad tiene su propia página con qué incluye, cuándo conviene y preguntas frecuentes.</p><?php foreach ($groups as $group => $keys): ?><?php if (count($groups) > 1): ?><h3 class="option-group-title"><?= h($group) ?></h3><?php endif; ?><div class="spec-grid"><?php foreach ($keys as $child): if (!isset($children[$child])) { continue; } $page = $children[$child]; ?><a href="/<?= h($slug) ?>/<?= h($child) ?>/" class="option-card"><div class="option-art"><img src="<?= h(obra_service_image($slug, $child)) ?>" srcset="<?= h(obra_reference_srcset($slug, $child)) ?>" sizes="(min-width:1280px) 25vw, (min-width:760px) 33vw, 50vw" alt="" width="1200" height="900" loading="lazy"></div><div class="option-copy"><span><?= h($page['kicker']) ?></span><h3><?= h($page['name']) ?></h3><p><?= h($page['summary'] ?? $page['description']) ?></p><b>Ver <?= h($page['name']) ?> <i aria-hidden="true">↗</i></b></div></a><?php endforeach; ?></div><?php endforeach; ?></section><?php
 }
 
+/** @param array<string, mixed> $page */
 function obra_v2_sections(array $page): void
 {
     if (!empty($page['process'])): ?><section class="process section"><div><p class="eyebrow">Cómo es el proceso</p><h2>Paso a paso, de la visita a la entrega.</h2></div><ol><?php foreach ($page['process'] as $i => $step): ?><li><span><?= sprintf('%02d', $i + 1) ?></span><div><h3><?= h($step[0]) ?></h3><p><?= h($step[1]) ?></p></div></li><?php endforeach; ?></ol></section><?php endif;
@@ -90,6 +113,11 @@ function obra_v2_sections(array $page): void
     if (!empty($page['mistakes'])): ?><section class="who-builds section"><div><p class="eyebrow">Errores comunes</p><h2>Lo que conviene evitar.</h2></div><div class="who-grid"><?php foreach ($page['mistakes'] as $item): ?><article><h3><?= h($item[0]) ?></h3><p><?= h($item[1]) ?></p></article><?php endforeach; ?></div></section><?php endif;
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ */
 function obra_page_home(array $config, array $content, array $route): void
 {
     $wa = obra_whatsapp($config, obra_wa_text('/', 'hero'));
@@ -154,6 +182,11 @@ function obra_page_home(array $config, array $content, array $route): void
 <?php obra_contact_band($config, '/');
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ */
 function obra_page_services(array $config, array $content, array $route): void
 {
     $count = count($content['services']);
@@ -164,6 +197,11 @@ function obra_page_services(array $config, array $content, array $route): void
 <?php obra_contact_band($config, '/servicios/');
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ */
 function obra_page_service(array $config, array $content, array $route): void
 {
     $slug = $route['slug']; $service = $content['services'][$slug]; $path = '/' . $slug . '/';
@@ -187,13 +225,17 @@ function obra_page_service(array $config, array $content, array $route): void
     ?><div id="preguntas"><?php obra_faq_section($service['faqs']); ?></div><?php obra_contact_band($config, $path, $slug);
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ */
 function obra_page_child(array $config, array $content, array $route): void
 {
     $slug = $route['slug']; $child = $route['child']; $parent = $content['services'][$slug]; $page = $content['children'][$slug][$child];
     $path = '/' . $slug . '/' . $child . '/'; $siblings = array_diff_key($content['children'][$slug], [$child => true]);
     obra_service_hero($config, $content, $route, $page);
     obra_service_nav(false); obra_case_section($page, $slug); obra_start_section($config, $slug, $page, $child); obra_project_evidence($config, $slug);
-    if ($options) { obra_specialties($content, $slug, $service); }
     ?><section class="include section" id="incluye"><div><p class="eyebrow">Qué incluye</p><h2>Qué puede incluir.</h2><p>Puntos habituales de este tipo de obra. El alcance final queda por escrito en la propuesta.</p></div><ul><?php foreach ($page['includes'] as $i => $item): ?><li><span><?= sprintf('%02d', $i + 1) ?></span><?= h($item) ?></li><?php endforeach; ?></ul></section>
 <div id="detalles" class="service-details"><section class="service-introduction section"><div><p class="eyebrow">En detalle</p><h2><?= h($page['name']) ?>: qué conviene conocer.</h2></div><div><?php foreach ($page['intro'] as $paragraph): ?><p><?= h($paragraph) ?></p><?php endforeach; ?></div></section><?php obra_v2_sections($page); ?></div>
 <section class="situations section"><div class="section-head"><div><p class="eyebrow">Cuándo consultar</p><h2>Te conviene si…</h2></div><p>Si tu caso se parece a alguno de estos, contanos y te decimos cómo seguir.</p></div><div class="situation-grid situation-grid-3"><?php foreach ($page['ideal'] as $i => $item): ?><article><span><?= sprintf('%02d', $i + 1) ?></span><p><?= h($item) ?></p></article><?php endforeach; ?></div></section>
@@ -203,6 +245,11 @@ function obra_page_child(array $config, array $content, array $route): void
 <div id="preguntas"><?php obra_faq_section($page['faqs']); ?></div><?php obra_contact_band($config, $path, $slug);
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ */
 function obra_page_guides(array $config, array $content, array $route): void
 {
     ?><header class="page-hero"><div><p class="eyebrow">Guías</p><h1><?= h($route['h1']) ?></h1><p>Respuestas directas a lo que la gente pregunta antes de construir. Sin precios inventados, sin plazos mágicos: lo que define cada decisión y cómo la trabajamos.</p></div><div class="hero-index" aria-hidden="true"><strong><?= count($content['guides']) ?></strong><span>Guías<br>prácticas</span></div></header>
@@ -210,6 +257,11 @@ function obra_page_guides(array $config, array $content, array $route): void
 <?php obra_contact_band($config, '/guias/');
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ */
 function obra_page_guide(array $config, array $content, array $route): void
 {
     $guide = $content['guides'][$route['slug']];
@@ -228,6 +280,11 @@ function obra_page_guide(array $config, array $content, array $route): void
 <?php obra_contact_band($config, $path);
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ */
 function obra_page_process(array $config, array $content, array $route): void
 {
     $steps = count($content['process']);
@@ -239,6 +296,11 @@ function obra_page_process(array $config, array $content, array $route): void
 <?php obra_contact_band($config, '/como-trabajamos/');
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ */
 function obra_page_contact(array $config, array $content, array $route): void
 {
     $wa = obra_whatsapp($config, obra_wa_text('/cotizar/', 'hero'));
@@ -248,6 +310,11 @@ function obra_page_contact(array $config, array $content, array $route): void
 <section class="contact-layout section" id="formulario"><div><p class="eyebrow">Formulario</p><h2>Contanos tu proyecto.</h2><?php obra_contact_form($config, $content); ?></div><aside class="contact-details"><h2>Contacto directo</h2><?php if ($hasDetails): ?><dl><?php if ($wa): ?><div><dt>WhatsApp</dt><dd><a href="<?= h($wa) ?>"<?= obra_wa_attrs('contact-aside') ?>><?= h(obra_phone_display($config)) ?></a></dd></div><?php if ($tel !== ''): ?><div><dt>Teléfono</dt><dd><a href="<?= h($tel) ?>"><?= h(obra_phone_display($config)) ?></a></dd></div><?php endif; ?><?php endif; ?><?php if ($config['email'] !== ''): ?><div><dt>Email</dt><dd><a href="mailto:<?= h($config['email']) ?>"><?= h($config['email']) ?></a></dd></div><?php endif; ?><?php if ($config['legal_address'] !== ''): ?><div><dt>Dirección</dt><dd><?= h($config['legal_address']) ?></dd></div><?php endif; ?><div><dt>Zona</dt><dd><?= h($config['area']) ?>. Otras zonas, según proyecto.</dd></div></dl><?php else: ?><p>Por ahora atendemos consultas únicamente a través de este formulario.</p><?php endif; ?><p class="contact-note">Respondemos en horario comercial. Si tu obra es urgente, decilo en el mensaje y lo priorizamos.</p></aside></section><?php
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ */
 function obra_page_about(array $config, array $content, array $route): void
 {
     $hasLegal = $config['legal_operator'] !== '' || $config['ruc'] !== '' || $config['legal_address'] !== '' || $config['email'] !== '';
@@ -261,12 +328,20 @@ function obra_page_about(array $config, array $content, array $route): void
 <?php obra_contact_band($config, '/nosotros/');
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $route
+ */
 function obra_page_privacy(array $config, array $route): void
 {
     $email = (string) ($config['privacy_email'] ?: $config['email']);
     ?><header class="legal-hero"><p class="eyebrow">Datos personales</p><h1><?= h($route['h1']) ?></h1><p>Qué datos recibimos a través de obra.com.py y para qué los usamos.</p></header><article class="legal-copy"><section><h2>Datos que recibimos</h2><p>Cuando completás el formulario o nos escribís por WhatsApp podemos recibir tu nombre, número de teléfono, ciudad o barrio, tipo de obra, situación del terreno, forma de financiación prevista y la descripción de tu proyecto.</p></section><section><h2>Para qué los usamos</h2><p>Para responder tu consulta, evaluar el alcance de la obra, preparar un presupuesto y hacer seguimiento comercial. Los datos pueden guardarse en nuestro sistema de gestión de clientes y compartirse con las empresas del mismo grupo (arq.com.py y carpinteria.com.py) solo cuando tu proyecto lo requiera.</p></section><section><h2>Datos sensibles</h2><p>No envíes cédula, datos bancarios, títulos de propiedad ni documentos confidenciales por el formulario. Si hacen falta, los pedimos por un canal acordado con vos.</p></section><section><h2>Cookies y medición</h2><p>Contamos de forma anónima las cargas de página, los toques en botones de WhatsApp o llamada y los resultados de envío del formulario, sin cookies de medición, sin guardar la dirección IP y sin identificar a nadie. Además, si aceptás las cookies en el aviso del sitio, podemos usar Google Analytics para medir visitas. Podés rechazarlas y el sitio funciona igual.</p><p>El formulario usa una cookie funcional de sesión para conservar lo que escribiste si hay errores y mostrar el resultado real del envío. El estado del formulario caduca a los 30 minutos; no incluimos esos datos personales en las direcciones de redirección ni en el registro anónimo de eventos.</p></section><section><h2>Tus derechos</h2><p>Podés pedir que corrijamos o eliminemos tus datos en cualquier momento. <?= $email !== '' ? 'Escribinos a <a href="mailto:' . h($email) . '">' . h($email) . '</a>.' : 'Escribinos por el mismo canal por el que nos contactaste.' ?></p></section></article><?php
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $route
+ */
 function obra_page_thanks(array $config, array $route): void
 {
     $receipt = $_SESSION['obra_form']['receipt'] ?? [];
@@ -280,16 +355,19 @@ function obra_page_thanks(array $config, array $route): void
     ?><section class="thanks" data-thanks="<?= h($state) ?>" data-receipt="<?= $valid ? h($receipt['id']) : '' ?>"><span aria-hidden="true"><?= $message[2] ? 'OK' : '?' ?></span><div><p class="eyebrow">Resultado del envío</p><h1><?= h($message[0]) ?></h1><p><?= h($message[1]) ?></p><div class="action-row"><?php if ($wa): ?><a class="btn btn-whatsapp" href="<?= h($wa) ?>"<?= obra_wa_attrs('thanks', $valid ? $receipt['service'] : null) ?>><?= $message[2] ? 'Seguir por WhatsApp' : 'Enviar directamente por WhatsApp' ?> <span aria-hidden="true">↗</span></a><?php endif; ?><?php if (!$message[2]): ?><a class="text-link" href="<?= h($quote) ?>">Volver al formulario</a><?php endif; ?><a class="text-link" href="/">Ir al inicio</a></div></div></section><?php
 }
 
+/** @param array<int, mixed> $process */
 function obra_process_section(array $process): void
 {
     ?><section class="process section"><div><p class="eyebrow">Cómo trabajamos</p><h2>Del terreno a la entrega en <?= count($process) ?> pasos.</h2><p>La profundidad de cada etapa cambia según el tamaño y la complejidad del proyecto. El orden, no.</p></div><ol><?php foreach ($process as $step): ?><li><span><?= h($step[0]) ?></span><div><h3><?= h($step[1]) ?></h3><p><?= h($step[2]) ?></p></div></li><?php endforeach; ?></ol></section><?php
 }
 
+/** @param array<int, array<int, string>> $faqs */
 function obra_faq_section(array $faqs): void
 {
     ?><section class="faq section"><div><p class="eyebrow">Preguntas frecuentes</p><h2>Lo que conviene aclarar antes de empezar.</h2></div><div class="accordion"><?php foreach ($faqs as $faq): ?><details><summary><?= h($faq[0]) ?><span aria-hidden="true">+</span></summary><p><?= h($faq[1]) ?></p></details><?php endforeach; ?></div></section><?php
 }
 
+/** @param array<string, mixed> $config */
 function obra_contact_band(array $config, string $path, ?string $serviceSlug = null): void
 {
     $wa = obra_whatsapp($config, obra_wa_text($path, 'band', $serviceSlug));

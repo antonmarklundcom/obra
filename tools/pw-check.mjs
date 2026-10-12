@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Playwright sobre cada URL del sitemap a 1366x768 y 390x844 (docs/IMPROVE-PLAN.md §5.4).
+// Playwright sobre cada URL del sitemap a 1366x768 y 390x844 (docs/archive/IMPROVE-PLAN.md §5.4).
 // Falla (exit 1) ante errores de consola, requests fallidos, imagenes rotas, scroll horizontal,
 // barra fija movil mal mostrada u ocultada, o botones de accion de menos de 44 px.
 // Uso: node tools/pw-check.mjs <base-url> [--paths=/,/casas/] [--shots=./audit-shots]

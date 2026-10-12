@@ -11,6 +11,7 @@ function obra_home_intents(): void
     ?><section class="home-intents section" id="elegi"><div class="section-head"><div><p class="eyebrow">Elegí por dónde empezar</p><h2>¿Qué querés hacer en tu propiedad?</h2></div><p>Empezá por tu necesidad. En cada servicio te contamos qué revisar y qué datos mandar para consultar.</p></div><div class="home-intent-grid"><?php foreach ($choices as [$slug, $title, $summary, $url]): ?><a class="home-intent-card" href="<?= h($url) ?>"><img src="<?= h(obra_service_image($slug)) ?>" srcset="<?= h(obra_reference_srcset($slug)) ?>" sizes="(min-width:760px) 33vw, 100vw" width="1200" height="900" alt="" loading="lazy"><div><h3><?= h($title) ?></h3><p><?= h($summary) ?></p><span>Ver opciones ↗</span></div></a><?php endforeach; ?></div><a class="text-link" href="/servicios/">Explorar todos los servicios →</a></section><?php
 }
 
+/** @param array<string, mixed> $config */
 function obra_home_start(array $config): void
 {
     $wa = obra_whatsapp($config, obra_wa_text('/', 'hero'));

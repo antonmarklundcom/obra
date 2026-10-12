@@ -39,16 +39,19 @@ function obra_path(): string
     return $path;
 }
 
+/** @param array<string, mixed> $config */
 function obra_url(array $config, string $path = '/'): string
 {
     return rtrim($config['origin'], '/') . ($path === '/' ? '/' : '/' . ltrim($path, '/'));
 }
 
+/** @param array<string, mixed> $config */
 function obra_phone_ready(array $config): bool
 {
     return (bool) preg_match('/^5959\d{8}$/', (string) $config['whatsapp']);
 }
 
+/** @param array<string, mixed> $config */
 function obra_phone_display(array $config): string
 {
     if (!obra_phone_ready($config)) { return ''; }
@@ -56,6 +59,7 @@ function obra_phone_display(array $config): string
     return '+595 ' . substr($n, 3, 3) . ' ' . substr($n, 6, 3) . ' ' . substr($n, 9);
 }
 
+/** @param array<string, mixed> $config */
 function obra_whatsapp(array $config, string $message): ?string
 {
     return obra_phone_ready($config)
@@ -64,6 +68,7 @@ function obra_whatsapp(array $config, string $message): ?string
 }
 
 // Mensajes de WhatsApp: todos viven en app/wa-messages.php (uno por pagina y ubicacion).
+/** @return array<string, mixed> */
 function obra_wa_messages(): array
 {
     static $messages = null;
@@ -75,6 +80,7 @@ function obra_wa_messages(): array
 }
 
 // Ubicacion efectiva: /gracias/ usa 'thanks' y la pagina 404 (ruta sin tipo) usa '404' en todos sus enlaces.
+/** @param array<string, mixed> $route */
 function obra_wa_placement(array $route, string $placement): string
 {
     $type = (string) ($route['type'] ?? '');
@@ -110,6 +116,7 @@ function obra_wa_attrs(string $placement, ?string $serviceSlug = null): string
 }
 
 // Mensaje final del formulario, armado con la plantilla 'form' del mapa.
+/** @param array<string, mixed> $values */
 function obra_wa_form_text(array $values): string
 {
     $template = (string) (obra_wa_messages()['form'] ?? "Hola, soy {name}. Completé el formulario de obra.com.py desde {page}.\nObra: {service}\nUbicación: {location}\nTerreno: {terrain}\nFinanciación: {financing}\nProyecto: {project}");
@@ -118,6 +125,7 @@ function obra_wa_form_text(array $values): string
     return strtr($template, $pairs);
 }
 
+/** @param array<string, mixed> $config */
 function obra_tel_href(array $config): string
 {
     return obra_phone_ready($config) ? 'tel:+' . $config['whatsapp'] : '';
@@ -126,6 +134,10 @@ function obra_tel_href(array $config): string
 // Carga un archivo de contenido por clave desde app/content/{dir}/{clave}.php.
 // Primero las claves de $order (orden fijo de menu, sitemap y footer); despues cualquier archivo nuevo, en orden alfabetico.
 // Asi cada agente de contenido edita o agrega solo su propio archivo.
+/**
+ * @param list<string> $order
+ * @return array<string, mixed>
+ */
 function obra_load_content_dir(string $dir, array $order): array
 {
     $base = __DIR__ . '/content/' . $dir . '/';
@@ -140,16 +152,22 @@ function obra_load_content_dir(string $dir, array $order): array
 }
 
 // Parametros de campana que viajan del enlace del anuncio al CRM (site.js los guarda y completa los inputs ocultos).
+/** @return list<string> */
 function obra_attribution_keys(): array
 {
     return ['gclid', 'gbraid', 'wbraid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'landing_path'];
 }
 
+/** @param array<mixed> $data */
 function obra_json(array $data): string
 {
     return (string) json_encode($data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT);
 }
 
+/**
+ * @param array<int, array<int, string>> $faqs
+ * @return array<string, mixed>
+ */
 function obra_faq_schema(array $faqs): array
 {
     $entities = [];
@@ -172,6 +190,11 @@ function obra_security_headers(): void
     if (($_SERVER['HTTPS'] ?? '') === 'on') { header('Strict-Transport-Security: max-age=31536000; includeSubDomains'); }
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param list<array{label: string, path: string}> $items
+ * @return array<string, mixed>
+ */
 function obra_breadcrumb_schema(array $config, array $items): array
 {
     $elements = [];
@@ -182,6 +205,11 @@ function obra_breadcrumb_schema(array $config, array $items): array
 }
 
 // Migas de pan de cualquier ruta: Inicio > Servicios > Servicio > Especialidad, o Inicio > Guías > Guía.
+/**
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ * @return list<array{label: string, path: string}>
+ */
 function obra_breadcrumbs(array $content, array $route, string $path): array
 {
     $items = [['label' => 'Inicio', 'path' => '/']];
@@ -214,6 +242,7 @@ function obra_safe_return(string $value, string $fallback = '/cotizar/'): string
     return preg_match('#^/(?!/)[a-z0-9/_-]*$#', $path) ? $path : $fallback;
 }
 
+/** @param array<string, string> $query */
 function obra_add_query(string $path, array $query): string
 {
     return $path . (str_contains($path, '?') ? '&' : '?') . http_build_query($query);

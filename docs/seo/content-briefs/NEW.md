@@ -1,4 +1,4 @@
-# New pages (NEW-x from docs/IMPROVE-PLAN.md §3.3)
+# New pages (NEW-x from docs/archive/IMPROVE-PLAN.md §3.3)
 
 Decision rule (D7): a NEW page is built only if its meaning group has PY volume > 0 in the keyword-library, is distinct from existing pages, and is not a brand or competitor phrase.
 

@@ -2,17 +2,24 @@
 declare(strict_types=1);
 
 // Servicio (hub) de la ruta, para el texto de WhatsApp, el formulario y GA4.
+/** @param array<string, mixed> $route */
 function obra_route_service(array $route): ?string
 {
     return in_array($route['type'] ?? '', ['service', 'child'], true) ? (string) $route['slug'] : null;
 }
 
 // Barra fija movil: en todas las paginas salvo /cotizar/ y /gracias/.
+/** @param array<string, mixed> $route */
 function obra_has_sticky(array $route, string $path): bool
 {
     return !in_array($route['type'] ?? '', ['contact', 'thanks'], true) && $path !== '/cotizar/' && $path !== '/gracias/';
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $route
+ * @param list<array<string, mixed>> $schemas
+ */
 function obra_head(array $config, array $route, string $path, array $schemas = []): void
 {
     $canonical = obra_url($config, $path);
@@ -46,6 +53,11 @@ function obra_head(array $config, array $route, string $path, array $schemas = [
 
 // Cabecera con menu de servicios en tres niveles (grupo > servicio > especialidad) y menu de guias.
 // Escritorio: desplegable por hover/foco/click. Movil: panel con acordeones. Todo HTML real y rastreable.
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ */
 function obra_header(array $config, array $content, string $path, array $route = []): void
 {
     $waService = obra_route_service($route);
@@ -76,6 +88,11 @@ function obra_header(array $config, array $content, string $path, array $route =
 </header><?php
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ */
 function obra_footer(array $config, array $content, array $route = []): void
 {
     $path = obra_path();
@@ -101,11 +118,16 @@ function obra_footer(array $config, array $content, array $route = []): void
 <script src="<?= h(obra_asset('/assets/js/site.js')) ?>" defer></script></body></html><?php
 }
 
+/** @param list<array{label: string, path: string}> $items */
 function obra_breadcrumb_nav(array $items): void
 {
     ?><nav class="breadcrumbs" aria-label="Ubicación en el sitio"><ol><?php foreach ($items as $i => $item): $last = $i === count($items) - 1; ?><li><?php if ($last): ?><span aria-current="page"><?= h($item['label']) ?></span><?php else: ?><a href="<?= h($item['path']) ?>"><?= h($item['label']) ?></a><?php endif; ?></li><?php endforeach; ?></ol></nav><?php
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ */
 function obra_contact_form(array $config, array $content): void
 {
     $values = obra_form_values(); $errors = obra_form_errors();

@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 // Presentation data is separate from the existing SEO manuscripts and route metadata.
+/** @return array<string, array<int, mixed>> */
 function obra_conversion_profiles(): array
 {
     return [
@@ -21,6 +22,7 @@ function obra_conversion_profiles(): array
     ];
 }
 
+/** @return array<string, mixed> */
 function obra_conversion_profile(string $slug): array
 {
     $p = obra_conversion_profiles()[$slug];
@@ -37,6 +39,7 @@ function obra_quote_url(?string $slug = null, ?string $child = null, string $ori
 }
 
 // Consultas chicas: terreno y financiacion son opcionales. Fuente unica; site.js lee las listas del <form>.
+/** @return array{services: list<string>, specialties: list<string>} */
 function obra_small_enquiry_lists(): array
 {
     return ['services' => ['techos', 'reformas', 'patios', 'muros', 'supervision', 'presupuesto'], 'specialties' => ['renovacion', 'refaccion', 'parrillas']];
@@ -59,11 +62,18 @@ function obra_reference_srcset(string $slug, string $child = ''): string
     return $base . '-480.webp 480w, ' . $base . '-960.webp 960w, ' . $base . '-1200.webp 1200w';
 }
 
+/** @param array<string, mixed> $page */
 function obra_service_media(array $page, string $slug, string $child = ''): void
 {
     ?><figure class="conversion-media"><img src="<?= h(obra_service_image($slug, $child)) ?>" srcset="<?= h(obra_reference_srcset($slug, $child)) ?>" sizes="(min-width:1024px) 45vw, 100vw" alt="<?= h($page['name']) ?>" width="1200" height="900" fetchpriority="high"></figure><?php
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $content
+ * @param array<string, mixed> $route
+ * @param array<string, mixed> $page
+ */
 function obra_service_hero(array $config, array $content, array $route, array $page): void
 {
     $slug = $route['slug']; $child = $route['child'] ?? '';
@@ -79,6 +89,7 @@ function obra_service_nav(bool $hasOptions): void
     ?><nav class="service-jumps" aria-label="Contenido del servicio"><?php if ($hasOptions): ?><a href="#opciones">Opciones</a><?php else: ?><a href="#tu-caso">Tu caso</a><?php endif; ?><a href="#propuesta">Cómo empezar</a><a href="#incluye">Qué incluye</a><a href="#detalles">Detalles y proceso</a><a href="#preguntas">Preguntas</a></nav><?php
 }
 
+/** @param array<string, mixed> $content */
 function obra_choice_overview(array $content, string $slug): void
 {
     $children = $content['children'][$slug] ?? [];
@@ -98,12 +109,17 @@ function obra_choice_overview(array $content, string $slug): void
     ?><section class="choice-overview section" id="opciones"><div class="section-head"><div><p class="eyebrow">Elegí tu solución</p><h2><?= h($p['heading']) ?></h2></div><p><?= h($p['explain']) ?></p></div><div class="choice-grid"><?php foreach ($choices as [$name, $summary, $url, $child]): ?><a class="choice-card" href="<?= h($url) ?>"><img src="<?= h(obra_service_image($slug, $child)) ?>" srcset="<?= h(obra_reference_srcset($slug, $child)) ?>" sizes="(min-width:760px) 33vw, 120px" alt="" width="1200" height="900" loading="lazy"><div><h3><?= h($name) ?></h3><p><?= h($summary) ?></p><span aria-hidden="true">↗</span></div></a><?php endforeach; ?></div><a class="text-link" href="#especialidades">Ver todas las especialidades →</a></section><?php
 }
 
+/** @param array<string, mixed> $page */
 function obra_case_section(array $page, string $slug): void
 {
     $p = obra_conversion_profile($slug);
     ?><section class="case-section section" id="tu-caso"><div class="section-head"><div><p class="eyebrow">Tu caso</p><h2><?= h($p['heading']) ?></h2></div><p><?= h($p['explain']) ?></p></div><div class="case-grid"><?php foreach (array_slice($page['ideal'], 0, 3) as $i => $item): ?><article><span class="case-number"><?= sprintf('%02d', $i + 1) ?></span><p><?= h($item) ?></p></article><?php endforeach; ?></div></section><?php
 }
 
+/**
+ * @param array<string, mixed> $config
+ * @param array<string, mixed> $page
+ */
 function obra_start_section(array $config, string $slug, array $page, string $child = ''): void
 {
     $path = '/' . $slug . '/' . ($child !== '' ? $child . '/' : '');
@@ -118,6 +134,7 @@ function obra_roof_comparison(): void
 }
 
 // Only authorized, attributable projects are rendered. Empty data is never replaced with invented proof.
+/** @param array<string, mixed> $config */
 function obra_project_evidence(array $config, string $slug): void
 {
     $projects = array_filter($config['projects'] ?? [], fn($p) => is_array($p) && !empty($p['authorized']) && ($p['service'] ?? '') === $slug && !empty($p['title']) && !empty($p['scope']) && !empty($p['image']) && str_starts_with($p['image'], '/assets/images/') && !str_starts_with($p['image'], '/assets/images/reference/') && !str_contains($p['image'], '..') && is_file(__DIR__ . '/..' . $p['image']));

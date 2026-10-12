@@ -13,3 +13,4 @@ tools/sunburst-jobs.json
 storage/*
 !storage/.gitkeep
 !storage/.htaccess
+tools/phpstan.phar
