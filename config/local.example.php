@@ -12,7 +12,7 @@ return [
     // with VENDERCRM_URL (base origin) and VENDERCRM_API_KEY.
     'crm_endpoint' => 'https://crm.clientes.com.py/api/v1/leads', // POST JSON, cabecera X-Api-Key (ya es el valor por defecto)
     'crm_api_key' => '',        // vc_live_... de obra.com.py: SOLO en el servidor, nunca en git
-    'stats_token' => '',       // 16+ caracteres al azar: abre /stats.php?token=...
+    'stats_token' => '',       // 16+ caracteres al azar: se escribe en el formulario de /stats.php
     'analytics_id' => '',      // G-XXXXXXX
     'area' => 'Asunción y Gran Asunción',
     // Complete only with real, verified information. Empty entries are not displayed.

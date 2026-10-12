@@ -6,6 +6,7 @@ declare(strict_types=1);
 return [
     'chicas' => [
         'name' => 'Piscinas pequeñas para patios chicos',
+        'updated' => '2026-09-30',
         'title' => 'Piscinas pequeñas para patios chicos en Paraguay | Obra',
         'description' => 'Piscinas pequeñas de hormigón para patios chicos en Asunción y Gran Asunción: medidas a la medida del espacio, acceso de obra resuelto y vereda integrada.',
         'summary' => 'Construcción de piscinas pequeñas de hormigón para patios chicos en Asunción y Gran Asunción: medidas a la medida del espacio, acceso de obra resuelto y vereda integrada.',
@@ -53,6 +54,7 @@ return [
     ],
     'quinta' => [
         'name' => 'Piscinas para quintas',
+        'updated' => '2026-09-30',
         'title' => 'Construcción de piscinas para quintas en Paraguay | Obra',
         'description' => 'Piscinas de hormigón para quintas y casas de campo en Paraguay: mayor tamaño, agua de pozo, filtrado dimensionado y área de quincho y solárium integrada.',
         'h1' => 'Piscinas para quintas y casas de campo',
@@ -97,6 +99,7 @@ return [
     ],
     'desbordante' => [
         'name' => 'Piscinas desbordantes',
+        'updated' => '2026-09-30',
         'title' => 'Piscinas desbordantes e infinity en Paraguay | Obra',
         'description' => 'Piscinas desbordantes (infinity) en Paraguay: borde perdido, canaleta, tanque de compensación y estructura calculada para que el efecto no filtre.',
         'summary' => 'Construcción de piscinas desbordantes (infinity) en Paraguay: borde perdido, canaleta, tanque de compensación y estructura calculada para el efecto sin filtraciones.',
@@ -143,6 +146,7 @@ return [
     ],
     'renovacion' => [
         'name' => 'Renovación y reparación de piscinas',
+        'updated' => '2026-09-30',
         'title' => 'Renovación y reparación de piscinas en Paraguay | Obra',
         'description' => 'Renovación de piscinas en Asunción y Gran Asunción: pérdidas de agua, revestimiento, vereda, filtrado e iluminación renovados sin construir de nuevo.',
         'h1' => 'Renovación y reparación de piscinas',

@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 return [
     'name' => 'Canaletas y bajadas pluviales para techos',
+    'updated' => '2026-10-01',
     'title' => 'Canaletas y bajadas pluviales para techos | Obra',
     'description' => 'Canaletas para techo y bajadas pluviales en Asunción y Gran Asunción: colocación de canaletas de chapa o PVC y desagüe resuelto. Mandá fotos por WhatsApp.',
     'summary' => 'Colocación de canaletas para techo y bajadas pluviales, de chapa o de PVC, con el desagüe del techo resuelto hasta el suelo.',

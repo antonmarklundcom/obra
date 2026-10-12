@@ -26,11 +26,13 @@ $config = [
     'ads_label_wa' => obra_env('OBRA_ADS_LABEL_WA'),
     'ads_label_form' => obra_env('OBRA_ADS_LABEL_FORM'),
     'ads_label_tel' => obra_env('OBRA_ADS_LABEL_TEL'),
-    // Token (16+ caracteres) para ver /stats.php?token=... (medicion propia). Vacio = la pagina no existe.
+    // Token (16+ caracteres) para entrar a /stats.php con su formulario POST (medicion propia). Vacio = la pagina no existe.
     'stats_token' => obra_env('OBRA_STATS_TOKEN'),
     // Zona principal que aparece en titulos, textos y schema.
     'area' => obra_env('OBRA_AREA', 'Asunción y Gran Asunción'),
     'territory' => obra_env('OBRA_TERRITORY', 'Paraguay'),
+    // Ciudad del domicilio legal (addressLocality del schema). Cambiar si el domicilio no esta en Asuncion.
+    'locality' => obra_env('OBRA_LOCALITY', 'Asunción'),
     // Sitios hermanos del grupo. 'live' => false imprime el texto sin enlace hasta que el dominio este publicado.
     // Verified facts and authorized real project evidence only; configured privately on the server.
     'team' => [],
@@ -62,6 +64,16 @@ catch (RuntimeException $error) {
     $config['crm_api_key'] = '';
 }
 if ($canonicalCrm) { $config['crm_endpoint'] = $canonicalCrm->endpoint(); $config['crm_api_key'] = $canonicalCrm->apiKey(); }
+// Rutas de sitios hermanos confirmadas con HEAD 200 por tools/check-partners.mjs (config/partner-live-paths.json).
+$partnerFile = __DIR__ . '/partner-live-paths.json';
+if (is_file($partnerFile)) {
+    $partnerLive = json_decode((string) file_get_contents($partnerFile), true);
+    foreach ((is_array($partnerLive['live_paths'] ?? null) ? $partnerLive['live_paths'] : []) as $site => $paths) {
+        if (isset($config['partner_sites'][$site]) && is_array($paths)) {
+            $config['partner_sites'][$site]['live_paths'] = array_values(array_unique(array_merge($config['partner_sites'][$site]['live_paths'] ?? [], array_filter($paths, fn($p) => is_string($p) && preg_match('#^/[a-z0-9/-]*$#', $p) === 1))));
+        }
+    }
+}
 $config['origin'] = rtrim((string) $config['origin'], '/');
 $config['whatsapp'] = preg_replace('/\D+/', '', (string) $config['whatsapp']) ?: '';
 $config['privacy_email'] = (string) ($config['privacy_email'] ?: $config['email']);

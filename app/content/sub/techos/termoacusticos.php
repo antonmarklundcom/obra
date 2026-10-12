@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 return [
     'name' => 'Techos termoacústicos',
+    'updated' => '2026-10-01',
     'title' => 'Techos termoacústicos en Paraguay | Obra',
     'description' => 'Techo termoacústico con chapa termoacústica o panel sándwich para bajar el calor en casas, quinchos y locales en Paraguay. Mandá fotos por WhatsApp.',
     'summary' => 'Colocación de techo termoacústico con panel sándwich o chapa termoacústica para casas, quinchos y locales que sufren el calor fuerte en Paraguay.',

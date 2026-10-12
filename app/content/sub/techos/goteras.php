@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 return [
     'name' => 'Goteras y filtraciones en el techo',
+    'updated' => '2026-10-01',
     'title' => 'Goteras en el techo: cómo se reparan en Paraguay | Obra',
     'description' => 'Goteras en el techo y techo que gotea en Paraguay: buscamos por dónde entra el agua y la sellamos en chapa, teja o losa. Mandá fotos por WhatsApp.',
     'summary' => 'Cómo se arreglan las goteras y filtraciones en el techo en Paraguay: se busca el origen del agua y se sella en chapa, teja o losa.',

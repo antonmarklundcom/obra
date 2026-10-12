@@ -1,6 +1,6 @@
 # obra.com.py
 
-Stack: PHP (router.php, app/, config/; needs .env from .env.example, never commit .env).
+Stack: PHP (router.php, app/, config/; reads its settings from server environment variables or config/local.php; see .env.example for every variable and its precedence, never commit real values).
 
 Source of truth for the live site as of 2026-09-29 (verified against live).
 

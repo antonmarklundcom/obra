@@ -6,7 +6,8 @@ require_once __DIR__ . '/app/helpers.php';
 $content = require __DIR__ . '/app/content.php';
 require_once __DIR__ . '/app/routes.php';
 $routes = obra_routes($content);
-// lastmod por pagina: mtime del archivo que guarda su contenido.
+// lastmod por pagina: 'updated' del contenido (servicios, especialidades, guias); si falta, mtime del archivo.
+// El mtime es solo respaldo: un deploy por zip lo cambia y todas las URLs parecerian modificadas ese dia.
 $fecha = static function (array $archivos): string {
     $t = 0;
     foreach ($archivos as $f) {
@@ -16,8 +17,8 @@ $fecha = static function (array $archivos): string {
 };
 $lastmodDe = static function (array $route) use ($fecha, $content): string {
     switch ($route['type']) {
-        case 'service': return $fecha(['app/content.php']);
-        case 'child':   return $fecha(['app/content/sub/' . $route['slug'] . '.php']);
+        case 'service': return (string) ($content['services'][$route['slug']]['updated'] ?? $fecha(['app/content.php']));
+        case 'child':   return (string) ($content['children'][$route['slug']][$route['child']]['updated'] ?? $fecha(['app/content/sub/' . $route['slug'] . '.php']));
         case 'guide':   $g = $content['guides'][$route['slug']] ?? []; return (string) ($g['updated'] ?? $fecha(['app/content/guides/' . $route['slug'] . '.php']));
         case 'home':    return $fecha(['app/pages.php', 'app/routes.php', 'app/content.php']);
         default:        return $fecha(['app/pages.php', 'app/routes.php']); // paginas fijas

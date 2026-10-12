@@ -6,6 +6,7 @@ declare(strict_types=1);
 return [
     'duplex' => [
         'name' => 'Dúplex y casas de dos plantas',
+        'updated' => '2026-09-30',
         'title' => 'Construcción de dúplex en Paraguay | Obra',
         'description' => 'Construcción de dúplex y casas de dos plantas en Asunción y Gran Asunción: estructura, losa, escalera e instalaciones resueltas para aprovechar terrenos chicos.',
         'h1' => 'Construcción de dúplex y casas de dos plantas',
@@ -51,6 +52,7 @@ return [
     ],
     'minimalistas' => [
         'name' => 'Casas modernas y minimalistas',
+        'updated' => '2026-09-30',
         'title' => 'Construcción de casas modernas y minimalistas en Paraguay | Obra',
         'description' => 'Construcción de casas modernas y minimalistas en Asunción y Gran Asunción: losa plana, ladrillo visto y aberturas grandes, con terminaciones limpias.',
         'summary' => 'Construcción de casas modernas y minimalistas en Asunción y Gran Asunción: losa plana, ladrillo visto, grandes aberturas y galería integrada, ejecutadas con terminaciones limpias.',
@@ -98,6 +100,7 @@ return [
     ],
     'etapas' => [
         'name' => 'Construcción por etapas',
+        'updated' => '2026-09-30',
         'title' => 'Construcción de casas por etapas en Paraguay | Obra',
         'description' => 'Construcción de casas por etapas en Asunción y Gran Asunción: obra gruesa primero, terminaciones después, con un plan que evita rehacer y ordena el gasto.',
         'summary' => 'Construí tu casa por etapas en Asunción y Gran Asunción: obra gruesa primero, terminaciones después, con un plan que evita rehacer y mantiene el presupuesto controlado.',
@@ -145,6 +148,7 @@ return [
     ],
     'prefabricadas' => [
         'name' => 'Casas prefabricadas vs construcción tradicional',
+        'updated' => '2026-09-30',
         'title' => 'Casas prefabricadas vs construcción tradicional | Obra',
         'description' => 'Casas prefabricadas y premoldeadas frente a la construcción tradicional en Paraguay: durabilidad, clima, financiación, reventa y en qué casos conviene cada una.',
         'h1' => 'Casas prefabricadas o construcción tradicional: qué conviene',

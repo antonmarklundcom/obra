@@ -6,6 +6,7 @@ declare(strict_types=1);
 return [
     'refaccion' => [
         'name' => 'Refacción de quintas',
+        'updated' => '2026-09-30',
         'title' => 'Refacción y puesta a punto de quintas en Paraguay | Obra',
         'description' => 'Refacción de quintas en Paraguay: techos, instalaciones, piscina, quincho y cerramiento renovados con un solo responsable y un plan por sectores.',
         'h1' => 'Refacción y puesta a punto de quintas',
@@ -52,6 +53,7 @@ return [
     ],
     'casa-campo' => [
         'name' => 'Casas de campo',
+        'updated' => '2026-09-30',
         'title' => 'Construcción de casas de campo en Paraguay | Obra',
         'description' => 'Construcción de casas de campo en Paraguay: galerías amplias, techos altos, materiales que aguantan el clima y servicios propios de agua y electricidad.',
         'h1' => 'Construcción de casas de campo',

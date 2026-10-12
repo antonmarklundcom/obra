@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 return [
     'name' => 'Impermeabilización de techos',
+    'updated' => '2026-10-01',
     'title' => 'Impermeabilización de techos en Paraguay | Obra',
     'description' => 'Impermeabilización de techos y losas en Paraguay: membrana asfáltica, pintura asfáltica, pendientes y babetas bien resueltas. Mandá fotos por WhatsApp.',
     'summary' => 'Impermeabilización de techos y losas en Paraguay: preparación de la base, membrana asfáltica, pintura asfáltica, pendientes, babetas y desagües.',

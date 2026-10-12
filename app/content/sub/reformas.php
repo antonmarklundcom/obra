@@ -6,6 +6,7 @@ declare(strict_types=1);
 return [
     'cocinas' => [
         'name' => 'Remodelación de cocinas',
+        'updated' => '2026-10-01',
         'title' => 'Remodelación de cocinas en Paraguay | Obra',
         'description' => 'Remodelación de cocinas en Asunción y Gran Asunción: obra civil con demolición, instalaciones de agua, gas y electricidad, y revestimientos.',
         'summary' => 'Remodelación de cocinas en Asunción y Gran Asunción: distribución, instalaciones de agua, gas y electricidad, revestimientos, mesadas y muebles coordinados en una sola obra.',
@@ -52,6 +53,7 @@ return [
     ],
     'banos' => [
         'name' => 'Remodelación de baños',
+        'updated' => '2026-10-01',
         'title' => 'Remodelación de baños en Paraguay | Obra',
         'description' => 'Remodelación de baños en Asunción y Gran Asunción: impermeabilización, instalaciones, revestimientos, ducha a nivel y sanitarios nuevos con un solo responsable.',
         'h1' => 'Remodelación de baños',
@@ -96,6 +98,7 @@ return [
     ],
     'fachadas' => [
         'name' => 'Renovación de fachadas',
+        'updated' => '2026-10-01',
         'title' => 'Renovación de fachadas de casas en Paraguay | Obra',
         'description' => 'Renovación de fachadas en Asunción y Gran Asunción: revoque, revestimientos, aberturas y muro frontal para cambiar la cara de la casa sin tocar adentro.',
         'summary' => 'Renovación de fachadas en Asunción y Gran Asunción: revoque, revestimientos, aberturas, techo de acceso y muro frontal para cambiar la cara de la casa sin tocar el interior.',
@@ -142,6 +145,7 @@ return [
     ],
     'techos' => [
         'name' => 'Cambio y reparación de techos',
+        'updated' => '2026-10-01',
         'title' => 'Cambio y reparación de techos en Paraguay | Obra',
         'description' => 'Reparación y cambio de techos de tejas, chapa y losa en Asunción y Gran Asunción: filtraciones, estructura, aislación térmica y canaletas resueltas de raíz.',
         'h1' => 'Cambio y reparación de techos',

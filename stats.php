@@ -1,20 +1,50 @@
 <?php
 declare(strict_types=1);
 
-// Resumen privado de eventos propios. Solo responde con ?token=... igual a stats_token (config/local.php); si no, 404.
+// Resumen privado de eventos propios. Acceso: formulario POST con el token (stats_token, 16+ caracteres) que abre
+// una sesion de 1 hora. Sin token configurado, token incorrecto o GET sin sesion: 404 (con el formulario si hay token).
 $config = require __DIR__ . '/config/site.php';
 require_once __DIR__ . '/app/helpers.php';
 require_once __DIR__ . '/app/events.php';
+require_once __DIR__ . '/app/form-state.php';
 obra_security_headers();
-$token = (string) ($config['stats_token'] ?? '');
-$given = (string) ($_GET['token'] ?? '');
-if ($token === '' || strlen($token) < 16 || !hash_equals($token, $given)) { http_response_code(404); echo 'No encontrado.'; exit; }
+header('Referrer-Policy: no-referrer');
 header('X-Robots-Tag: noindex, nofollow');
-header('Cache-Control: no-store');
+$token = (string) ($config['stats_token'] ?? '');
+if ($token === '' || strlen($token) < 16) { http_response_code(404); echo 'No encontrado.'; exit; }
+obra_form_session();
+$meses = max(1, min(13, (int) ($_GET['meses'] ?? 1)));
+if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
+    $given = $_POST['token'] ?? '';
+    if (is_string($given) && hash_equals($token, $given)) {
+        session_regenerate_id(true);
+        $_SESSION['obra_stats'] = time();
+        header('Location: /stats.php' . ($meses > 1 ? '?meses=' . $meses : ''), true, 303);
+        exit;
+    }
+    unset($_SESSION['obra_stats']);
+}
+if ((int) ($_SESSION['obra_stats'] ?? 0) < time() - 3600) {
+    unset($_SESSION['obra_stats']);
+    http_response_code(404);
+    ?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>No encontrado</title>
+<link rel="stylesheet" href="<?= h(obra_asset('/assets/css/stats.css')) ?>"></head><body><p>No encontrado.</p>
+<form method="post" action="/stats.php<?= $meses > 1 ? '?meses=' . $meses : '' ?>"><label>Token <input type="password" name="token" autocomplete="current-password" required></label> <button type="submit">Entrar</button></form></body></html><?php
+    exit;
+}
 
-$days = 30;
-$since = gmdate('Y-m-d', time() - $days * 86400);
-$files = [obra_storage_dir() . '/events-' . gmdate('Y-m', time() - 32 * 86400) . '.log', obra_storage_dir() . '/events-' . gmdate('Y-m') . '.log'];
+// Retencion: se borran los archivos de eventos de mas de 13 meses (se conservan el mes actual y los 12 anteriores).
+$monthIndex = static fn(string $ym): int => (int) substr($ym, 0, 4) * 12 + (int) substr($ym, 5, 2) - 1;
+$current = $monthIndex(gmdate('Y-m'));
+foreach (glob(obra_storage_dir() . '/events-*.log') ?: [] as $old) {
+    if (preg_match('/events-(\d{4}-\d{2})\.log$/', $old, $m) && $monthIndex($m[1]) < $current - 12) { @unlink($old); }
+}
+
+$sinceTs = (int) strtotime(gmdate('Y-m-d') . ' -' . $meses . ' months');
+$days = (int) round((time() - $sinceTs) / 86400);
+$since = gmdate('Y-m-d', $sinceTs);
+$files = [];
+for ($i = $monthIndex(gmdate('Y-m', $sinceTs)); $i <= $current; $i++) { $files[] = obra_storage_dir() . sprintf('/events-%04d-%02d.log', intdiv($i, 12), $i % 12 + 1); }
 $by = ['event' => [], 'page' => [], 'placement' => [], 'service' => [], 'day' => []];
 $total = 0;
 $funnel = [];
@@ -41,7 +71,7 @@ $table = static function (string $title, array $rows, int $limit = 15): void {
 krsort($by['day']);
 ?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Estadísticas</title>
 <link rel="stylesheet" href="<?= h(obra_asset('/assets/css/stats.css')) ?>"></head><body>
-<h1>Eventos de los últimos <?= $days ?> días</h1><p><?= $total ?> eventos. Sin cookies ni datos personales.</p>
+<h1>Eventos de los últimos <?= $days ?> días</h1><p>Período: <?php foreach ([1, 3, 6, 12, 13] as $n): ?><?= $n === $meses ? '<strong>' . $n . ' ' . ($n === 1 ? 'mes' : 'meses') . '</strong>' : '<a href="/stats.php?meses=' . $n . '">' . $n . ' ' . ($n === 1 ? 'mes' : 'meses') . '</a>' ?> <?php endforeach; ?></p><p><?= $total ?> eventos. Sin cookies ni datos personales.</p>
 <h2>Consultas y entrega por página</h2>
 <p>Vistas = cargas de página, no personas únicas. Los clics no son mensajes enviados. Una consulta confirmada se cuenta cuando CRM o email acepta la entrega; la calificación comercial se revisa en el CRM.</p>
 <div class="table-scroll"><table><thead><tr><th>Página</th><th>Vistas</th><th>Clics WhatsApp</th><th>Formularios válidos</th><th>Entregados</th><th>Fallos</th><th>Entrega / vistas</th></tr></thead><tbody>

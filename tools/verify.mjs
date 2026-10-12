@@ -8,7 +8,7 @@
 import { spawn, spawnSync, execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { mkdtempSync, readdirSync, readFileSync, rmSync, existsSync } from 'node:fs';
+import { mkdtempSync, readdirSync, readFileSync, rmSync, existsSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -36,6 +36,16 @@ try {
   const files = execFileSync('git', ['ls-files', '--cached', '--others', '--exclude-standard', '*.php'], { cwd: root, encoding: 'utf8' }).split('\n').filter(Boolean);
   const bad = files.filter(f => spawnSync(PHP, ['-l', f], { cwd: root, encoding: 'utf8' }).status !== 0);
   step('php -l', bad.length === 0, `${files.length} files${bad.length ? ', errors: ' + bad.join(' ') : ''}`);
+
+  // Fechas de contenido: cada servicio, especialidad y guia necesita 'updated' (YYYY-MM-DD, no futura) para el lastmod del sitemap.
+  const dates = JSON.parse(execFileSync(PHP, ['-r', `require 'app/helpers.php'; $c = require 'app/content.php'; $o = [];
+    foreach ($c['services'] as $s => $p) { $o['/' . $s . '/'] = $p['updated'] ?? ''; }
+    foreach ($c['children'] as $h => $ps) { foreach ($ps as $s => $p) { $o['/' . $h . '/' . $s . '/'] = $p['updated'] ?? ''; } }
+    foreach ($c['guides'] as $s => $p) { $o['guide:' . $s] = $p['updated'] ?? ''; }
+    echo json_encode($o);`], { cwd: root, encoding: 'utf8', env: { ...process.env, OBRA_LOCAL_CONFIG: '0' } }));
+  const today = new Date().toISOString().slice(0, 10);
+  const badDates = Object.entries(dates).filter(([, d]) => !/^\d{4}-\d{2}-\d{2}$/.test(d) || d > today).map(([p, d]) => `${p} "${d}"`);
+  step('content dates', badDates.length === 0, `${Object.keys(dates).length} pages with 'updated'` + (badDates.length ? '\n      ' + badDates.join('\n      ') : ''));
 
   const base = await server(8090);
   const referenceImages = node('check-reference-images.mjs', [base]);
@@ -173,12 +183,24 @@ try {
   if (!/whatsapp_click\thero\t\/quinchos\/\tquinchos/.test(logText)) evFail.push('click line missing');
   if (!/form_lead\tform\t\/piscinas\/chicas\/\tpiscinas/.test(logText)) evFail.push('form_lead line missing');
   if (/(\d{1,3}\.){3}\d{1,3}|Mozilla|Googlebot/.test(logText)) evFail.push('log contains IP or user agent');
-  if ((await fetch(eb + '/stats.php')).status !== 404) evFail.push('stats without token != 404');
-  if ((await fetch(eb + '/stats.php?token=wrong')).status !== 404) evFail.push('stats wrong token != 404');
-  const st = await fetch(eb + `/stats.php?token=${TOKEN}`);
-  if (st.status !== 200 || !(await st.text()).includes('whatsapp_click')) evFail.push('stats with token lacks data');
+  // /stats.php: login por POST (el token nunca va en la URL), sesion de 1 hora, 404 sin sesion.
+  const form = { 'Content-Type': 'application/x-www-form-urlencoded' };
+  const stGet = await fetch(eb + '/stats.php');
+  if (stGet.status !== 404 || (stGet.headers.get('referrer-policy') || '') !== 'no-referrer') evFail.push(`stats GET without session -> ${stGet.status} ${stGet.headers.get('referrer-policy')}`);
+  if (!(await stGet.text()).includes('type="password" name="token"')) evFail.push('stats login form missing');
+  if ((await fetch(eb + `/stats.php?token=${TOKEN}`)).status !== 404) evFail.push('stats still accepts ?token= in the URL');
+  if ((await fetch(eb + '/stats.php', { method: 'POST', redirect: 'manual', headers: form, body: 'token=wrong' })).status !== 404) evFail.push('stats wrong token != 404');
+  writeFileSync(join(store, 'events-2020-01.log'), '2020-01-01\tpage_view\t\t/x/\t\n');
+  const login = await fetch(eb + '/stats.php', { method: 'POST', redirect: 'manual', headers: form, body: `token=${TOKEN}` });
+  const sid = (login.headers.get('set-cookie') || '').split(';')[0];
+  if (login.status !== 303 || !sid) evFail.push(`stats login -> ${login.status} (want 303 with session cookie)`);
+  const st = await fetch(eb + '/stats.php', { headers: { Cookie: sid } });
+  if (st.status !== 200 || !(await st.text()).includes('whatsapp_click')) evFail.push('stats with session lacks data');
+  if (existsSync(join(store, 'events-2020-01.log'))) evFail.push('stats did not delete a log older than 13 months');
+  const st13 = await fetch(eb + '/stats.php?meses=13', { headers: { Cookie: sid } });
+  if (st13.status !== 200 || !(await st13.text()).includes('<strong>13 meses</strong>')) evFail.push('stats ?meses=13 failed');
   const nb = await server(8095, { OBRA_STORAGE: store });
-  if ((await fetch(nb + `/stats.php?token=${TOKEN}`)).status !== 404) evFail.push('stats without configured token != 404');
+  if ((await fetch(nb + '/stats.php', { method: 'POST', redirect: 'manual', headers: form, body: `token=${TOKEN}` })).status !== 404) evFail.push('stats without configured token != 404');
   // Limite de t.php: 60 eventos cada 10 minutos por IP; el resto responde 204 sin registrar.
   const rb = await server(8096);
   for (let i = 0; i < 61; i++) await fetch(rb + '/t.php', { method: 'POST', headers: ua, body: JSON.stringify({ e: 'page_view', p: '', u: '/casas/', s: '' }) });

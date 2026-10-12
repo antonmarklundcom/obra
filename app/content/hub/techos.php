@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 return [
     'name' => 'Techos y cubiertas',
+    'updated' => '2026-10-01',
     'short' => 'Techos de chapa, de tejas y de losa para casas, cocheras y quinchos, con estructura y desagüe.',
     'title' => 'Construcción de techos en Paraguay: chapa, tejas y losa | Obra',
     'description' => 'Construcción de techos en Asunción y Gran Asunción: techos de chapa, de tejas y de losa para casas, cocheras y quinchos. Mandá fotos por WhatsApp.',

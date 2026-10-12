@@ -8,6 +8,7 @@ return [
     'services' => [
         'casas' => [
             'name' => 'Casas llave en mano',
+            'updated' => '2026-10-01',
             'short' => 'Planos, obra gruesa, instalaciones y terminaciones en una sola contratación.',
             'title' => 'Construcción de casas llave en mano en Paraguay | Obra',
             'description' => 'Casas llave en mano en Asunción y Gran Asunción: platea, mampostería, techo, instalaciones y terminaciones con un responsable. Pedí evaluar tu terreno.',
@@ -33,6 +34,7 @@ return [
         ],
         'quintas' => [
             'name' => 'Quintas y casas de campo',
+            'updated' => '2026-10-01',
             'short' => 'Casa, quincho, piscina, pozo y cerramiento coordinados por una sola empresa.',
             'title' => 'Construcción de quintas y casas de campo en Paraguay | Obra',
             'description' => 'Construcción y refacción de quintas en Paraguay: casa de campo, quincho, piscina, accesos, pozo y muro perimetral coordinados en un solo proyecto.',
@@ -58,6 +60,7 @@ return [
         ],
         'piscinas' => [
             'name' => 'Piscinas de hormigón',
+            'updated' => '2026-10-01',
             'short' => 'Piscinas de hormigón armado con vereda, filtrado e iluminación.',
             'title' => 'Construcción de piscinas de hormigón en Paraguay | Obra',
             'description' => 'Construcción de piscinas de hormigón en Asunción y Gran Asunción: excavación, estructura, vereda, filtrado e iluminación. Consultá por tu patio o quinta.',
@@ -82,6 +85,7 @@ return [
         ],
         'quinchos' => [
             'name' => 'Quinchos con parrilla',
+            'updated' => '2026-10-01',
             'short' => 'Parrilla, mesada, bacha, techo e iluminación integrados a tu patio.',
             'title' => 'Construcción de quinchos con parrilla en Paraguay | Obra',
             'description' => 'Construcción de quinchos con parrilla en Asunción y Gran Asunción: estructura, techo, parrilla, mesada, bacha e instalaciones en una sola obra.',
@@ -107,6 +111,7 @@ return [
         ],
         'reformas' => [
             'name' => 'Reformas y remodelaciones',
+            'updated' => '2026-10-01',
             'short' => 'Reorganizá ambientes, renová instalaciones y terminaciones sobre lo que ya tenés.',
             'title' => 'Reformas y remodelación de casas en Paraguay | Obra',
             'description' => 'Reformas y remodelación de casas en Asunción y Gran Asunción: demoliciones, albañilería, instalaciones y terminaciones con alcance claro y un responsable.',
@@ -132,6 +137,7 @@ return [
         ],
         'ampliaciones' => [
             'name' => 'Ampliaciones de vivienda',
+            'updated' => '2026-10-01',
             'short' => 'Un dormitorio, una planta alta o un área social nueva sobre la casa actual.',
             'title' => 'Ampliación de casas en Paraguay | Obra',
             'description' => 'Ampliación de casas en Asunción y Gran Asunción: dormitorios, planta alta, galerías y áreas sociales sumados a lo existente, con estructura resuelta.',
@@ -155,6 +161,7 @@ return [
         ],
         'patios' => [
             'name' => 'Patios, decks y pérgolas',
+            'updated' => '2026-10-01',
             'short' => 'Veredas, decks, pérgolas y galerías para usar el exterior todo el año.',
             'title' => 'Patios, decks y pérgolas en Paraguay | Obra',
             'description' => 'Construcción de patios, veredas, decks, pérgolas y galerías en Asunción y Gran Asunción. Exteriores integrados a la casa, el quincho o la piscina.',
@@ -179,6 +186,7 @@ return [
         ],
         'tinglados' => [
             'name' => 'Tinglados, galpones y cocheras',
+            'updated' => '2026-10-01',
             'short' => 'Estructura metálica y cubierta para vehículos, depósito o producción.',
             'title' => 'Construcción de tinglados y galpones en Paraguay | Obra',
             'description' => 'Construcción de tinglados y galpones en Asunción y Gran Asunción: estructura metálica, cubierta, canaletas y piso según el uso residencial o comercial.',
@@ -204,6 +212,7 @@ return [
         'techos' => require __DIR__ . '/content/hub/techos.php',
         'muros' => [
             'name' => 'Muros perimetrales y cerramientos',
+            'updated' => '2026-10-01',
             'short' => 'Muralla, portón y acceso integrados a la propiedad.',
             'title' => 'Muros perimetrales y murallas en Paraguay | Obra',
             'description' => 'Construcción de muros perimetrales, murallas, portones y accesos en Asunción y Gran Asunción para casas, quintas y terrenos.',
@@ -228,6 +237,7 @@ return [
         ],
         'comerciales' => [
             'name' => 'Obras comerciales',
+            'updated' => '2026-10-01',
             'short' => 'Locales, oficinas y consultorios preparados para operar en fecha.',
             'title' => 'Obras comerciales y adecuación de locales en Paraguay | Obra',
             'description' => 'Obras comerciales y adecuación de locales, oficinas y consultorios en Asunción y Gran Asunción: obra civil, instalaciones y terminaciones coordinadas.',
@@ -253,6 +263,7 @@ return [
         ],
         'supervision' => [
             'name' => 'Supervisión y fiscalización de obra',
+            'updated' => '2026-10-01',
             'short' => 'Un ingeniero responsable que controla tu obra aunque la ejecute otro.',
             'title' => 'Supervisión y fiscalización de obra en Paraguay | Obra',
             'description' => 'Supervisión, fiscalización y dirección de obra en Asunción y Gran Asunción: control de avances, calidad, certificaciones y pagos con un profesional responsable.',
@@ -277,6 +288,7 @@ return [
         ],
         'presupuesto' => [
             'name' => 'Presupuesto de obra y cómputo métrico',
+            'updated' => '2026-10-01',
             'short' => 'Sabé cuánto cuesta tu proyecto por rubro antes de comprometerte.',
             'title' => 'Presupuesto de obra y cómputo métrico en Paraguay | Obra',
             'description' => 'Presupuesto de obra y cómputo métrico en Paraguay: cantidades, rubros y costos en guaraníes desde tus planos, para comparar propuestas o pedir crédito.',

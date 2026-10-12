@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 return [
     'name' => 'Techos de losa',
+    'updated' => '2026-10-01',
     'title' => 'Techos de losa en Paraguay | Obra',
     'description' => 'Techo de losa de viguetas o de hormigón armado para casas en Paraguay: encofrado, armado, hormigonado y terminación. Mandá fotos por WhatsApp.',
     'summary' => 'Construcción de techos de losa de viguetas y de hormigón armado para casas en Paraguay, con encofrado, armado, hormigonado y terminación de la cubierta.',

@@ -6,6 +6,7 @@ declare(strict_types=1);
 return [
     'portones' => [
         'name' => 'Portones y accesos',
+        'updated' => '2026-09-30',
         'title' => 'Construcción de portones y accesos en Paraguay | Obra',
         'description' => 'Portones corredizos, batientes y automatizados con su obra civil en Asunción y Gran Asunción: columnas, guías, fundaciones, muro de frente y acceso vehicular.',
         'h1' => 'Construcción de portones y accesos',
