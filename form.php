@@ -99,7 +99,11 @@ $placement = preg_replace('/[^a-z0-9-]/', '', obra_post('placement', 20)) ?: 'fo
 $message = obra_wa_form_text(['name' => $name, 'service' => $labels['service'], 'location' => $location, 'terrain' => $labels['terrain'], 'financing' => $labels['financing'], 'project' => $messageText, 'page' => $originPath]);
 $attribution = [];
 foreach (obra_attribution_keys() as $key) { $v = preg_replace('/[^A-Za-z0-9_\-\.\/%+ ]/', '', obra_post($key, 200)) ?? ''; if ($v !== '') { $attribution[$key] = $v; } }
-$payload = ['name' => $name, 'phone' => '+' . $phone, 'message' => $message, 'source' => 'site:obra-com-py', 'page_url' => $pageUrl, 'idempotency_key' => bin2hex(random_bytes(16)), 'fields' => ['service' => $service, 'specialty' => $specialty, 'location' => $location, 'terrain' => $terrain, 'financing' => $financing, 'project' => $messageText, 'origin_path' => $originPath, 'placement' => $placement, 'submitted_at' => gmdate('c')] + $attribution];
+// Mismo WhatsApp en la misma hora = el mismo envio (doble clic, reintento): el CRM no duplica. 32 hex, el formato de la cola.
+$idempotencyKey = substr(hash('sha256', '+' . $phone . '|' . gmdate('Y-m-d-H')), 0, 32);
+// Campana arriba del payload (lo que lee el reporte de VenderCRM); gbraid/wbraid/landing_path quedan solo en fields.
+$topAttribution = array_intersect_key($attribution, array_flip(['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid']));
+$payload = $topAttribution + ['name' => $name, 'phone' => '+' . $phone, 'message' => $message, 'source' => 'site:obra-com-py', 'page_url' => $pageUrl, 'idempotency_key' => $idempotencyKey, 'fields' => ['service' => $service, 'specialty' => $specialty, 'location' => $location, 'terrain' => $terrain, 'financing' => $financing, 'project' => $messageText, 'origin_path' => $originPath, 'placement' => $placement, 'submitted_at' => gmdate('c')] + $attribution];
 obra_event_log('form_attempt', $placement, $originPath, $service === 'otro' ? '' : $service);
 $crm = obra_crm_send($config, $payload);
 if (!$crm['ok']) { obra_crm_spool($payload); }
