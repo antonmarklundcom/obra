@@ -69,6 +69,9 @@ try {
     if (/(Warning|Notice|Deprecated|Fatal error|Parse error):/.test(html)) routeFail.push(`${p} PHP warning in output`);
     if (!/<\/html>\s*$/.test(html)) routeFail.push(`${p} page truncated (PHP fatal error after output started?)`);
   }
+  // Marcador de despliegue: debe servirse como archivo estatico (lo comprueba tambien la produccion tras cada deploy).
+  const ver = await fetch(base + '/version.txt');
+  if (ver.status !== 200 || !/^live-check r\d{8} obra\s*$/.test(await ver.text())) routeFail.push('/version.txt missing or malformed');
   const legacy = JSON.parse(execFileSync(PHP, ['-r', "require 'app/routes.php'; echo json_encode(obra_legacy_redirects());"], { cwd: root, encoding: 'utf8' }));
   legacy['/piscinas'] = '/piscinas/'; legacy['/sitemap.php'] = '/sitemap.xml';
   for (const [from, to] of Object.entries(legacy)) {
